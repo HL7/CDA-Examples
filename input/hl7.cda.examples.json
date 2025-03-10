@@ -1,0 +1,154 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "hl7.cda.examples",
+  "url" : "http://hl7.org/cda/hl7.cda.examples",
+  "version" : "1.0.0",
+  "name" : "CDAExamples",
+  "title" : "CDA Examples",
+  "status" : "active",
+  "date" : "2025-02-17T13:54:03-06:00",
+  "publisher" : "Health Level Seven",
+  "contact" : [{
+    "name" : "HL7 International - Structured Documents",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/structure"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "packageId" : "hl7.cda.examples",
+  "fhirVersion" : ["5.0.0"],
+  "dependsOn" : [{
+    "id" : "cda",
+    "uri" : "http://hl7.org/cda/stds/core/ImplementationGuide/hl7.cda.uv.core",
+    "packageId" : "hl7.cda.uv.core",
+    "version" : "current"
+  },
+  {
+    "id" : "ccda",
+    "uri" : "http://hl7.org/cda/us/ccda/ImplementationGuide/hl7.cda.us.ccda",
+    "packageId" : "hl7.cda.us.ccda",
+    "version" : "current"
+  }],
+  "definition" : {
+    "grouping" : [{
+      "id" : "allergies",
+      "name" : "Allergies",
+      "description" : "Allergies and Intolerances Section Examples from C-CDA"
+    },
+    {
+      "id" : "header",
+      "name" : "Header",
+      "description" : "Header Examples from C-CDA"
+    },
+    {
+      "id" : "notes",
+      "name" : "Notes",
+      "description" : "Notes Examples from C-CDA"
+    }],
+    "page" : {
+      "sourceUrl" : "index.html",
+      "name" : "index.html",
+      "title" : "CDA Examples",
+      "generation" : "markdown"
+    },
+    "resource": [{
+      "extension": [{
+        "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+        "valueCode": "application/xml"
+      }, {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+        "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+      }],
+      "reference": {
+        "reference": "Binary/allergy-to-food-egg"
+      },
+      "name": "Allergy to Food Egg Example",
+      "description": "This is an example of a food allergy with information on both allergic reaction and reaction severity. It was based upon discussion with Russ Leftwich and Lisa Nelson in coordination with Patient Care Committee. See DSTU 219 for update regarding act/code.",
+      "isExample": true,
+      "profile": [
+        "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyIntoleranceObservation",
+        "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection",
+        "http://hl7.org/cda/us/ccda/StructureDefinition/ReactionObservation",
+        "http://hl7.org/cda/us/ccda/StructureDefinition/SeverityObservation"],
+      "groupingId": "allergies"
+    }, {
+      "extension": [{
+        "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+        "valueCode": "application/xml"
+      }, {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+        "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+      }],
+      "reference": {
+        "reference": "Binary/allergy-to-latex"
+      },
+      "name": "Allergy to Latex",
+      "description": "This is an example of a propensity to substance allergy with information on both allergic reaction and reaction severity. It was based upon discussion with Russ Leftwich and Lisa Nelson in coordination with Patient Care Committee. See DSTU 219 for update regarding act/code.",
+      "isExample": true,
+      "profile": [
+        "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyIntoleranceObservation",
+        "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection",
+        "http://hl7.org/cda/us/ccda/StructureDefinition/ReactionObservation",
+        "http://hl7.org/cda/us/ccda/StructureDefinition/SeverityObservation"
+      ],
+      "groupingId": "allergies"
+    }, {
+      "extension": [{
+        "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+        "valueCode": "application/xml"
+      }, {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+        "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"
+      }],
+      "reference": {
+        "reference": "Binary/header-patient-aliases"
+      },
+      "name": "Patient Aliases",
+      "description": "Best practices for sending one or more patient aliases",
+      "isExample": true,
+      "profile": ["http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"],
+      "groupingId": "header"
+    }, {
+      "extension": [{
+        "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+        "valueCode": "application/xml"
+      }, {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+        "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"
+      }],
+      "reference": {
+        "reference": "Binary/header-masked-ssn"
+      },
+      "name": "Masked Social Security Number",
+      "description": "This is an example of how to represent a social security number (SSN) that has been masked to show only the last four digits.",
+      "isExample": true,
+      "profile": ["http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"],
+      "groupingId": "header"
+    }, {
+      "extension": [{
+        "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+        "valueCode": "application/xml"
+      }, {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+        "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/HospitalCourseSection"
+      }],
+      "reference": {
+        "reference": "Binary/note-discharge"
+      },
+      "name": "Discharge Note in Hospital Course",
+      "description": "This is an example of how to record a single Discharge Note in a Hospital Course Section.",
+      "isExample": true,
+      "profile": [
+        "http://hl7.org/cda/us/ccda/StructureDefinition/NoteActivity",
+        "http://hl7.org/cda/us/ccda/StructureDefinition/HospitalCourseSection"
+      ],
+      "groupingId": "notes"
+    }]
+  }
+}

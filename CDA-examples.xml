@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="sd" url="http://hl7.org/cda/hl7.cda.examples">
+<version code="current" url=""/>
+<artifactPageExtension value="-definitions"/>
+<artifactPageExtension value="-examples"/>
+<artifactPageExtension value="-mappings"/>
+<artifact id="Binary/allergy-to-food-egg" key="Binary-allergy-to-food-egg" name="Allergy to Food Egg Example"/>
+<artifact id="Binary/allergy-to-latex" key="Binary-allergy-to-latex" name="Allergy to Latex"/>
+<artifact id="Binary/note-discharge" key="Binary-note-discharge" name="Discharge Note in Hospital Course"/>
+<artifact id="Binary/header-masked-ssn" key="Binary-header-masked-ssn" name="Masked Social Security Number"/>
+<artifact id="Binary/header-patient-aliases" key="Binary-header-patient-aliases" name="Patient Aliases"/>
+<page key="NA" name="(NA)"/>
+<page key="many" name="(many)"/>
+<page key="artifacts" name="Artifacts Summary"/>
+<page key="index" name="CDA Examples"/>
+<page key="toc" name="Table of Contents"/>
+</specification>
