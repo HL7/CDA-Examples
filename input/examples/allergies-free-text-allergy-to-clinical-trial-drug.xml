@@ -12,16 +12,20 @@
           <th>Reaction</th>
           <th>Reaction Severity</th>
           <th>Documentation Date</th>
-          <th>Start Date</th>
+          <th>Onset Date</th> <!-- Date from observation/effectiveTime-->
         </tr>
       </thead>
       <tbody>
-        <tr ID="allergy4">
-          <td ID="allergy4allergen">Latex</td>
-          <td ID="allergy4reaction">Anaphylaxis</td>
-          <td ID="allergy4reactionseverity">Severe</td>
-          <td>Jan 4 2014</td>
-          <td>Jan 3 2014</td>
+        <tr ID="allergy1">
+          <td ID="allergy1allergen">talazoparib</td>
+          <td>
+            <content ID="allergy1reaction">Dyspnea</content>
+          </td>
+          <td>
+            <content ID="allergy1reactionseverity">Moderate</content>
+          </td>
+          <td>April 1 2018</td>
+          <td>April 1 2018</td>
         </tr>
       </tbody>
     </table>
@@ -34,24 +38,23 @@
       <id root="4a2ac5fc-0c85-4223-baee-c2e254803974"/>
       <code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
       <text>
-        <reference value="#allergy4" />
-      </text>
+    <reference value="#allergy1"/>
+    </text>
       <statusCode code="active"/>
       <!-- This is the time stamp for when the allergy was first documented as a concern-->
-      <effectiveTime>
-        <low value="20140104123506-0500"/>
-      </effectiveTime>
+      <effectiveTime value="20180401103001-0500"/> <!-- Apr 1, 2018 at 10:30a ET -->
       <author>
         <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
-        <time value="20140104"/>
+        <time value="20180401"/>
         <assignedAuthor>
-          <id extension="99999999" root="2.16.840.1.113883.4.6"/>
-          <code code="207Q00000X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Health Care Provider Taxonomy" displayName="Allopathic &amp; Osteopathic Physicians; Family Medicine" />
-          <telecom use="WP" value="tel:555-555-1002"/>
+          <id extension="12345" root="2.16.840.1.113883.4.6"/>
+          <code code="207RX0202X" codeSystem="2.16.840.1.113883.6.101"
+            codeSystemName="Health Care Provider Taxonomy" displayName="Allopathic &amp; Osteopathic Physicians; Internal Medicine, Medical Oncology"/>
+          <telecom use="WP" value="tel:555-555-1234"/>
           <assignedPerson>
             <name>
-              <given>Henry</given>
-              <family>Seven</family>
+              <given>Adam</given>
+              <family>Anydoc</family>
             </name>
           </assignedPerson>
         </assignedAuthor>
@@ -61,30 +64,34 @@
           <!-- allergy observation template -->
           <templateId root="2.16.840.1.113883.10.20.22.4.7"/>
           <templateId root="2.16.840.1.113883.10.20.22.4.7" extension="2014-06-09"/>
-          <id root="4a2ac5fc-0c85-4223-baee-c2e254803974"/>
+          <id root="4d3ac7ac-0c32-8712-b3fe-c2b268808259"/>
           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
           <text>
-            <reference value="#allergy4" />
+            <reference value="#allergy1"/>
           </text>
           <statusCode code="completed"/>
           <!-- This is the time stamp for the biological onset of the allergy. -->
-          <!-- This documents that the allergy began at given year month and day, although hour and minute not specified-->
+          <!-- Just the year is shown since a specific month and date was not reported -->
           <effectiveTime>
-            <low value="20140103"/>
+            <low value="20180401"/>
+            <high value="20180401"/>
           </effectiveTime>
-          <!-- This specifies that the allergy is a propensity to adverse reactions to substance -->
-          <value xsi:type="CD" code="418038007" displayName="Propensity to adverse reactions to substance (disorder)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+          <!-- This specifies that the allergy is to a medication in contrast to other allergies (substance) -->
+          <value xsi:type="CD" code="59037007" displayName="Intolerance to drug (finding)"
+            codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
           <author>
             <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
-            <time value="20140104"/>
+            <time value="20180401"/>
             <assignedAuthor>
               <id extension="99999999" root="2.16.840.1.113883.4.6"/>
-              <code code="207Q00000X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Health Care Provider Taxonomy" displayName="Allopathic &amp; Osteopathic Physicians; Family Medicine" />
-              <telecom use="WP" value="tel:555-555-1002"/>
+              <code code="207RX0202X" codeSystem="2.16.840.1.113883.6.101"
+                codeSystemName="Health Care Provider Taxonomy"
+                displayName="Allopathic &amp; Osteopathic Physicians; Internal Medicine, Medical Oncology"/>
+              <telecom use="WP" value="tel:555-555-1234"/>
               <assignedPerson>
                 <name>
-                  <given>Henry</given>
-                  <family>Seven</family>
+                  <given>Adam</given>
+                  <family>Anydoc</family>
                 </name>
               </assignedPerson>
             </assignedAuthor>
@@ -92,49 +99,55 @@
           <participant typeCode="CSM">
             <participantRole classCode="MANU">
               <playingEntity classCode="MMAT">
-                <!-- SNOMED or UNII may be used for allergies in both C-CDA 1.1 and 2.0 -->
-                <!-- SNOMED was added to C-CDA 1.1 by DSTU  381 and illustrated below -->
-                <!-- Note that the SNOMED code for 'latex allergy' is not appropriate since the allergy is conveyed elsewhere in the observation -->
-                <code code="111088007" displayName="Latex" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                <!-- This drug is a clinical trial drug not approved by FDA so there is no RxNorm code -->
+                <!-- For non-drug substances that don't have a concept you may omit codeSystem -->
+                <!-- Use OTH and originalText -->
+                <code nullFlavor="OTH" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm"> 
                   <originalText>
-                    <reference value="#allergy4allergen"/>
+                    <reference value="#allergy1allergen"/>
                   </originalText>
+                  <!-- Include clinical trial code or local code and codeSystem in translation-->
+                   <translation code="C95733" displayName="talazoparib" 
+                        codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI"/>
                 </code>
               </playingEntity>
             </participantRole>
           </participant>
+          <!-- Only one reaction recorded here, although multiple reactions may be recorded to the same substance ([0..*] -->
           <entryRelationship typeCode="MFST" inversionInd="true">
             <observation classCode="OBS" moodCode="EVN">
               <!-- Reaction Observation template -->
               <templateId root="2.16.840.1.113883.10.20.22.4.9"/>
               <templateId root="2.16.840.1.113883.10.20.22.4.9" extension="2014-06-09"/>
-              <id root="0506c036-adfb-4e6e-b9e1-eea76177ead5"/>
+              <id root="fea0b775-f3fe-4e0a-9c4f-4a5c235c2af0"/>
               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
-              <text>
-                <reference value="#allergy4reaction"/>
-              </text>
+              
               <statusCode code="completed"/>
-              <effectiveTime>
-                <low value="20140103"/>
-              </effectiveTime>
-              <value xsi:type="CD" code="39579001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Anaphylaxis"/>
-              <!-- The Severity observation is no longer recommended, use criticality observation in future exchanges -->							
-                <entryRelationship typeCode="SUBJ" inversionInd="true">
+              <effectiveTime value = "20180401"/>
+              <value xsi:type="CD" code="267036007" codeSystem="2.16.840.1.113883.6.96"
+                codeSystemName="SNOMED CT" displayName="Dyspnea">
+                <originalText>
+                  <reference value="#allergy1reaction"/>
+                </originalText>
+              </value>
+              <entryRelationship typeCode="SUBJ" inversionInd="true">
                 <observation classCode="OBS" moodCode="EVN">
                   <!-- Severity Observation template -->
                   <templateId root="2.16.840.1.113883.10.20.22.4.8"/>
                   <templateId root="2.16.840.1.113883.10.20.22.4.8" extension="2014-06-09"/>
-                  <code code="SEV" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+                  <code code="SEV" codeSystem="2.16.840.1.113883.5.4"
+                    codeSystemName="ActCode"/>
                   <text>
-                    <reference value="#allergy4reactionseverity"/>
+                    <reference value="#allergy1reactionseverity"/>
                   </text>
                   <statusCode code="completed"/>
-                  <value xsi:type="CD" code="24484000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Severe"/>
+                  <value xsi:type="CD" code="6736007" codeSystem="2.16.840.1.113883.6.96"
+                    codeSystemName="SNOMED CT" displayName="Moderate"/>
                 </observation>
               </entryRelationship>
             </observation>
           </entryRelationship>
-        </observation>
+           </observation>
       </entryRelationship>
     </act>
   </entry>

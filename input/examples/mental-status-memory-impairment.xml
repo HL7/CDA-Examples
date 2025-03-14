@@ -1,0 +1,62 @@
+<section xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- This is an example of how to affirmatively assert there is a memory (cognitive) impairment -->
+  <!-- Original design influenced by Transitions of Care test scenario, inpatient for MU2 170.314(b)(2)-->
+  <!-- Note that in C-CDA 1.1, functional and cognitive status (mental) are within the same section -->
+  <!-- Section not backwards compaitble with prior 2.16.840.1.113883.10.20.22.2.14 since new section --> 
+  <templateId root="2.16.840.1.113883.10.20.22.2.56" extension="2015-08-01" />
+  <code code="10190-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Mental status Narrative" />
+  <title>MENTAL STATUS</title>  
+  <!-- Narrative organized as a single table. Some systems may prefer separate tables for functional vs. cognitive assessments -->
+  <text>
+    <table>
+      <thead>
+        <tr>
+          <th>Assessment</th>
+          <th>Date</th>
+          <th>Results</th>
+          <th>Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ID="MS_Narrative1">
+          <td ID="MS_Type1">Cognitive Status</td> 
+          <!-- Some systems may just report this to day rather than hour and minute timestamp. Both of which are acceptable. -->
+          <td>August 15 2012, 5:32pm</td>
+          <td ID="MS_Finding1">Memory Impairment</td>
+          <td />
+        </tr>
+      </tbody>
+    </table>
+  </text>
+  <entry>
+    <!-- Template for Mental Status Result Observation. Note other templates may apply. -->
+    <observation classCode="OBS" moodCode="EVN">
+      <templateId root="2.16.840.1.113883.10.20.22.4.74"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.74" extension="2015-08-01"/>
+      <id root="faa09c19-fa1f-4a6c-ae79-10a3b711550f"/>
+      <!-- In C-CDA R2.1 August 2015 this is a fixed code. SDWG may change to a value set in STU comment 1367 -->
+      <code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="373930000" displayName="Cognitive function finding">
+        <originalText>
+          <reference value="#MS_Type1" />
+        </originalText>
+        <translation code="75275-8" 
+          displayName="Cognitive function [Interpretation]"
+          codeSystem="2.16.840.1.113883.6.1"
+          codeSystemName="LOINC"/>
+      </code>
+      <text>
+        <reference value="#MS_Narrative1"/>
+      </text>
+      <statusCode code="completed"/>
+      <effectiveTime>
+        <!-- Some systems may just report this to day rather than hour and minute timestamp. Both of which are acceptable. -->
+        <low value="20120815173215-0500"/>
+      </effectiveTime>
+      <value xsi:type="CD" code="386807006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Memory impairment">
+        <originalText>
+          <reference value="#MS_Finding1"/>
+        </originalText>
+      </value>
+    </observation>
+  </entry>
+</section>

@@ -1,154 +1,3359 @@
 {
-  "resourceType" : "ImplementationGuide",
-  "id" : "hl7.cda.examples",
-  "url" : "http://hl7.org/cda/hl7.cda.examples",
-  "version" : "1.0.0",
-  "name" : "CDAExamples",
-  "title" : "CDA Examples",
-  "status" : "active",
-  "date" : "2025-02-17T13:54:03-06:00",
-  "publisher" : "Health Level Seven",
-  "contact" : [{
-    "name" : "HL7 International - Structured Documents",
-    "telecom" : [{
-      "system" : "url",
-      "value" : "http://www.hl7.org/Special/committees/structure"
-    }]
-  }],
-  "jurisdiction" : [{
-    "coding" : [{
-      "system" : "urn:iso:std:iso:3166",
-      "code" : "US"
-    }]
-  }],
-  "packageId" : "hl7.cda.examples",
-  "fhirVersion" : ["5.0.0"],
-  "dependsOn" : [{
-    "id" : "cda",
-    "uri" : "http://hl7.org/cda/stds/core/ImplementationGuide/hl7.cda.uv.core",
-    "packageId" : "hl7.cda.uv.core",
-    "version" : "current"
-  },
-  {
-    "id" : "ccda",
-    "uri" : "http://hl7.org/cda/us/ccda/ImplementationGuide/hl7.cda.us.ccda",
-    "packageId" : "hl7.cda.us.ccda",
-    "version" : "current"
-  }],
-  "definition" : {
-    "grouping" : [{
-      "id" : "allergies",
-      "name" : "Allergies",
-      "description" : "Allergies and Intolerances Section Examples from C-CDA"
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.cda.examples",
+  "url": "http://hl7.org/cda/hl7.cda.examples",
+  "version": "1.0.0",
+  "name": "CDAExamples",
+  "title": "CDA Examples",
+  "status": "active",
+  "date": "2025-02-17T13:54:03-06:00",
+  "publisher": "Health Level Seven",
+  "contact": [
+    {
+      "name": "HL7 International - Structured Documents",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/structure"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
+  "packageId": "hl7.cda.examples",
+  "fhirVersion": [
+    "5.0.0"
+  ],
+  "dependsOn": [
+    {
+      "id": "cda",
+      "uri": "http://hl7.org/cda/stds/core/ImplementationGuide/hl7.cda.uv.core",
+      "packageId": "hl7.cda.uv.core",
+      "version": "current"
     },
     {
-      "id" : "header",
-      "name" : "Header",
-      "description" : "Header Examples from C-CDA"
+      "id": "ccda",
+      "uri": "http://hl7.org/cda/us/ccda/ImplementationGuide/hl7.cda.us.ccda",
+      "packageId": "hl7.cda.us.ccda",
+      "version": "current"
+    }
+  ],
+  "definition": {
+    "page": {
+      "sourceUrl": "index.html",
+      "name": "index.html",
+      "title": "CDA Examples",
+      "generation": "markdown",
+      "page": [
+        {
+          "sourceUrl": "migrationnotes.html",
+          "name": "migrationnotes.html",
+          "title": "Migration Notes",
+          "generation": "markdown"
+        }
+      ]
     },
-    {
-      "id" : "notes",
-      "name" : "Notes",
-      "description" : "Notes Examples from C-CDA"
-    }],
-    "page" : {
-      "sourceUrl" : "index.html",
-      "name" : "index.html",
-      "title" : "CDA Examples",
-      "generation" : "markdown"
-    },
-    "resource": [{
-      "extension": [{
-        "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
-        "valueCode": "application/xml"
-      }, {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-        "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
-      }],
-      "reference": {
-        "reference": "Binary/allergy-to-food-egg"
+    "parameter": [
+      {
+        "code": {
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+          "code": "excludexml"
+        },
+        "value": "y"
       },
-      "name": "Allergy to Food Egg Example",
-      "description": "This is an example of a food allergy with information on both allergic reaction and reaction severity. It was based upon discussion with Russ Leftwich and Lisa Nelson in coordination with Patient Care Committee. See DSTU 219 for update regarding act/code.",
-      "isExample": true,
-      "profile": [
-        "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyIntoleranceObservation",
-        "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection",
-        "http://hl7.org/cda/us/ccda/StructureDefinition/ReactionObservation",
-        "http://hl7.org/cda/us/ccda/StructureDefinition/SeverityObservation"],
-      "groupingId": "allergies"
-    }, {
-      "extension": [{
-        "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
-        "valueCode": "application/xml"
-      }, {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-        "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
-      }],
-      "reference": {
-        "reference": "Binary/allergy-to-latex"
+      {
+        "code": {
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+          "code": "excludejson"
+        },
+        "value": "y"
+      }
+    ],
+    "grouping": [
+      {
+        "id": "allergies",
+        "name": "Allergies",
+        "description": "Allergies and Intolerances Section Examples from C-CDA"
       },
-      "name": "Allergy to Latex",
-      "description": "This is an example of a propensity to substance allergy with information on both allergic reaction and reaction severity. It was based upon discussion with Russ Leftwich and Lisa Nelson in coordination with Patient Care Committee. See DSTU 219 for update regarding act/code.",
-      "isExample": true,
-      "profile": [
-        "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyIntoleranceObservation",
-        "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection",
-        "http://hl7.org/cda/us/ccda/StructureDefinition/ReactionObservation",
-        "http://hl7.org/cda/us/ccda/StructureDefinition/SeverityObservation"
-      ],
-      "groupingId": "allergies"
-    }, {
-      "extension": [{
-        "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
-        "valueCode": "application/xml"
-      }, {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-        "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"
-      }],
-      "reference": {
-        "reference": "Binary/header-patient-aliases"
+      {
+        "id": "care-team",
+        "name": "Care Team",
+        "description": "Care Team Examples from C-CDA Companion Guide"
       },
-      "name": "Patient Aliases",
-      "description": "Best practices for sending one or more patient aliases",
-      "isExample": true,
-      "profile": ["http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"],
-      "groupingId": "header"
-    }, {
-      "extension": [{
-        "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
-        "valueCode": "application/xml"
-      }, {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-        "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"
-      }],
-      "reference": {
-        "reference": "Binary/header-masked-ssn"
+      {
+        "id": "encounters",
+        "name": "Encounters",
+        "description": "Encounter Section Examples from C-CDA"
       },
-      "name": "Masked Social Security Number",
-      "description": "This is an example of how to represent a social security number (SSN) that has been masked to show only the last four digits.",
-      "isExample": true,
-      "profile": ["http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"],
-      "groupingId": "header"
-    }, {
-      "extension": [{
-        "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
-        "valueCode": "application/xml"
-      }, {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-        "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/HospitalCourseSection"
-      }],
-      "reference": {
-        "reference": "Binary/note-discharge"
+      {
+        "id": "family-history",
+        "name": "Family History",
+        "description": "Family History Section Examples from C-CDA"
       },
-      "name": "Discharge Note in Hospital Course",
-      "description": "This is an example of how to record a single Discharge Note in a Hospital Course Section.",
-      "isExample": true,
-      "profile": [
-        "http://hl7.org/cda/us/ccda/StructureDefinition/NoteActivity",
-        "http://hl7.org/cda/us/ccda/StructureDefinition/HospitalCourseSection"
-      ],
-      "groupingId": "notes"
-    }]
+      {
+        "id": "functional-status",
+        "name": "Functional Status",
+        "description": "Functional Status Section Examples from C-CDA"
+      },
+      {
+        "id": "general",
+        "name": "General",
+        "description": "General Examples from C-CDA"
+      },
+      {
+        "id": "goals",
+        "name": "Goals",
+        "description": "Goals Section Examples from C-CDA"
+      },
+      {
+        "id": "header",
+        "name": "Header",
+        "description": "C-CDA Header Examples"
+      },
+      {
+        "id": "health-concerns",
+        "name": "Health Concerns",
+        "description": "Health Concerns Section Examples from C-CDA"
+      },
+      {
+        "id": "immunizations",
+        "name": "Immunizations",
+        "description": "Immunization Section Examples from C-CDA"
+      },
+      {
+        "id": "interventions",
+        "name": "Interventions",
+        "description": "Interventions Section Examples from C-CDA"
+      },
+      {
+        "id": "medical-equipment",
+        "name": "Medical Equipment",
+        "description": "Medical Equipment Section Examples from C-CDA"
+      },
+      {
+        "id": "medications",
+        "name": "Medications",
+        "description": "Medication Section Examples from C-CDA"
+      },
+      {
+        "id": "mental-status",
+        "name": "Mental Status",
+        "description": "Mental Status Section Examples from C-CDA"
+      },
+      {
+        "id": "notes",
+        "name": "Notes",
+        "description": "Notes Section Examples from C-CDA"
+      },
+      {
+        "id": "plan-of-treatment",
+        "name": "Plan of Treatment",
+        "description": "Plan of Treatment Section Examples from C-CDA"
+      },
+      {
+        "id": "problems",
+        "name": "Problems",
+        "description": "Problem Section Examples from C-CDA"
+      },
+      {
+        "id": "procedures",
+        "name": "Procedures",
+        "description": "Procedure Section Examples from C-CDA"
+      },
+      {
+        "id": "quality",
+        "name": "Quality",
+        "description": "Quality Related Examples from C-CDA and QRDA"
+      },
+      {
+        "id": "referrals",
+        "name": "Referrals - Planned and Completed",
+        "description": "Referral Examples from C-CDA"
+      },
+      {
+        "id": "results",
+        "name": "Results",
+        "description": "Result Section Examples from C-CDA"
+      },
+      {
+        "id": "social-history",
+        "name": "Social History",
+        "description": "Social History Section Examples from C-CDA"
+      },
+      {
+        "id": "unstructured",
+        "name": "Unstructured",
+        "description": "Unstructured Document Examples"
+      },
+      {
+        "id": "vital-signs",
+        "name": "Vital Signs",
+        "description": "Vital Sign Section Examples from C-CDA"
+      }
+    ],
+    "resource": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/allergies-allergy-to-food-egg"
+        },
+        "name": "Allergy to food egg",
+        "description": "This is an example of a food allergy with information on both allergic reaction and reaction severity. It was based upon discussion with Russ Leftwich and Lisa Nelson in coordination with Patient Care Committee. See DSTU 219 for update regarding act/code.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyIntoleranceObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ReactionObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SeverityObservation"
+        ],
+        "groupingId": "allergies"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/allergies-allergy-to-latex"
+        },
+        "name": "Allergy to latex",
+        "description": "This is an example of a propensity to substance allergy with information on both allergic reaction and reaction severity. It was based upon discussion with Russ Leftwich and Lisa Nelson in coordination with Patient Care Committee. See DSTU 219 for update regarding act/code.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyIntoleranceObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ReactionObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SeverityObservation"
+        ],
+        "groupingId": "allergies"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/allergies-allergy-to-specific-drug-codeine"
+        },
+        "name": "Allergy to specific drug Codeine",
+        "description": "This is an example of a propensity to drug adverse event with information on multiple allergic reactions each with reaction severity. It was based upon discussion with Rob Hausam and John D'Amore and Russ Leftwich in coordination with Patient Care Committee. This sample replaces the Epinephrine sample which had less clinical accuracy/relevance. See DSTU 219 for update regarding act/code.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyIntoleranceObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ReactionObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SeverityObservation"
+        ],
+        "groupingId": "allergies"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/allergies-allergy-to-specific-drug-penicillin"
+        },
+        "name": "Allergy to specific drug Penicillin",
+        "description": "This is an example of an allergy to a specific drug (penicillin) using RxNorm as terminology with information on both allergic reaction and reaction severity. For drug allergies, this example illustrates a good practice of encoding the allergen at the ingredient level (penicillin) not administration level (10 mg tablet). See DSTU 219 for update regarding act/code.\nMultiple reactions are listed in some examples",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyIntoleranceObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ReactionObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SeverityObservation"
+        ],
+        "groupingId": "allergies"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/allergies-allergy-to-specific-drug-class-penicillins"
+        },
+        "name": "Allergy to specific drug class Penicillins",
+        "description": "This is an example of an allergy to a drug class (penicillins) using SNOMED CT as terminology with information on both allergic reaction and reaction severity. See DSTU 219 for update regarding act/code",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyIntoleranceObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ReactionObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SeverityObservation"
+        ],
+        "groupingId": "allergies"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/allergies-free-text-allergy-to-clinical-trial-drug"
+        },
+        "name": "Free-text Allergy to clinical trial drug",
+        "description": "This example illustrates an example of allergy to a new drug ingredient which is in a clinical trial phase and not approved by the FDA. As a result, there is no RxNorm, NDF-RT, SNOMED or UNII code.  An NCI thesaurus code is in turn used as a translation code since NCI tracks new chemotherapy drugs in clinical trial phases.\nAdditional Notes and Assumptions:\nThe example drug, talazoparib, was in clinical trial phase at the time of this example.  It is possible for this drug to be approved at some point in the future after this C-CDA example is approved.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyIntoleranceObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ReactionObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SeverityObservation"
+        ],
+        "groupingId": "allergies"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/allergies-no-known-allergies"
+        },
+        "name": "No Known Allergies",
+        "description": "This is an example of how an author can record a patient has no known allergies.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyIntoleranceObservation"
+        ],
+        "groupingId": "allergies"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/allergies-no-known-medication-allergies"
+        },
+        "name": "No Known Medication Allergies",
+        "description": "This is an example of how an author can record a patient has no known medication allergies.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyIntoleranceObservation"
+        ],
+        "groupingId": "allergies"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/allergies-no-section-information-allergies"
+        },
+        "name": "No Section Information Allergies",
+        "description": "This is an example of no information available for allergies. This example is similar to the No Section Information Problems example. This sample is not approriate for asserting 'No Known Allergies'.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+        ],
+        "groupingId": "allergies"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/allergies-not-allergic-to-peanuts"
+        },
+        "name": "Not Allergic to Peanuts",
+        "description": "This is an example of how an author can record a patient is not allergic to a specific substance. In this example, the susbtance is Peanuts.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyIntoleranceObservation"
+        ],
+        "groupingId": "allergies"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/CareTeamsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/care-team-narrative-only"
+        },
+        "name": "Care Team Narrative Only",
+        "description": "This is an example of how to send a Care Team with narrative only. Updated 3/5/2020 with proper templateId.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/CareTeamsSection"
+        ],
+        "groupingId": "care-team"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/CareTeamsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/care-team-structured-entry"
+        },
+        "name": "Care Team Structured Entry",
+        "description": "This is an example of how to send a Care Team with structured entries.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/CareTeamsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/CareTeamOrganizer"
+        ],
+        "groupingId": "care-team"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/EncountersSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/encounters-hospital-discharge-encounter-with-billable-diagnoses"
+        },
+        "name": "Hospital Discharge Encounter with Billable Diagnoses",
+        "description": "This is an example of a hospitalization with discharge diagnoses. Meaningful Use requires a place to document encounter diagnoses, and this example attempts to satisfy. This example aligns with QRDA suggestion to use a Rank Observation for Principal diagnosis.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/EncountersSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/EncounterActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ServiceDeliveryLocation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/HospitalDischargeDiagnosis",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "encounters"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/EncountersSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/encounters-inpatient-encounter-discharged-to-rehab-location"
+        },
+        "name": "Inpatient Encounter Discharged to Rehab Location",
+        "description": "This is an example of a hospitalization with discharge disposition. The Discharge Disposition includes both the standard code and a local code, and a discharge destination",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/EncountersSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/EncounterActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ServiceDeliveryLocation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "encounters"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/encounters-multiple-cpt-e-m-codes"
+        },
+        "name": "Multiple CPT E&M Codes",
+        "description": "This is an example of how to record multiple CPT Evaluation and Management codes with a single encounter.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/EncounterActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/EncounterDiagnosis",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemObservation"
+        ],
+        "groupingId": "encounters"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/EncountersSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/encounters-outpatient-encounter-patient-disenrolled"
+        },
+        "name": "Outpatient Encounter Patient Disenrolled",
+        "description": "This is an example of an outpatient visit discharge disposition. In order to support a local Discharge Disposition code the dischargeDisposition contains the &quot;OTH&quot; nullFlavor.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/EncountersSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/EncounterActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ServiceDeliveryLocation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "encounters"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/EncountersSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/encounters-outpatient-encounter-with-diagnoses"
+        },
+        "name": "Outpatient Encounter with Diagnoses",
+        "description": "This example illustrates how to structure Encounter Diagnosis for the 170.314(b)(2) Transitions of care - L) Encounter Diagnosis",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/EncountersSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/EncounterActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ServiceDeliveryLocation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/EncounterDiagnosis",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemStatus"
+        ],
+        "groupingId": "encounters"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/family-history-generic"
+        },
+        "name": "Family History Generic",
+        "description": "Example shows generic &quot;family history of x&quot; and &quot;no family history of x&quot; with commentary suggesting better options.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/FamilyHistoryOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/FamilyHistoryObservation"
+        ],
+        "groupingId": "family-history"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/family-history-two-individuals-same-relationship-to-the-patient"
+        },
+        "name": "Family History two individuals same relationship to the patient",
+        "description": "Example shows two brothers with multiple conditions. Though they have the same relationship to the patient, they can be identified by their separation into two family history organizers as well as by their subject ID's.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/FamilyHistoryOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/FamilyHistoryObservation"
+        ],
+        "groupingId": "family-history"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/family-history-normal-family-history-father-deceased-mother-aliv"
+        },
+        "name": "Normal Family History Father deceased-Mother alive",
+        "description": "Example shows multiple observations for one family member, identifying the cause of death, and a family member with no known problems.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/FamilyHistoryOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/FamilyHistoryObservation"
+        ],
+        "groupingId": "family-history"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/FunctionalStatusSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/functional-status-functional-assessment-glasgow-coma"
+        },
+        "name": "Functional Assessment - Glasgow Coma",
+        "description": "This is an example of a Glasgow Coma Scale. It illustrates an assessment in the Functional Status Section.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/FunctionalStatusSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AssessmentScaleObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AssessmentScaleSupportingObservation"
+        ],
+        "groupingId": "functional-status"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/FunctionalStatusSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/functional-status-functional-impairment"
+        },
+        "name": "Functional Impairment",
+        "description": "This is an example of a functional impairment. It only illustrates one potential templated within the functional status section and was originally prepared for the ONC 2014 Transitions of Care test scenario, inpatient for MU2 170.314(b)(2). Note that there are significant changes to functional and cognitive status in C-CDA 2.1 (including section breakout and deprecation of certain templates). This example represents the proper way to send a functional impairment in C-CDA R2.1.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/FunctionalStatusSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/FunctionalStatusObservation"
+        ],
+        "groupingId": "functional-status"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/FunctionalStatusSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/functional-status-no-functional-impairment"
+        },
+        "name": "No Functional Impairment",
+        "description": "This is an example of no functional impairment. It only illustrates one potential templated within the functional status section and was originally prepared for the ONC 2014 170.314(b)(2) Transitions of care - M) Functional and Cognitive Status. Note that there are significant changes to functional and cognitive status in C-CDA 2.1 (including section breakout and deprecation of certain templates). This example represents the proper way to send no functional impairment in C-CDA R2.1.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/FunctionalStatusSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/FunctionalStatusObservation"
+        ],
+        "groupingId": "functional-status"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/general-external-document-reference"
+        },
+        "name": "External Document Reference",
+        "description": "This demonstrates how an individual entry may refer to an external document where information was originally provided (e.g. a problem in this example). In addition, how to also link back to the original observation using externalObservation is also shown. While these elements are optional, they help create a chain of data provenance.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ExternalDocumentReference"
+        ],
+        "groupingId": "general"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/general-narrative-reference-act"
+        },
+        "name": "Narrative Reference - Act",
+        "description": "This example demonstrates how to link the section narrative (section.text) to the coded information (entry) below. The example includes several comments and does not conform to any specific C-CDA/CDA template. The principles agreed to in this sample should be present in all other examples.",
+        "isExample": true,
+        "profile": [],
+        "groupingId": "general"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/general-narrative-reference-encounter"
+        },
+        "name": "Narrative Reference - Encounter",
+        "description": "This example demonstrates how to link the section narrative (section.text) to the coded information (entry) below. The example includes several comments and does not conform to any specific C-CDA/CDA template. The principles agreed to in this sample should be present in all other examples.",
+        "isExample": true,
+        "profile": [],
+        "groupingId": "general"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/general-narrative-reference-observation"
+        },
+        "name": "Narrative Reference - Observation",
+        "description": "This example demonstrates how to link the section narrative (section.text) to the coded information (entry) below. The example includes several comments and does not conform to any specific C-CDA/CDA template. The principles agreed to in this sample should be present in all other examples.",
+        "isExample": true,
+        "profile": [],
+        "groupingId": "general"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/general-narrative-reference-organizer"
+        },
+        "name": "Narrative Reference - Organizer",
+        "description": "This example demonstrates how to link the section narrative (section.text) to the coded information (entry) below. The example includes several comments and does not conform to any specific C-CDA/CDA template. The principles agreed to in this sample should be present in all other examples.",
+        "isExample": true,
+        "profile": [],
+        "groupingId": "general"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/general-narrative-reference-procedure"
+        },
+        "name": "Narrative Reference - Procedure",
+        "description": "This example demonstrates how to link the section narrative (section.text) to the coded information (entry) below. The example includes several comments and does not conform to any specific C-CDA/CDA template. The principles agreed to in this sample should be present in all other examples.",
+        "isExample": true,
+        "profile": [],
+        "groupingId": "general"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/general-narrative-reference-substanceadministration"
+        },
+        "name": "Narrative Reference - SubstanceAdministration",
+        "description": "This example demonstrates how to link the section narrative (section.text) to the coded information (entry) below. The example includes several comments and does not conform to any specific C-CDA/CDA template. The principles agreed to in this sample should be present in all other examples.",
+        "isExample": true,
+        "profile": [],
+        "groupingId": "general"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/general-narrative-reference-supply"
+        },
+        "name": "Narrative Reference - Supply",
+        "description": "This example demonstrates how to link the section narrative (section.text) to the coded information (entry) below. The example includes several comments and does not conform to any specific C-CDA/CDA template. The principles agreed to in this sample should be present in all other examples.",
+        "isExample": true,
+        "profile": [],
+        "groupingId": "general"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/general-no-section-information-problems"
+        },
+        "name": "No Section Information Problems",
+        "description": "This is an example of no information available for problems.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection"
+        ],
+        "groupingId": "general"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/USRealmHeader"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/general-parent-document-replace-relationship"
+        },
+        "name": "Parent Document Replace Relationship",
+        "description": "This is an example of how a continuity of care document (or other document) may reference parent documents. This one replaces a previous document.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/USRealmHeader"
+        ],
+        "groupingId": "general"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/general-share-with-patient-or-proxy"
+        },
+        "name": "Share With Patient or Proxy",
+        "description": "This is an example of how to mark information in an entry as shareable or not shareable with a patient and/or their proxies. This example uses a Note Activity, but the information below could go inside any entry.",
+        "isExample": true,
+        "profile": [],
+        "groupingId": "general"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/GoalsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/goals-narrative-only"
+        },
+        "name": "Goals Narrative Only",
+        "description": "This is an example of how to send a goals section with only narrative.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/GoalsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/GoalObservation"
+        ],
+        "groupingId": "goals"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/GoalsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/goals-sdoh-goal"
+        },
+        "name": "SDOH Goal",
+        "description": "This is an example of how to send a goals section with a coded Goal using ICD10.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/GoalsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/GoalObservation"
+        ],
+        "groupingId": "goals"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/DocumentationOf"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/header-care-team-in-transition-of-care-documents"
+        },
+        "name": "Care Team In Transition of Care Documents",
+        "description": "This is an example of how to include Care Team information for 170.315_b1 Ambulatory test data",
+        "isExample": true,
+        "profile": [],
+        "groupingId": "header"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/USRealmHeader"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/header-direct-address"
+        },
+        "name": "Direct Address",
+        "description": "This demonstrates a patient with a Patient DirectTrust Address and a Provider Organization with a Covered Entity DirectTrust Address.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/USRealmHeader"
+        ],
+        "groupingId": "header"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/header-masked-social-security-number"
+        },
+        "name": "Masked Social Security Number",
+        "description": "This is an example of how to represent a social security number (SSN) that has been masked to show only the last four digits.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/USRealmHeader"
+        ],
+        "groupingId": "header"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/header-multiple-patient-identifiers"
+        },
+        "name": "Multiple Patient Identifiers",
+        "description": "This demonstrates a patient with multiple identifiers from different institutions.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/USRealmHeader"
+        ],
+        "groupingId": "header"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/header-patient-aliases"
+        },
+        "name": "Patient Aliases",
+        "description": "Best practices for sending one or more patient aliases",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/USRealmPatientNamePTNUSFIELDED"
+        ],
+        "groupingId": "header"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/header-patient-birth-name"
+        },
+        "name": "Patient Birth Name",
+        "description": "This example illustrates how to structure Patient's birth name, which is a special case of previous name.",
+        "isExample": true,
+        "profile": [],
+        "groupingId": "header"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/header-patient-deceased"
+        },
+        "name": "Patient Deceased",
+        "description": "This is an example of how to use sdtc extension of deceasedInd. See this site for more on CDA extensions: http://wiki.hl7.org/index.php?title=CDA_R2_Extensions",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/USRealmHeader"
+        ],
+        "groupingId": "header"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/header-patient-demographic-information"
+        },
+        "name": "Patient Demographic Information",
+        "description": "This example illustrates how to structure Patient Demographics for the 170.314(b)(2) Transitions of care - A) Patient Demographics.",
+        "isExample": true,
+        "profile": [],
+        "groupingId": "header"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/header-patient-previous-name"
+        },
+        "name": "Patient Previous Name",
+        "description": "This example illustrates how to structure Patient's previous name.",
+        "isExample": true,
+        "profile": [],
+        "groupingId": "header"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/header-patient-with-prior-addresses"
+        },
+        "name": "Patient With Prior Addresses",
+        "description": "This example illustrates how to structure multiple past addresses for a patient",
+        "isExample": true,
+        "profile": [],
+        "groupingId": "header"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/header-person-name-formatting"
+        },
+        "name": "Person Name Formatting",
+        "description": "This example demonstrates the idea that name pieces should be sent in a logical display order (ie such that a receiver which only extracts the text and ignores the markup around `<given>`, `<family>`, etc. would still display the name in a way a human would interpret correctly).",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/USRealmPatientNamePTNUSFIELDED"
+        ],
+        "groupingId": "header"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/ClinicalDocument"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/health-concerns-link-to-problems-section"
+        },
+        "name": "Health Concerns Link to Problems Section",
+        "description": "This is an example of how to link a concern to a problem in the problem list section.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/HealthConcernsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/HealthConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/EntryReference",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemConcernAct"
+        ],
+        "groupingId": "health-concerns"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/ClinicalDocument"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/health-concerns-link-to-problems-section-with-linkhtml"
+        },
+        "name": "Health Concerns Link to Problems Section with linkHTML",
+        "description": "This is an example of how to link a concern to a problem in the problem list section with linkHTML.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/HealthConcernsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/HealthConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/EntryReference",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemConcernAct"
+        ],
+        "groupingId": "health-concerns"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/HealthConcernsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/health-concerns-narrative-only"
+        },
+        "name": "Health Concerns Narrative Only",
+        "description": "This is an example of how to send a health concern section with only narrative.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/HealthConcernsSection"
+        ],
+        "groupingId": "health-concerns"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/HealthConcernsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/health-concerns-no-known-health-concerns"
+        },
+        "name": "No Known Health Concerns",
+        "description": "This is an example of how an author can record they have no health concerns for a patient.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/HealthConcernsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/HealthConcernAct"
+        ],
+        "groupingId": "health-concerns"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/immunizations-immunization-not-given-patient-refused"
+        },
+        "name": "Immunization not given Patient refused",
+        "description": "This is an example of how an author can record a patient refused an immunization.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationMedicationInformation"
+        ],
+        "groupingId": "immunizations"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/immunizations-influenza-vaccination"
+        },
+        "name": "Influenza Vaccination",
+        "description": "This example illustrates how to structure Immunizations for the 170.314(b)(2) Transitions of care - J) Immunizations.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationMedicationInformation"
+        ],
+        "groupingId": "immunizations"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/immunizations-influenza-vaccination-patient-reported"
+        },
+        "name": "Influenza Vaccination - Patient Reported",
+        "description": "This example illustrates how to structure Immunizations when it's reported by a patient",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationMedicationInformation"
+        ],
+        "groupingId": "immunizations"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/immunizations-influenza-vaccination-with-ndc"
+        },
+        "name": "Influenza Vaccination with NDC",
+        "description": "This example illustrates how to structure Immunizations for the 170.314(b)(2) Transitions of care - J) Immunizations with a translation for the NDC code.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationMedicationInformation"
+        ],
+        "groupingId": "immunizations"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/immunizations-no-section-information-immunizations"
+        },
+        "name": "No Section Information Immunizations",
+        "description": "This is an example of no information available for immunizations. This example is similar to the No Section Information Problems example. This sample is not approriate for asserting 'No Known Immunizations'.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationsSection"
+        ],
+        "groupingId": "immunizations"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/immunizations-unknown-immunization-status"
+        },
+        "name": "Unknown Immunization Status",
+        "description": "This is an example of how an author can record they do now know whether the patient has received any vaccinations.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ImmunizationMedicationInformation"
+        ],
+        "groupingId": "immunizations"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ActivitiesSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/interventions-intervention-counseling"
+        },
+        "name": "Intervention Counseling",
+        "description": "This example illustrates an intervention section, with an intervention act wrapping a procedure activity act.\nThe example task force approved this to provide a parallel example to how QRDA communicates interventions. Some systems may choose to include this in the procedure section.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ActivitiesSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/InterventionAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "interventions"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicalEquipmentSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/medical-equipment-implant-udi-organizer"
+        },
+        "name": "Implant UDI Organizer",
+        "description": "This is an example of how to record the full details of a UDI. This examples follows the design in Appendix B of the 2019 C-CDA Companion Guide.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicalEquipmentSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProcedureActivityProcedure",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProductInstance"
+        ],
+        "groupingId": "medical-equipment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicalEquipmentSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/medical-equipment-implant-udi-unknown"
+        },
+        "name": "Implant UDI Unknown",
+        "description": "This is an example of a medical equipment section containing an implantable device where the full unique device identifier (UDI) is unknown.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicalEquipmentSection"
+        ],
+        "groupingId": "medical-equipment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicalEquipmentSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/medical-equipment-implant-without-procedure"
+        },
+        "name": "Implant Without Procedure",
+        "description": "This is an example of how an author can record an implant when the procedure is unknown.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicalEquipmentSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProcedureActivityProcedure",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProductInstance"
+        ],
+        "groupingId": "medical-equipment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicalEquipmentSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/medical-equipment-multiple-implants"
+        },
+        "name": "Multiple Implants",
+        "description": "This is an example of how a single procedure (angioplasty) can have multiple implants (2 drug eluting stents). There are still two entries since this is being included in medical equipment rather than procedure section.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicalEquipmentSection"
+        ],
+        "groupingId": "medical-equipment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicalEquipmentSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/medical-equipment-no-implanted-devices"
+        },
+        "name": "No Implanted Devices",
+        "description": "This is an example of how an author can record a patient has no implanted devices",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicalEquipmentSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProcedureActivityProcedure",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProductInstance"
+        ],
+        "groupingId": "medical-equipment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/medical-equipment-non-medicinal-supply-cane-and-eyeglasses"
+        },
+        "name": "Non-Medicinal Supply - Cane and Eyeglasses",
+        "description": "This example demonstrates how to represent equipment supplied to or used by a\npatient such as wheelchairs, canes, walkers, hearing aids, eye glasses.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/NonMedicinalSupplyActivity"
+        ],
+        "groupingId": "medical-equipment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/medications-drug-mixture"
+        },
+        "name": "Drug Mixture",
+        "description": "This is an example of a mixture of three or more different drug ingredients, each with a different relative concentration.\nNote the use of the urn:ihe:pharm:medication namespace, which is required by the UV Medication Information (detail) template.\nThe CDA schema doesn't recognize content from this namespace and so flags it as invalid by default, although extension content from other namespaces\nis allowed in CDA even when not recognized by the schema (see 1.4 CDA Extensibility).",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationInformation"
+        ],
+        "groupingId": "medications"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/medications-free-text-medication-sig"
+        },
+        "name": "Free Text Medication SIG",
+        "description": "This is an example of having a medication with only a free text SIG when you have no other coded information.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationInformation"
+        ],
+        "groupingId": "medications"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/medications-med-relative-dose-iv-drug"
+        },
+        "name": "Med Relative Dose IV Drug",
+        "description": "This example illustrates an example of a medication order with the following characteristics:\nan IV drug with a relative dose quantity that is based on weight,\na drug vehicle used for preparation,\nand indications for the medication.\nThis example was created to address the following Use Case:\nAn oncologist is ordering a drug as part of a chemotherapy regimen. Chemotherapy regimens consist of orders could be administered weeks or months in advance.  Moreover their preparation is based on the patient's weight at the time of administration.  Because of these constraints, the C-CDA medications section needs to be represented in a way that reflects this.\nAdditional Notes and Assumptions:\nthe /entry/substanceAdministration/effectiveTime/@value is meant to be set at a future date relative to the date of the encounter.  The date of the encounter would have been represented in a separate section outside of this example.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationInformation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "medications"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/medications-med-at-bedtime"
+        },
+        "name": "Med at bedtime",
+        "description": "This is an example of having a medication with event timing (take at bedtime or at the &quot;hour of sleep&quot; (HS))",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationInformation"
+        ],
+        "groupingId": "medications"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/medications-med-oral-qid-with-prn"
+        },
+        "name": "Med oral QID with PRN",
+        "description": "This is an example of a medication which is QID and PRN (as needed) but with no precondition specified. It was generated based on SDWG list-serv discussion in December 2013. It also demonstrated a pre-coordinated generic medication coded at the SDC level (generic 600mg Oral Tablet) in RxNorm hierarchy.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationInformation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "medications"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/medications-med-oral-with-indications-and-instructions"
+        },
+        "name": "Med oral with indications and instructions",
+        "description": "This is an example of a medication administered orally with a PRN coded precondition, instructions (not PRN), and indications (not PRN).",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationInformation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "medications"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/medications-medication-refused"
+        },
+        "name": "Medication Refused",
+        "description": "This is an example of a patient refusing to take a medication at a point in time due to a reason of patient objection (QRDA template used)",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationInformation"
+        ],
+        "groupingId": "medications"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/medications-no-medications"
+        },
+        "name": "No Medications",
+        "description": "This is an example of no medications",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationInformation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "medications"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/medications-single-administration-of-medication"
+        },
+        "name": "Single administration of medication",
+        "description": "This is an example of two baby aspirin being administered at a single point in time. At the January 2014 San Antonio meeting of HL7, this approach was decided as appropriate for medication timing of a point in time. Subsequent to that meeting, the TTT validator was adjusted to accept this format for medication times.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationInformation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "medications"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MentalStatusSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/mental-status-memory-impairment"
+        },
+        "name": "Memory Impairment",
+        "description": "This is an example of mental (cognitive) impairment. It only illustrates one potential templated within the mental status section and was originally prepared for the ONC 2014 170.314(b)(2) Transitions of care - M) Functional and Cognitive Status.  Note that there are significant changes to functional and cognitive status in C-CDA 2.1 (including section breakout and deprecation of certain templates). This example represents the proper way to send a mental impairment in C-CDA R2.1.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MentalStatusSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MentalStatusObservation"
+        ],
+        "groupingId": "mental-status"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MentalStatusSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/mental-status-no-cognitive-impairment"
+        },
+        "name": "No Cognitive Impairment",
+        "description": "This is an example of no cognitive impairment. It only illustrates one potential templated within the mental status section and was originally prepared for the ONC 2014 170.314(b)(2) Transitions of care - M) Functional and Cognitive Status. Note that there are significant changes to functional and cognitive status in C-CDA 2.1 (including section breakout and deprecation of certain templates). This example represents the proper way to send no cognitive impairment in C-CDA R2.1.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MentalStatusSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MentalStatusObservation"
+        ],
+        "groupingId": "mental-status"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/HospitalCourseSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/notes-discharge-note-in-hospital-course"
+        },
+        "name": "Discharge Note in Hospital Course",
+        "description": "This is an example of how to record a single Discharge Note in a Hospital Course Section.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/HospitalCourseSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/NotesSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/NoteActivity"
+        ],
+        "groupingId": "notes"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/notes-note-directly-attached-to-a-procedure"
+        },
+        "name": "Note directly attached to a Procedure",
+        "description": "This is an example of how to associate a Procedure Note with a Procedure in the Procedure section.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProcedureActivityProcedure",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/NoteActivity"
+        ],
+        "groupingId": "notes"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/notes-rtf-note"
+        },
+        "name": "RTF Note",
+        "description": "This is an example of how to include rich text in a C-CDA Note Activity.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/NoteActivity"
+        ],
+        "groupingId": "notes"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/NotesSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/notes-single-consultation-note"
+        },
+        "name": "Single Consultation Note",
+        "description": "This is an example of how to record a single Consultation Note.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/NotesSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/NoteActivity"
+        ],
+        "groupingId": "notes"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/PlanofTreatmentSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/plan-of-treatment-care-plan-goals-and-instructions"
+        },
+        "name": "Care Plan Goals and Instructions",
+        "description": "This example illustrates how to structure a Goals and Instructions for the 170.314(b)(2) Transitions of care - K) Care Plan (Goals and Instructions).",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PlanofTreatmentSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/GoalObservation"
+        ],
+        "groupingId": "plan-of-treatment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/PlanofTreatmentSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/plan-of-treatment-no-planned-tests"
+        },
+        "name": "No Planned Tests",
+        "description": "This is an example of how an author can record no planned tests.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PlanofTreatmentSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PlannedProcedure"
+        ],
+        "groupingId": "plan-of-treatment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/PlanofTreatmentSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/plan-of-treatment-planned-ekg"
+        },
+        "name": "Planned EKG",
+        "description": "This example illustrates how to structure a planned observation.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PlanofTreatmentSection"
+        ],
+        "groupingId": "plan-of-treatment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/ClinicalDocument"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/plan-of-treatment-planned-encounter-referral"
+        },
+        "name": "Planned Encounter - Referral",
+        "description": "This example illustrates how to structure a Referral for the 170.314(b)(2) Transitions of care - N) Referral",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ReasonforReferralSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PlanofTreatmentSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PlannedEncounter",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ServiceDeliveryLocation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/Indication"
+        ],
+        "groupingId": "plan-of-treatment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/problems-active-problem"
+        },
+        "name": "Active Problem",
+        "description": "This example illustrates how to structure an active problem.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemObservation"
+        ],
+        "groupingId": "problems"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/problems-complete-or-resolved-problem"
+        },
+        "name": "Complete or Resolved Problem",
+        "description": "This example illustrates how to structure a resolved problem, both by having a biological resolution date and a completed status of the concern.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemObservation"
+        ],
+        "groupingId": "problems"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/problems-no-known-problems"
+        },
+        "name": "No Known Problems",
+        "description": "This is an example of no known problems.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemObservation"
+        ],
+        "groupingId": "problems"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/problems-patient-does-not-have-diabetes"
+        },
+        "name": "Patient Does Not Have Diabetes",
+        "description": "This is an example of an author asserting a patient does not have diabetes.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemObservation"
+        ],
+        "groupingId": "problems"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/problems-pregnancy-with-week-gestation"
+        },
+        "name": "Pregnancy with Week Gestation",
+        "description": "This is an example of a patient pregnancy in problem list with information about estimateed delivery date. This is an alternative place to document and share pregancy informatoin in addition to social history and detailed pregnancy sections (see HL7 IG for more on pregancy status here: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=494)",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/EstimatedDateofDelivery"
+        ],
+        "groupingId": "problems"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/problems-problem-targetsitecode-qualifier"
+        },
+        "name": "Problem TargetSiteCode Qualifier",
+        "description": "This is an example of adding a SNOMED qualifier to an ambiguous ICD-9 which could be used in qualifying patients related to QRDA/eCQM measure",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemObservation"
+        ],
+        "groupingId": "problems"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/problems-problem-value-translation-qualifier-examples"
+        },
+        "name": "Problem Value, Translation, Qualifier examples",
+        "description": "This example illustrates how to structure an active problem with value codes that need translation & qualifiers.\nNote that no formally vetted post-coordination semantics exist for codesystems besides SNOMED today (eg ICD-10), which is a limitation\nto this example. Example was updated after the March 2022 C-CDA Implementation-a-thon.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemObservation"
+        ],
+        "groupingId": "problems"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/problems-sdoh-problem"
+        },
+        "name": "SDOH Problem",
+        "description": "This example illustrates how to structure an Active SDOH problem with a translation to ICD10.\nSome systems may document active SDOH issues in the Social History Section or the Health Concerns Section. Gravity and other industry initiatives may provide additional guidance on best practices.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemConcernAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemObservation"
+        ],
+        "groupingId": "problems"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/procedures-procedure-alternatives"
+        },
+        "name": "Procedure Alternatives",
+        "description": "This example illustrates a planned surgical procedure with multiple proposed alternatives, with the expectation that the surgeon will choose one to perform when the surgery actually occurs.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PlannedProcedure"
+        ],
+        "groupingId": "procedures"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/procedures-procedure-refused"
+        },
+        "name": "Procedure Refused",
+        "description": "This is an example of a patient refusing a procedure.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProcedureActivityProcedure",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/Reason"
+        ],
+        "groupingId": "procedures"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/procedures-procedure-unsuccessful"
+        },
+        "name": "Procedure Unsuccessful",
+        "description": "This is an example of an unsuccessful procedure attempt.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProcedureActivityProcedure"
+        ],
+        "groupingId": "procedures"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/procedures-section-act-entry"
+        },
+        "name": "Procedures Section Act Entry",
+        "description": "This example illustrates an act within a procedure section.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "procedures"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/procedures-section-observation-entry"
+        },
+        "name": "Procedures Section Observation Entry",
+        "description": "This example illustrates how an observation within a procedure section.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "procedures"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/procedures-section-procedure-entry"
+        },
+        "name": "Procedures Section Procedure Entry",
+        "description": "This example illustrates how a procedure which &quot;alters the physical state&quot; of the patient and should be classified as a procedure.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProcedureActivityProcedure",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "procedures"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/procedures-section-procedure-entry-colonoscopy"
+        },
+        "name": "Procedures Section Procedure Entry - Colonoscopy",
+        "description": "This example illustrates a Colonoscopy procedure which with biopsy. Even if not biopsy, a colonscopy is recommended to be in a Procedure Activity Procedure.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProcedureActivityProcedure",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "procedures"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/quality-care-compliance-in-c-cda"
+        },
+        "name": "Quality Care Compliance in C-CDA",
+        "description": "This is an example of how one could report quality measures in a C-CDA document. It is not a C-CDA template, but could be included as a section (since open template) and is conformant to QRDA1 Measure Section constraints. It would not be appropriate for US QRDA submission.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+        ],
+        "groupingId": "quality"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ConsultationNote"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/referrals-close-referral-with-a-document"
+        },
+        "name": "Close Referral with a Document",
+        "description": "This example document shows how an ordered referral could have a completed Constulation Note Document fulfill the requirements of Closing the Loop quality measure https://ecqi.healthit.gov/ecqm/measures/cms50v7\nNote that the examples task force has approved multiple samples in regards to this quality measure. The Planned Referral Act opens the loop (see example: Referral Request and Close Referral with a Note) and this Consultation Note Document would be eligible to close the loop.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ConsultationNote"
+        ],
+        "groupingId": "referrals"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/ClinicalDocument"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/referrals-referral-request-and-close-referral-with-a-note"
+        },
+        "name": "Referral Request and Close Referral with a Note",
+        "description": "This example shows how an ordered referral could have a completed note documented in to fulfill the requirements of Closing the Loop quality measure https://ecqi.healthit.gov/ecqm/measures/cms50v7\nNote that the examples task force has approved multiple examples in regards to this quality measure. The Planned Referral Act opens the loop and the Note would be eligible to close the loop. This examples combines into one for ease of reader. In a 'real-world' exchange these would be in separate documents. The example titled Close Referral with a Document is another approach where a full document completes the referral. Other additional appaoaches may be appropriate.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PlanofTreatmentSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/NotesSection"
+        ],
+        "groupingId": "referrals"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/results-covid-positive"
+        },
+        "name": "Result COVID Positive",
+        "description": "This is an example of a positive COVID result using one potential LOINC code. Please note that LOINC information may change as this was an urgent release. Other possible LOINC codes are noted in comments of the example",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultObservation"
+        ],
+        "groupingId": "results"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/results-panel-with-coded-values-of-negative-positive"
+        },
+        "name": "Result panel with coded values of negative-positive",
+        "description": "This is an example of how to encode positive and negative, which are common data types returned form lab equipment. While some technologies may represent this as a type of ST (string), it is logical and easily possible to encode this information using SNOMED-CT. This would allow structured examination of this information downstream as well as comparison to a structured reference range, as shown in the example.\nPreviously the examples task force approved this sample with the data type Coded Ordinal (CO) with the example name: Result panel with two ordinal values of negative-positive. The examples task force received feedback during implementation that CO is not commonly used, and CD is preferred. Updated the sample name to Result panel with coded values of negative-positive",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultObservation"
+        ],
+        "groupingId": "results"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/results-with-multiple-reference-ranges"
+        },
+        "name": "Result with Multiple Reference Ranges",
+        "description": "This is an example of a value from a lab result with multiple reference ranges: Negative (less than), Bordeline (equal), and Positive (greater than).",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "results"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/results-with-an-unstructured-string-as-value-urine-color"
+        },
+        "name": "Result with an unstructured string as value (urine color)",
+        "description": "This is an example of a value from a lab result that may not be structured.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultObservation"
+        ],
+        "groupingId": "results"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/results-with-greater-than-a-specified-value"
+        },
+        "name": "Result with greater than a specified value",
+        "description": "This is an example of how to encode &quot;greater than&quot; (but not equal to) a specific range when returned from lab equipment. The example is for a point-of-care glucometer, which measures blood sugar for diabetics. Often these devices may have an upper bound, 500 mg/dL is shown in this example. An inclusive tag of false is shown to demonstrate a non-inclusive range. The upper bound of the interval is positive infinity in this example. This example also includes two structured reference ranges for normal and high.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultObservation"
+        ],
+        "groupingId": "results"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/results-with-lab-location"
+        },
+        "name": "Result with lab location",
+        "description": "This is an example of a results panel with Laboratory Location details as required by 2015 Certification Sender test 170.315(e1), in compliance with 42 CFR 493.1291(c)(1) through (7).",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultObservation"
+        ],
+        "groupingId": "results"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/results-with-non-numeric-physical-quantity-and-unit"
+        },
+        "name": "Result with non-numeric physical quantity and unit",
+        "description": "This is an example of a value from a lab with a discrete unit, but whose value is not a number, so the PQ datatype, the only type with a unit attribute, cannot be used.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultObservation"
+        ],
+        "groupingId": "results"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/results-radiology-with-image-narrative"
+        },
+        "name": "Results Radiology with Image Narrative",
+        "description": "This is an example of how to show a radiology result with narrative report in the results section. For the value, xsi-type equals ED (with reference) for encapsulated data.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultObservation"
+        ],
+        "groupingId": "results"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/results-unit-non-ucum"
+        },
+        "name": "Results Unit Non-UCUM",
+        "description": "This is an example of a value from a lab which didn't include a UCUM unit.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultObservation"
+        ],
+        "groupingId": "results"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/results-of-basic-metabolic-panel-and-troponin"
+        },
+        "name": "Results of Basic Metabolic Panel and Troponin",
+        "description": "Sample from Meaningful Use test data (inpatient data)",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultObservation"
+        ],
+        "groupingId": "results"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/results-of-co2-test"
+        },
+        "name": "Results of CO2 Test",
+        "description": "This example illustrates how to structure Laboratory Tests and Values/Results for the 170.314(b)(2) Transitions of care - I) Laboratory Tests and Values/Results.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultObservation"
+        ],
+        "groupingId": "results"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/results-panel-with-pending-component"
+        },
+        "name": "Results panel with pending component",
+        "description": "This is an example of a results panel with pending component.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultObservation"
+        ],
+        "groupingId": "results"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/results-with-less-than-specific-value"
+        },
+        "name": "Results with less than specific value",
+        "description": "This is an example of how to encode &quot;less than or equal to&quot; a specific range when returned from lab equipment. The example is for BNP, an immunoassay where the lower threshold for detection is often 5 pg/mL. The lower bound of the interval is zero in this example, even though this is none may be specified, since zero is the lower bound for measures of physical quantity. This example also includes a structured reference range.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultObservation"
+        ],
+        "groupingId": "results"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/results-with-translation-unit"
+        },
+        "name": "Results with translation unit",
+        "description": "This is an example of a value from a lab which requires a translation for its unit. All units for physical quantities should be represent in UCUM.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultObservation"
+        ],
+        "groupingId": "results"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/BirthSexObservation"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/social-history-birth-sex"
+        },
+        "name": "Birth Sex",
+        "description": "This observation represents the sex of the patient at birth. It is the sex that is entered on the person's birth certificate at time of birth.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/BirthSexObservation"
+        ],
+        "groupingId": "social-history"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/social-history-current-smoking-status"
+        },
+        "name": "Current Smoking Status",
+        "description": "This is an example of current smoking status. This example also includes a coordinating social history observation to convey the amount of smoking using a SNOMED code. This SNOMED code in the accompanying observation is not acceptable since smoking status, which is constrained by HL7 and Meaningful Use value set requirements. Each social history section shall only include a single smoking status.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SmokingStatusMeaningfulUse",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/TobaccoUse"
+        ],
+        "groupingId": "social-history"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/social-history-electronic-cigarette"
+        },
+        "name": "Electronic Cigarette",
+        "description": "This is an example of a patient using Electronic cigarette liquid containing nicotine. The concept selected aligns with the 2019 guidance https://www.healthit.gov/isa/representing-patient-electronic-cigarette-use-vaping.\nThe examples task force spent significant time discussion the different substances that can be used in an electronic cigarette, more than just nicotine.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistoryObservation"
+        ],
+        "groupingId": "social-history"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/social-history-former-smoking-status"
+        },
+        "name": "Former Smoking Status",
+        "description": "This is an example of a former smoker in smoking status. There is a variation in how effectiveTime/high is used since this represents when the patient stopped smoking, not when they stopped being a former smoker. C-CDA explicitly guides to this usage of effectiveTime. A best practice to avoid confusion is for each social history section to only include a single smoking status.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SmokingStatusMeaningfulUse",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "social-history"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/social-history-never-smoking-status"
+        },
+        "name": "Never Smoking Status",
+        "description": "This is an example of a never smoker in smoking status. A best practice to avoid confusion is for each social history section to only include a single smoking status.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SmokingStatusMeaningfulUse",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "social-history"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/social-history-not-pregnant"
+        },
+        "name": "Not Pregnant",
+        "description": "This is an example of patient that is not pregnant.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PregnancyObservation"
+        ],
+        "groupingId": "social-history"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/social-history-sexual-orientation-gender-identity"
+        },
+        "name": "Sexual Orientation Gender Identity",
+        "description": "This is an example of sexual orientation and gender identity represented in a C-CDA under the social history section. It has codes which align with the ISA recommendations for this information (see: https://www.healthit.gov/isa/representing-patient-identified-sexual-orientation)",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistoryObservation"
+        ],
+        "groupingId": "social-history"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/social-history-unknown-smoking-status"
+        },
+        "name": "Unknown Smoking Status",
+        "description": "This is an example of unknown smoking status. There is a major variation in how no information is managed for smoking status. C-CDA explicitly guides to not utilize a nullFlavor for this information. Instead a SNOMED code should be used as demonstrated in the example. A best practice to avoid confusion is for each social history section to only include a single smoking status.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SmokingStatusMeaningfulUse",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
+        ],
+        "groupingId": "social-history"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/social-history-unknown-if-pregnant"
+        },
+        "name": "Unknown if Pregnant",
+        "description": "This is an example of unknown pregnancy status.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PregnancyObservation"
+        ],
+        "groupingId": "social-history"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/social-history-we-care-assessment"
+        },
+        "name": "WE Care Assessment",
+        "description": "WE CARE (Well Child Care, Evaluation, Community Resources, Advocacy, Referral, Education) is a clinic-based screening and referral system developed for pediatric settings [USCF](https://sirenetwork.ucsf.edu/tools-resources/resources/we-care).\nThis example includes the assessment in the Social History section",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AssessmentScaleObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AssessmentScaleSupportingObservation"
+        ],
+        "groupingId": "social-history"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/UnstructuredDocument"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/unstructured-cda-reference-pdf"
+        },
+        "name": "CDA reference PDF",
+        "description": "This sample originates from the 2014-11-12 publication.\nThis example shows a CDA document that conforms to the C-CDA Unstructured Document specification using a referenced pdf.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/UnstructuredDocument",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/USRealmHeader"
+        ],
+        "groupingId": "unstructured"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/UnstructuredDocument"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/unstructured-cda-with-embedded-pdf-1"
+        },
+        "name": "CDA with Embedded PDF 1",
+        "description": "This sample originates from the 2014 C-CDA R2.0 publication but has been altered for C-CDA 2.1 conformance. This example shows a CDA document that conforms to the C-CDA Unstructured Document specification using an embedded 64-bit encoded pdf. The PDF is a discharge summary.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/UnstructuredDocument",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/USRealmHeader"
+        ],
+        "groupingId": "unstructured"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/UnstructuredDocument"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/unstructured-cda-with-embedded-pdf-2"
+        },
+        "name": "CDA with Embedded PDF 2",
+        "description": "This example shows a CDA document that conforms to the C-CDA Unstructured Document specification using an embedded 64-bit encoded pdf. It also conforms to the HL7 Personal Advance Care Plan specification and the C-CDA Patient Generated Document header.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/UnstructuredDocument",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/USRealmHeaderforPatientGeneratedDocument"
+        ],
+        "groupingId": "unstructured"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/UnstructuredDocument"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/unstructured-cda-with-embedded-text-plain"
+        },
+        "name": "CDA with Embedded Text plain",
+        "description": "This example shows a CDA document that conforms to the C-CDA Unstructured Document specification using an embedded text plain document (base 64 encoded). When decoded it will show a surgical consult note. Note that the HL7 standard stylesheet will show this natively",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/UnstructuredDocument"
+        ],
+        "groupingId": "unstructured"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/vital-signs-growth-charts-examples"
+        },
+        "name": "Growth Charts Examples",
+        "description": "This example illustrates three vital sign observations with LOINC codes and reference growth chart names for BMI percentile, weight-for-length percentile, and head circumference percentile. or example, this illustrates how to send that a child's BMI percentile is 45 %, and that the CDC (Boys 2-20 years) growth chart was used to determine the value.\n[Pediatric Vital Signs](https://docs.google.com/presentation/d/1R0QQyQZ1_vnmABAQZJd9IJUIYTw8iUXddglNOTdcHug/edit?usp=sharing) chart to help developers include the appropriate reference range.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignsOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignObservation"
+        ],
+        "groupingId": "vital-signs"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/vital-signs-heart-rate-rhythm"
+        },
+        "name": "Heart Rate Rhythm",
+        "description": "This is panel of the 2 vitals signs - pulse, and a Heart Rate Rhythm Observation. Other common vital signs could be included.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignsOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ResultObservation"
+        ],
+        "groupingId": "vital-signs"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/vital-signs-panel-of-vital-signs-oxygen-concentration-included"
+        },
+        "name": "Panel of Vital Signs (Oxygen Concentration Included)",
+        "description": "This is panel of the nine common vital signs collected on an adult in metric units, with the additional inclusion of oxygen concentration as a separate observation.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignsOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignObservation"
+        ],
+        "groupingId": "vital-signs"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/vital-signs-panel-of-vital-signs-in-metric-units"
+        },
+        "name": "Panel of Vital Signs in Metric Units",
+        "description": "This is panel of the nine common vital signs collected on an adult in metric units. Note that body surface area (BSA), head circumference and height (lying) are not included.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignsOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignObservation"
+        ],
+        "groupingId": "vital-signs"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignsSection"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/vital-signs-panel-of-vital-signs-in-mixed-metric-imperial-units"
+        },
+        "name": "Panel of Vital Signs in Mixed Metric-Imperial Units",
+        "description": "This is panel of the nine common vital signs collected on an adult in mixed metric/imperial units. Note that body surface area (BSA), head circumference and height (lying) are not included.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignsSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignsOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/VitalSignObservation"
+        ],
+        "groupingId": "vital-signs"
+      }
+    ]
   }
 }

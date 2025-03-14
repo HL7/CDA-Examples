@@ -22,7 +22,8 @@
         extension="2016-11-01"/>
       <code code="34109-9" codeSystem="2.16.840.1.113883.6.1" 
         displayName="Note">
-        <translation code="8648-8" codeSystem="2.16.840.1.113883.6.1" />
+        <translation code="8648-8" codeSystem="2.16.840.1.113883.6.1" 
+          displayName="Discharge Summary" />
       </code>
       <text><reference value="#DischargeNote" /></text>
       <statusCode code="completed"/>
@@ -35,15 +36,13 @@
         <time value="201609131446-0500"/>
         <assignedAuthor>
           <id root="20cf14fb-b65c-4c8c-a54d-b0cca834c18c"/>
-          <assignedPerson>
-            <name>Dr. Physician</name>
-          </assignedPerson>
+          <name>Dr. Physician</name>
         </assignedAuthor>
       </author>
       <!-- Reference to encounter -->
       <!-- When a Note is in an Encounter Specific Document this may not be needed -->
       <entryRelationship typeCode="COMP" inversionInd="true">
-        <encounter classCode="ENC" moodCode="EVN">
+        <encounter>
           <!-- Encounter ID matches an encounter in the Encounters Section or encompassingEncounter -->
           <id root="1.2.3.4.5.6"/>
         </encounter>
@@ -51,3 +50,4 @@
     </act>
   </entry>
 </section>
+

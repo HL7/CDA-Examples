@@ -4,14 +4,144 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="Binary/allergy-to-food-egg" key="Binary-allergy-to-food-egg" name="Allergy to Food Egg Example"/>
-<artifact id="Binary/allergy-to-latex" key="Binary-allergy-to-latex" name="Allergy to Latex"/>
-<artifact id="Binary/note-discharge" key="Binary-note-discharge" name="Discharge Note in Hospital Course"/>
-<artifact id="Binary/header-masked-ssn" key="Binary-header-masked-ssn" name="Masked Social Security Number"/>
+<artifact id="Binary/problems-active-problem" key="Binary-problems-active-problem" name="Active Problem"/>
+<artifact id="Binary/allergies-allergy-to-food-egg" key="Binary-allergies-allergy-to-food-egg" name="Allergy to food egg"/>
+<artifact id="Binary/allergies-allergy-to-latex" key="Binary-allergies-allergy-to-latex" name="Allergy to latex"/>
+<artifact id="Binary/allergies-allergy-to-specific-drug-codeine" key="Binary-allergies-allergy-to-specific-drug-codeine" name="Allergy to specific drug Codeine"/>
+<artifact id="Binary/allergies-allergy-to-specific-drug-penicillin" key="Binary-allergies-allergy-to-specific-drug-penicillin" name="Allergy to specific drug Penicillin"/>
+<artifact id="Binary/allergies-allergy-to-specific-drug-class-penicillins" key="Binary-allergies-allergy-to-specific-drug-class-penicillins" name="Allergy to specific drug class Penicillins"/>
+<artifact id="Binary/social-history-birth-sex" key="Binary-social-history-birth-sex" name="Birth Sex"/>
+<artifact id="Binary/unstructured-cda-reference-pdf" key="Binary-unstructured-cda-reference-pdf" name="CDA reference PDF"/>
+<artifact id="Binary/unstructured-cda-with-embedded-pdf-1" key="Binary-unstructured-cda-with-embedded-pdf-1" name="CDA with Embedded PDF 1"/>
+<artifact id="Binary/unstructured-cda-with-embedded-pdf-2" key="Binary-unstructured-cda-with-embedded-pdf-2" name="CDA with Embedded PDF 2"/>
+<artifact id="Binary/unstructured-cda-with-embedded-text-plain" key="Binary-unstructured-cda-with-embedded-text-plain" name="CDA with Embedded Text plain"/>
+<artifact id="Binary/plan-of-treatment-care-plan-goals-and-instructions" key="Binary-plan-of-treatment-care-plan-goals-and-instructions" name="Care Plan Goals and Instructions"/>
+<artifact id="Binary/header-care-team-in-transition-of-care-documents" key="Binary-header-care-team-in-transition-of-care-documents" name="Care Team In Transition of Care Documents"/>
+<artifact id="Binary/care-team-narrative-only" key="Binary-care-team-narrative-only" name="Care Team Narrative Only"/>
+<artifact id="Binary/care-team-structured-entry" key="Binary-care-team-structured-entry" name="Care Team Structured Entry"/>
+<artifact id="Binary/referrals-close-referral-with-a-document" key="Binary-referrals-close-referral-with-a-document" name="Close Referral with a Document"/>
+<artifact id="Binary/problems-complete-or-resolved-problem" key="Binary-problems-complete-or-resolved-problem" name="Complete or Resolved Problem"/>
+<artifact id="Binary/social-history-current-smoking-status" key="Binary-social-history-current-smoking-status" name="Current Smoking Status"/>
+<artifact id="Binary/header-direct-address" key="Binary-header-direct-address" name="Direct Address"/>
+<artifact id="Binary/notes-discharge-note-in-hospital-course" key="Binary-notes-discharge-note-in-hospital-course" name="Discharge Note in Hospital Course"/>
+<artifact id="Binary/medications-drug-mixture" key="Binary-medications-drug-mixture" name="Drug Mixture"/>
+<artifact id="Binary/social-history-electronic-cigarette" key="Binary-social-history-electronic-cigarette" name="Electronic Cigarette"/>
+<artifact id="Binary/general-external-document-reference" key="Binary-general-external-document-reference" name="External Document Reference"/>
+<artifact id="Binary/family-history-generic" key="Binary-family-history-generic" name="Family History Generic"/>
+<artifact id="Binary/family-history-two-individuals-same-relationship-to-the-patient" key="Binary-family-history-two-individuals-same-relationship-to-the-patient" name="Family History two individuals same relationship to the patient"/>
+<artifact id="Binary/social-history-former-smoking-status" key="Binary-social-history-former-smoking-status" name="Former Smoking Status"/>
+<artifact id="Binary/medications-free-text-medication-sig" key="Binary-medications-free-text-medication-sig" name="Free Text Medication SIG"/>
+<artifact id="Binary/allergies-free-text-allergy-to-clinical-trial-drug" key="Binary-allergies-free-text-allergy-to-clinical-trial-drug" name="Free-text Allergy to clinical trial drug"/>
+<artifact id="Binary/functional-status-functional-assessment-glasgow-coma" key="Binary-functional-status-functional-assessment-glasgow-coma" name="Functional Assessment - Glasgow Coma"/>
+<artifact id="Binary/functional-status-functional-impairment" key="Binary-functional-status-functional-impairment" name="Functional Impairment"/>
+<artifact id="Binary/goals-narrative-only" key="Binary-goals-narrative-only" name="Goals Narrative Only"/>
+<artifact id="Binary/vital-signs-growth-charts-examples" key="Binary-vital-signs-growth-charts-examples" name="Growth Charts Examples"/>
+<artifact id="Binary/health-concerns-link-to-problems-section" key="Binary-health-concerns-link-to-problems-section" name="Health Concerns Link to Problems Section"/>
+<artifact id="Binary/health-concerns-link-to-problems-section-with-linkhtml" key="Binary-health-concerns-link-to-problems-section-with-linkhtml" name="Health Concerns Link to Problems Section with linkHTML"/>
+<artifact id="Binary/health-concerns-narrative-only" key="Binary-health-concerns-narrative-only" name="Health Concerns Narrative Only"/>
+<artifact id="Binary/vital-signs-heart-rate-rhythm" key="Binary-vital-signs-heart-rate-rhythm" name="Heart Rate Rhythm"/>
+<artifact id="Binary/encounters-hospital-discharge-encounter-with-billable-diagnoses" key="Binary-encounters-hospital-discharge-encounter-with-billable-diagnoses" name="Hospital Discharge Encounter with Billable Diagnoses"/>
+<artifact id="Binary/immunizations-immunization-not-given-patient-refused" key="Binary-immunizations-immunization-not-given-patient-refused" name="Immunization not given Patient refused"/>
+<artifact id="Binary/medical-equipment-implant-udi-organizer" key="Binary-medical-equipment-implant-udi-organizer" name="Implant UDI Organizer"/>
+<artifact id="Binary/medical-equipment-implant-udi-unknown" key="Binary-medical-equipment-implant-udi-unknown" name="Implant UDI Unknown"/>
+<artifact id="Binary/medical-equipment-implant-without-procedure" key="Binary-medical-equipment-implant-without-procedure" name="Implant Without Procedure"/>
+<artifact id="Binary/immunizations-influenza-vaccination" key="Binary-immunizations-influenza-vaccination" name="Influenza Vaccination"/>
+<artifact id="Binary/immunizations-influenza-vaccination-patient-reported" key="Binary-immunizations-influenza-vaccination-patient-reported" name="Influenza Vaccination - Patient Reported"/>
+<artifact id="Binary/immunizations-influenza-vaccination-with-ndc" key="Binary-immunizations-influenza-vaccination-with-ndc" name="Influenza Vaccination with NDC"/>
+<artifact id="Binary/encounters-inpatient-encounter-discharged-to-rehab-location" key="Binary-encounters-inpatient-encounter-discharged-to-rehab-location" name="Inpatient Encounter Discharged to Rehab Location"/>
+<artifact id="Binary/interventions-intervention-counseling" key="Binary-interventions-intervention-counseling" name="Intervention Counseling"/>
+<artifact id="Binary/header-masked-social-security-number" key="Binary-header-masked-social-security-number" name="Masked Social Security Number"/>
+<artifact id="Binary/medications-med-relative-dose-iv-drug" key="Binary-medications-med-relative-dose-iv-drug" name="Med Relative Dose IV Drug"/>
+<artifact id="Binary/medications-med-at-bedtime" key="Binary-medications-med-at-bedtime" name="Med at bedtime"/>
+<artifact id="Binary/medications-med-oral-qid-with-prn" key="Binary-medications-med-oral-qid-with-prn" name="Med oral QID with PRN"/>
+<artifact id="Binary/medications-med-oral-with-indications-and-instructions" key="Binary-medications-med-oral-with-indications-and-instructions" name="Med oral with indications and instructions"/>
+<artifact id="Binary/medications-medication-refused" key="Binary-medications-medication-refused" name="Medication Refused"/>
+<artifact id="Binary/mental-status-memory-impairment" key="Binary-mental-status-memory-impairment" name="Memory Impairment"/>
+<artifact id="Binary/encounters-multiple-cpt-e-m-codes" key="Binary-encounters-multiple-cpt-e-m-codes" name="Multiple CPT E&amp;M Codes"/>
+<artifact id="Binary/medical-equipment-multiple-implants" key="Binary-medical-equipment-multiple-implants" name="Multiple Implants"/>
+<artifact id="Binary/header-multiple-patient-identifiers" key="Binary-header-multiple-patient-identifiers" name="Multiple Patient Identifiers"/>
+<artifact id="Binary/general-narrative-reference-act" key="Binary-general-narrative-reference-act" name="Narrative Reference - Act"/>
+<artifact id="Binary/general-narrative-reference-encounter" key="Binary-general-narrative-reference-encounter" name="Narrative Reference - Encounter"/>
+<artifact id="Binary/general-narrative-reference-observation" key="Binary-general-narrative-reference-observation" name="Narrative Reference - Observation"/>
+<artifact id="Binary/general-narrative-reference-organizer" key="Binary-general-narrative-reference-organizer" name="Narrative Reference - Organizer"/>
+<artifact id="Binary/general-narrative-reference-procedure" key="Binary-general-narrative-reference-procedure" name="Narrative Reference - Procedure"/>
+<artifact id="Binary/general-narrative-reference-substanceadministration" key="Binary-general-narrative-reference-substanceadministration" name="Narrative Reference - SubstanceAdministration"/>
+<artifact id="Binary/general-narrative-reference-supply" key="Binary-general-narrative-reference-supply" name="Narrative Reference - Supply"/>
+<artifact id="Binary/social-history-never-smoking-status" key="Binary-social-history-never-smoking-status" name="Never Smoking Status"/>
+<artifact id="Binary/mental-status-no-cognitive-impairment" key="Binary-mental-status-no-cognitive-impairment" name="No Cognitive Impairment"/>
+<artifact id="Binary/functional-status-no-functional-impairment" key="Binary-functional-status-no-functional-impairment" name="No Functional Impairment"/>
+<artifact id="Binary/medical-equipment-no-implanted-devices" key="Binary-medical-equipment-no-implanted-devices" name="No Implanted Devices"/>
+<artifact id="Binary/allergies-no-known-allergies" key="Binary-allergies-no-known-allergies" name="No Known Allergies"/>
+<artifact id="Binary/health-concerns-no-known-health-concerns" key="Binary-health-concerns-no-known-health-concerns" name="No Known Health Concerns"/>
+<artifact id="Binary/allergies-no-known-medication-allergies" key="Binary-allergies-no-known-medication-allergies" name="No Known Medication Allergies"/>
+<artifact id="Binary/problems-no-known-problems" key="Binary-problems-no-known-problems" name="No Known Problems"/>
+<artifact id="Binary/medications-no-medications" key="Binary-medications-no-medications" name="No Medications"/>
+<artifact id="Binary/plan-of-treatment-no-planned-tests" key="Binary-plan-of-treatment-no-planned-tests" name="No Planned Tests"/>
+<artifact id="Binary/allergies-no-section-information-allergies" key="Binary-allergies-no-section-information-allergies" name="No Section Information Allergies"/>
+<artifact id="Binary/immunizations-no-section-information-immunizations" key="Binary-immunizations-no-section-information-immunizations" name="No Section Information Immunizations"/>
+<artifact id="Binary/general-no-section-information-problems" key="Binary-general-no-section-information-problems" name="No Section Information Problems"/>
+<artifact id="Binary/medical-equipment-non-medicinal-supply-cane-and-eyeglasses" key="Binary-medical-equipment-non-medicinal-supply-cane-and-eyeglasses" name="Non-Medicinal Supply - Cane and Eyeglasses"/>
+<artifact id="Binary/family-history-normal-family-history-father-deceased-mother-aliv" key="Binary-family-history-normal-family-history-father-deceased-mother-aliv" name="Normal Family History Father deceased-Mother alive"/>
+<artifact id="Binary/allergies-not-allergic-to-peanuts" key="Binary-allergies-not-allergic-to-peanuts" name="Not Allergic to Peanuts"/>
+<artifact id="Binary/social-history-not-pregnant" key="Binary-social-history-not-pregnant" name="Not Pregnant"/>
+<artifact id="Binary/notes-note-directly-attached-to-a-procedure" key="Binary-notes-note-directly-attached-to-a-procedure" name="Note directly attached to a Procedure"/>
+<artifact id="Binary/encounters-outpatient-encounter-patient-disenrolled" key="Binary-encounters-outpatient-encounter-patient-disenrolled" name="Outpatient Encounter Patient Disenrolled"/>
+<artifact id="Binary/encounters-outpatient-encounter-with-diagnoses" key="Binary-encounters-outpatient-encounter-with-diagnoses" name="Outpatient Encounter with Diagnoses"/>
+<artifact id="Binary/vital-signs-panel-of-vital-signs-oxygen-concentration-included" key="Binary-vital-signs-panel-of-vital-signs-oxygen-concentration-included" name="Panel of Vital Signs (Oxygen Concentration Included)"/>
+<artifact id="Binary/vital-signs-panel-of-vital-signs-in-metric-units" key="Binary-vital-signs-panel-of-vital-signs-in-metric-units" name="Panel of Vital Signs in Metric Units"/>
+<artifact id="Binary/vital-signs-panel-of-vital-signs-in-mixed-metric-imperial-units" key="Binary-vital-signs-panel-of-vital-signs-in-mixed-metric-imperial-units" name="Panel of Vital Signs in Mixed Metric-Imperial Units"/>
+<artifact id="Binary/general-parent-document-replace-relationship" key="Binary-general-parent-document-replace-relationship" name="Parent Document Replace Relationship"/>
 <artifact id="Binary/header-patient-aliases" key="Binary-header-patient-aliases" name="Patient Aliases"/>
+<artifact id="Binary/header-patient-birth-name" key="Binary-header-patient-birth-name" name="Patient Birth Name"/>
+<artifact id="Binary/header-patient-deceased" key="Binary-header-patient-deceased" name="Patient Deceased"/>
+<artifact id="Binary/header-patient-demographic-information" key="Binary-header-patient-demographic-information" name="Patient Demographic Information"/>
+<artifact id="Binary/problems-patient-does-not-have-diabetes" key="Binary-problems-patient-does-not-have-diabetes" name="Patient Does Not Have Diabetes"/>
+<artifact id="Binary/header-patient-previous-name" key="Binary-header-patient-previous-name" name="Patient Previous Name"/>
+<artifact id="Binary/header-patient-with-prior-addresses" key="Binary-header-patient-with-prior-addresses" name="Patient With Prior Addresses"/>
+<artifact id="Binary/header-person-name-formatting" key="Binary-header-person-name-formatting" name="Person Name Formatting"/>
+<artifact id="Binary/plan-of-treatment-planned-ekg" key="Binary-plan-of-treatment-planned-ekg" name="Planned EKG"/>
+<artifact id="Binary/plan-of-treatment-planned-encounter-referral" key="Binary-plan-of-treatment-planned-encounter-referral" name="Planned Encounter - Referral"/>
+<artifact id="Binary/problems-pregnancy-with-week-gestation" key="Binary-problems-pregnancy-with-week-gestation" name="Pregnancy with Week Gestation"/>
+<artifact id="Binary/problems-problem-targetsitecode-qualifier" key="Binary-problems-problem-targetsitecode-qualifier" name="Problem TargetSiteCode Qualifier"/>
+<artifact id="Binary/problems-problem-value-translation-qualifier-examples" key="Binary-problems-problem-value-translation-qualifier-examples" name="Problem Value, Translation, Qualifier examples"/>
+<artifact id="Binary/procedures-procedure-alternatives" key="Binary-procedures-procedure-alternatives" name="Procedure Alternatives"/>
+<artifact id="Binary/procedures-procedure-refused" key="Binary-procedures-procedure-refused" name="Procedure Refused"/>
+<artifact id="Binary/procedures-procedure-unsuccessful" key="Binary-procedures-procedure-unsuccessful" name="Procedure Unsuccessful"/>
+<artifact id="Binary/procedures-section-act-entry" key="Binary-procedures-section-act-entry" name="Procedures Section Act Entry"/>
+<artifact id="Binary/procedures-section-observation-entry" key="Binary-procedures-section-observation-entry" name="Procedures Section Observation Entry"/>
+<artifact id="Binary/procedures-section-procedure-entry" key="Binary-procedures-section-procedure-entry" name="Procedures Section Procedure Entry"/>
+<artifact id="Binary/procedures-section-procedure-entry-colonoscopy" key="Binary-procedures-section-procedure-entry-colonoscopy" name="Procedures Section Procedure Entry - Colonoscopy"/>
+<artifact id="Binary/quality-care-compliance-in-c-cda" key="Binary-quality-care-compliance-in-c-cda" name="Quality Care Compliance in C-CDA"/>
+<artifact id="Binary/notes-rtf-note" key="Binary-notes-rtf-note" name="RTF Note"/>
+<artifact id="Binary/referrals-referral-request-and-close-referral-with-a-note" key="Binary-referrals-referral-request-and-close-referral-with-a-note" name="Referral Request and Close Referral with a Note"/>
+<artifact id="Binary/results-covid-positive" key="Binary-results-covid-positive" name="Result COVID Positive"/>
+<artifact id="Binary/results-panel-with-coded-values-of-negative-positive" key="Binary-results-panel-with-coded-values-of-negative-positive" name="Result panel with coded values of negative-positive"/>
+<artifact id="Binary/results-with-multiple-reference-ranges" key="Binary-results-with-multiple-reference-ranges" name="Result with Multiple Reference Ranges"/>
+<artifact id="Binary/results-with-an-unstructured-string-as-value-urine-color" key="Binary-results-with-an-unstructured-string-as-value-urine-color" name="Result with an unstructured string as value (urine color)"/>
+<artifact id="Binary/results-with-greater-than-a-specified-value" key="Binary-results-with-greater-than-a-specified-value" name="Result with greater than a specified value"/>
+<artifact id="Binary/results-with-lab-location" key="Binary-results-with-lab-location" name="Result with lab location"/>
+<artifact id="Binary/results-with-non-numeric-physical-quantity-and-unit" key="Binary-results-with-non-numeric-physical-quantity-and-unit" name="Result with non-numeric physical quantity and unit"/>
+<artifact id="Binary/results-radiology-with-image-narrative" key="Binary-results-radiology-with-image-narrative" name="Results Radiology with Image Narrative"/>
+<artifact id="Binary/results-unit-non-ucum" key="Binary-results-unit-non-ucum" name="Results Unit Non-UCUM"/>
+<artifact id="Binary/results-of-basic-metabolic-panel-and-troponin" key="Binary-results-of-basic-metabolic-panel-and-troponin" name="Results of Basic Metabolic Panel and Troponin"/>
+<artifact id="Binary/results-of-co2-test" key="Binary-results-of-co2-test" name="Results of CO2 Test"/>
+<artifact id="Binary/results-panel-with-pending-component" key="Binary-results-panel-with-pending-component" name="Results panel with pending component"/>
+<artifact id="Binary/results-with-less-than-specific-value" key="Binary-results-with-less-than-specific-value" name="Results with less than specific value"/>
+<artifact id="Binary/results-with-translation-unit" key="Binary-results-with-translation-unit" name="Results with translation unit"/>
+<artifact id="Binary/goals-sdoh-goal" key="Binary-goals-sdoh-goal" name="SDOH Goal"/>
+<artifact id="Binary/problems-sdoh-problem" key="Binary-problems-sdoh-problem" name="SDOH Problem"/>
+<artifact id="Binary/social-history-sexual-orientation-gender-identity" key="Binary-social-history-sexual-orientation-gender-identity" name="Sexual Orientation Gender Identity"/>
+<artifact id="Binary/general-share-with-patient-or-proxy" key="Binary-general-share-with-patient-or-proxy" name="Share With Patient or Proxy"/>
+<artifact id="Binary/notes-single-consultation-note" key="Binary-notes-single-consultation-note" name="Single Consultation Note"/>
+<artifact id="Binary/medications-single-administration-of-medication" key="Binary-medications-single-administration-of-medication" name="Single administration of medication"/>
+<artifact id="Binary/immunizations-unknown-immunization-status" key="Binary-immunizations-unknown-immunization-status" name="Unknown Immunization Status"/>
+<artifact id="Binary/social-history-unknown-smoking-status" key="Binary-social-history-unknown-smoking-status" name="Unknown Smoking Status"/>
+<artifact id="Binary/social-history-unknown-if-pregnant" key="Binary-social-history-unknown-if-pregnant" name="Unknown if Pregnant"/>
+<artifact id="Binary/social-history-we-care-assessment" key="Binary-social-history-we-care-assessment" name="WE Care Assessment"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="index" name="CDA Examples"/>
+<page key="migrationnotes" name="Migration Notes"/>
 <page key="toc" name="Table of Contents"/>
 </specification>
