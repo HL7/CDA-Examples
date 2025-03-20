@@ -8,6 +8,7 @@
     <!-- Health Concern Act -->
     <act classCode="ACT" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.132" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.132" extension="2022-06-01"/>
       <id nullFlavor="UNK"/>
       <!-- Fixed act/code in C-CDA -->
       <code code="75310-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Health Concern"/>
@@ -16,6 +17,3 @@
     </act>
   </entry>
 </section>
-
-
-
