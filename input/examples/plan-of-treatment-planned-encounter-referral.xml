@@ -1,7 +1,7 @@
 <!-- Transition of Care snips to show Referral from test data for 170.314b2 Ambulatory
   
 N)  Referral
- - Pulmonary function tests, Dr. Penny Puffer, Tel: 555-555-1049, 1047 Healthcare Drive, Portland, OR 97005, Scheduled date: Test date + 2 days 
+ - Pulmonary function tests, Dr. Penny Puffer, tel:555-555-1049, 1047 Healthcare Drive, Portland, OR 97005, Scheduled date: Test date + 2 days 
  
  
 The minimal content to include for the stated test data is text in the Reason for Referral section, and that is shown below as the first section of this example.
@@ -18,7 +18,7 @@ there are systems that might very well represent the data in the Plan of Treatme
       <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.1" extension="2014-06-09" />
       <code code="42349-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Reason For Referral"/>
       <title>Reason For Referral</title>
-      <text>Pulmonary function tests, Dr. Penny Puffer, Tel: 555-555-1049, 1047 Healthcare Drive, Portland, OR 97005, Scheduled date: 08/17/2012</text>
+      <text>Pulmonary function tests, Dr. Penny Puffer, tel:555-555-1049, 1047 Healthcare Drive, Portland, OR 97005, Scheduled date: 08/17/2012</text>
     </section>
   </component>
   <!-- here is the optional section for Plan of Care with the Planned Encounter -->
@@ -43,7 +43,7 @@ there are systems that might very well represent the data in the Plan of Treatme
           <tbody>
             <tr>
               <td ID="ID0EFFFFFFCA">
-                <content ID="ID0EFAAAAACA">Pulmonary Function Tests; Dr. Penny Puffer, Tel: 555-555-1049, 1047 Healthcare Drive, Portland OR 97005</content>
+                <content ID="ID0EFAAAAACA">Pulmonary Function Tests; Dr. Penny Puffer, tel:555-555-1049, 1047 Healthcare Drive, Portland OR 97005</content>
               </td>
               <td>17-Aug-2012</td>
               <td ID="ID0EAAAAAAAAACA">Indication: Costal Chondritis</td>

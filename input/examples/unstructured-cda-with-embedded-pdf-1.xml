@@ -52,7 +52,7 @@
     <providerOrganization>
     <id root="2.16.840.1.113883.19.5.9999.1393"/>
     <name>Community Health Hospital</name>
-    <telecom use="WP" value="tel: 555-555-5000"/>
+    <telecom use="WP" value="tel:555-555-5000"/>
     <addr>
       <streetAddressLine>1001 Village Avenue</streetAddressLine>
       <city>Portland</city>
@@ -139,7 +139,7 @@
     <representedCustodianOrganization>
     <id extension="99999999" root="2.16.840.1.113883.4.6"/>
     <name>Community Health and Hospitals</name>
-    <telecom value="tel: 555-555-1002" use="WP"/>
+    <telecom value="tel:555-555-1002" use="WP"/>
     <addr use="WP">
       <streetAddressLine>1002 Healthcare Drive </streetAddressLine>
       <city>Portland</city>

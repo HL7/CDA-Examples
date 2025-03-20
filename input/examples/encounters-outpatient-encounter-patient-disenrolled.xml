@@ -76,7 +76,7 @@
             <postalCode>99123</postalCode>
             <country>US</country>
           </addr>
-          <telecom use="WP" value="tel: +1(555)555-1030"/>
+          <telecom use="WP" value="tel:+1(555)555-1030"/>
           <playingEntity classCode="PLC">
             <name>Community Urgent Care</name>
           </playingEntity>
