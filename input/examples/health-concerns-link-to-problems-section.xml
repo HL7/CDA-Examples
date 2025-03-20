@@ -98,6 +98,8 @@
       <entry>
         <act classCode="ACT" moodCode="EVN">
           <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2024-05-01"/>
+          <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01"/>
+          <templateId root="2.16.840.1.113883.10.20.22.4.3"/>
           <id root="102ca2e9-884c-4523-a2b4-1b6c3469c397"/>
           <code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
           <text>
@@ -110,6 +112,8 @@
           <entryRelationship typeCode="SUBJ">
             <observation classCode="OBS" moodCode="EVN">
               <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2024-05-01"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.4"/>
               <id root="49c5ca3e-662f-4e33-948f-2777ebc6727e"/>
               <code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="55607006" displayName="Problem">
                 <translation codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="75326-9" displayName="Problem"/>
