@@ -130,7 +130,7 @@
     <time value="20130731"/>
     <assignedAuthor>
       <id extension="555555555" root="2.16.840.1.113883.4.6"/>
-      <code code="207QA0505X" displayName="Allopathic &amp; Osteopathic Physicians; Family Medicine, Adult Medicine"
+      <code code="207QA0505X" displayName="Family Medicine Physician, Adult Medicine"
         codeSystem="2.16.840.1.113883.6.101"
         codeSystemName="Healthcare Provider Taxonomy (HIPAA)"/>
       <addr>
@@ -225,7 +225,7 @@
     <signatureCode code="S"/>
     <assignedEntity>
       <id extension="555555555" root="2.16.840.1.113883.4.6"/>
-      <code code="207QA0505X" displayName="Allopathic &amp; Osteopathic Physicians; Family Medicine, Adult Medicine"
+      <code code="207QA0505X" displayName="Family Medicine Physician, Adult Medicine"
         codeSystem="2.16.840.1.113883.6.101"
         codeSystemName="Healthcare Provider Taxonomy (HIPAA)"/>
       <addr>
