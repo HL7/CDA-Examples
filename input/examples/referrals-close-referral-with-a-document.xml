@@ -3,13 +3,16 @@
 <!-- The inFulfillmentOf element links back to the original requested referral --> 
 <!-- Original sample adapted from Lantana samples provided with C-CDA 2.0 Guide -->
 <ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:voc="urn:hl7-org:v3/voc" xmlns:sdtc="urn:hl7-org:sdtc"> > <!-- ** CDA Header ** -->
+  xmlns:voc="urn:hl7-org:v3/voc" xmlns:sdtc="urn:hl7-org:sdtc"> <!-- ** CDA Header ** -->
   <realmCode code="US"/>
   <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
   <!-- Identifies document as conformant to US Realm Header (V2) Template -->
   <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01"/>
+  <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2024-05-01"/>
   <!-- Consultation Note V2  -->
   <templateId root="2.16.840.1.113883.10.20.22.1.4" extension="2015-08-01"/>
+  <!-- Consultation Note C-CDA 3.0  -->
+  <templateId root="2.16.840.1.113883.10.20.22.1.4" extension="2024-05-01"/>
   <id extension="TT988" root="2.16.840.1.113883.19.5.99999.1"/>
   <code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="11488-4"
     displayName="Consult note">
@@ -71,7 +74,7 @@
           codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC"/>
         <guardian>
           <code code="POWATT" displayName="Power of Attorney"
-            codeSystem="2.16.840.1.113883.1.11.19830" codeSystemName="ResponsibleParty"/>
+            codeSystem="2.16.840.1.113883.5.111" codeSystemName="ResponsibleParty"/>
           <addr use="HP">
             <streetAddressLine>2222 Home Street</streetAddressLine>
             <city>Beaverton</city>
@@ -99,24 +102,13 @@
             </addr>
           </place>
         </birthplace>
-        <languageCommunication>
-          <!-- "eng" is ISO 639-2 alpha-3 code for "English" -->
-          <languageCode code="eng"/>
-          <modeCode code="ESP" displayName="Expressed spoken"
-            codeSystem="2.16.840.1.113883.5.60" codeSystemName="LanguageAbilityMode"/>
-          <proficiencyLevelCode code="G" displayName="Good"
-            codeSystem="2.16.840.1.113883.5.61"
-            codeSystemName="LanguageAbilityProficiency"/>
-          <!-- Patient's preferred language -->
-          <preferenceInd value="true"/>
-        </languageCommunication>
       </patient>
       <providerOrganization>
         <!-- Organizations SHOULD have an NPI; this is a real root; fake extension -->
         <id extension="219BX" root="2.16.840.1.113883.4.6"/>
         <name>The DoctorsTogether Physician Group</name>
-        <telecom use="WP" value="tel: +1(555)555-5000"/>
-        <addr>
+        <telecom use="WP" value="tel:+1(555)555-5000"/>
+        <addr use="WP">
           <streetAddressLine>1007 Health Drive</streetAddressLine>
           <city>Portland</city>
           <state>OR</state>
@@ -127,13 +119,13 @@
     </patientRole>
   </recordTarget>
   <author>
-    <time value="20130731"/>
+    <time value="201307310530-0800"/>
     <assignedAuthor>
       <id extension="555555555" root="2.16.840.1.113883.4.6"/>
       <code code="207QA0505X" displayName="Family Medicine Physician, Adult Medicine"
         codeSystem="2.16.840.1.113883.6.101"
         codeSystemName="Healthcare Provider Taxonomy (HIPAA)"/>
-      <addr>
+      <addr use="WP">
         <streetAddressLine>1004 Healthcare Drive </streetAddressLine>
         <city>Portland</city>
         <state>OR</state>
@@ -154,7 +146,7 @@
   <dataEnterer>
     <assignedEntity>
       <id extension="333777777" root="2.16.840.1.113883.4.6"/>
-      <addr>
+      <addr use="WP">
         <streetAddressLine>1007 Healthcare Drive</streetAddressLine>
         <city>Portland</city>
         <state>OR</state>
@@ -173,7 +165,7 @@
   <informant>
     <assignedEntity>
       <id extension="888888888" root="2.16.840.1.113883.19.5"/>
-      <addr>
+      <addr use="WP">
         <streetAddressLine>1007 Healthcare Drive</streetAddressLine>
         <city>Portland</city>
         <state>OR</state>
@@ -228,7 +220,7 @@
       <code code="207QA0505X" displayName="Family Medicine Physician, Adult Medicine"
         codeSystem="2.16.840.1.113883.6.101"
         codeSystemName="Healthcare Provider Taxonomy (HIPAA)"/>
-      <addr>
+      <addr use="WP">
         <streetAddressLine>1004 Healthcare Drive </streetAddressLine>
         <city>Portland</city>
         <state>OR</state>
@@ -261,7 +253,7 @@
       <id extension="9937012" root="2.16.840.1.113883.19"/>
       <code codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT-4" code="99213"
         displayName="Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using time for code selection, 20-29 minutes of total time is spent on the date of the encounter."/>
-      <effectiveTime value="20180623"/>
+      <effectiveTime value="201806230800-0800"/>
       <location>
         <healthCareFacility>
           <id root="2.16.540.1.113883.19.2"/>
@@ -269,13 +261,14 @@
       </location>
     </encompassingEncounter>
   </componentOf>
-  <!-- Note that structured body is omitted in this example, so this sample will not validate without errors -->
-  <!-- The structuredBody SHALL contain History of Present Illness Section,  Allergies and Intolerances Section, Problems Section, -->
-  <!-- Assessment and Plan Section, or both an Assessment Section and a Plan of Treatment Section -->
-  <!-- Reason for Referral or Reason for Visit Section -->
+  <!-- Note that structured body is stubbed in this example, as the focus is on the header -->
   <component>
     <structuredBody>
-      <component> </component>
+      <component><section><templateId root="2.16.840.1.113883.10.20.22.2.9" extension="2014-06-09" /><code code="51847-2" codeSystem="2.16.840.1.113883.6.1" /><title>AP</title><text /></section></component>
+      <component><section><templateId root="2.16.840.1.113883.10.20.22.2.12" /><code code="29299-5" codeSystem="2.16.840.1.113883.6.1" /><title>RFR</title><text /></section></component>
+      <component><section><templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.4" /><code code="10164-2" codeSystem="2.16.840.1.113883.6.1" /><title>HPI</title><text /></section></component>
+      <component><section nullFlavor="NI"><templateId root="2.16.840.1.113883.10.20.22.2.6.1" extension="2015-08-01" /><code code="48765-2" codeSystem="2.16.840.1.113883.6.1" /><title>Allergies</title><text /></section></component>
+      <component><section nullFlavor="NI"><templateId root="2.16.840.1.113883.10.20.22.2.5.1" extension="2015-08-01" /><code code="11450-4" codeSystem="2.16.840.1.113883.6.1" /><title>Problems</title><text /></section></component>
     </structuredBody>
   </component>
 </ClinicalDocument>
