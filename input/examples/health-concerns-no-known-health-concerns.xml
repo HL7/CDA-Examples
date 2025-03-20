@@ -11,7 +11,9 @@
   <entry typeCode="COMP">
     <!-- negationInd=true indicates no known health concerns at the stated time-->
     <act classCode="ACT" moodCode="EVN" negationInd="true">
+      <templateId root="2.16.840.1.113883.10.20.22.4.132" extension="2022-06-01"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.132" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.132"/>
       <id root="4eab0e52-dd7d-4285-99eb-72d32ddb195d"/>
       <code code="75310-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
         displayName="Health Concern"/>
@@ -28,12 +30,13 @@
       <!-- This is different then No Known Problems in that we aren't requiring declaration that no concerns
       for each of the potential 30+ choices available.-->
       <author>
+        <templateId root="2.16.840.1.113883.10.20.22.4.119" />
         <time value="20151115"/>
         <assignedAuthor>
           <id extension="66666" root="2.16.840.1.113883.4.6"/>
           <code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101"
-            codeSystemName="NUCC" displayName="Allopathic &amp; Osteopathic Physicians; Internal Medicine, Cardiovascular Disease"/>
-          <addr>
+            codeSystemName="NUCC" displayName="Cardiovascular Disease Physician"/>
+          <addr use="WP">
             <streetAddressLine>6666 StreetName St.</streetAddressLine>
             <city>Silver Spring</city>
             <state>MD</state>
@@ -53,4 +56,3 @@
     </act>
   </entry>
 </section>
-

@@ -1277,7 +1277,7 @@
           },
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/ClinicalDocument"
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/StructuredBody"
           }
         ],
         "reference": {
@@ -1304,7 +1304,7 @@
           },
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/ClinicalDocument"
+            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/StructuredBody"
           }
         ],
         "reference": {
