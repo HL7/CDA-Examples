@@ -68,6 +68,8 @@
         <assignedAuthor>
           <!-- Full author information is elsewhere in the document . -->
           <id root="20cf14fb-b65c-4c8c-a54d-b0cca834c18c"/>
+          <addr nullFlavor="UNK"/>
+          <telecom nullFlavor="UNK"/>
           <assignedPerson>
             <name>
               <prefix>Dr.</prefix>

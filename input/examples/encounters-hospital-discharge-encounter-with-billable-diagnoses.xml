@@ -150,6 +150,7 @@
         <assignedAuthor>
           <id extension="99999999" root="2.16.840.1.113883.4.6"/>
           <code code="204C00000X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Health Care Provider Taxonomy" displayName="Allopathic &amp; Osteopathic Physicians; &quot;Neuromusculoskeletal Medicine, Sports Medicine&quot;" />
+          <addr nullFlavor="UNK"/>
           <telecom use="WP" value="tel:555-555-1002"/>
           <assignedPerson>
           <name>
@@ -217,6 +218,7 @@
         <assignedAuthor>
           <id extension="99999999" root="2.16.840.1.113883.4.6"/>
           <code code="204C00000X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Health Care Provider Taxonomy" displayName="Allopathic &amp; Osteopathic Physicians; &quot;Neuromusculoskeletal Medicine, Sports Medicine&quot;" />
+          <addr nullFlavor="UNK"/>
           <telecom use="WP" value="tel:555-555-1002"/>
           <assignedPerson>
           <name>
@@ -242,4 +244,3 @@
   </encounter>
   </entry>
 </section>
-

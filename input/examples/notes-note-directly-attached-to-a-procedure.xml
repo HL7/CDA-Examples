@@ -71,6 +71,8 @@
             <time value="20140204083215-0500"/>
             <assignedAuthor>
               <id root="20cf14fb-b65c-4c8c-a54d-b0cca834c18c"/>
+              <addr nullFlavor="UNK"/>
+              <telecom nullFlavor="UNK"/>
               <name>Dr. Physician</name>
             </assignedAuthor>
           </author>

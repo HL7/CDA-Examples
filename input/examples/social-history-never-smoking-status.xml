@@ -42,6 +42,7 @@
       <code code="200000000X" codeSystem="2.16.840.1.113883.6.101"
       displayName="Allopathic and Osteopathic Physicians"/>
       <telecom use="WP" value="tel:+1(555)555-1002"/>
+      <addr nullFlavor="UNK"/>
       <assignedPerson>
       <name>
         <given>Henry</given>

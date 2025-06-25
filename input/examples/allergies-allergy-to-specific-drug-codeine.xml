@@ -95,6 +95,7 @@
       <code code="207Q00000X" codeSystem="2.16.840.1.113883.6.101"
       codeSystemName="Health Care Provider Taxonomy"
       displayName="Family Medicine Physician"/>
+      <addr nullFlavor="UNK"/>
       <telecom use="WP" value="tel:555-555-1002"/>
       <assignedPerson>
       <name>
@@ -139,6 +140,7 @@
         <code code="207Q00000X" codeSystem="2.16.840.1.113883.6.101"
         codeSystemName="Health Care Provider Taxonomy"
         displayName="Family Medicine Physician"/>
+        <addr nullFlavor="UNK"/>
         <telecom use="WP" value="tel:555-555-1002"/>
         <assignedPerson>
         <name>

@@ -50,6 +50,7 @@
           <id extension="12345" root="2.16.840.1.113883.4.6"/>
           <code code="207RX0202X" codeSystem="2.16.840.1.113883.6.101"
             codeSystemName="Health Care Provider Taxonomy" displayName="Allopathic &amp; Osteopathic Physicians; Internal Medicine, Medical Oncology"/>
+          <addr nullFlavor="UNK"/>
           <telecom use="WP" value="tel:555-555-1234"/>
           <assignedPerson>
             <name>
@@ -89,6 +90,7 @@
               <code code="207RX0202X" codeSystem="2.16.840.1.113883.6.101"
                 codeSystemName="Health Care Provider Taxonomy"
                 displayName="Allopathic &amp; Osteopathic Physicians; Internal Medicine, Medical Oncology"/>
+              <addr nullFlavor="UNK"/>                
               <telecom use="WP" value="tel:555-555-1234"/>
               <assignedPerson>
                 <name>
