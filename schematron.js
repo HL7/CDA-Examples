@@ -5,7 +5,8 @@ const validator = require('cda-schematron-validator')
 // Tests that cda-schematron-validation can't handle yet
 const knownIgnoredTests = [
   'current()',
-  'voc.xml'
+  'voc.xml',
+  'not(@extension)', // https://jira.hl7.org/browse/CDA-21367
 ];
 
 const filenameFilter = process.argv[2];
@@ -72,6 +73,7 @@ function validateFile(file) {
     results.ignored.forEach(i => {
       console.warn(`Ignored test: ${i.test} in file ${file}`);
     });
+    results.errors = results.errors.filter(e => !knownIgnoredTests.find(search => e.test.includes(search)));
 
     if (results.errors.length === 0) {
       console.log(`✅ ${file}`);

@@ -22,6 +22,20 @@
       <code code="34109-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Note">
         <translation code="34746-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Nurse Note" />
       </code>
+      <statusCode code="completed"/>
+      <effectiveTime value="20140203070000-0700"/>
+      <author nullFlavor="NA">
+        <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+        <time value="20140203070000-0700"/>
+        <assignedAuthor>
+          <id nullFlavor="NA"/>
+          <addr nullFlavor="NA"/>
+          <telecom nullFlavor="NA"/>
+          <assignedPerson>
+            <name>Nick Nurse</name>
+          </assignedPerson>
+        </assignedAuthor>
+      </author>
       <!-- This Base64 example includes line breaks which is optional --> 
       <text mediaType="text/rtf" representation="B64">
         e1xydGYxXGFuc2lcYW5zaWNwZzEyNTJcZGVmZjBcbm91aWNvbXBhdFxkZWZsYW5nMTAzM3tcZm9u

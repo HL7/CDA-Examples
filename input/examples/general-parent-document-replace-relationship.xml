@@ -428,7 +428,10 @@
           <id root="4adc1020-7b16-11db-9fe1-0832200c9a66"/>
           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
           <statusCode code="completed"/>
-          <effectiveTime nullFlavor="NA"/>
+          <effectiveTime nullFlavor="NA">
+            <low nullFlavor="NA"/>
+            <high nullFlavor="NA"/>
+          </effectiveTime>
           <!-- using Drug allergy (disorder) along with negationInd instead -db -->
           <value xsi:type="CD" code="416098002"
           displayName="Allergy to drug (finding)"
