@@ -89,6 +89,7 @@
     <!-- #1 Care Team Member Act - This component is a care team member who is a provider -->
     <component>
      <act classCode="PCPR" moodCode="EVN">
+      <templateId root="2.16.840.1.113883.10.20.22.4.500.1" extension="2022-06-01"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.500.1" extension="2024-05-01"/>
       <id root="1.5.5.5.5.5.5"/>
       <!-- Note in C-CDA 2.1, templateId version 2022-06-01, this code had to be 85847-2 -->

@@ -80,6 +80,10 @@
           </assignedPerson>
           <representedOrganization>
             <id root="2.16.840.1.113883.19.5.9999.1394"/>
+            <!-- Tax ID Required Identifier-->
+            <id root="2.16.840.1.113883.4.2" nullFlavor="UNK"/>
+            <!-- NPI Required Identifier-->
+            <id root="2.16.840.1.113883.4.6" nullFlavor="UNK"/>
             <name>Good Health Clinic</name>
             <telecom nullFlavor="UNK"/>
             <addr nullFlavor="UNK"/>
