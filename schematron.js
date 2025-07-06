@@ -9,6 +9,10 @@ const knownIgnoredTests = [
   'not(@extension)', // https://jira.hl7.org/browse/CDA-21367
 ];
 
+const skippedAssertions = [
+  'a-1098-30784-v'  // This is a warning which the schematron validator treats as an error
+];
+
 const filenameFilter = process.argv[2];
 const schematron = fs.readFileSync('ccda-2-1.sch', 'utf8');
 const header = `
@@ -39,6 +43,7 @@ if (!fs.existsSync(inputDir)) {
   process.exit(1);
 }
 
+let schematronMap;
 const files = fs.readdirSync(inputDir);
 const xmlFiles = files.filter(file => file.endsWith('.xml') && (!filenameFilter || file.includes(filenameFilter)));
 xmlFiles.forEach(validateFile);
@@ -68,12 +73,18 @@ function validateFile(file) {
     const data = fs.readFileSync(filePath, 'utf8');
 
     validator.clearCache();
-    const results = validator.validate(data, schematron);
+    let options = {
+      parsedSchematronMap: schematronMap
+    };
+    const results = validator.validate(data, schematron, options);
+    schematronMap = options.schematronMap; // Cache the schematron map for future use
     results.ignored = results.ignored.filter(i => !knownIgnoredTests.find(search => i.test.includes(search)));
     results.ignored.forEach(i => {
       console.warn(`Ignored test: ${i.test} in file ${file}`);
     });
-    results.errors = results.errors.filter(e => !knownIgnoredTests.find(search => e.test.includes(search)));
+    results.errors = results.errors
+      .filter(e => !knownIgnoredTests.find(search => e.test.includes(search)))
+      .filter(e => !skippedAssertions.includes(e.assertionId));
 
     if (results.errors.length === 0) {
       console.log(`✅ ${file}`);
