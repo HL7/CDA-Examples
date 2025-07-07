@@ -60,6 +60,7 @@
   <organizer classCode="BATTERY" moodCode="EVN">
     <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
     <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2023-05-01"/>
     <id root="b4a47651-8375-44f8-89fd-0261a72a0698"/>
     <code code="89365-1"
     displayName="HIV 1 and 2 Ab panel - Serum, Plasma or Blood by Rapid immunoassay"
@@ -73,6 +74,7 @@
     <observation classCode="OBS" moodCode="EVN">
       <!-- Positive HIV result... -->
       <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="c1a2b3c4-d5e6-7890-abcd-ef1234567890"/>
       <code code="56888-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HIV 1 Ab [Presence] in Serum, Plasma or Blood by Rapid immunoassay"/>
       <statusCode code="completed"/>

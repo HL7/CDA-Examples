@@ -9,6 +9,7 @@
     <observation classCode="OBS" moodCode="GOL">
       <!-- Goal Observation -->
       <templateId root="2.16.840.1.113883.10.20.22.4.121"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.121" extension="2022-06-01"/>
       <!-- If you have an id for your goal, include here -->
       <id nullFlavor="UNK"/>
       <code nullFlavor="UNK"/>
@@ -20,4 +21,3 @@
     </observation>
   </entry>
 </section>
-

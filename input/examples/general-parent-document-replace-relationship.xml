@@ -425,6 +425,8 @@
           <!-- ** Allergy observation (V2) ** -->
           <templateId root="2.16.840.1.113883.10.20.22.4.7" extension="2014-06-09"/>
           <templateId root="2.16.840.1.113883.10.20.22.4.7"/>
+          <!-- Substance or Device Allergy Intolerance Observation Template -->
+          <templateId root="2.16.840.1.113883.10.20.24.3.90" extension="2014-06-09"/>
           <id root="4adc1020-7b16-11db-9fe1-0832200c9a66"/>
           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
           <statusCode code="completed"/>
@@ -471,7 +473,9 @@
         <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
         <id root="cdbd33f0-6cde-11db-9fe1-0833200c9a66"/>
         <statusCode code="active"/>
-        <effectiveTime nullFlavor="NA"/>
+        <effectiveTime nullFlavor="NA">
+          <low nullFlavor="NA"/>
+        </effectiveTime>
         <doseQuantity nullFlavor="NA"/>
         <consumable>
         <manufacturedProduct classCode="MANU">
@@ -514,7 +518,9 @@
         <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
         <id root="cdbd33f0-6cde-11db-9fe1-0834200c9a66"/>
         <statusCode code="active"/>
-        <effectiveTime nullFlavor="NA"/>
+        <effectiveTime nullFlavor="NA">
+          <low nullFlavor="NA"/>
+        </effectiveTime>
         <doseQuantity nullFlavor="NA"/>
         <consumable>
         <manufacturedProduct classCode="MANU">
@@ -568,7 +574,7 @@
       <entry typeCode="DRIV">
       <!-- Problem Concern Act -->  
       <act classCode="ACT" moodCode="EVN">
-        <!-- ** Problem Concern Act (V3) ** -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2024-05-01" />
         <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
         <templateId root="2.16.840.1.113883.10.20.22.4.3" />
         <id root="36e3e930-7b14-11db-9fe1-0835200c9a66"/>
@@ -590,7 +596,7 @@
         <!-- The negationInd = true negates the value element. --> 
         <!-- problem observation template -->
         <observation classCode="OBS" moodCode="EVN" negationInd="true">
-          <!-- ** Problem observation  (V3)** -->
+          <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2024-05-01"/>
           <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01"/>
           <templateId root="2.16.840.1.113883.10.20.22.4.4"/>
           <id root="4adc1021-7b14-11db-9fe1-0836200c9a67"/>
@@ -928,6 +934,7 @@
       <act classCode="ACT" moodCode="EVN" negationInd="true">
         <!-- There is no V1 version of this template -db -->
         <templateId root="2.16.840.1.113883.10.20.22.4.132" extension="2015-08-01"/>
+        <templateId root="2.16.840.1.113883.10.20.22.4.132" extension="2022-06-01"/>
         <id root="4eab0e52-dd7d-4285-99eb-72d32ddb195d"/>
         <code code="75310-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
         displayName="Health Concern"/>

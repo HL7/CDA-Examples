@@ -21,8 +21,9 @@
         <reference value="#Medication_None"/>
       </text>
       <statusCode code="active"/>
-      <!-- Note: An error will be logged on the use of effectiveTime with nullFlavor until validator is updated for C-CDA DSTU Comment 423 -->
-      <effectiveTime nullFlavor="NA"/>
+      <effectiveTime nullFlavor="NA">
+        <low nullFlavor="NA"/>
+      </effectiveTime>
       <doseQuantity nullFlavor="NA"/>
       <consumable>
         <manufacturedProduct classCode="MANU">

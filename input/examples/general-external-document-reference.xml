@@ -35,6 +35,7 @@
   <act classCode="ACT" moodCode="EVN">
     <templateId root="2.16.840.1.113883.10.20.22.4.3" />
     <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2024-05-01"/>
     <!-- Since this represents an element which has been imported from the original document 
     but may vary from original act, a different GUID is used to idenitfy  -->
     <!-- Some systems may also include the original id here. This example did 
@@ -49,6 +50,7 @@
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.4" />
       <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2024-05-01"/>
       <!-- Since this represents an element which has been imported from the original document 
       but may vary from original observation, a different GUID is used to idenitfy  -->
       <!-- Some systems may also include the original id here. This example did 
