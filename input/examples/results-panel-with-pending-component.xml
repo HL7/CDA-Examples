@@ -35,6 +35,7 @@
   <organizer classCode="BATTERY" moodCode="EVN">
     <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
     <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2023-05-01"/>
     <id root="7d5a02b0-67a4-11db-bd13-0800200c9a66"/>
     <code code="57782-5"
     displayName="CBC with Ordered Manual Differential panel - Blood"
@@ -42,9 +43,10 @@
     <!-- Status is active since all components are not complete -->
     <statusCode code="active"/>
     <component>
-    <observation classCode="OBS" moodCode="EVN">
+     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="68762391-bfa5-4dfa-9f6f-d37109a97d19"/>
       <code code="804-5"
       displayName="Leukocytes [#/volume] in Blood by Manual count"
@@ -59,8 +61,8 @@
       <!-- The more common scenario is the result is not present -->
       <!-- The task force created this example becasue it came up during certification testing-->
       <!-- We do not believe this is a common scenario -->
-          <value xsi:type="PQ" nullFlavor="NA"/>          
-        </observation>
+      <value xsi:type="PQ" nullFlavor="NA" unit="1"/>
+     </observation>
     </component>
   </organizer>
   </entry>

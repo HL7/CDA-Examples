@@ -32,6 +32,7 @@
   <organizer classCode="BATTERY" moodCode="EVN">
     <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
     <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2023-05-01"/>
     <id root="cda1fc54-59fb-412d-86e0-acf6b78aa9a6"/>
     <code code="32016-8" displayName="Glucose [Mass/Volume] In Capillary Blood"
     codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
@@ -44,6 +45,7 @@
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="cda1fc54-59fb-412d-86e0-acf6b78aa9a6"/>
       <code code="32016-8" displayName="Glucose [Mass/Volume] In Capillary Blood"
       codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>

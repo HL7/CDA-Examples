@@ -36,6 +36,7 @@
   <organizer classCode="BATTERY" moodCode="EVN">
     <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
     <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2023-05-01"/>
     <id root="f1aa44dd-6f39-4f5c-b267-897c3824b563"/>
     <code code="24356-8" displayName="Urinalysis complete pnl Ur"
     codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
@@ -48,6 +49,7 @@
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="f1aa44dd-6f39-4f5c-b267-897c3824b563"/>
       <code code="5778-6" displayName="Color of Urine"
       codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>

@@ -32,6 +32,7 @@
   <organizer classCode="BATTERY" moodCode="EVN">
     <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
     <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2023-05-01"/>
     <id root="8DFF4B72-E8FE-11E4-B48A-460231621F93"/>
     <!-- This code specifies panel type - single result so just used result code-->
     <code code="2028-9" codeSystem="2.16.840.1.113883.6.1"
@@ -42,6 +43,7 @@
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="503B5578-E8FF-11E4-B48A-460231621F93"/>
       <code code="2028-9" codeSystem="2.16.840.1.113883.6.1"
       codeSystemName="LOINC" displayName="Carbon dioxide">

@@ -41,6 +41,7 @@
   <organizer classCode="BATTERY" moodCode="EVN">
     <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
     <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2023-05-01"/>
     <id root="b5684bf0-eb6f-46dd-9f2e-b6cbcc4196fd"/>
     <code code="70161-5"
     displayName="Chlamydia trachomatis and Neisseria gonorrhoeae rRNA panel - Urine by NAA with probe detection"
@@ -54,6 +55,7 @@
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="5a6be91a-32d5-4d24-a8bd-07d10a3ef14d"/>
       <code code="42931-6"
       displayName="Chlamydia trachomatis rRNA [Presence] in Urine by NAA with probe detection"
@@ -83,6 +85,7 @@
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="404bba0e-1c76-4265-afb5-1a57b55e128b"/>
       <code code="60256-5"
       displayName="Neisseria gonorrhoeae rRNA [Presence] in Urine by NAA with probe detection"

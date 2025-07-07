@@ -100,7 +100,8 @@
   <entry>
   <organizer classCode="BATTERY" moodCode="EVN">
     <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
-      <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2023-05-01"/>
     <id root="cda1fc54-59fb-412d-86e0-acf6b78aa9a6"/>
     <!-- Note that we've included the first set of lab results in a BATTERY classCode and under the Basic Metabolic Panel -->
     <!-- Note the code for Basic Metabolic Panel IN BLOOD was not specifically noted in test script.  -->
@@ -116,7 +117,8 @@
     <component>
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
-          <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="d8fe6100-c31a-4b8c-b97d-57a6bd415bf7"/>
       <!-- There was significant discussion on what should be in the displayName, our current decision was to show LOINC long name-->
       <!-- Note that displayName will not correspond to human readable and originalText used for referencing that information-->
@@ -149,7 +151,8 @@
     <component>
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
-          <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="3ee6ac58-d22c-4416-9acc-c1c75c1c2c91"/>
       <code code="6298-4" displayName="Potassium [Moles/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
       <originalText>
@@ -180,7 +183,8 @@
     <component>
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
-          <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="0431a3ec-8ad6-49da-9de1-0a8704b7609d"/>
       <code code="2069-3" displayName="Chloride [Moles/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
       <originalText>
@@ -211,7 +215,8 @@
     <component>
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
-          <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="70c62997-9f12-4b7c-9023-0cdf249336a7"/>
       <!-- Note that this exception is base on LOINC code in test data. CO2 code of 20565-8 (In Blood) would more accurately align with panel ordered --> 
       <code code="2028-9" displayName="Carbon dioxide, total [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
@@ -243,7 +248,8 @@
     <component>
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
-          <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="e3db8661-71b7-4cf3-a666-4ed9e127e134"/>
       <code code="6299-2" displayName="Urea nitrogen [Mass/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
       <originalText>
@@ -274,7 +280,8 @@
     <component>
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
-          <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="21261c16-b527-49f2-916b-2ad5dabf4381"/>
       <code code="38483-4" displayName="Creatinine [Mass/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
       <originalText>
@@ -305,7 +312,8 @@
     <component>
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
-          <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="7e68c2a8-a507-413b-aed4-87de5081b369"/>
       <code code="2339-0" displayName="Glucose [Mass/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
       <originalText>
@@ -350,7 +358,8 @@
   <entry>
   <organizer classCode="CLUSTER" moodCode="EVN">
     <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
-      <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2023-05-01"/>
     <id root="950c948f-e5b2-4973-b7c0-e9ee08875e04"/>
     <!-- For an individual result which may be ordered independently, we choose a CLUSTER classCode and used the specific LOINC code as organizer/code-->
     <code code="6598-7" displayName="Troponin T.Cardiac [Mass/Volume] In Serum Or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
@@ -363,7 +372,8 @@
     <component>
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
-          <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="01323ca7-4a72-4ae3-963d-af903df828d2"/>
       <code code="6598-7" displayName="Troponin T.Cardiac [Mass/Volume] In Serum Or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
       <originalText>
@@ -396,7 +406,8 @@
   <entry>
   <organizer classCode="CLUSTER" moodCode="EVN">
     <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
-      <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2023-05-01"/>
     <id root="a4307cb2-b3b4-4f42-be03-1d9077376f4a"/>
     <!-- For an individual result which may be ordered independently, we choose a CLUSTER classCode and used the specific LOINC code as organizer/code-->
     <code code="6598-7" displayName="Troponin T.Cardiac [Mass/Volume] In Serum Or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
@@ -408,7 +419,8 @@
     <component>
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
-          <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="bf9c0a26-4524-4395-b3ce-100450b9c9ac"/>
       <code code="6598-7" displayName="Troponin T.Cardiac [Mass/Volume] In Serum Or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
       <originalText>

@@ -29,6 +29,7 @@
   </text>
   <entry typeCode="DRIV">
   <organizer classCode="BATTERY" moodCode="EVN">
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2023-05-01"/>
     <!-- ** Result organizer (V3) ** -->
     <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
     <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
@@ -41,6 +42,7 @@
     </effectiveTime>
     <component>
     <observation classCode="OBS" moodCode="EVN">
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <!-- ** Result observation (V3) ** -->
       <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>

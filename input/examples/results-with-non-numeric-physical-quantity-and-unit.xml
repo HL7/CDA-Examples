@@ -42,6 +42,7 @@
   <organizer classCode="BATTERY" moodCode="EVN">
     <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
     <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2023-05-01"/>
     <id root="f16043d8-8d93-41a1-9682-a6cc7215572c"/>
     <code code="24331-1" displayName="Lipid Panel" codeSystem="2.16.840.1.113883.6.1"
     codeSystemName="LOINC"/>
@@ -55,6 +56,7 @@
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="ccccccd8-8d93-41a1-9682-a6cc7215572c"/>
       <code code="3043-7" displayName="Triglycerides"
       codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
@@ -71,6 +73,7 @@
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="eeeee3d8-8d93-41a1-9682-a6cc7215572c"/>
       <code code="13457-7" displayName="Cholesterol in LDL by calculation"
       codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>

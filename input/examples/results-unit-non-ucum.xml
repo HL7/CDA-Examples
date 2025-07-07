@@ -31,6 +31,7 @@
   <organizer classCode="BATTERY" moodCode="EVN">
     <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
     <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2023-05-01"/>
     <id root="1.2.3.4" extension="abcd"/>
     <code code="57021-8" displayName="CBC W Auto Differential panel"
     codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
@@ -49,6 +50,7 @@
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <id root="1.2.3.4.5" extension="efgh"/>
       <code code="26515-7" displayName="Platelets [#/volume] in Blood"
       codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
@@ -62,7 +64,8 @@
       <!-- Lab sends a result to an EHR or another system with discrete units 
               that have not been translated to UCUM -->
       <!-- value/@nullFlavor must be used since the unit is not specified in UCUM-->
-      <value xsi:type="PQ" nullFlavor="OTH">
+      <!-- Since unit is required, it is set to the default unit of "1" -->
+      <value xsi:type="PQ" nullFlavor="OTH" unit="1">
       <!-- The units for this lab result require translation to be conformant to UCUM.-->
       <!-- translation/@nullFlavor must be used since the unit is not specified in any coding system-->
       <!-- This doesn't mean the value is null, but that the code/codeSystem is unknown -->

@@ -42,6 +42,7 @@
     <!-- Selected CLUSTER since not a set of tests -->
     <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
     <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2023-05-01"/>
     <!-- Results Organizer -->
     <id root="e1aa44dd-6f39-4f5c-b267-897c3821b563"/>
     <code code="71020" displayName="Chest X-Ray 2 Views" codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT"/>
@@ -51,6 +52,7 @@
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01"/>
       <!-- Results Observation -->
       <id root="e1aa44dd-6f39-2f5c-b267-897c3824b563"/>
       <code code="36643-5" displayName="XR Chest 2 Views" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
