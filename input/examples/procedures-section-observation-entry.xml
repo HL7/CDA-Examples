@@ -22,10 +22,13 @@
   </table>
   </text>
   <entry typeCode="DRIV">
-  <!-- Observations should be used for care that result in information about the patient (e.g. a diagnostic test & result) but do not alter physical state-->
-  <observation classCode="OBS" moodCode="EVN">
-    <templateId root="2.16.840.1.113883.10.20.22.4.13"/>
-    <templateId root="2.16.840.1.113883.10.20.22.4.13" extension="2014-06-09"/>
+  <!-- Observations should be used for care that result in information about the patient (e.g. a diagnostic test & result) but do not alter physical state -->
+  <!-- As of C-CDA 3.0, the Procedures Section requires that only the procedure template is used. 
+       To record observations, use the Result Observation template in the Results Section. -->
+   <procedure classCode="PROC" moodCode="EVN">
+    <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2024-05-01"/>
     <id root="c03e5445-af1b-4911-a419-e2782f21448c"/>
     <code code="268400002" codeSystem="2.16.840.1.113883.6.96" displayName="12 lead electrocardiogram" codeSystemName="SNOMED-CT">
     <originalText>
@@ -41,8 +44,6 @@
     </text>
     <statusCode code="completed"/>
     <effectiveTime value="20140329091522-0500" />
-    <!-- When choosing an observation, value records relevant findings-->
-    <value xsi:type="CD" code="251135002" codeSystem="2.16.840.1.113883.6.96" displayName="Borderline normal electrocardiogram" codeSystemName="SNOMED-CT" />
-  </observation>
+   </procedure>
   </entry>
 </section>

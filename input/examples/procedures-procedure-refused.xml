@@ -30,6 +30,7 @@
   <procedure moodCode="EVN" classCode="PROC" negationInd="true">
     <templateId root="2.16.840.1.113883.10.20.22.4.14" />
     <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2024-05-01"/>
     <id root="bd4ef764-d7f8-4484-8f65-a776e30816d5"/>
     <code code="6025007" displayName="Laparoscopic appendectomy"
     codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT">

@@ -22,3 +22,7 @@ The following examples were NOT brought over via automatic process:
     - `Med oral liquid PRN`
   - `xsi:type="IVL_INT"` is currently not supported in `Observation.value`
     - `Patient Health Questionnaire PHQ-9`
+
+Summarization of content changes in examples during initial migration
+- TemplateIds from C-CDA 3.0 and beyond were added
+- Procedure act and observation examples were all migrated to use `<procedure>`

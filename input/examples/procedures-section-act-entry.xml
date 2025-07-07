@@ -23,9 +23,11 @@
   </text>
   <entry typeCode="DRIV">
   <!-- Act should be used for care of the patient that cannot be classified as a procedure or observation (e.g. wound dressing change, counseling) -->
-  <act classCode="ACT" moodCode="EVN">
-    <templateId root="2.16.840.1.113883.10.20.22.4.12"/>
-    <templateId root="2.16.840.1.113883.10.20.22.4.12" extension="2014-06-09"/>
+  <!-- As of C-CDA 3.0, the Procedures Section requires that only the procedure template is used. -->
+   <procedure classCode="PROC" moodCode="EVN">
+    <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2024-05-01"/>
     <id root="9c0f070c-2e9e-4be1-a5b5-ff6d0f68123c"/>
     <code code="61310001" codeSystem="2.16.840.1.113883.6.96" displayName="Nutrition education" codeSystemName="SNOMED-CT">
     <originalText>
@@ -42,6 +44,6 @@
     </text>
     <statusCode code="completed"/>
     <effectiveTime value="20140329104513-0500"/>
-  </act>
+   </procedure>
   </entry>
 </section>
