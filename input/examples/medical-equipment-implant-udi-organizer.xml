@@ -75,6 +75,7 @@
   </text>
   <entry>
   <procedure classCode="PROC" moodCode="EVN">
+    <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2024-05-01"/>
     <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
     <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
     <id root="1.2.840.114350.1.13.5552.1.7.2.737780" extension="6239942"/>
@@ -87,7 +88,7 @@
     <!-- Procedure is completed, even though the implant is still active -->
     <statusCode code="completed"/>
     <!--time stamp as a point in time-->
-    <time value="20200714" /> 
+    <effectiveTime value="20200714" /> 
     <!--Product Instance Template-->
     <participant typeCode="DEV">
     <participantRole classCode="MANU">
@@ -130,6 +131,7 @@
       <component>
       <observation classCode="OBS" moodCode="EVN">
         <templateId root="2.16.840.1.113883.10.20.22.4.304" extension="2019-06-21"/>
+        <templateId root="2.16.840.1.113883.10.20.22.4.304" extension="2022-06-01"/>
         <code code="C101722" displayName="Primary DI Number" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus"/>
         <value xsi:type="II" root="1.3.160" extension="00848486001048" assigningAuthorityName="GS1" displayable="true"/>
       </observation>

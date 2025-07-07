@@ -18,6 +18,7 @@ UDI       Schematron generated from Trifolia on 4/22/2022
 Manually-applied changes:
 https://jira.hl7.org/browse/CDA-21367 - Several extension-less templateIds
 https://jira.hl7.org/browse/CDA-21368 - fixed a-4437-3488
+https://jira.hl7.org/browse/CDA-21368 - removed a-4524-3421
 -->
 <sch:schema xmlns:voc="http://www.lantanagroup.com/voc" xmlns:svs="urn:ihe:iti:svs:2008" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdtc="urn:hl7-org:sdtc" xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
   <sch:ns prefix="voc" uri="http://www.lantanagroup.com/voc" />
@@ -9580,7 +9581,7 @@ https://jira.hl7.org/browse/CDA-21368 - fixed a-4437-3488
   </sch:pattern>
   <sch:pattern id="p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.304-2022-06-01-errors">
     <sch:rule id="r-urn-hl7ii-2.16.840.1.113883.10.20.22.4.304-2022-06-01-errors-abstract" abstract="true">
-      <sch:assert id="a-4524-3421" test="count(cda:templateId)=1">SHALL contain exactly one [1..1] templateId (CONF:4524-3421).</sch:assert>
+      <!-- <sch:assert id="a-4524-3421" test="count(cda:templateId)=1">SHALL contain exactly one [1..1] templateId (CONF:4524-3421).</sch:assert> -->
       <sch:assert id="a-4524-3422" test="count(cda:code)=1">SHALL contain exactly one [1..1] code (CONF:4524-3422).</sch:assert>
       <sch:assert id="a-4524-3423" test="count(cda:value[@xsi:type='II'])=1">SHALL contain exactly one [1..1] value with @xsi:type="II" (CONF:4524-3423).</sch:assert>
       <sch:assert id="a-4524-3424" test="cda:templateId[@root='2.16.840.1.113883.10.20.22.4.304']">This templateId SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.22.4.304" (CONF:4524-3424).</sch:assert>
