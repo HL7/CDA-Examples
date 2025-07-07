@@ -29,6 +29,7 @@
   <entry>
     <act classCode="ACT" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2024-05-01"/>
       <id root="e5fbc288-659f-4aeb-a5e1-eb7cc8fcdfaf" />
       <code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
       <!-- While clinicians can track resolved problems, generally active problems will have active concern status and resolved concerns will be completed -->
@@ -40,6 +41,7 @@
       <entryRelationship typeCode="SUBJ">
         <observation classCode="OBS" moodCode="EVN">
           <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01"/>
+          <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2024-05-01"/>
           <id root="ac416033-3cc1-4485-ab31-36ce7669f55c" />
           <code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="55607006" displayName="Problem">
             <translation code="75326-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem"/>
@@ -72,4 +74,3 @@
     </act>
   </entry>
 </section>
-

@@ -29,6 +29,7 @@
   <act classCode="ACT" moodCode="EVN">
     <templateId root="2.16.840.1.113883.10.20.22.4.3" />
     <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2024-05-01"/>
     <id root="e5fbc288-659f-4aeb-a5e1-eb7cc8fcdfaf" />
     <code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
     <!-- Since this is a resolved problem, the concern status has been changed to completed. -->
@@ -44,6 +45,7 @@
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.4"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2024-05-01"/>
       <id extension="10241108" root="1.3.6.1.4.1.22812.4.111.0.4.1.2.1" />
       <code code="55607006" displayName="Problem"
       codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
