@@ -120,6 +120,7 @@
       <observation classCode="OBS" moodCode="EVN">
         <templateId root="2.16.840.1.113883.10.20.22.4.4"/>
         <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01"/>
+        <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2024-05-01"/>
         <id root="20cdd1a0-6136-4939-802f-edfebe9320bc"/>
         <!-- We'll use the type of diagnosis, since this is a coded diagnosis, not from problem list-->
         <code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="282291009" displayName="Diagnosis interpretation">
@@ -189,6 +190,7 @@
       <observation classCode="OBS" moodCode="EVN">
         <templateId root="2.16.840.1.113883.10.20.22.4.4"/>
         <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01"/>
+        <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2024-05-01"/>
         <id root="5f9b714d-a6ec-4f8f-95ae-ea75e5a54bac"/>
         <!-- We'll use the type of diagnosis, since this is a coded diagnosis, not from problem list-->
         <code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="282291009" displayName="Diagnosis interpretation">
