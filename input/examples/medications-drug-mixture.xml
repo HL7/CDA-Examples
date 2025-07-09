@@ -11,7 +11,8 @@
   <code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Medication use Narrative" /> 
   <title>Medications</title> 
   <text>
-     <!-- ... -->
+    <!-- Narrative omitted; only elements required for reference resolution are included -->
+    <content ID="Med1">diphenhydrAMINE hydrochloride 5 mg, lidocaine 50 mg in aluminum &amp; magnesium hydroxide-simethicone 80-80-8 mg/mL SUSP 1.6667 mL</content>
   </text>
   <!-- Example mixture:
       diphenhydrAMINE hydrochloride 5 mg, lidocaine 50 mg in aluminum & magnesium hydroxide-simethicone 80-80-8 mg/mL -->
@@ -21,7 +22,7 @@
       <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09" /> 
       <id extension="1012722087" root="1.2.840.114350.1.13.861.1.7.2.798268" /> 
       <text>
-        <reference value="#Med1"/>diphenhydrAMINE hydrochloride 5 mg, lidocaine 50 mg in aluminum &amp; magnesium hydroxide-simethicone 80-80-8 mg/mL SUSP 1.6667 mL
+        <reference value="#Med1"/>
       </text>
       <statusCode code="active" /> 
       <effectiveTime xsi:type="IVL_TS">
@@ -29,7 +30,7 @@
         <high value="20220119055900+0000" /> 
       </effectiveTime>
       <effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
-        <period unit="d" value=".5" /> 
+        <period unit="d" value="0.5" /> 
       </effectiveTime>
       <routeCode code="C38289" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="Oropharyngeal Route of Administration">
         <originalText>Mouth/Throat</originalText> 
