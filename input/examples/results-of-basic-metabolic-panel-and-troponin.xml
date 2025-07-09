@@ -124,7 +124,7 @@
       <!-- Note that displayName will not correspond to human readable and originalText used for referencing that information-->
       <code code="2947-0" displayName="Sodium [Moles/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
       <originalText>
-        <reference value="#ResultName1" />
+        <reference value="#Result1Name" />
       </originalText>
       </code>
       <text>
@@ -156,7 +156,7 @@
       <id root="3ee6ac58-d22c-4416-9acc-c1c75c1c2c91"/>
       <code code="6298-4" displayName="Potassium [Moles/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
       <originalText>
-        <reference value="#ResultName2" />
+        <reference value="#Result2Name" />
       </originalText>
       </code>
       <text>
@@ -188,7 +188,7 @@
       <id root="0431a3ec-8ad6-49da-9de1-0a8704b7609d"/>
       <code code="2069-3" displayName="Chloride [Moles/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
       <originalText>
-        <reference value="#ResultName3" />
+        <reference value="#Result3Name" />
       </originalText>
       </code>
       <text>
@@ -221,7 +221,7 @@
       <!-- Note that this exception is base on LOINC code in test data. CO2 code of 20565-8 (In Blood) would more accurately align with panel ordered --> 
       <code code="2028-9" displayName="Carbon dioxide, total [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
       <originalText>
-        <reference value="#ResultName4" />
+        <reference value="#Result4Name" />
       </originalText>
       </code>
       <text>
@@ -253,7 +253,7 @@
       <id root="e3db8661-71b7-4cf3-a666-4ed9e127e134"/>
       <code code="6299-2" displayName="Urea nitrogen [Mass/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
       <originalText>
-        <reference value="#ResultName5" />
+        <reference value="#Result5Name" />
       </originalText>
       </code>
       <text>
@@ -285,7 +285,7 @@
       <id root="21261c16-b527-49f2-916b-2ad5dabf4381"/>
       <code code="38483-4" displayName="Creatinine [Mass/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
       <originalText>
-        <reference value="#ResultName6" />
+        <reference value="#Result6Name" />
       </originalText>
       </code>
       <text>
@@ -317,7 +317,7 @@
       <id root="7e68c2a8-a507-413b-aed4-87de5081b369"/>
       <code code="2339-0" displayName="Glucose [Mass/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
       <originalText>
-        <reference value="#ResultName7" />
+        <reference value="#Result7Name" />
       </originalText>
       </code>
       <text>
@@ -377,7 +377,7 @@
       <id root="01323ca7-4a72-4ae3-963d-af903df828d2"/>
       <code code="6598-7" displayName="Troponin T.Cardiac [Mass/Volume] In Serum Or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
       <originalText>
-        <reference value="#ResultName8" />
+        <reference value="#Result8Name" />
       </originalText>
       </code>
       <text>
@@ -424,7 +424,7 @@
       <id root="bf9c0a26-4524-4395-b3ce-100450b9c9ac"/>
       <code code="6598-7" displayName="Troponin T.Cardiac [Mass/Volume] In Serum Or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
       <originalText>
-        <reference value="#ResultName9" />
+        <reference value="#Result9Name" />
       </originalText>
       </code>
       <text>
