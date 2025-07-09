@@ -7,9 +7,6 @@
   <list ID="NonMedicinalSupplyFullTextReference">
   <item ID="NonMedicinalSupplSupplyActCodeReference1">Maecenas nec odio et ante tincidunt tempus.<content ID="NonMedicinalplayingDeviceCodeReference1"> et ante tincidunt</content></item>
   </list>
-  <list>
-  ...
-  </list>
   
 </text>
 <!-- This illustrates a simple supply. in C-CDA this is used as a Non-Medicinal Supply Activity, a Planned Supply, or via entryRelationships as various supply activities. -->
