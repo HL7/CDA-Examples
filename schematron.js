@@ -37,6 +37,18 @@ const schematronData = {
  ╚═══██╗   ████╔╝██║
 ██████╔╝██╗╚██████╔╝
 ╚═════╝ ╚═╝ ╚═════╝`
+  },
+  '4.0': {
+    fileName: 'ccda-4-0.sch',
+    contents: null,
+    parsedMap: null,
+    header: `
+██╗  ██╗    ██████╗ 
+██║  ██║   ██╔═████╗
+███████║   ██║██╔██║
+╚════██║   ████╔╝██║
+     ██║██╗╚██████╔╝
+     ╚═╝╚═╝ ╚═════╝`
   }
 };
 
@@ -64,16 +76,9 @@ const headerDash = `
  █████╗ 
  ╚════╝ `;
 
-const header40 = `
-██╗  ██╗    ██████╗ 
-██║  ██║   ██╔═████╗
-███████║   ██║██╔██║
-╚════██║   ████╔╝██║
-     ██║██╗╚██████╔╝
-     ╚═╝╚═╝ ╚═════╝`;
 
 
-const schematron = process.argv[2] === '3.0' ? schematronData['3.0'] : schematronData['2.1'];
+const schematron = Object.keys(schematronData).includes(process.argv[2]) ? schematronData[process.argv[2]] : schematronData['2.1'];
 
 schematron.contents = fs.readFileSync(schematron.fileName, 'utf8');
 if (!schematron.contents) {
