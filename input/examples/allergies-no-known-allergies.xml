@@ -64,8 +64,9 @@
             <low nullFlavor="NI" />
           </effectiveTime>
 
-          <value xsi:type="CD" code="419199007"
-            displayName="Allergy to substance (disorder)"
+          <!-- Note 419199007 - Allergy to substance has been retired; 609328004 is the recommended replacement -->
+          <value xsi:type="CD" code="609328004"
+            displayName="Allergic disposition (finding)"
             codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
           <author>
             <templateId root="2.16.840.1.113883.10.20.22.4.119"/>

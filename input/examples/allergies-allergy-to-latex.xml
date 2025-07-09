@@ -76,7 +76,8 @@
       <low value="20140103"/>
       </effectiveTime>
       <!-- This specifies that the allergy is a propensity to adverse reactions to substance -->
-      <value xsi:type="CD" code="418038007" displayName="Propensity to adverse reactions to substance (disorder)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+      <!-- Note 418038007 - Propensity to adverse reactions has been retired; 420134006 is the recommended replacement -->
+      <value xsi:type="CD" code="420134006" displayName="Propensity to adverse reaction (finding)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
       <author>
       <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
       <time value="20140104"/>
