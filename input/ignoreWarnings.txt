@@ -6,6 +6,10 @@ The code 'NP' is valid but is retired
 # NUCC OID issue
 The OID '2.16.840.1.113883.6.101' matches multiple resources%
 
+# Examples with pharm extensions are not supported
+Undefined element 'formCode'%
+Undefined element 'ingredient'%
+
 # Suppress information for C-CDA 1.1 templateIds 
 The CDA Template 1.3.6.1.4.1.19376.1.5.3.1.3.1 is not known
 The CDA Template 1.3.6.1.4.1.19376.1.5.3.1.3.33 is not known
