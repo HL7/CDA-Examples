@@ -35,7 +35,7 @@
         If no author is present, it is assumed the document or section author(s) is the author of this goal. -->
       <author>
         <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
-        <time value="20220813124536-500"/>
+        <time value="20220813124536-0500"/>
         <assignedAuthor>
           <id extension="66666" root="2.16.840.1.113883.4.6"/>
           <code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101"

@@ -92,7 +92,7 @@
       <reference value="#simpleObservationValueReference1"/>
       </originalText>
     </value>
-    <interpretationCode code="x" codeSystem="1.2.3.4.5.6.7.8.42" displayName="semper">
+    <interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83">
       <originalText>
       <reference value="#ResultComponentInterpretationCodeTextReference1"/>
       </originalText>

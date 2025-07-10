@@ -46,7 +46,6 @@
     <reference value="#encounterFullTextReference1"/>
   </text>
   <!-- ... -->
-  <effectiveTime value="YYYMMDD"/>
   </encounter>
 </entry>
 </section>

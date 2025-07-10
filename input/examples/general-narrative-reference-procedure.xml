@@ -9,7 +9,6 @@
     <tr ID="procedureFullTextReference1">
     <td ID="procedureCodeTextReference1">Vestibulum nunc nisl</td>
     <td>labelText: mmm DD YYYY</td>
-    <br/>
     <td>
       labelText: 
       <content ID="procedureSiteCodeReference1">Vulputate eget  </content>
@@ -36,11 +35,9 @@
   <!-- we may reference the entire text of the procedure
         Example: Appendectomy Date: Feb 3rd 2013 Site: Right Abdomen Method: Transverse Incision Comments: patient is NPO
       -->
-  <statusCode/>
   <text>
     <reference value="#procedureFullTextReference1"/>
   </text>
-  <effectiveTime value="YYYYMMDD"/>
   <!-- ... -->
   <!-- when the method of a procedure is reflected in the human readable text we SHOULD have originalText/reference -->
   <methodCode code="6789" codeSystem="1.2.3.4.5.6.7.8.42" displayName="ornare eget">

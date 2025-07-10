@@ -38,7 +38,6 @@
     <reference value="#simpleActFullTextReference1"/>
   </text>
   <!-- ... -->
-  <effectiveTime value="YYYMMDD"/>
   </act>
 </entry>
 </section>
