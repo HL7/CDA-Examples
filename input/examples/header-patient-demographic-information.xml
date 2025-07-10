@@ -48,8 +48,7 @@
       </languageCommunication>
       <!-- Multiple languages are permitted. Only one should have a preferenceInd = true --> 
       <languageCommunication>
-        <languageCode code="ita"/>
-        <!-- "ita" is ISO 639-2 alpha-3 code for "Italian" -->
+        <languageCode code="it"/>
         <modeCode code="ESP" displayName="Expressed spoken" codeSystem="2.16.840.1.113883.5.60" codeSystemName="LanguageAbilityMode"/>
         <proficiencyLevelCode code="G" displayName="Good" codeSystem="2.16.840.1.113883.5.61" codeSystemName="LanguageAbilityProficiency"/>
         <!-- Patient's preferred language -->
@@ -58,4 +57,3 @@
     </patient>
   </patientRole>
 </recordTarget>
-

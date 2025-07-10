@@ -40,7 +40,7 @@
           codeSystem="2.16.840.1.113883.6.238" codeSystemName="CDC Race and Ethnicity"/>
         <languageCommunication>
           <templateId root="2.16.840.1.113883.3.88.11.32.2"/>
-          <languageCode code="eng"/>
+          <languageCode code="en"/>
           <preferenceInd value="true"/>
         </languageCommunication>
       </patient>
