@@ -25,4 +25,6 @@ The following examples were NOT brought over via automatic process:
 
 Summarization of content changes in examples during initial migration
 - TemplateIds from C-CDA 3.0 and beyond were added
+- Nullified addr and telecom fields were added to author elements where required
 - Procedure act and observation examples were all migrated to use `<procedure>`
+- Various CDA schema errors were corrected
