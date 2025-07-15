@@ -42,7 +42,7 @@
       <!-- Optional Author Element-->
       <author>
         <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
-        <time value="2015120171605"/>
+        <time value="20151202171605"/>
         <assignedAuthor>
           <id extension="666545666" root="2.16.840.1.113883.4.6"/>
           <code code="363LA2100X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC"

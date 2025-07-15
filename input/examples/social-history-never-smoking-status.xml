@@ -31,8 +31,6 @@
     <!-- The use of a specfic SNOMED code for unknown smoker is an encouraged variation from C-CDA practices in other sections -->
     
     <effectiveTime value="201406061032-0500"/>
-    <!-- The use of a specfic SNOMED code for unknown smoker is an encouraged variation from C-CDA practices in other sections -->
-    <value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="266919005" displayName="Never smoked tobacco"/>
     <author>
     <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
     <time value="201406061032-0500"/>
@@ -51,6 +49,8 @@
       </assignedPerson>
     </assignedAuthor>
     </author>
+    <!-- The use of a specfic SNOMED code for unknown smoker is an encouraged variation from C-CDA practices in other sections -->
+    <value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="266919005" displayName="Never smoked tobacco"/>
   </observation>
   </entry>
 </section>

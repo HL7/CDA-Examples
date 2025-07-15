@@ -23,7 +23,7 @@
       <code code="34109-9" codeSystem="2.16.840.1.113883.6.1" 
         displayName="Note">
         <translation code="8648-8" codeSystem="2.16.840.1.113883.6.1" 
-          displayName="Discharge Summary" />
+          displayName="Hospital course Narrative" />
       </code>
       <text><reference value="#DischargeNote" /></text>
       <statusCode code="completed"/>
@@ -38,13 +38,15 @@
           <id root="20cf14fb-b65c-4c8c-a54d-b0cca834c18c"/>
           <addr nullFlavor="UNK"/>
           <telecom nullFlavor="UNK"/>
-          <name>Dr. Physician</name>
+          <assignedPerson>
+            <name>Dr. Physician</name>
+          </assignedPerson>
         </assignedAuthor>
       </author>
       <!-- Reference to encounter -->
       <!-- When a Note is in an Encounter Specific Document this may not be needed -->
       <entryRelationship typeCode="COMP" inversionInd="true">
-        <encounter>
+        <encounter classCode="ENC" moodCode="EVN">
           <!-- Encounter ID matches an encounter in the Encounters Section or encompassingEncounter -->
           <id root="1.2.3.4.5.6"/>
         </encounter>

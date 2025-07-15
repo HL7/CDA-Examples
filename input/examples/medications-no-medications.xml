@@ -21,7 +21,7 @@
         <reference value="#Medication_None"/>
       </text>
       <statusCode code="active"/>
-      <effectiveTime nullFlavor="NA">
+      <effectiveTime xsi:type="IVL_TS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nullFlavor="NA">
         <low nullFlavor="NA"/>
       </effectiveTime>
       <doseQuantity nullFlavor="NA"/>

@@ -103,12 +103,13 @@
       <!-- The entire UDI as a single string is scoped by the FDA OID: 2.16.840.1.113883.3.3719 -->
       <id root="2.16.840.1.113883.3.3719" extension="(01)00848486001048(11)181015(10)ABC999(21)bi12342222(17)221015" assigningAuthorityName="FDA"/>
       <playingDevice>
-      <code code="2282003" codeSystem="2.16.840.1.113883.6.96" displayName="Breast Implant" codeSystemName="SNOMED CT"/>
+        <code code="2282003" codeSystem="2.16.840.1.113883.6.96" displayName="Breast Implant" codeSystemName="SNOMED CT">
+          <!-- Add original text with device type to playingDevice.code-->
+          <originalText>
+            <reference value="#_d92f7e16-385c-4079-b9c8-adfb2525ef6c"/>
+          </originalText>
+        </code>
       </playingDevice>
-      <!-- Add original text with device type to playingDevice.code-->
-      <originalText>
-        <reference value="#_d92f7e16-385c-4079-b9c8-adfb2525ef6c"/>
-      </originalText>
       <!-- From Product Instance template: The scopingEntity/id should correspond to FDA or the appropriate issuing agency. -->
       <scopingEntity>
       <id root="2.16.840.1.113883.3.3719"/>

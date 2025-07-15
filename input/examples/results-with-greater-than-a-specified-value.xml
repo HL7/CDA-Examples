@@ -38,8 +38,8 @@
     codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
     <statusCode code="completed"/>
     <effectiveTime>
-    <low value="2014030200908-0500"/>
-    <high value="2014030200908-0500"/>
+    <low value="201403020908-0500"/>
+    <high value="201403020908-0500"/>
     </effectiveTime>
     <component>
     <observation classCode="OBS" moodCode="EVN">

@@ -74,12 +74,14 @@
               <id root="20cf14fb-b65c-4c8c-a54d-b0cca834c18c"/>
               <addr nullFlavor="UNK"/>
               <telecom nullFlavor="UNK"/>
-              <name>Dr. Physician</name>
+              <assignedPerson>
+                <name>Dr. Physician</name>
+              </assignedPerson>
             </assignedAuthor>
           </author>
           <!-- Reference to encounter -->
           <entryRelationship typeCode="COMP" inversionInd="true">
-            <encounter>
+            <encounter classCode="ENC" moodCode="EVN">
               <!-- Encounter ID matches an encounter in the Encounters Section -->
               <id root="1.2.3.4"/>
             </encounter>

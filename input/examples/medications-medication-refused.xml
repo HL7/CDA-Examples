@@ -87,7 +87,7 @@
         </assignedAuthor>
       </author>
       <!-- Comment activity --> 
-      <entryRelationship>
+      <entryRelationship typeCode="COMP">
         <act classCode="ACT" moodCode="EVN">
           <templateId root="2.16.840.1.113883.10.20.22.4.64"/>
           <code code="48767-8" displayName="Annotation Comment" codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1"/>
@@ -97,7 +97,7 @@
         </act>
       </entryRelationship>
       <!-- This is the QRDA template --> 
-      <entryRelationship>
+      <entryRelationship typeCode="COMP">
         <observation classCode="OBS" moodCode="EVN">
           <!-- Reason (V2) -->
           <templateId root="2.16.840.1.113883.10.20.24.3.88" extension="2014-12-01" />
