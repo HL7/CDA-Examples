@@ -67,7 +67,9 @@
         <addr nullFlavor="UNK"/>
         <telecom nullFlavor="UNK"/>
         <assignedPerson>
-          <name nullFlavor="UNK"/>
+          <name nullFlavor="UNK">
+            <family nullFlavor="UNK"/>
+          </name>
         </assignedPerson>
       </assignedAuthor>
       </author>
