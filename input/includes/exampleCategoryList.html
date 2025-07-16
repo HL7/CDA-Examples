@@ -1,7 +1,20 @@
 {% assign pagesByCat = site.data.ImplementationGuide-hl7cdaexamples.definition.page.page | where: "name", 'examples-by-category.html' | first %}
 
-<ul>
-  {% for page in pagesByCat.page %}
-    <li><a href="{{ page.name }}">{{ page.title }}</a></li>
+{% assign groupings = site.data.ImplementationGuide-hl7cdaexamples.definition.grouping %}
+
+<table class="grid>
+  {% for grouping in groupings %}
+  {% assign catPageName = 'examples-' | append: grouping.id | append: '.html' %}
+  {% assign catPage = pagesByCat.page | where: "name", catPageName | first %}
+  {% if catPage %}
+    <tr>
+      <td>
+        <a href="{{ catPage.name }}">{{ catPage.title }}</a>
+      </td>
+      <td>
+        {{ grouping.description | markdownify }}
+      </td>
+    </tr>
+  {% endif %}
   {% endfor %}
-</ul>
+</table>
