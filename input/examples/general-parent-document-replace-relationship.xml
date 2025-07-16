@@ -299,7 +299,7 @@
     </functionCode>
     <assignedEntity>
       <id extension="5555555555" root="2.16.840.1.113883.4.6"/>
-      <code code="207QA0505X" displayName="Family Medicine Physician, Adult Medicine" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Healthcare Provider Taxonomy (HIPAA)"/>
+      <code code="207QA0505X" displayName="Adult Medicine Physician" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Healthcare Provider Taxonomy (HIPAA)"/>
       <addr>
       <streetAddressLine>1002 Healthcare Dr</streetAddressLine>
       <city>Portland</city>
@@ -340,7 +340,7 @@
       <!-- the provider is a Registered Nurse - may not be so -->
       <!-- note: we don't know what Mary is from the test data
        but since not specified, RN should not be an issue -db -->
-      <code codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC Health Care Provider Taxonomy" code="163W00000X" displayName="Nursing Service Providers; Registered Nurse"/>
+      <code codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC Health Care Provider Taxonomy" code="163W00000X" displayName="Registered Nurse"/>
       <addr>
       <streetAddressLine>1002 Healthcare Dr</streetAddressLine>
       <city>Portland</city>
@@ -473,7 +473,7 @@
         <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
         <id root="cdbd33f0-6cde-11db-9fe1-0833200c9a66"/>
         <statusCode code="active"/>
-        <effectiveTime nullFlavor="NA">
+        <effectiveTime xsi:type="IVL_TS" nullFlavor="NA">
           <low nullFlavor="NA"/>
         </effectiveTime>
         <doseQuantity nullFlavor="NA"/>

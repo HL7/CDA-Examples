@@ -31,6 +31,8 @@
     <!-- The use of a specfic SNOMED code for unknown smoker is an encouraged variation from C-CDA practices in other sections -->
     
     <effectiveTime value="201406061032-0500"/>
+    <!-- The use of a specfic SNOMED code for unknown smoker is an encouraged variation from C-CDA practices in other sections -->
+    <value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="266919005" displayName="Never smoked tobacco"/>
     <author>
     <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
     <time value="201406061032-0500"/>
@@ -39,8 +41,8 @@
       <!-- Root means NPI number. -->
       <code code="200000000X" codeSystem="2.16.840.1.113883.6.101"
       displayName="Allopathic and Osteopathic Physicians"/>
-      <telecom use="WP" value="tel:+1(555)555-1002"/>
       <addr nullFlavor="UNK"/>
+      <telecom use="WP" value="tel:+1(555)555-1002"/>
       <assignedPerson>
       <name>
         <given>Henry</given>
@@ -49,8 +51,6 @@
       </assignedPerson>
     </assignedAuthor>
     </author>
-    <!-- The use of a specfic SNOMED code for unknown smoker is an encouraged variation from C-CDA practices in other sections -->
-    <value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="266919005" displayName="Never smoked tobacco"/>
   </observation>
   </entry>
 </section>

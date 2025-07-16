@@ -775,7 +775,7 @@
           },
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection"
           }
         ],
         "reference": {
@@ -2240,7 +2240,7 @@
           },
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection"
           }
         ],
         "reference": {
@@ -2266,7 +2266,7 @@
           },
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ProblemSection"
           }
         ],
         "reference": {
