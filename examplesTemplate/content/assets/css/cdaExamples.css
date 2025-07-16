@@ -1,3 +1,7 @@
 .cda-example p {
   display: none !important;
 }
+
+.cda-example pre {
+  width: 100%;
+}
