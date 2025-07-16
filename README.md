@@ -14,3 +14,8 @@ npm run 2.1
 ```
 
 This will validate all input/examples files against the C-CDA 2.1 schematron with Companion Guide 4.1 additions.
+
+# Helpful Scripts
+The following scripts are helpful when making structural changes to the IG:
+
+- `node scripts/generatePages.js` - Run after modifying groupings to update the IG's pages field, create new pagecontent entries, and update the menu
