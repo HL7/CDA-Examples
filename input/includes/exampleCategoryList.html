@@ -1,0 +1,7 @@
+{% assign pagesByCat = site.data.ImplementationGuide-hl7cdaexamples.definition.page.page | where: "name", 'examples-by-category.html' | first %}
+
+<ul>
+  {% for page in pagesByCat.page %}
+    <li><a href="{{ page.name }}">{{ page.title }}</a></li>
+  {% endfor %}
+</ul>

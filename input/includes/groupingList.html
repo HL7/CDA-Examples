@@ -1,0 +1,22 @@
+{% assign grouping = site.data.ImplementationGuide-hl7cdaexamples.definition.grouping | where: "id", groupingId | first %}
+
+{{ grouping.description | markdownify }}
+
+{% assign resource = site.data.ImplementationGuide-hl7cdaexamples.definition.resource | where: "groupingId", groupingId %}
+
+{% if resource.size > 0 %}
+  <table class="grid">
+  {% for item in resource %}
+      <tr>
+        <td>
+          <a href="{{ item.reference.reference | replace: '/', '-' }}.html">{{ item.name }}</a>
+        </td>
+        <td>
+          {{ item.description | markdownify }}
+        </td>
+      </tr>
+  {% endfor %}
+  </table>
+{% else %}
+  <p>No examples yet.</p>
+{% endif %}

@@ -55,12 +55,164 @@
       "generation": "markdown",
       "page": [
         {
+          "sourceUrl": "examples-by-category.html",
+          "name": "examples-by-category.html",
+          "title": "Examples by Category",
+          "generation": "markdown",
+          "page": [
+            {
+              "sourceUrl": "examples-allergies.html",
+              "name": "examples-allergies.html",
+              "title": "Allergy Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-care-team.html",
+              "name": "examples-care-team.html",
+              "title": "Care Team Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-encounters.html",
+              "name": "examples-encounters.html",
+              "title": "Encounters Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-family-history.html",
+              "name": "examples-family-history.html",
+              "title": "Family History Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-functional-status.html",
+              "name": "examples-functional-status.html",
+              "title": "Functional Status Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-general.html",
+              "name": "examples-general.html",
+              "title": "General Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-goals.html",
+              "name": "examples-goals.html",
+              "title": "Goals Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-header.html",
+              "name": "examples-header.html",
+              "title": "Header Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-health-concerns.html",
+              "name": "examples-health-concerns.html",
+              "title": "Health Concerns Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-immunizations.html",
+              "name": "examples-immunizations.html",
+              "title": "Immunizations Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-interventions.html",
+              "name": "examples-interventions.html",
+              "title": "Interventions Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-medical-equipment.html",
+              "name": "examples-medical-equipment.html",
+              "title": "Medical Equipment Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-medications.html",
+              "name": "examples-medications.html",
+              "title": "Medications Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-mental-status.html",
+              "name": "examples-mental-status.html",
+              "title": "Mental Status Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-notes.html",
+              "name": "examples-notes.html",
+              "title": "Notes Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-plan-of-treatment.html",
+              "name": "examples-plan-of-treatment.html",
+              "title": "Plan of Treatment Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-problems.html",
+              "name": "examples-problems.html",
+              "title": "Problems Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-procedures.html",
+              "name": "examples-procedures.html",
+              "title": "Procedures Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-quality.html",
+              "name": "examples-quality.html",
+              "title": "Quality Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-referrals.html",
+              "name": "examples-referrals.html",
+              "title": "Referrals Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-results.html",
+              "name": "examples-results.html",
+              "title": "Results Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-social-history.html",
+              "name": "examples-social-history.html",
+              "title": "Social History Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-unstructured.html",
+              "name": "examples-unstructured.html",
+              "title": "Unstructured Examples",
+              "generation": "markdown"
+            },
+            {
+              "sourceUrl": "examples-vital-signs.html",
+              "name": "examples-vital-signs.html",
+              "title": "Vital Signs Examples",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
           "sourceUrl": "migrationnotes.html",
           "name": "migrationnotes.html",
           "title": "Migration Notes",
           "generation": "markdown"
         },
-		{
+        {
           "sourceUrl": "medicationstatus.html",
           "name": "medicationstatus.html",
           "title": "Medication statusCodes",

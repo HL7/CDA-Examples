@@ -4,8 +4,36 @@
     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Guidance<b class="caret"> </b></a>
     <ul class="dropdown-menu">
       <li><a href="migrationnotes.html">Migration Notes</a></li>
-	  <li><a href="medicationstatus.html">Medication statusCodes</a></li>
+      <li><a href="medicationstatus.html">Medication statusCodes</a></li>
     </ul>
   </li>
-  <li><a href="artifacts.html">List of Examples</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" class="dropdown-toggle" href="artifacts.html">Examples by Category<b class="caret"> </b></a>
+    <ul class="dropdown-menu" id="examples-by-category">
+      <li><a href="examples-allergies.html">Allergies</a></li>
+      <li><a href="examples-care-team.html">Care Team</a></li>
+      <li><a href="examples-encounters.html">Encounters</a></li>
+      <li><a href="examples-family-history.html">Family History</a></li>
+      <li><a href="examples-functional-status.html">Functional Status</a></li>
+      <li><a href="examples-general.html">General</a></li>
+      <li><a href="examples-goals.html">Goals</a></li>
+      <li><a href="examples-header.html">Header</a></li>
+      <li><a href="examples-health-concerns.html">Health Concerns</a></li>
+      <li><a href="examples-immunizations.html">Immunizations</a></li>
+      <li><a href="examples-interventions.html">Interventions</a></li>
+      <li><a href="examples-medical-equipment.html">Medical Equipment</a></li>
+      <li><a href="examples-medications.html">Medications</a></li>
+      <li><a href="examples-mental-status.html">Mental Status</a></li>
+      <li><a href="examples-notes.html">Notes</a></li>
+      <li><a href="examples-plan-of-treatment.html">Plan of Treatment</a></li>
+      <li><a href="examples-problems.html">Problems</a></li>
+      <li><a href="examples-procedures.html">Procedures</a></li>
+      <li><a href="examples-quality.html">Quality</a></li>
+      <li><a href="examples-referrals.html">Referrals</a></li>
+      <li><a href="examples-results.html">Results</a></li>
+      <li><a href="examples-social-history.html">Social History</a></li>
+      <li><a href="examples-unstructured.html">Unstructured</a></li>
+      <li><a href="examples-vital-signs.html">Vital Signs</a></li>
+    </ul>
+  </li>
 </ul>
