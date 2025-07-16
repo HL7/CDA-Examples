@@ -1,0 +1,49 @@
+---
+---
+{% include fragment-pagebegin.html %}
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+
+  <a name="root"> </a>
+{% if site.data.artifacts[page.path].example %}
+  {% assign example = 'Example ' %}
+{% else %}
+  {% assign example = site.data.artifacts[page.path].type %}
+{% endif %}
+  <h2 id="root">{{example}}: {{site.data.pages[page.path].title | escape_once}}</h2>
+
+  <!-- insert intro if present -->
+   <div>
+  {% include fragment-intro.html type='{{[type]}}' id='{{[id]}}' %}
+  </div>
+
+{% assign resource = site.data.ImplementationGuide-hl7cdaexamples.definition.resource | where: "reference.reference", "Binary/{{[id]}}" | first %}
+{% if resource %}
+  <div>{{ resource.description | markdownify }}</div>
+
+  {% if resource.profile %}
+    <p>This file includes examples of the following templates:
+    <ul>
+      {% for url in resource.profile %}
+        <li>
+          <a href="{{ url }}">{{ url | split: '/' | last }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+{% else %}
+  <!-- Would call the direct render... if I could figure out how to render XML in the template ANYWAY -->
+  <!-- For now, it just always calls the direct render -->
+{% endif %}
+
+  <div class="cda-example">
+    {% include {{[type]}}-{{[id]}}-html.xhtml %}
+  </div>
+
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='{{[type]}}' id='{{[id]}}' %}
+
+</div>
+{% include fragment-pageend.html %}

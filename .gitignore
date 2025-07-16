@@ -4,3 +4,5 @@ template/
 input-cache/
 node_modules/
 _gencontinuous.*
+.index.db
+.index.json

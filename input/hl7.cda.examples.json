@@ -82,6 +82,13 @@
           "code": "excludejson"
         },
         "value": "y"
+      },
+      {
+        "code": {
+          "code": "produce-jekyll-data",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "true"
       }
     ],
     "grouping": [
