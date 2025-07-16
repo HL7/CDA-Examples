@@ -59,6 +59,12 @@
           "name": "migrationnotes.html",
           "title": "Migration Notes",
           "generation": "markdown"
+        },
+		{
+          "sourceUrl": "medicationstatus.html",
+          "name": "medicationstatus.html",
+          "title": "Medication statusCodes",
+          "generation": "markdown"
         }
       ]
     },

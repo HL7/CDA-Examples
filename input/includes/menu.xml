@@ -4,6 +4,7 @@
     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Guidance<b class="caret"> </b></a>
     <ul class="dropdown-menu">
       <li><a href="migrationnotes.html">Migration Notes</a></li>
+	  <li><a href="medicationstatus.html">Medication statusCodes</a></li>
     </ul>
   </li>
   <li><a href="artifacts.html">List of Examples</a></li>
