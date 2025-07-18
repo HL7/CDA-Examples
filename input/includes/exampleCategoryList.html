@@ -2,7 +2,7 @@
 
 {% assign groupings = site.data.ImplementationGuide-hl7cdaexamples.definition.grouping %}
 
-<table class="grid>
+<table class="grid">
   {% for grouping in groupings %}
   {% assign catPageName = 'examples-' | append: grouping.id | append: '.html' %}
   {% assign catPage = pagesByCat.page | where: "name", catPageName | first %}
