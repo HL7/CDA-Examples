@@ -217,6 +217,12 @@
           "name": "medicationstatus.html",
           "title": "Medication statusCodes",
           "generation": "markdown"
+        } ,
+        {
+          "sourceUrl": "medicationfrequency.html",
+          "name": "medicationfrequency.html",
+          "title": "Medication Frequency",
+          "generation": "markdown"
         }
       ]
     },

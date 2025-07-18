@@ -5,6 +5,7 @@
     <ul class="dropdown-menu">
       <li><a href="migrationnotes.html">Migration Notes</a></li>
       <li><a href="medicationstatus.html">Medication statusCodes</a></li>
+      <li><a href="medicationfrequency.html">Medication Frequency</a></li>
     </ul>
   </li>
   <li class="dropdown">
