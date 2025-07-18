@@ -8,26 +8,187 @@ This page provides best practices for representing medication frequency in CDA (
 
 ---
 
-## PIVL_TS Examples (Periodic Intervals)
+### PIVL_TS Examples (Periodic Intervals)
 
-Use `PIVL_TS` when specifying regular periodic medication schedules:
-
-| Frequency | Description          | Preferred XML (PIVL_TS)                                                | Alternate XML |
-|----------|----------------------|------------------------------------------------------------------------|----------------|
-| **BID** | Two times daily       | `<period value="0.5" unit="d" institutionSpecified="true"/>`           | `<period value="12" unit="h"/>` |
-| **Q12H** | Every 12 hours       | `<period value="12" unit="h"/>`                                        | `<period value="0.5" unit="d"/>` |
-| **TID** | Three times daily     | `<period value="0.3333" unit="d" institutionSpecified="true"/>`        | `<period value="8" unit="h"/>` |
-| **Q8H** | Every 8 hours         | `<period value="8" unit="h"/>`                                         | `<period value="0.3333" unit="d"/>` |
-| **QID** | Four times daily      | `<period value="0.25" unit="d" institutionSpecified="true"/>`          | `<period value="6" unit="h"/>` |
-| **Q6H** | Every 6 hours         | `<period value="6" unit="h"/>`                                         | `<period value="0.25" unit="d"/>` |
-| **QD**  | Daily                 | `<period value="1" unit="d" institutionSpecified="true"/>`             | `<period value="24" unit="h"/>` |
-| **Q24H**| Every 24 hours        | `<period value="24" unit="h"/>`                                        | `<period value="1" unit="d"/>` |
-| **QOD** | Every other day       | `<period value="2" unit="d" institutionSpecified="true"/>`             | `<period value="48" unit="h"/>` |
-| **QM**  | Once a month          | `<period value="1" unit="mo" institutionSpecified="true"/>`            | — |
-| —        | Every other week      | `<period value="2" unit="wk" institutionSpecified="true"/>`            | — |
-| —        | Every 4–6 hours (range)| `<period xsi:type="IVL_PQ"><low value="4" unit="h"/><high value="6" unit="h"/></period>` | — |
+Use `PIVL_TS` when specifying regular periodic medication schedules.  
 
 ---
+
+#### BID (Two times daily)
+
+Preferred (institution-specified):
+```xml
+<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+  <period value="0.5" unit="d"/>
+</effectiveTime>
+```
+
+Alternate:
+```xml
+<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+  <period value="12" unit="h"/>
+</effectiveTime>
+```
+
+---
+
+#### Q12H (Every 12 hours)
+
+Preferred:
+```xml
+<effectiveTime xsi:type="PIVL_TS" operator="A">
+  <period value="12" unit="h"/>
+</effectiveTime>
+```
+
+Alternate:
+```xml
+<effectiveTime xsi:type="PIVL_TS" operator="A">
+  <period value="0.5" unit="d"/>
+</effectiveTime>
+```
+
+#### TID (Three times daily)
+
+Preferred:
+```xml
+<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+  <period value="0.3333" unit="d"/>
+</effectiveTime>
+```
+
+Alternate:
+```xml
+<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+  <period value="8" unit="h"/>
+</effectiveTime>
+```
+
+#### Q8H (Every 8 hours)
+
+Preferred:
+```xml
+<effectiveTime xsi:type="PIVL_TS" operator="A">
+  <period value="8" unit="h"/>
+</effectiveTime>
+```
+
+Alternate:
+```xml
+<effectiveTime xsi:type="PIVL_TS" operator="A">
+  <period value="0.3333" unit="d"/>
+</effectiveTime>
+```
+
+#### QID (Four times daily)
+
+Preferred:
+```xml
+<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+  <period value="0.25" unit="d"/>
+</effectiveTime>
+```
+
+Alternate:
+```xml
+<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+  <period value="6" unit="h"/>
+</effectiveTime>
+```
+
+#### Q6H (Every 6 hours)
+
+Preferred:
+```xml
+<effectiveTime xsi:type="PIVL_TS" operator="A">
+  <period value="6" unit="h"/>
+</effectiveTime>
+```
+
+Alternate:
+```xml
+<effectiveTime xsi:type="PIVL_TS" operator="A">
+  <period value="0.25" unit="d"/>
+</effectiveTime>
+```
+
+#### QD (Daily)
+
+Preferred:
+```xml
+<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+  <period value="1" unit="d"/>
+</effectiveTime>
+```
+
+Alternate:
+```xml
+<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+  <period value="24" unit="h"/>
+</effectiveTime>
+```
+
+#### Q24H (Every 24 hours)
+
+Preferred:
+```xml
+<effectiveTime xsi:type="PIVL_TS" operator="A">
+  <period value="24" unit="h"/>
+</effectiveTime>
+```
+
+Alternate:
+```xml
+<effectiveTime xsi:type="PIVL_TS" operator="A">
+  <period value="1" unit="d"/>
+</effectiveTime>
+```
+
+#### QOD (Every other day)
+
+Preferred:
+```xml
+<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+  <period value="2" unit="d"/>
+</effectiveTime>
+```
+
+Alternate:
+```xml
+<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+  <period value="48" unit="h"/>
+</effectiveTime>
+```
+
+#### QM (Once a month)
+
+Preferred:
+```xml
+<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+  <period value="1" unit="mo"/>
+</effectiveTime>
+```
+
+#### Every other week
+
+Preferred:
+```xml
+<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+  <period value="2" unit="wk"/>
+</effectiveTime>
+```
+
+#### Every 4–6 hours (range)
+
+Preferred:
+```xml
+<effectiveTime xsi:type="PIVL_TS" operator="A">
+  <period xsi:type="IVL_PQ">
+    <low value="4" unit="h"/>
+    <high value="6" unit="h"/>
+  </period>
+</effectiveTime>
+```
 
 ### EIVL_TS Examples (Event-Based Intervals)
 
