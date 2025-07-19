@@ -17,7 +17,7 @@ Use `PIVL_TS` when specifying regular periodic medication schedules.
 <!--
 Model for XML tr:
 
-<tr><td>REPLACE_WITH_FREQ</td><td>REPLACE_WITH_DESCRIPTION</td>
+<tr><th>REPLACE_WITH_FREQ</th><td>REPLACE_WITH_DESCRIPTION</td>
 <td>
 <div markdown="1">
 {% highlight xml %}
@@ -42,7 +42,7 @@ Model for XML tr:
 <tr><th>Frequency</th><th>Description</th><th>Preferred (units align with description)</th><th>Known other representation</th></tr>
 
 
-<tr><td>BID</td><td>Two times daily</td>
+<tr><th>BID</th><td>Two times daily</td>
 <td>
 <div markdown="1">
 {% highlight xml %}
@@ -67,7 +67,7 @@ Model for XML tr:
 </td>
 </tr>
 
-<tr><td>Q12H</td><td>Every 12 hours</td>
+<tr><th>Q12H</th><td>Every 12 hours</td>
 <td>
 <div markdown="1">
 {% highlight xml %}
@@ -90,7 +90,7 @@ Model for XML tr:
 </td>
 </tr>
 
-<tr><td>TID</td><td>Three times daily</td>
+<tr><th>TID</th><td>Three times daily</td>
 <td>
 <div markdown="1">
 {% highlight xml %}
@@ -113,7 +113,7 @@ Model for XML tr:
 </td>
 </tr>
 
-<tr><td>Q8H</td><td>Every 8 hours</td>
+<tr><th>Q8H</th><td>Every 8 hours</td>
 <td>
 <div markdown="1">
 {% highlight xml %}
@@ -134,7 +134,7 @@ Model for XML tr:
 </td>
 </tr>
 
-<tr><td>QID</td><td>Four times daily</td>
+<tr><th>QID</th><td>Four times daily</td>
 <td>
 <div markdown="1">
 {% highlight xml %}
@@ -157,7 +157,7 @@ Model for XML tr:
 </td>
 </tr>
 
-<tr><td>Q6H</td><td>Every 6 hours</td>
+<tr><th>Q6H</th><td>Every 6 hours</td>
 <td>
 <div markdown="1">
 {% highlight xml %}
@@ -178,7 +178,7 @@ Model for XML tr:
 </td>
 </tr>
 
-<tr><td>QD</td><td>Daily</td>
+<tr><th>QD</th><td>Daily</td>
 <td>
 <div markdown="1">
 {% highlight xml %}
@@ -201,7 +201,7 @@ Model for XML tr:
 </td>
 </tr>
 
-<tr><td>Q24H</td><td>Every 24 hours</td>
+<tr><th>Q24H</th><td>Every 24 hours</td>
 <td>
 <div markdown="1">
 {% highlight xml %}
@@ -222,7 +222,7 @@ Model for XML tr:
 </td>
 </tr>
 
-<tr><td>QOD</td><td>Every other day</td>
+<tr><th>QOD</th><td>Every other day</td>
 <td>
 <div markdown="1">
 {% highlight xml %}
@@ -245,7 +245,7 @@ Model for XML tr:
 </td>
 </tr>
 
-<tr><td>QM</td><td>Once a month</td>
+<tr><th>QM</th><td>Once a month</td>
 <td>
 <div markdown="1">
 {% highlight xml %}
@@ -260,7 +260,7 @@ Model for XML tr:
 </td>
 </tr>
 
-<tr><td colspan="2">Every other week</td>
+<tr><td></td><td>Every other week</td>
 <td>
 <div markdown="1">
 {% highlight xml %}
@@ -275,7 +275,7 @@ Model for XML tr:
 </td>
 </tr>
 
-<tr><td colspan="2">Every 4-6 hours (range)</td>
+<tr><td></td><td>Every 4-6 hours (range)</td>
 <td>
 <div markdown="1">
 {% highlight xml %}
@@ -294,53 +294,76 @@ Model for XML tr:
 
 </table>
 
-
-
 ### EIVL_TS Examples (Event-Based Intervals)
 
 Use `EIVL_TS` when dosing is based on an event (e.g., mealtime):
 
-#### 1 hour after meal
-```xml
+<table class="grid">
+<tr><th>1 hour after meal</th>
+<td>
+<div markdown="1">
+{% highlight xml %}
 <effectiveTime xsi:type="EIVL_TS" operator="A">
   <event code="PC"/>
   <offset>
     <low value="1" unit="h"/>
   </offset>
 </effectiveTime>
-```
+{% endhighlight %}
+</div>
+</td>
+</tr>
 
-#### Before dinner
-
-```xml
+<tr><th>Before dinner</th>
+<td>
+<div markdown="1">
+{% highlight xml %}
 <effectiveTime xsi:type="EIVL_TS" operator="A">
   <event code="ACV"/>
 </effectiveTime>
-```
+{% endhighlight %}
+</div>
+</td>
+</tr>
 
-#### Before lunch (ante cibus diurnus)
-
-```xml
+<tr><th>Before lunch (ante cibus diurnus)</th>
+<td>
+<div markdown="1">
+{% highlight xml %}
 <effectiveTime xsi:type="EIVL_TS" operator="A">
   <event code="ACD"/>
 </effectiveTime>
-```
+{% endhighlight %}
+</div>
+</td>
+</tr>
 
-#### At the hour of sleep
-
-```xml
+<tr><th>At the hour of sleep</th>
+<td>
+<div markdown="1">
+{% highlight xml %}
 <effectiveTime xsi:type="EIVL_TS" operator="A">
   <event code="HS"/>
 </effectiveTime>
-```
+{% endhighlight %}
+</div>
+</td>
+</tr>
 
-#### Every evening (between dinner and sleep)
-
-```xml
+<tr><th>Every evening (between dinner and sleep)</th>
+<td>
+<div markdown="1">
+{% highlight xml %}
 <effectiveTime xsi:type="EIVL_TS" operator="A">
   <event code="ICV"/>
 </effectiveTime>
-```
+{% endhighlight %}
+</div>
+</td>
+</tr>
+
+</table>
+
 
 ### TimingEvent Value Set
 
