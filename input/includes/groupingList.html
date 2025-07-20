@@ -2,17 +2,37 @@
 
 {{ grouping.description | markdownify }}
 
-{% assign resource = site.data.ImplementationGuide-hl7cdaexamples.definition.resource | where: "groupingId", groupingId %}
+{% assign resources = site.data.ImplementationGuide-hl7cdaexamples.definition.resource | where: "groupingId", groupingId %}
 
-{% if resource.size > 0 %}
+{% if resources.size > 0 %}
   <table class="grid">
-  {% for item in resource %}
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Approval</th>
+    </tr>
+  {% for resource in resources %}
       <tr>
         <td>
-          <a href="{{ item.reference.reference | replace: '/', '-' }}.html">{{ item.name }}</a>
+          <a href="{{ resource.reference.reference | replace: '/', '-' }}.html">{{ resource.name }}</a>
         </td>
         <td>
-          {{ item.description | markdownify }}
+          {{ resource.description | markdownify }}
+        </td>
+        <td>
+
+{% assign approvalExtension = resource.extension | where: "url", "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus" | first %}
+{% assign statusExtension = approvalExtension.extension | where: "url", "status" | first %}
+{% assign sdwgDates = approvalExtension.extension | where: "url", "sdwgApprovalDate" %}
+
+    {% if statusExtension.valueCode == "pending" %}
+      {% include labelPending.html %}
+    {% elsif statusExtension.valueCode == "withdrawn" %}
+      {% include labelWithdrawn.html %}
+    {% else %}
+      {{ sdwgDates | map: "valueDate" | join: ", " }}
+    {% endif %}
+
         </td>
       </tr>
   {% endfor %}

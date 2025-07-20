@@ -5,19 +5,34 @@
   <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
 
   <a name="root"> </a>
+
+{% assign resource = site.data.ImplementationGuide-hl7cdaexamples.definition.resource | where: "reference.reference", "Binary/{{[id]}}" | first %}
+{% assign approvalExtension = resource.extension | where: "url", "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus" | first %}
+{% assign statusExtension = approvalExtension.extension | where: "url", "status" | first %}
+{% assign approvalStatus = statusExtension.valueCode %}
+
+{% assign approvalMessage = "" %}
+{% if approvalStatus == "pending" %}
+  {% assign approvalMessage = " (Approval pending)" %}
+{% elsif approvalStatus == "withdrawn" %}
+  {% assign approvalMessage = " (Example withdrawn)" %}
+{% endif %}
+
+
 {% if site.data.artifacts[page.path].example %}
-  {% assign example = 'Example ' %}
+  {% assign example = 'Example' %}
 {% else %}
   {% assign example = site.data.artifacts[page.path].type %}
 {% endif %}
-  <h2 id="root">{{example}}: {{site.data.pages[page.path].title | escape_once}}</h2>
+  <h2 id="root">{{example}}: {{site.data.pages[page.path].title | escape_once}}{{approvalMessage}}</h2>
+
+  {% include approvalBox.html approvalExtension=approvalExtension %}
 
   <!-- insert intro if present -->
    <div>
   {% include fragment-intro.html type='{{[type]}}' id='{{[id]}}' %}
   </div>
 
-{% assign resource = site.data.ImplementationGuide-hl7cdaexamples.definition.resource | where: "reference.reference", "Binary/{{[id]}}" | first %}
 {% if resource %}
   <div>{{ resource.description | markdownify }}</div>
 

@@ -5,3 +5,28 @@
 .cda-example pre {
   width: 100%;
 }
+
+.approvalBox {
+  margin: 4px;
+  padding: 6px;
+  float: right;
+  border: 1px solid navy; /* default project.css toc-box-border */
+  background-color: #ddd;
+  border-radius: 3px;
+}
+
+.approvalPending {
+  border: 1px solid black;
+  padding: 0 2px;
+  background-color: #fff9c4;
+  border-radius: 3px;
+  cursor: default;
+}
+
+.approvalWithdrawn {
+  border: 1px solid black;
+  padding: 0 2px;
+  background-color: #ffb3b3;
+  border-radius: 3px;
+  cursor: default;
+}

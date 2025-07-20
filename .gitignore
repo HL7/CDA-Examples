@@ -3,6 +3,7 @@ temp/
 template/
 input-cache/
 node_modules/
+fsh-generated/
 _gencontinuous.*
 .index.db
 .index.json
