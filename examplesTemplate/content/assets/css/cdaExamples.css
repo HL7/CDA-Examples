@@ -7,7 +7,7 @@
 }
 
 .approvalBox {
-  margin: 4px;
+  margin: 4px 0 4px 4px;
   padding: 6px;
   float: right;
   border: 1px solid navy; /* default project.css toc-box-border */
