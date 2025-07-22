@@ -1,4 +1,4 @@
-The following are notes about the status of migrating all examples from the old [https://github.com/HL7/C-CDA-Examples](C-CDA Examples repository) into this IG.
+The following are notes about the status of migrating all examples from the old [C-CDA Examples repository](https://github.com/HL7/C-CDA-Examples) into this IG.
 
 All files (with the following exceptions) were copied directly into the IG with minimal content changes:
 - Grouping was set to the original folder name
