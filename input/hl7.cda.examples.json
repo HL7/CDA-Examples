@@ -4616,7 +4616,8 @@
         "description": "This example shows how an ordered referral could have a completed note documented in to fulfill the requirements of Closing the Loop quality measure https://ecqi.healthit.gov/ecqm/measures/cms50v7\nNote that the examples task force has approved multiple examples in regards to this quality measure. The Planned Referral Act opens the loop and the Note would be eligible to close the loop. This examples combines into one for ease of reader. In a 'real-world' exchange these would be in separate documents. The example titled Close Referral with a Document is another approach where a full document completes the referral. Other additional appaoaches may be appropriate.",
         "isExample": true,
         "profile": [
-          "http://hl7.org/cda/us/ccda/StructureDefinition/PatientReferralAct",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PatientReferralAct|3.0.0",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ReferralAct",
           "http://hl7.org/cda/us/ccda/StructureDefinition/ActivitiesSection",
           "http://hl7.org/cda/us/ccda/StructureDefinition/NotesSection",
           "http://hl7.org/cda/us/ccda/StructureDefinition/NoteActivity"
@@ -5505,7 +5506,8 @@
         "isExample": true,
         "profile": [
           "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection",
-          "http://hl7.org/cda/us/ccda/StructureDefinition/PregnancyObservation"
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PregnancyObservation|3.0.0",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PregnancyStatusObservation"
         ],
         "groupingId": "social-history"
       },
@@ -5630,7 +5632,8 @@
         "isExample": true,
         "profile": [
           "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection",
-          "http://hl7.org/cda/us/ccda/StructureDefinition/PregnancyObservation"
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PregnancyObservation|3.0.0",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PregnancyStatusObservation"
         ],
         "groupingId": "social-history"
       },
