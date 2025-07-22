@@ -10,6 +10,11 @@ The OID '2.16.840.1.113883.6.101' matches multiple resources%
 Undefined element 'formCode'%
 Undefined element 'ingredient'%
 
+# This is a known issue with the FHIR Validator around CDA narratives
+Elements of type table at text/table cannot have the following children%
+Elements of type col must be in a table%
+Elements of type ul%
+
 # The string IS Base64 Encoded but line breaks are added for example readability
 Constraint failed: ed-base64: 'If @representation='B64', then xmlText SHALL be a base64binary string.'
 

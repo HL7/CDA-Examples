@@ -51,7 +51,7 @@
           codeSystem="2.16.840.1.113883.6.238"
           codeSystemName="OMB Standards for Race and Ethnicity"/>
         <languageCommunication>
-          <languageCode code="eng"/>
+          <languageCode code="en"/>
           <modeCode code="ESP" displayName="Expressed spoken"
             codeSystem="2.16.840.1.113883.5.60" codeSystemName="LanguageAbilityMode"/>
           <proficiencyLevelCode code="E" displayName="Excellent"
