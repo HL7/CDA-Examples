@@ -11,7 +11,7 @@
   <li class="dropdown">
     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Example Lists<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-      <li><a href="examples-by-category.html">Examples by Category</a></li>
+      <li><a href="list-by-category.html">Examples by Category</a></li>
       <li><a href="list-by-template.html">Examples by Template</a></li>
     </ul>
   </li>

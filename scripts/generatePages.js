@@ -25,7 +25,7 @@ const groupings = ig.definition.grouping.sort((a, b) => {
   if (!b.name) return -1;
   return a.name.localeCompare(b.name);
 });
-const examplesByPage = ig.definition.page.page.find(p => p.name === 'examples-by-category.html');
+const examplesByPage = ig.definition.page.page.find(p => p.name === 'list-by-category.html');
 let sdModified = false;
 
 for (const group of groupings) {
