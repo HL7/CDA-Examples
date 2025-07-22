@@ -9,6 +9,13 @@
     </ul>
   </li>
   <li class="dropdown">
+    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Example Lists<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="examples-by-category.html">Examples by Category</a></li>
+      <li><a href="list-by-template.html">Examples by Template</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
     <a data-toggle="dropdown" class="dropdown-toggle" href="artifacts.html">Examples by Category<b class="caret"> </b></a>
     <ul class="dropdown-menu" id="examples-by-category">
       <li><a href="examples-allergies.html">Allergies</a></li>
