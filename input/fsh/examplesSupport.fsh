@@ -25,6 +25,7 @@ Context: ImplementationGuide.definition.resource
 * extension[status] ^short = "State of approval"
   * value[x] only code
   * value[x] from ApprovalStatusValueSet
+  * value[x] ^short = "approved | pending | withdrawn"
 * extension[sdwgApprovalDate] ^short = "Date extension approved by Structured Documents Work Group"
   * value[x] only date
 * extension[taskForceApprovalDate] ^short = "Date extension approved by Examples Task Force"
