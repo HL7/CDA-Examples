@@ -1,5 +1,3 @@
-## 🧾 Introduction
-
 This page provides best practices for representing medication frequency in CDA (C‑CDA), focusing on correct use of `effectiveTime` with both **PIVL_TS** (periodic intervals) and **EIVL_TS** (event‑based intervals). These examples also highlight the `institutionSpecified` attribute and are approved by the HL7 Pharmacy Structured Documents Work Group.
 
 > **institutionSpecified**  
