@@ -3,8 +3,8 @@
     "cda-schematron-validator": "^1.1.12"
   },
   "scripts": {
-    "2.1": "node schematron.js 2.1",
-    "3.0": "node schematron.js 3.0",
-    "4.0": "node schematron.js 4.0"
+    "2.1": "node scripts/schematron.js 2.1",
+    "3.0": "node scripts/schematron.js 3.0",
+    "4.0": "node scripts/schematron.js 4.0"
   }
 }

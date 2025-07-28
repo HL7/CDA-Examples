@@ -98,7 +98,7 @@ for (const variable of matches) {
   schematron.contents = schematron.contents.replaceAll(`($${variable[1]},`, `(${variable[2]},`);
 }
 
-const inputDir = path.join(__dirname, 'input', 'examples');
+const inputDir = path.join(__dirname, '..', 'input', 'examples');
 if (!fs.existsSync(inputDir)) {
   console.error(`Error: Input directory ${inputDir} does not exist. Please ensure the input/examples directory is present.`);
   process.exit(1);
