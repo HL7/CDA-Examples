@@ -2,47 +2,33 @@ const fs = require('fs');
 const path = require('path');
 const { loadSchematron, validateXml } = require('./schematronValidation');
 
-
-const schematronData = {
-  '2.1': {
-    fileName: 'ccda-2-1.sch',
-    contents: null,
-    parsedMap: null,
-    header: `
+const versionHeaders = {
+  '2.1': `
  ██████╗    ██╗
  ╚════██╗  ███║
   █████╔╝  ╚██║
  ██╔═══╝    ██║
  ███████╗██╗██║
  ╚══════╝╚═╝╚═╝`
-  },
-  '3.0': {
-    fileName: 'ccda-3-0.sch',
-    contents: null,
-    parsedMap: null,
-    header: `
+  ,
+  '3.0': `
 ██████╗     ██████╗ 
 ╚════██╗   ██╔═████╗
  █████╔╝   ██║██╔██║
  ╚═══██╗   ████╔╝██║
 ██████╔╝██╗╚██████╔╝
 ╚═════╝ ╚═╝ ╚═════╝`
-  },
-  '4.0': {
-    fileName: 'ccda-4-0.sch',
-    contents: null,
-    parsedMap: null,
-    header: `
+  ,
+  '4.0': `
 ██╗  ██╗    ██████╗ 
 ██║  ██║   ██╔═████╗
 ███████║   ██║██╔██║
 ╚════██║   ████╔╝██║
      ██║██╗╚██████╔╝
      ╚═╝╚═╝ ╚═════╝`
-  }
 };
 
-const filenameFilter = Object.keys(schematronData).includes(process.argv[2]) ? process.argv[3] : process.argv[2] || null;
+const filenameFilter = Object.keys(versionHeaders).includes(process.argv[2]) ? process.argv[3] : process.argv[2] || null;
 
 // TextToASCII Font ANSI Shadow
 const headerBase = `
@@ -64,17 +50,29 @@ const headerDash = `
         
         
  █████╗ 
- ╚════╝ `;
+ ╚════╝ 
+        
+        `;
 
-const version = Object.keys(schematronData).includes(process.argv[2]) ? process.argv[2] : '2.1';
+const version = Object.keys(versionHeaders).includes(process.argv[2]) ? process.argv[2] : 'all';
+const versions = version === 'all' ? Object.keys(versionHeaders) : [version];
 
-if (!loadSchematron(version)) {
-  console.error(`Error loading schematron for version ${version}.`);
-  process.exit(1);
+for (const versionToLoad of versions) {
+  if (!loadSchematron(versionToLoad)) {
+    console.error(`Error loading schematron for version ${versionToLoad}.`);
+    process.exit(1);
+  }
 }
 
-// TODO - add dash and range when we do more simultaneously!
-const header = headerBase.split('\n').map((base, index) => base + (schematronData[version].header.split('\n')[index] || '')).join('\n');
+const header = headerBase.split('\n').map((base, index) => {
+  const firstVersion = version === 'all' ? Object.keys(versionHeaders)[0] : version;
+  let versionedRow = base + (versionHeaders[firstVersion].split('\n')[index] || '');
+
+  if (version === 'all') {
+    versionedRow += (headerDash.split('\n')[index] + versionHeaders['4.0'].split('\n')[index]) || '';
+  }
+  return versionedRow;
+}).join('\n');
 
 console.log(header);
 console.log(filenameFilter ? `Validating example files matching: ${filenameFilter}` : 'Validating all sample files (pass in a string to filter files)');
@@ -87,13 +85,20 @@ if (!fs.existsSync(inputDir)) {
 
 const files = fs.readdirSync(inputDir);
 const xmlFiles = files.filter(file => file.endsWith('.xml') && (!filenameFilter || file.includes(filenameFilter)));
+printVersionNumbers();
 xmlFiles.forEach(validateFile);
 console.info(`Watching for changes in ${inputDir}... (press 'q' to stop)`);
+let watchTimeout;
+const delay = 300;
 const watcher = fs.watch(inputDir, (eventType, filename) => {
-  if (eventType === 'change' && filename.endsWith('.xml') && (!filenameFilter || filename.includes(filenameFilter))) {
-    console.log(`Revalidating...`);
-    validateFile(filename);
-  }
+  clearTimeout(watchTimeout);
+  watchTimeout = setTimeout(() => {
+    if (eventType === 'change' && filename.endsWith('.xml') && (!filenameFilter || filename.includes(filenameFilter))) {
+      console.log(`File changed: ${filename}. Revalidating...`);
+      printVersionNumbers();
+      validateFile(filename);
+    }
+  }, delay);
 });
 
 // Allow user to stop watching by pressing 'q'
@@ -108,17 +113,36 @@ process.stdin.on('data', (key) => {
   }
 });
 
+function printVersionNumbers() {
+  if (version !== 'all') return;
+  console.log('2️⃣  3️⃣  4️⃣');
+}
+
 function validateFile(file) {
   const filePath = path.join(inputDir, file);
   try {
     const data = fs.readFileSync(filePath, 'utf8');
 
-    const results = validateXml(version, data);
+    const results = versions.map(version => ({
+      ...validateXml(version, data),
+      version
+    }));
+    
+    const icons = results.map(result => {
+      if (!result) return '❌';
+      if (result.errors.length === 0) return '✅';
+      return '❌';
+    });
 
-    if (results.errors.length === 0) {
-      console.log(`✅ ${file}`);
-    } else {
-      console.error(`❌ ${file}`, results.errors);
+    console.log(`${icons.join(' ')} ${file}`);
+    if (!results) return;
+
+    for (const result of results) {
+      if (!result) continue;
+      if (result.errors.length > 0) {
+        if (versions.length > 1) console.log(`From Version ${result.version}:`);
+        console.log(result.errors);
+      }
     }
     // Do something with the XML data
   } catch (err) {
