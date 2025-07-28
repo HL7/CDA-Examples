@@ -1,17 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const validator = require('cda-schematron-validator')
+const { loadSchematron, validateXml } = require('./schematronValidation');
 
-// Tests that cda-schematron-validation can't handle yet
-const knownIgnoredTests = [
-  'current()',
-  'voc.xml',
-  'not(@extension)', // https://jira.hl7.org/browse/CDA-21367
-];
-
-const skippedAssertions = [
-  'a-1098-30784-v'  // This is a warning which the schematron validator treats as an error
-];
 
 const schematronData = {
   '2.1': {
@@ -76,27 +66,18 @@ const headerDash = `
  █████╗ 
  ╚════╝ `;
 
+const version = Object.keys(schematronData).includes(process.argv[2]) ? process.argv[2] : '2.1';
 
-
-const schematron = Object.keys(schematronData).includes(process.argv[2]) ? schematronData[process.argv[2]] : schematronData['2.1'];
-
-schematron.contents = fs.readFileSync(schematron.fileName, 'utf8');
-if (!schematron.contents) {
-  console.error(`Error: Schematron file ${schematron.fileName} not found. Please ensure it is in the current directory.`);
+if (!loadSchematron(version)) {
+  console.error(`Error loading schematron for version ${version}.`);
   process.exit(1);
 }
 
 // TODO - add dash and range when we do more simultaneously!
-const header = headerBase.split('\n').map((base, index) => base + (schematron.header.split('\n')[index] || '')).join('\n');
+const header = headerBase.split('\n').map((base, index) => base + (schematronData[version].header.split('\n')[index] || '')).join('\n');
 
 console.log(header);
 console.log(filenameFilter ? `Validating example files matching: ${filenameFilter}` : 'Validating all sample files (pass in a string to filter files)');
-
-// Quick fix since cda-schematron-validator doesn't handle variables, and I can't work on that right now
-const matches = Array.from(schematron.contents.matchAll(/<let name="([\w_]+)" value="('[^'"]+')"\/>/g));
-for (const variable of matches) {
-  schematron.contents = schematron.contents.replaceAll(`($${variable[1]},`, `(${variable[2]},`);
-}
 
 const inputDir = path.join(__dirname, '..', 'input', 'examples');
 if (!fs.existsSync(inputDir)) {
@@ -132,19 +113,7 @@ function validateFile(file) {
   try {
     const data = fs.readFileSync(filePath, 'utf8');
 
-    validator.clearCache();
-    let options = {
-      parsedSchematronMap: schematron.parsedMap
-    };
-    const results = validator.validate(data, schematron.contents, options);
-    schematron.parsedMap = options.schematronMap; // Cache the schematron map for future use
-    results.ignored = results.ignored.filter(i => !knownIgnoredTests.find(search => i.test.includes(search)));
-    results.ignored.forEach(i => {
-      console.warn(`Ignored test: ${i.test} in file ${file}`);
-    });
-    results.errors = results.errors
-      .filter(e => !knownIgnoredTests.find(search => e.test.includes(search)))
-      .filter(e => !skippedAssertions.includes(e.assertionId));
+    const results = validateXml(version, data);
 
     if (results.errors.length === 0) {
       console.log(`✅ ${file}`);
