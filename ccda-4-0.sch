@@ -5,6 +5,9 @@ THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLU
 Generated from @hl7/fhir-cda-validation version 1.1.0 on Wed Jul 09 2025
 Includes validation of Value Sets with fewer than 1000 concepts
 More information may be found at https://github.com/HL7/fhir-cda-validation
+
+Manually-applied changes:
+- Temporarily removed the duplicate AgeRangeObservation validation, since it uses the same templateId as AgeObservation.
 -->
 <schema xmlns="http://purl.oclc.org/dsdl/schematron">
   <ns prefix="sch" uri="http://purl.oclc.org/dsdl/schematron"/>
@@ -708,6 +711,7 @@ More information may be found at https://github.com/HL7/fhir-cda-validation
   </pattern>
   <pattern id="AgeRangeObservation-errors">
     <!--urn:oid:2.16.840.1.113883.10.20.22.4.31-->
+<!-- Temp removing due to bad templateId
     <rule id="AgeRangeObservation-errors-root" context="cda:observation[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.31' and not(@extension)]]">
       <assert test="@classCode = 'OBS'">@classCode SHALL = 'OBS'</assert>
       <assert test="@moodCode = 'EVN'">@moodCode SHALL = 'EVN'</assert>
@@ -746,6 +750,7 @@ More information may be found at https://github.com/HL7/fhir-cda-validation
     <rule id="AgeRangeObservation-errors-value.high.unit" context="cda:observation[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.31' and not(@extension)]]/cda:value/cda:high/@unit">
       <assert test="contains($AgePQ_UCUM, .)">SHALL be selected from ValueSet AgePQ_UCUM</assert>
     </rule>
+  -->
   </pattern>
   <pattern id="AllergiesAndIntolerancesSection-errors">
     <!--urn:hl7ii:2.16.840.1.113883.10.20.22.2.6.1:2015-08-01-->
