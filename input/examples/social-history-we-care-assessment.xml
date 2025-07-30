@@ -123,6 +123,7 @@
     <observation classCode="OBS" moodCode="EVN">
       <!-- Assessment Scale Supporting Observation -->
       <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2022-06-01"/> <!-- Companion Guide -->
       <id root="a6a704ab-271a-4bfa-9f0d-1581da2b1235"/>
       <code code="96446-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
       <text>
@@ -140,6 +141,7 @@
     <entryRelationship typeCode="COMP">
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2022-06-01"/> <!-- Companion Guide -->
       <id root="a6a704ab-271a-4bfa-9f0d-1581da2b1186"/>
       <code code="96445-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
       <text>
@@ -155,6 +157,7 @@
     <entryRelationship typeCode="COMP">
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2022-06-01"/> <!-- Companion Guide -->
       <id root="466f43c8-fc2b-4161-b9a1-2d88688e5f74"/>
       <code code="96444-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
       <text>
@@ -170,6 +173,7 @@
     <entryRelationship typeCode="COMP">
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2022-06-01"/> <!-- Companion Guide -->
       <id root="e3e5b3d7-76f5-48f1-8ba0-b2b4e6314f95"/>
       <code code="96443-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
       <text>
@@ -185,6 +189,7 @@
     <entryRelationship typeCode="COMP">
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2022-06-01"/> <!-- Companion Guide -->
       <id root="4d77eb67-6588-4f77-b506-1d987eee1711"/>
       <code code="96442-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
       <text>
@@ -200,6 +205,7 @@
     <entryRelationship typeCode="COMP">
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2022-06-01"/> <!-- Companion Guide -->
       <id root="b24d5a2c-48d6-46a0-bd92-1c901e577cc3"/>
       <code code="96433-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
       <text>
@@ -215,6 +221,7 @@
     <entryRelationship typeCode="COMP">
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2022-06-01"/> <!-- Companion Guide -->
       <id root="c67c51ea-4928-449d-b6c0-0f85b1975e07"/>
       <code code="96441-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
       <text>
@@ -230,6 +237,7 @@
     <entryRelationship typeCode="COMP">
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2022-06-01"/> <!-- Companion Guide -->
       <id root="68301d32-9158-429b-92b6-1f1e553a2f8c"/>
       <code code="96440-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
       <text>
@@ -245,6 +253,7 @@
     <entryRelationship typeCode="COMP">
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2022-06-01"/> <!-- Companion Guide -->
       <id root="400a66ad-3d5f-4b6e-913e-81e46241d83b"/>
       <code code="96439-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
       <text>
@@ -260,6 +269,7 @@
     <entryRelationship typeCode="COMP">
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2022-06-01"/> <!-- Companion Guide -->
       <id root="36792a59-7905-406e-a920-701a2ae746be"/>
       <code code="96434-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
       <text>
@@ -275,6 +285,7 @@
     <entryRelationship typeCode="COMP">
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2022-06-01"/> <!-- Companion Guide -->
       <id root="36792a59-7905-406e-a920-701a2ae746be"/>
       <code code="96438-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
       <text>
@@ -290,6 +301,7 @@
     <entryRelationship typeCode="COMP">
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2022-06-01"/> <!-- Companion Guide -->
       <id root="36792a59-7905-406e-a920-701a2ae746be"/>
       <code code="96437-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
       <text>
@@ -305,6 +317,7 @@
     <entryRelationship typeCode="COMP">
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2022-06-01"/> <!-- Companion Guide -->
       <id root="36792a59-7905-406e-a920-701a2ae746be"/>
       <code code="96436-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
       <text>
@@ -320,6 +333,7 @@
     <entryRelationship typeCode="COMP">
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2022-06-01"/> <!-- Companion Guide -->
       <id root="36792a59-7905-406e-a920-701a2ae746be"/>
       <code code="96753-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
       <text>
@@ -335,6 +349,7 @@
     <entryRelationship typeCode="COMP">
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2015-08-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.86" extension="2022-06-01"/> <!-- Companion Guide -->
       <id root="36792a59-7905-406e-a920-701a2ae746be"/>
       <code code="96435-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
       <text>

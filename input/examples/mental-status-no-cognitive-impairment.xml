@@ -33,9 +33,12 @@
     <!-- Template for Mental Status Observation. Note other templates may apply. -->
     <!-- We chose to use terminology to state 'no impairment' over negation since the C-CDA Mental Status template design didn't include guidance on negation-->
     <observation classCode="OBS" moodCode="EVN">
+      <templateId root="2.16.840.1.113883.10.20.22.4.74" extension="2024-05-01"/> <!-- C-CDA 3.0 -->
+      <id root="faa09c19-fa1f-4a6c-ae79-10a3b711550f"/>
+      <code code="8693-4" displayName="Mental Status" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+      <!-- C-CDA 2.1 version of this observation
       <templateId root="2.16.840.1.113883.10.20.22.4.74"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.74" extension="2015-08-01"/>
-      <id root="faa09c19-fa1f-4a6c-ae79-10a3b711550f"/>
       <code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="373930000" displayName="Cognitive function finding">
         <originalText>
           <reference value="#MS_Type1" />
@@ -44,7 +47,7 @@
           displayName="Cognitive function [Interpretation]"
           codeSystem="2.16.840.1.113883.6.1"
           codeSystemName="LOINC"/>
-      </code>
+      </code> -->
       <text>
         <reference value="#MS_Narrative1"/>
       </text>
@@ -60,4 +63,3 @@
     </observation>
   </entry>
 </section>
-

@@ -38,8 +38,9 @@
   <entry>
     <observation classCode="OBS" moodCode="GOL">
       <!-- Goal Observation C-CDA R2.1-->
-      <!-- Plan of Care Activity Observation C-CDA R1.1-->
       <templateId root="2.16.840.1.113883.10.20.22.4.121"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.121" extension="2022-06-01"/> <!-- Companion Guide -->
+      <!-- Plan of Care Activity Observation C-CDA R1.1-->
       <templateId root="2.16.840.1.113883.10.20.22.4.44"/>
       <id root="2a620155-9d11-439e-92b3-5d9815ff4dd4"/>
       <code code="289169006" displayName="Exercising to lose weight" codeSystem="2.16.840.1.113883.6.96"

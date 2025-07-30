@@ -90,16 +90,19 @@
       <entryRelationship typeCode="REFR">
         <act classCode="ACT" moodCode="EVN">
           <!-- Encounter Diagnosis -->
+          <templateId root="2.16.840.1.113883.10.20.22.4.80" extension="2024-05-01" /> <!-- C-CDA 3.0 -->
           <templateId root="2.16.840.1.113883.10.20.22.4.80" extension="2015-08-01" />
           <templateId root="2.16.840.1.113883.10.20.22.4.80"/>
           <code code="29308-4" displayName="Diagnosis"
             codeSystem="2.16.840.1.113883.6.1"
             codeSystemName="LOINC"/>
+          <statusCode code="completed"/>
           <!-- This example uses the Problem Status Observation to represent status of the diagnosis.
                    The statusCode of the encounter diagnosis is an alternative approach.-->
           <entryRelationship typeCode="SUBJ">
             <observation classCode="OBS" moodCode="EVN">
               <!-- Problem Observation -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" assigningAuthorityName="CCDA Problem Observation" extension="2024-05-01" /> <!-- C-CDA 3.0-->
               <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
               <templateId root="2.16.840.1.113883.10.20.22.4.4"/>
               <id root="db734647-fc99-424c-a864-7e3cda82e704"/>
@@ -122,8 +125,9 @@
                 <observation classCode="OBS" moodCode="EVN"> 
                   <!-- Problem Status which is strange on an encounter diagnosis but 
                              included due to the test data -->
-                  <!-- C-CDA R2.0 deprecated this template -->
+                  <!-- C-CDA R2.0 deprecated this template, but it was revised in the Companion Guide -->
                   <templateId root="2.16.840.1.113883.10.20.22.4.6"/>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.6" extension="2019-06-20"/>
                   <code code="33999-4" displayName="Status"
                     codeSystem="2.16.840.1.113883.6.1"
                     codeSystemName="LOINC"/>

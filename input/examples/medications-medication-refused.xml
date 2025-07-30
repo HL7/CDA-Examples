@@ -101,6 +101,7 @@
         <observation classCode="OBS" moodCode="EVN">
           <!-- Reason (V2) -->
           <templateId root="2.16.840.1.113883.10.20.24.3.88" extension="2014-12-01" />
+          <templateId root="2.16.840.1.113883.10.20.24.3.88" extension="2023-05-01" /> <!-- Companion Guide -->
           <id root="5750a5bb-6a01-4b99-9b1c-cda56b1dce0c" />
           <code code="77301-0" codeSystem="2.16.840.1.113883.6.1" displayName="Reason care action performed or not" codeSystemName="LOINC" />
           <statusCode code="completed" />

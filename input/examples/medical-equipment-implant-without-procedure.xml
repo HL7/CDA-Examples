@@ -53,6 +53,7 @@
   </text>
   <entry>
     <procedure classCode="PROC" moodCode="EVN">
+      <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2024-05-01"/> <!-- C-CDA 3.0 -->
       <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
       <id extension="2744" root="1.2.840.114350.1.13.5552.1.7.2.737780"/>
@@ -94,6 +95,7 @@
   </entry>
   <entry>
     <procedure classCode="PROC" moodCode="EVN">
+      <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2024-05-01"/> <!-- C-CDA 3.0 -->
       <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
       <id extension="2745" root="1.2.840.114350.1.13.5552.1.7.2.737780"/>
@@ -127,6 +129,7 @@
   </entry>
   <entry>
     <procedure classCode="PROC" moodCode="EVN">
+      <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2024-05-01"/> <!-- C-CDA 3.0 -->
       <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
       <id extension="2746" root="1.2.840.114350.1.13.5552.1.7.2.737780"/>
@@ -162,4 +165,3 @@
     </procedure>
   </entry>
 </section>
-

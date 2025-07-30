@@ -39,6 +39,8 @@
   <procedure classCode="PROC" moodCode="EVN">
     <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
     <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
+    <!-- Note - not sending the 2024-05-01 C-CDA 3.0 templateId because
+         that changed the requirement of date to being precise to at least the day-->
     <!-- This a different procedure at the same facility, so the extension is different while the root is the same -->
     <id extension="1122334455" root="1.2.840.114350.1.13.5552.1.7.2.737780"/>
     <code code="25267002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED" displayName="Insertion of intracardiac pacemaker">
@@ -62,11 +64,12 @@
     <assignedEntity>
       <id extension="2222222222" root="2.16.840.1.113883.4.6" />
       <addr>
-      <streetAddressLine>123 Any Street</streetAddressLine>
-      <streetAddressLine>Suite 101</streetAddressLine>
-      <city>Anytown</city>
-      <postalCode>10010</postalCode>
-      <country>US</country>
+        <streetAddressLine>123 Any Street</streetAddressLine>
+        <streetAddressLine>Suite 101</streetAddressLine>
+        <city>Anytown</city>
+        <state>AR</state>
+        <postalCode>10010</postalCode>
+        <country>US</country>
       </addr>
       <telecom value="tel:+1-(555)555-1234" />
       <assignedPerson>

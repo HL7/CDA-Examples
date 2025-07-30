@@ -31,6 +31,7 @@
   <!-- Only a single entry included for this example. Note that other entries may be required for conformant social history section --> 
   <entry>
     <observation classCode="OBS" moodCode="EVN">
+      <templateId root="2.16.840.1.113883.10.20.22.4.38" extension="2022-06-01"/> <!-- Companion Guide -->
       <templateId root="2.16.840.1.113883.10.20.22.4.38" extension="2015-08-01" /> 
       <templateId root="2.16.840.1.113883.10.20.22.4.38" /> 
       <id extension="Z504295^^713914004" root="1.2.840.114350.1.13.861.1.7.1.1040.8" /> 

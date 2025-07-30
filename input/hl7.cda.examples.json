@@ -4250,7 +4250,9 @@
         "description": "This example illustrates a planned surgical procedure with multiple proposed alternatives, with the expectation that the surgeon will choose one to perform when the surgery actually occurs.",
         "isExample": true,
         "profile": [
-          "http://hl7.org/cda/us/ccda/StructureDefinition/PlannedProcedure"
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PlannedProcedure",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/Indication",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PriorityPreference"
         ],
         "groupingId": "procedures"
       },

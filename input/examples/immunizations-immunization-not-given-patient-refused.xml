@@ -1,4 +1,4 @@
-<section xmlns="urn:hl7-org:v3">
+<section xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <!-- conforms to Immunizations section with entries optional -->
   <templateId root="2.16.840.1.113883.10.20.22.2.2"/>
   <templateId root="2.16.840.1.113883.10.20.22.2.2" extension="2015-08-01"/>
@@ -52,8 +52,10 @@
           <!-- Immunization Refusal Reason  -->
           <!-- Included the reason since it may be relevant to a future clinician or quality measurement -->
           <templateId root="2.16.840.1.113883.10.20.22.4.53"/>
+          <templateId root="2.16.840.1.113883.10.20.22.4.53" extension="2024-05-01"/> <!-- C-CDA 3.0 -->
           <id root="c1296315-9a6d-45a2-aac0-ee225d375409"/>
-          <code displayName="patient objection" code="PATOBJ"
+          <code code="71798-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Immunization Refusal Reason"/>
+          <value xsi:type="CD" displayName="patient objection" code="PATOBJ"
             codeSystemName="HL7 ActNoImmunizationReason" codeSystem="2.16.840.1.113883.5.8"/>
           <statusCode code="completed"/>
         </observation>        

@@ -8,10 +8,12 @@ const knownIgnoredTests = [
   'current()',
   'voc.xml',
   'not(@extension)', // https://jira.hl7.org/browse/CDA-21367
+  'count(sdtc:category)=1', // https://jira.hl7.org/browse/CDA-21383
 ];
 
 const skippedAssertions = [
-  'a-1098-30784-v'  // This is a warning which the schematron validator treats as an error
+  'a-1098-30784-v',  // This is a warning which the schematron validator treats as an error
+  'a-4515-30784-v'
 ];
 
 // Map of version to schematron file and parsedMap

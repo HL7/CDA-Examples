@@ -14,6 +14,7 @@
       <!-- Procedure Activity Procedure V2-->
       <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2024-05-01"/> <!-- C-CDA 3.0 -->
       <id root="d5b614bd-01ce-410d-8726-e1fd01dcc72a" />
       <code code="71388002" codeSystem="2.16.840.1.113883.6.96"   
         displayName="Procedure"/>
