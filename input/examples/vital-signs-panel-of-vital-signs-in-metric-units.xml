@@ -1,5 +1,9 @@
 <section xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <templateId root="2.16.840.1.113883.10.20.22.2.4.1"/>
+  <!-- Note that C-CDA 3.0 has a different LOINC code requirement for Vital Signs Organizer.
+       C-CDA 2.1 allows this as long as the 1.1 templateId is not present. 
+       For that reason, the 1.1 templateIds have been omitted in this example.
+       See more information at organizer/code-->
+  <!-- <templateId root="2.16.840.1.113883.10.20.22.2.4.1" /> -->
   <templateId root="2.16.840.1.113883.10.20.22.2.4.1" extension="2015-08-01"/>
   <code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
   displayName="Vital signs"/>
@@ -39,15 +43,13 @@
   <entry typeCode="DRIV">
   <!-- When a set of vital signs are recorded together, include them in single clustered organizer-->
   <organizer classCode="CLUSTER" moodCode="EVN">
-    <templateId root="2.16.840.1.113883.10.20.22.4.26"/>
+    <!-- <templateId root="2.16.840.1.113883.10.20.22.4.26"/> -->
     <templateId root="2.16.840.1.113883.10.20.22.4.26" extension="2015-08-01"/>
     <id root="e6c800c4-4a71-41bf-80e2-e741dd1168e9"/>
-    <code code="46680005" displayName="Vital Signs" codeSystem="2.16.840.1.113883.6.96"
-    codeSystemName="SNOMED CT">
-    <translation code="74728-7"
-      displayName="Vital signs, weight, height, head circumference, oximetry, BMI, and BSA panel "
-      codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-    </code>
+    <!-- If this were C-CDA 1.1 + 2.1 (with an additional templateId containing no extension),
+        the code element would have SNOMED code 46680005. Since this is not allowed in C-CDA 3.0,
+        it has been omitted from this example. -->
+    <code code="74728-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vital signs, weight, height, head circumference, oximetry, BMI, and BSA panel" />
     <statusCode code="completed"/>
     <effectiveTime value="20140520193605-0500"/>
     <!-- Each vital sign should be its own component. Note that systolic and diastolic BP must be separate components-->
