@@ -3,14 +3,16 @@
   xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc">
   <realmCode code="US"/>
   <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
-  <!-- US Patient Generated Document Header -->
-  <templateId root="2.16.840.1.113883.10.20.22.1.10" extension="2015-08-01"/>
+  <!-- US General Header Template -->
+  <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01"/>
+  <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2024-05-01"/> <!-- C-CDA 3.0 -->
   <!-- C-CDA Unstructured Document -->
-  <templateId root="2.16.840.1.113883.4.823.1.1.1" extension="2016-07-01"/>
+  <templateId root="2.16.840.1.113883.10.20.22.1.10" extension="2015-08-01"/>
+  <templateId root="2.16.840.1.113883.10.20.22.1.10" extension="2024-05-01"/> <!-- C-CDA 3.0 -->
   <!-- PACP Header -->
-  <templateId root="2.16.840.1.113883.4.823.1.2.1" extension="2016-07-01"/>
-  <!-- PACP Document -->
   <templateId root="2.16.840.1.113883.4.823.1.1.1" extension="2016-07-01"/>
+  <!-- PACP Document -->
+  <templateId root="2.16.840.1.113883.4.823.1.2.1" extension="2016-07-01"/>
   
   <id root="2.16.840.1.113883.3.3208.101.1" extension="20130607100315-CCDA-CCD"/>
   <code  code="81334-5" displayName="Patient Personal advance care plan" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>

@@ -9,9 +9,11 @@
   <realmCode code="US"/>
   <typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
   <!-- US Realm Header ID-->
+  <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2024-05-01"/> <!-- C-CDA 3.0 -->
   <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01"/>
   <templateId root="2.16.840.1.113883.10.20.22.1.1"/>
   <!-- CCD template ID-->
+  <templateId root="2.16.840.1.113883.10.20.22.1.2" extension="2024-05-01"/> <!-- C-CDA 3.0 -->
   <templateId root="2.16.840.1.113883.10.20.22.1.2" extension="2015-08-01"/>
   <templateId root="2.16.840.1.113883.10.20.22.1.2"/>
   <!-- Globally unique identifier for the document  -->
@@ -484,7 +486,7 @@
           <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
           <manufacturedMaterial>
           <code nullFlavor="OTH" codeSystem="2.16.840.1.113883.6.88"> 
-            <translation code="410942007" displayName="drug or medication"
+            <translation code="410942007" displayName="Drug or medicament (substance)"
             codeSystem="2.16.840.1.113883.6.96"      
             codeSystemName="SNOMED CT"/>
           </code>
@@ -518,7 +520,7 @@
         <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
         <id root="cdbd33f0-6cde-11db-9fe1-0834200c9a66"/>
         <statusCode code="active"/>
-        <effectiveTime nullFlavor="NA">
+        <effectiveTime nullFlavor="NA" xsi:type="IVL_TS">
           <low nullFlavor="NA"/>
         </effectiveTime>
         <doseQuantity nullFlavor="NA"/>
@@ -529,7 +531,7 @@
           <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
           <manufacturedMaterial>
           <code nullFlavor="OTH" codeSystem="2.16.840.1.113883.6.88"> 
-            <translation code="410942007" displayName="drug or medication"
+            <translation code="410942007" displayName="Drug or medicament (substance)"
             codeSystem="2.16.840.1.113883.6.96"      
             codeSystemName="SNOMED CT"/>
           </code>
@@ -680,6 +682,7 @@
         <!-- Procedure Activity Procedure V2-->
         <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
         <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
+        <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2024-05-01"/> <!-- C-CDA 3.0-->
         <id root="d5b614bd-01ce-410d-8728-e1fd01dcc72a" />
         <code code="71388002" codeSystem="2.16.840.1.113883.6.96"   
         displayName="Procedure"/>
@@ -714,6 +717,7 @@
     <section>
       <!-- *** Immunizations Section (entries required) (V2) *** -->
       <templateId root="2.16.840.1.113883.10.20.22.2.2.1" extension="2014-06-09"/>
+      <templateId root="2.16.840.1.113883.10.20.22.2.2.1" extension="2015-08-01"/> <!-- Companion Guide -->
       <templateId root="2.16.840.1.113883.10.20.22.2.2.1"/>
       <code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of immunizations"/>
       <title>IMMUNIZATIONS</title>
@@ -800,6 +804,7 @@
       <observation classCode="OBS" moodCode="EVN">
         <!-- ** Smoking Status - Meaningful Use (V2) ** -->
         <templateId root="2.16.840.1.113883.10.20.22.4.78" extension="2014-06-09"/>
+        <templateId root="2.16.840.1.113883.10.20.22.4.78" extension="2024-05-01"/> <!-- C-CDA 3.0 -->
         <templateId root="2.16.840.1.113883.10.20.22.4.78"/>
         <id extension="123456789" root="2.16.840.1.113883.19"/>
         <!-- code SHALL be 72166-2 for Smoking Status - Meaningful Use (V2) -db -->
@@ -817,6 +822,7 @@
       <entry>
       <observation classCode="OBS" moodCode="EVN">
         <templateId root="2.16.840.1.113883.10.20.22.4.200" extension="2016-06-01"/>
+        <templateId root="2.16.840.1.113883.10.20.22.4.200" extension="2024-05-01"/> <!-- C-CDA 3.0 -->
         <code code="76689-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Sex Assigned At Birth"/>
         <text>
         <reference value="#BirthSexInfo"/>

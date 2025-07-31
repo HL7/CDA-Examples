@@ -4,7 +4,7 @@
   <realmCode code="US"/>
   <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
   <templateId root="2.16.840.1.113883.10.20.22.1.1"/>
-  <templateId root="2.16.840.1.113883.10.20.22.1.2"/>
+  <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2024-05-01"/> <!-- C-CDA 3.0 -->
   <id root="2.16.840.1.113883.3.109" extension="bf6b3a62-4293-47b4-9f14-c8829a156f4b"/>
   <code code="34133-9" displayName="Summary of episode note"
     codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
@@ -106,12 +106,34 @@
           <streetAddressLine>823 Main Street</streetAddressLine>
           <city>River Valley</city>
           <state>RI</state>
-          <postalCode>028321</postalCode>
+          <postalCode>02832</postalCode>
           <country>US</country>
         </addr>
       </providerOrganization>
     </patientRole>
   </recordTarget>
+  <author>
+    <time nullFlavor="NI"/>
+    <assignedAuthor>
+      <id nullFlavor="NI"/>
+      <addr nullFlavor="NI"/>
+      <telecom nullFlavor="NI"/>
+      <assignedAuthoringDevice>
+        <manufacturerModelName nullFlavor="NI"/>
+        <softwareName nullFlavor="NI"/>
+      </assignedAuthoringDevice>
+    </assignedAuthor>
+  </author>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id nullFlavor="NI" />
+        <name nullFlavor="NI" />
+        <telecom nullFlavor="NI" />
+        <addr nullFlavor="NI" />
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
   <!-- ... -->
   <component>
     <structuredBody>
