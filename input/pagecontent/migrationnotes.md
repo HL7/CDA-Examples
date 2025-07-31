@@ -25,7 +25,8 @@ The following examples were NOT brought over via automatic process:
     - `Patient Health Questionnaire PHQ-9`
 
 Summarization of content changes in examples during initial migration
-- TemplateIds from C-CDA 3.0 and beyond were added
+- TemplateIds from the Companion Guide, C-CDA 3.0, and beyond were added
 - Nullified addr and telecom fields were added to author elements where required
 - Procedure act and observation examples were all migrated to use `<procedure>`
 - Various CDA schema errors were corrected
+- Immunization Not Given updated with code -> value for C-CDA 3.0

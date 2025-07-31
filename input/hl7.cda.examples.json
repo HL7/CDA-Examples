@@ -676,7 +676,7 @@
           },
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
           },
           {
             "url": "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus",
@@ -707,6 +707,7 @@
         "description": "This is an example of how an author can record a patient has no known allergies.",
         "isExample": true,
         "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection",
           "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyConcernAct",
           "http://hl7.org/cda/us/ccda/StructureDefinition/AllergyIntoleranceObservation"
         ],
@@ -720,7 +721,7 @@
           },
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/AllergiesAndIntolerancesSection"
           },
           {
             "url": "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus",
@@ -911,7 +912,8 @@
         "isExample": true,
         "profile": [
           "http://hl7.org/cda/us/ccda/StructureDefinition/CareTeamsSection",
-          "http://hl7.org/cda/us/ccda/StructureDefinition/CareTeamOrganizer"
+          "http://hl7.org/cda/us/ccda/StructureDefinition/CareTeamOrganizer",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/CareTeamMemberAct"
         ],
         "groupingId": "care-team"
       },
@@ -1144,7 +1146,7 @@
           },
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/FamilyHistorySection"
           },
           {
             "url": "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus",
@@ -1188,7 +1190,7 @@
           },
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/FamilyHistorySection"
           },
           {
             "url": "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus",
@@ -1232,7 +1234,7 @@
           },
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/FamilyHistorySection"
           },
           {
             "url": "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus",
@@ -1789,7 +1791,7 @@
           },
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/ResultsSection"
           },
           {
             "url": "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus",
@@ -3018,7 +3020,7 @@
           },
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicalEquipmentSection"
           },
           {
             "url": "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus",
@@ -3210,7 +3212,8 @@
         "profile": [
           "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection",
           "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationActivity",
-          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationInformation"
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationInformation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationFreeTextSig"
         ],
         "groupingId": "medications"
       },
@@ -3256,6 +3259,7 @@
           "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection",
           "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationActivity",
           "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationInformation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PreconditionforSubstanceAdministration",
           "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
         ],
         "groupingId": "medications"
@@ -3298,6 +3302,10 @@
           "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection",
           "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationActivity",
           "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationInformation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationFreeTextSig",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/PreconditionforSubstanceAdministration",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/InstructionActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/Indication",
           "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
         ],
         "groupingId": "medications"
@@ -3339,7 +3347,9 @@
         "profile": [
           "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection",
           "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationActivity",
-          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationInformation"
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationInformation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/CommentActivity",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/Reason"
         ],
         "groupingId": "medications"
       },
@@ -3613,7 +3623,7 @@
           },
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/NotesSection"
           },
           {
             "url": "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus",
@@ -4223,7 +4233,7 @@
           },
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-            "valueCanonical": "http://hl7.org/cda/stds/core/StructureDefinition/Section"
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/PlanofTreatmentSection"
           },
           {
             "url": "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus",
@@ -4293,6 +4303,7 @@
         "profile": [
           "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection",
           "http://hl7.org/cda/us/ccda/StructureDefinition/ProcedureActivityProcedure",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/CommentActivity",
           "http://hl7.org/cda/us/ccda/StructureDefinition/Reason"
         ],
         "groupingId": "procedures"
@@ -4377,6 +4388,7 @@
         "isExample": true,
         "profile": [
           "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProcedureActivityProcedure",
           "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
         ],
         "groupingId": "procedures"
@@ -4421,6 +4433,7 @@
         "isExample": true,
         "profile": [
           "http://hl7.org/cda/us/ccda/StructureDefinition/ProceduresSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/ProcedureActivityProcedure",
           "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
         ],
         "groupingId": "procedures"
@@ -5429,6 +5442,7 @@
         "profile": [
           "http://hl7.org/cda/us/ccda/StructureDefinition/SocialHistorySection",
           "http://hl7.org/cda/us/ccda/StructureDefinition/SmokingStatusMeaningfulUse",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/TobaccoUse",
           "http://hl7.org/cda/us/ccda/StructureDefinition/AuthorParticipation"
         ],
         "groupingId": "social-history"
