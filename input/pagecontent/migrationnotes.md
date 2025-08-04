@@ -21,8 +21,6 @@ The following examples were NOT brought over via automatic process:
   - Period elements with overridden `xsi:type="IVL_PQ"` - currently crashes the publisher
     - `Med every 4-6 hours`
     - `Med oral liquid PRN`
-  - `xsi:type="IVL_INT"` is currently not supported in `ObservationRange.value`
-    - `Patient Health Questionnaire PHQ-9`
 
 Summarization of content changes in examples during initial migration
 - TemplateIds from the Companion Guide, C-CDA 3.0, and beyond were added

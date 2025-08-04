@@ -3464,6 +3464,52 @@
               },
               {
                 "url": "sdwgApprovalDate",
+                "valueDate": "2019-07-25"
+              },
+              {
+                "url": "sdwgApprovalDate",
+                "valueDate": "2023-03-09"
+              },
+              {
+                "url": "taskForceApprovalDate",
+                "valueDate": "2019-07-11"
+              }
+            ]
+          }
+        ],
+        "reference": {
+          "reference": "Binary/mental-status-patient-health-questionnaire"
+        },
+        "name": "Patient Health Questionnaire (PHQ-9)",
+        "description": "This is an example of to include a PHQ-9 survey with total score and compoonent questions. While not all questions may be necessary in all uses, the total score has an impact on quality measures related to depression screening.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MentalStatusSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MentalStatusObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AssessmentScaleObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AssessmentScaleSupportingObservation"
+        ],
+        "groupingId": "mental-status"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MentalStatusSection"
+          },
+          {
+            "url": "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus",
+            "extension": [
+              {
+                "url": "status",
+                "valueCode": "approved"
+              },
+              {
+                "url": "sdwgApprovalDate",
                 "valueDate": "2017-07-06"
               },
               {
