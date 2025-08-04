@@ -3372,6 +3372,49 @@
               },
               {
                 "url": "sdwgApprovalDate",
+                "valueDate": "2014-02-06"
+              },
+              {
+                "url": "sdwgApprovalDate",
+                "valueDate": "2016-12-01"
+              },
+              {
+                "url": "taskForceApprovalDate",
+                "valueDate": "2014-01-30"
+              }
+            ]
+          }
+        ],
+        "reference": {
+          "reference": "Binary/medications-med-every-4-6-hours"
+        },
+        "name": "Medication Every 4-6 Hours",
+        "description": "This is an example of a medication (Sudafed) which to be administered every 4-6 hours, a common dosing pattern. Representing the range of potential of hours is done through a low and high child element of the period within effectiveTime of PIVL_TS.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection"
+        ],
+        "groupingId": "medications"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection"
+          },
+          {
+            "url": "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus",
+            "extension": [
+              {
+                "url": "status",
+                "valueCode": "approved"
+              },
+              {
+                "url": "sdwgApprovalDate",
                 "valueDate": "2014-04-10"
               },
               {
