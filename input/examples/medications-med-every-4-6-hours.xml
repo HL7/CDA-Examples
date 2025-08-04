@@ -1,39 +1,5 @@
-<section xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <templateId root="2.16.840.1.113883.10.20.22.2.1.1"/>
-  <templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09"/>
-  <!-- Medication Section (entries required) -->
-  <code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Medication Use"/>
-  <title>MEDICATIONS</title>
-  <text>
-    <table border="1" width="100%">
-      <thead>
-        <tr>
-          <th>Medication</th>
-          <th>Instructions</th>
-          <th>Dosage</th>
-          <th>Effective Dates (start - stop)</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ID="Medication_1">
-          <td>
-            <content ID="MedicationName_1" xmlns="urn:hl7-org:v3">Sudafed 30mg Oral Tablet</content>
-          </td>
-          <td>
-            <content>take 2 tablets every 4-6 hours</content>
-          </td>
-          <td>
-            <content>30 MG</content>
-          </td>
-          <td>Jan-18-2014 - </td>
-          <td>Active</td>
-        </tr>
-      </tbody>
-    </table>
-  </text>
-  <entry typeCode="DRIV">
-    <substanceAdministration classCode="SBADM" moodCode="INT" xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!-- Comment out from section because validator isn't picking up that the entry is a MedicationActivity -->
+<substanceAdministration classCode="SBADM" moodCode="INT" xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <!-- This medication use case is a medication to be administered. If it has been already administered use moodCode = "EVN". If an ordered drug then use moodCode = "RQO" -->
       <!-- Dependencies exist between moodCode, statusCode and effectiveTime  -->
       <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
@@ -104,5 +70,3 @@
         </assignedAuthor>
       </author>
     </substanceAdministration>
-  </entry>
-</section>

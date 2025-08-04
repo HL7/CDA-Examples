@@ -3361,7 +3361,7 @@
           },
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
-            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection"
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationActivity"
           },
           {
             "url": "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus",
@@ -3392,7 +3392,7 @@
         "description": "This is an example of a medication (Sudafed) which to be administered every 4-6 hours, a common dosing pattern. Representing the range of potential of hours is done through a low and high child element of the period within effectiveTime of PIVL_TS.",
         "isExample": true,
         "profile": [
-          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationsSection"
+          "http://hl7.org/cda/us/ccda/StructureDefinition/MedicationActivity"
         ],
         "groupingId": "medications"
       },
