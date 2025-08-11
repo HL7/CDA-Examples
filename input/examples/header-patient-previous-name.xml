@@ -7,23 +7,23 @@
       <name use="L">
         <given>Jimmy</given>
         <given>Jones</given>
-        <!-- A legal name without a validTime or with a high/@nullFlavor='NA' is considered current --> 
+        <!-- A legal name without a validTime or with a high/@nullFlavor='NA' is considered current -->
         <!-- An instance SHOULD have no more than 1 legal name without a validTime or with a high/@nullFlavor='NA'  -->
-        <family>Newman</family> 
+        <family>Newman</family>
       </name>
-      <name use="L"> 
-        <given>Sam</given> 
+      <name use="L">
+        <given>Sam</given>
         <given>Jones</given>
-        <family>Newman</family> 
+        <family>Newman</family>
         <!-- Systems may have an explicit field to capture the date/time a name changed -->
         <!-- Low is when this name is first active. It may be captured from a patient/caregiver, external system, or a system may default on first entry  -->
         <!-- High is populated when the name is no longer active. It may be captured from a patient/caregiver, external system, or a system may default on name change  -->
-        <!-- Systems that don't capture when a name changed may use high/@nullFlavor='UNK'(there is a valid end time, it's just not known)-->       
+        <!-- Systems that don't capture when a name changed may use high/@nullFlavor='UNK'(there is a valid end time, it's just not known)-->
         <validTime>
           <low value="20000505"/>
           <high value="20100510"/>
         </validTime>
-      </name>  
+      </name>
     </patient>
   </patientRole>
 </recordTarget>

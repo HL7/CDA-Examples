@@ -36,14 +36,15 @@
       <templateId root="2.16.840.1.113883.10.20.22.4.49" extension="2015-08-01"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.49"/>
       <id root="2a620155-9d11-439e-92b3-5d9815ff4de8"/>
-      <code code="99213" displayName="Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using time for code selection, 20-29 minutes of total time is spent on the date of the encounter." codeSystemName="CPT-4" codeSystem="2.16.840.1.113883.6.12">
+      <code code="99213" codeSystem="2.16.840.1.113883.6.12"
+            displayName="Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using time for code selection, 20-29 minutes of total time is spent on the date of the encounter."
+            codeSystemName="CPT-4">
         <originalText>
           <reference value="#Encounter1_Type"/>
         </originalText>
         <!-- MAY MAY contain zero or one [0..1] translation (CONF:1198-32323)
-        The translation may exist to map the code of EncounterTypeCode (2.16.840.1.113883.3.88.12.80.32) valueset to the code of Encounter Planned (2.16.840.1.113883.11.20.9.52) valueset.
-      <translation code="AMB" codeSystem="2.16.840.1.113883.5.4" displayName="Ambulatory" codeSystemName="HL7 ActEncounterCode"/>
-      -->
+             The translation may exist to map the code of EncounterTypeCode (2.16.840.1.113883.3.88.12.80.32) valueset to the code of Encounter Planned (2.16.840.1.113883.11.20.9.52) valueset.
+             <translation code="AMB" codeSystem="2.16.840.1.113883.5.4" displayName="Ambulatory" codeSystemName="HL7 ActEncounterCode"/> -->
       </code>
       <text>
         <reference value="#Encounter1"/>
@@ -55,7 +56,8 @@
           <reference value="#Encounter1_DischargeDispositionCode" />
         </originalText>
         <!-- Good Health Hospital (local OID) to represent their local code system. -->
-        <translation code="DE" codeSystem="2.16.840.1.113883.19.5" codeSystemName="Community Urgent Care Local Discharge Code" displayName="Disenrolled"/>
+        <translation code="DE" codeSystem="2.16.840.1.113883.19.5"
+                     codeSystemName="Community Urgent Care Local Discharge Code" displayName="Disenrolled" />
       </sdtc:dischargeDispositionCode>
       <performer>
         <assignedEntity>
@@ -82,7 +84,7 @@
           </playingEntity>
         </participantRole>
       </participant>
-<entryRelationship typeCode="RSON">
+      <entryRelationship typeCode="RSON">
         <!-- ** Indication (V2) ** -->
         <observation classCode="OBS" moodCode="EVN">
           <templateId root="2.16.840.1.113883.10.20.22.4.19" extension="2023-05-01"/> <!-- Companion Guide -->
@@ -91,8 +93,8 @@
           <id root="db734647-fc99-424c-a864-7e3cda82e703" extension="45665"/>
           <!-- code is required; MAY be selected from ValueSet Problem Type (LOINC) urn:oid:2.16.840.1.113883.3.88.12.3221.7.2 STATIC 2014-09-02 (CONF:1098-31229) -->
           <code code="404684003" displayName="Clinical finding" codeSystemName="SNOMED-CT" codeSystem="2.16.840.1.113883.6.96">
-            <!--  of course this MAY be present 
-        <translation code="75321-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Clinical finding"/>-->
+            <!--  of course this MAY be present
+                 <translation code="75321-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Clinical finding"/>-->
           </code>
           <statusCode code="completed"/>
           <effectiveTime>

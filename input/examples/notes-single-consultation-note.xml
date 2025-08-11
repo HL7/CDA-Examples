@@ -6,8 +6,8 @@
   <!-- This Notes Section could be included in a Consultation Note Document with other discrete sections (Results, Vitals etc.)-->
   <!-- This Notes Section is most appropriate for an encounter specific document -->
   <!-- If this Notes section were included in a CCD, each Note Activity entry should be linked to an appropriate Encounter entry in the Encounters section -->
-  <code code="11488-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-    displayName="Consult note"/>
+  <code code="11488-4" codeSystem="2.16.840.1.113883.6.1"
+        codeSystemName="LOINC" displayName="Consult note" />
   <title>Consultation Notes</title>
   <text>
     <list>
@@ -28,8 +28,7 @@
         <paragraph>Endoscopic evaluation revealed a normal colonoscopy. Biopsies taken
           throughout the colon were essentially unremarkable. Stool tests for pathogenic
           organisms were negative. Of note, on the upper endoscopy examination, no
-          significant abnormalities were seen; however, upon biopsy, features of celiac
-          disease were noted.</paragraph>
+          significant abnormalities were seen; however, upon biopsy, features of celiac disease were noted.</paragraph>
         <paragraph> In summary, this 40-year-old woman has evidence of celiac disease. We
           discussed the diagnosis in detail in the office. She was advised to undertake a
           lifelong gluten-free diet. Followup laboratories in my office were notable for a
@@ -37,10 +36,8 @@
           triple-phase CT scan of the liver revealed no change in the right hepatic lobe
           lesion, which is consistent with FNH. I advised periodic reevaluation of the
           liver with imaging, as well as followup for any potential development of
-          nutritional deficiencies. She should take an iron supplement and continue on a
-          lifelong gluten-free diet. </paragraph>
-        <paragraph>Thank you for the courtesy of this referral. I would be pleased to see
-          Ms. Everywoman in followup.</paragraph>
+          nutritional deficiencies. She should take an iron supplement and continue on a lifelong gluten-free diet. </paragraph>
+        <paragraph>Thank you for the courtesy of this referral. I would be pleased to see Ms. Everywoman in followup.</paragraph>
       </item>
     </list>
   </text>
@@ -48,11 +45,11 @@
   <entry>
     <act classCode="ACT" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.202" extension="2016-11-01"/>
-      <code code="34109-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-        displayName="Note">
+      <code code="34109-9" codeSystem="2.16.840.1.113883.6.1"
+            codeSystemName="LOINC" displayName="Note">
         <!-- Code must match or be equivalent to section code -->
         <translation code="11488-4" codeSystem="2.16.840.1.113883.6.1"
-          codeSystemName="LOINC" displayName="Consult note"/>
+                     codeSystemName="LOINC" displayName="Consult note" />
       </code>
       <text>
         <reference value="#ConsultNote1"/>

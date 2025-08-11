@@ -1,6 +1,6 @@
 <recordTarget xmlns="urn:hl7-org:v3">
   <patientRole>
-    <!-- The @root OID below (which is fictional) would be specific to an institution's record identifier system. -->  
+    <!-- The @root OID below (which is fictional) would be specific to an institution's record identifier system. -->
     <id root="2.16.840.1.113883.3.6132" extension="345678912-0154"/>
     <!-- HP is "primary home" from valueSet 2.16.840.1.113883.1.11.10637 -->
     <addr use="HP">
@@ -27,18 +27,20 @@
         <given>Adam</given>
         <family>Everyman</family>
       </name>
-      <!-- From CDA R2 on administrativeGender Code: This attribute does not include terms related to clinical gender. 
-    Gender is a complex physiological, genetic and sociological concept that requires multiple observations in order to be 
-    comprehensively described. The purpose of this attribute is to provide a high level classification that can additionally 
-    be used for the appropriate allocation of inpatient bed assignment.-->
+      <!-- From CDA R2 on administrativeGender Code: This attribute does not include terms related to clinical gender.
+           Gender is a complex physiological, genetic and sociological concept that requires multiple observations in order to be
+           comprehensively described. The purpose of this attribute is to provide a high level classification that can additionally
+           be used for the appropriate allocation of inpatient bed assignment.-->
       <!-- Sex at birth and gender identity may be specified in social history -->
       <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" displayName="Male" codeSystemName="AdministrativeGender"/>
       <birthTime value="19621022"/>
       <maritalStatusCode code="M" displayName="Married" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatus"/>
-      <religiousAffiliationCode code="1013" displayName="Christian (non-Catholic, non-specific)" codeSystem="2.16.840.1.113883.5.1076" codeSystemName="HL7 Religious Affiliation"/>
+      <religiousAffiliationCode code="1013" codeSystem="2.16.840.1.113883.5.1076"
+                                displayName="Christian (non-Catholic, non-specific)" codeSystemName="HL7 Religious Affiliation" />
       <!-- CDC Race and Ethnicity code set contains the five minimum race and ethnicity categories defined by OMB Standards -->
       <raceCode code="2106-3" displayName="White" codeSystem="2.16.840.1.113883.6.238" codeSystemName="CDC Race and Ethnicity"/>
-      <ethnicGroupCode code="2186-5" displayName="Not Hispanic or Latino" codeSystem="2.16.840.1.113883.6.238" codeSystemName="CDC Race and Ethnicity"/>
+      <ethnicGroupCode code="2186-5" codeSystem="2.16.840.1.113883.6.238"
+                       displayName="Not Hispanic or Latino" codeSystemName="CDC Race and Ethnicity" />
       <languageCommunication>
         <languageCode code="en"/>
         <!-- "en" is ISO 639-1 alpha-2 code for "English" -->
@@ -46,7 +48,7 @@
         <proficiencyLevelCode code="E" displayName="Excellent" codeSystem="2.16.840.1.113883.5.61" codeSystemName="LanguageAbilityProficiency"/>
         <preferenceInd value="true"/>
       </languageCommunication>
-      <!-- Multiple languages are permitted. Only one should have a preferenceInd = true --> 
+      <!-- Multiple languages are permitted. Only one should have a preferenceInd = true -->
       <languageCommunication>
         <languageCode code="it"/>
         <modeCode code="ESP" displayName="Expressed spoken" codeSystem="2.16.840.1.113883.5.60" codeSystemName="LanguageAbilityMode"/>

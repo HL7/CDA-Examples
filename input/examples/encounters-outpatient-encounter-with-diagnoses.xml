@@ -38,10 +38,11 @@
       <templateId root="2.16.840.1.113883.10.20.22.4.49"/>
       <id root="2a620155-9d11-439e-92b3-5d9815ff4de8"/>
       <!-- Selected reasonable encounter/code. Not in test data -->
-      <code code="99213" displayName="Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using time for code selection, 20-29 minutes of total time is spent on the date of the encounter."
-        codeSystemName="CPT" codeSystem="2.16.840.1.113883.6.12"
-        codeSystemVersion="4">
-        <originalText><reference value="#Encounter1_type"/>
+      <code code="99213" codeSystem="2.16.840.1.113883.6.12"
+            displayName="Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using time for code selection, 20-29 minutes of total time is spent on the date of the encounter."
+            codeSystemName="CPT" codeSystemVersion="4">
+        <originalText>
+          <reference value="#Encounter1_type"/>
         </originalText>
       </code>
       <text><reference value="#Encounter1" /></text>
@@ -53,8 +54,7 @@
           <!-- Fake Provider NPI "12345678910" -->
           <id root="2.16.840.1.113883.4.6" extension="12345678910"/>
           <code code="207R00000X" codeSystem="2.16.840.1.113883.6.101"
-            codeSystemName="Health Care Provider Taxonomy" 
-            displayName="Allopathic &amp; Osteopathic Physicians; Internal Medicine">
+                codeSystemName="Health Care Provider Taxonomy" displayName="Allopathic &amp; Osteopathic Physicians; Internal Medicine">
             <originalText><reference value="Encounter1_performer_type" /></originalText>
           </code>
           <assignedPerson>
@@ -63,7 +63,7 @@
               <given>Samir</given>
               <family>Khan</family>
               <!--  Could alternately use <suffix>MD</suffix> -->
-            </name>                    
+            </name>
           </assignedPerson>
         </assignedEntity>
       </performer>
@@ -73,8 +73,7 @@
           <templateId root="2.16.840.1.113883.10.20.22.4.32"/>
           <!-- Service Delivery Location template -->
           <code code="1160-1" codeSystem="2.16.840.1.113883.6.259"
-            codeSystemName="HealthcareServiceLocation"
-            displayName="Urgent Care Center"/>
+                codeSystemName="HealthcareServiceLocation" displayName="Urgent Care Center" />
           <addr>
             <streetAddressLine>1004 Healthcare Dr.</streetAddressLine>
             <city>Portland</city>
@@ -93,23 +92,22 @@
           <templateId root="2.16.840.1.113883.10.20.22.4.80" extension="2024-05-01" /> <!-- C-CDA 3.0 -->
           <templateId root="2.16.840.1.113883.10.20.22.4.80" extension="2015-08-01" />
           <templateId root="2.16.840.1.113883.10.20.22.4.80"/>
-          <code code="29308-4" displayName="Diagnosis"
-            codeSystem="2.16.840.1.113883.6.1"
-            codeSystemName="LOINC"/>
+          <code code="29308-4" codeSystem="2.16.840.1.113883.6.1"
+                displayName="Diagnosis" codeSystemName="LOINC" />
           <statusCode code="completed"/>
           <!-- This example uses the Problem Status Observation to represent status of the diagnosis.
-                   The statusCode of the encounter diagnosis is an alternative approach.-->
+               The statusCode of the encounter diagnosis is an alternative approach.-->
           <entryRelationship typeCode="SUBJ">
             <observation classCode="OBS" moodCode="EVN">
               <!-- Problem Observation -->
-              <templateId root="2.16.840.1.113883.10.20.22.4.4" assigningAuthorityName="CCDA Problem Observation" extension="2024-05-01" /> <!-- C-CDA 3.0-->
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" assigningAuthorityName="CCDA Problem Observation" extension="2024-05-01" />
               <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
               <templateId root="2.16.840.1.113883.10.20.22.4.4"/>
               <id root="db734647-fc99-424c-a864-7e3cda82e704"/>
-              <code code="282291009" displayName="Diagnosis interpretation" codeSystem="2.16.840.1.113883.6.96"
-                codeSystemName="SNOMED CT">
-                <translation code="29308-4" displayName="Diagnosis" codeSystem="2.16.840.1.113883.6.1"
-                  codeSystemName="LOINC"/>
+              <code code="282291009" codeSystem="2.16.840.1.113883.6.96"
+                    displayName="Diagnosis interpretation" codeSystemName="SNOMED CT">
+                <translation code="29308-4" codeSystem="2.16.840.1.113883.6.1"
+                             displayName="Diagnosis" codeSystemName="LOINC" />
               </code>
               <statusCode code="completed"/>
               <!-- This same data may be represented in the Problem List -->
@@ -117,26 +115,25 @@
                 <low value="20120815"/>
               </effectiveTime>
               <!-- Test data is SNOMED but in practice this is probably an ICD9/10 code -->
-              <value xsi:type="CD" code="64109004" displayName="Costal chondritis"
-                codeSystem="2.16.840.1.113883.6.96">
+              <value xsi:type="CD" code="64109004" codeSystem="2.16.840.1.113883.6.96"
+                     displayName="Costal chondritis">
                 <originalText><reference value="#Encounter1_diagnosis" /></originalText>
               </value>
               <entryRelationship typeCode="REFR">
-                <observation classCode="OBS" moodCode="EVN"> 
-                  <!-- Problem Status which is strange on an encounter diagnosis but 
-                             included due to the test data -->
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- Problem Status which is strange on an encounter diagnosis but
+                       included due to the test data -->
                   <!-- C-CDA R2.0 deprecated this template, but it was revised in the Companion Guide -->
                   <templateId root="2.16.840.1.113883.10.20.22.4.6"/>
                   <templateId root="2.16.840.1.113883.10.20.22.4.6" extension="2019-06-20"/>
-                  <code code="33999-4" displayName="Status"
-                    codeSystem="2.16.840.1.113883.6.1"
-                    codeSystemName="LOINC"/>
+                  <code code="33999-4" codeSystem="2.16.840.1.113883.6.1"
+                        displayName="Status" codeSystemName="LOINC" />
                   <statusCode code="completed"/>
-                  <value xsi:type="CD" code="55561003" displayName="Active"
-                    codeSystem="2.16.840.1.113883.6.96">
+                  <value xsi:type="CD" code="55561003" codeSystem="2.16.840.1.113883.6.96"
+                         displayName="Active">
                     <originalText><reference value="#Encounter1_diagnosis_status" /></originalText>
                   </value>
-                </observation>                       
+                </observation>
               </entryRelationship>
             </observation>
           </entryRelationship>

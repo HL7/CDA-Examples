@@ -7,7 +7,7 @@
     <list>
       <!-- This is the Plain Text representation of the RTF, it must FULLY preserve the meaning of the embedded RTF. -->
       <!-- Systems receiving a section with RTF SHALL be capable of displaying the section.text. -->
-      <item ID="note1"> 
+      <item ID="note1">
         <caption>Nursing Note written by Nick Nurse</caption>
         <paragraph>0700-1900 Nursing Note: Patient's vital signs were stable as documented throughout shift on 2L Oxygen via nasal cannula. His lungs are diminished with scattered crackles. Bowel sounds are active and the patient had a bowel movement x 2 today, both soft. Incontinent of urine and wearing a diaper. Skin intact at this time. Skin color is pale. 2+ non-pitting edema noted in bilateral calves and ankles. Assessed patient and reconciled medications. Spoke with daughter, pt's power of attorney, to provide updates and education on the patient's condition. Laboratory obtained morning labs without problem and vascular therapy placed a new 18g peripheral IV as the previous one was due for a change. Pt took all morning meds without problem. Reoriented patient and provided opportunities for toileting and for making needs known every 1-2 hours today to lessen risk of fall.</paragraph>
       </item>
@@ -22,9 +22,8 @@
       <code code="34109-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Note">
         <translation code="34746-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Nurse Note" />
       </code>
-      <!-- This Base64 example includes line breaks which is optional --> 
-      <text mediaType="text/rtf" representation="B64">
-        e1xydGYxXGFuc2lcYW5zaWNwZzEyNTJcZGVmZjBcbm91aWNvbXBhdFxkZWZsYW5nMTAzM3tcZm9u
+      <!-- This Base64 example includes line breaks which is optional -->
+      <text mediaType="text/rtf" representation="B64"> e1xydGYxXGFuc2lcYW5zaWNwZzEyNTJcZGVmZjBcbm91aWNvbXBhdFxkZWZsYW5nMTAzM3tcZm9u
         dHRibHtcZjBcZm5pbFxmY2hhcnNldDAgQ2FsaWJyaTt9fQ0Ke1xjb2xvcnRibCA7XHJlZDUxXGdy
         ZWVuNTFcYmx1ZTUxO30NCntcKlxnZW5lcmF0b3IgUmljaGVkMjAgMTAuMC4xODM2Mn1cdmlld2tp
         bmQ0XHVjMSANClxwYXJkXHNhMjAwXHNsMjc2XHNsbXVsdDFcY2YxXGJcZjBcZnMyMlxsYW5nOSAw
@@ -42,8 +41,7 @@
         dmFzY3VsYXIgdGhlcmFweSBwbGFjZWQgYSBuZXcgMThnIHBlcmlwaGVyYWwgSVYgYXMgdGhlIHBy
         ZXZpb3VzIG9uZSB3YXMgZHVlIGZvciBhIGNoYW5nZS4gUHQgdG9vayBhbGwgbW9ybmluZyBtZWRz
         IHdpdGhvdXQgcHJvYmxlbS4gUmVvcmllbnRlZCBwYXRpZW50IGFuZCBwcm92aWRlZCBvcHBvcnR1
-        bml0aWVzIGZvciB0b2lsZXRpbmcgYW5kIGZvciBtYWtpbmcgbmVlZHMga25vd24gZXZlcnkgMS0y
-        IGhvdXJzIHRvZGF5IHRvIGxlc3NlbiByaXNrIG9mIGZhbGwuXHBhcg0KfQ0KAA==
+        bml0aWVzIGZvciB0b2lsZXRpbmcgYW5kIGZvciBtYWtpbmcgbmVlZHMga25vd24gZXZlcnkgMS0y IGhvdXJzIHRvZGF5IHRvIGxlc3NlbiByaXNrIG9mIGZhbGwuXHBhcg0KfQ0KAA==
         <reference value="#note1"/>
       </text>
       <statusCode code="completed"/>

@@ -17,7 +17,7 @@
       </name>
       <!-- This is okay; "Dr. Robin Taylor" is a logical display order -->
       <name>
-        <prefix qualifier="AC TITLE">Dr. </prefix><!-- Space in element is intentional (see CDA R2.0 Section 2.23.4) -->
+        <prefix qualifier="AC TITLE">Dr. </prefix> <!-- Space in element is intentional (see CDA R2.0 Section 2.23.4) -->
         <given>Robin</given>
         <family>Taylor</family>
       </name>
@@ -25,14 +25,14 @@
       <name>
         <given>Robin</given>
         <family>Taylor</family>
-        <suffix qualifier="AC TITLE"> MD</suffix><!-- Space in element is intentional (see CDA R2.0 Section 2.23.4) -->
+        <suffix qualifier="AC TITLE"> MD</suffix> <!-- Space in element is intentional (see CDA R2.0 Section 2.23.4) -->
       </name>
       <!-- Don't do this; "Robin Taylor Dr." isn't a logical display order -->
       <name>
         <given>Robin</given>
         <family>Taylor</family>
-        <prefix qualifier="AC TITLE">Dr. </prefix><!-- Space in element is intentional -->
-      </name>      
+        <prefix qualifier="AC TITLE">Dr. </prefix> <!-- Space in element is intentional -->
+      </name>
       <!-- Don't do this; "Taylor Robin" is confusing (is Taylor the given name?) -->
       <name>
         <family>Taylor</family>

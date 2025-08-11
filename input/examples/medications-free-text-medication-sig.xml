@@ -14,11 +14,11 @@
       </thead>
       <tbody>
         <tr ID="Medication_1">
-           <td><!-- This shouldn't be used if a medication substance can be coded -->
+          <td> <!-- This shouldn't be used if a medication substance can be coded -->
             <content ID="MedicationSIG">Experimental '150 cure-all drug', take one tab by mouth every morning</content>
           </td>
           <td>Jan 10 2018</td>
-          <td>Active</td> 
+          <td>Active</td>
         </tr>
       </tbody>
     </table>
@@ -37,14 +37,14 @@
         <low value="20180110"/>
         <high nullFlavor="NI"/>
       </effectiveTime>
-       <doseQuantity nullFlavor="UNK"/>
+      <doseQuantity nullFlavor="UNK"/>
       <consumable typeCode="CSM">
         <manufacturedProduct classCode="MANU">
           <!-- ** Medication information ** -->
           <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
           <manufacturedMaterial>
             <!-- Medications should be specified at a level corresponding to prescription when possible - coded information isn't available -->
-            <code nullFlavor="UNK"/>            
+            <code nullFlavor="UNK"/>
           </manufacturedMaterial>
         </manufacturedProduct>
       </consumable>
@@ -66,4 +66,3 @@
     </substanceAdministration>
   </entry>
 </section>
-

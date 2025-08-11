@@ -2,12 +2,12 @@
   <!-- This is an example of how to affirmatively assert there is no mental status impairment -->
   <!-- Note that in C-CDA 1.1, functional and cognitive status (mental) are within the same section -->
   <!-- If no information is known (i.e. assessment not performed), then a pattern of null entries would be more appropriate -->
-  <!-- This example uses terminology to assert 'No Impairment' rather than 'Impairment' and negationInd='true' (as value.negationInd) since template design didn't include guidance on negation. --> 
+  <!-- This example uses terminology to assert 'No Impairment' rather than 'Impairment' and negationInd='true' (as value.negationInd) since template design didn't include guidance on negation. -->
   <!-- The test data also included the No Impairment code. -->
-  <!-- Section not backwards compaitble with prior 2.16.840.1.113883.10.20.22.2.14 since new section --> 
+  <!-- Section not backwards compaitble with prior 2.16.840.1.113883.10.20.22.2.14 since new section -->
   <templateId root="2.16.840.1.113883.10.20.22.2.56" extension="2015-08-01" />
   <code code="10190-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Mental status Narrative" />
-  <title>MENTAL STATUS</title>  
+  <title>MENTAL STATUS</title>
   <!-- Narrative organized as a single table. Some systems may prefer separate tables for functional vs. cognitive assessments -->
   <text>
     <table>
@@ -21,7 +21,7 @@
       </thead>
       <tbody>
         <tr ID="MS_Narrative1">
-          <td ID="MS_Type1">Cognitive Status</td> 
+          <td ID="MS_Type1">Cognitive Status</td>
           <td>August 15 2012, 5:32pm</td>
           <td ID="MS_Finding1">No impairment</td>
           <td />
@@ -37,17 +37,17 @@
       <id root="faa09c19-fa1f-4a6c-ae79-10a3b711550f"/>
       <code code="8693-4" displayName="Mental Status" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
       <!-- C-CDA 2.1 version of this observation
-      <templateId root="2.16.840.1.113883.10.20.22.4.74"/>
-      <templateId root="2.16.840.1.113883.10.20.22.4.74" extension="2015-08-01"/>
-      <code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="373930000" displayName="Cognitive function finding">
-        <originalText>
-          <reference value="#MS_Type1" />
-        </originalText>
-        <translation code="75275-8" 
-          displayName="Cognitive function [Interpretation]"
-          codeSystem="2.16.840.1.113883.6.1"
-          codeSystemName="LOINC"/>
-      </code> -->
+           <templateId root="2.16.840.1.113883.10.20.22.4.74"/>
+           <templateId root="2.16.840.1.113883.10.20.22.4.74" extension="2015-08-01"/>
+           <code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="373930000" displayName="Cognitive function finding">
+              <originalText>
+               <reference value="#MS_Type1" />
+              </originalText>
+              <translation code="75275-8"
+                displayName="Cognitive function [Interpretation]"
+                codeSystem="2.16.840.1.113883.6.1"
+                codeSystemName="LOINC"/>
+           </code> -->
       <text>
         <reference value="#MS_Narrative1"/>
       </text>
@@ -55,7 +55,8 @@
       <effectiveTime>
         <low value="20120815173215-0500"/>
       </effectiveTime>
-      <value xsi:type="CD" code="66557003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Disability evaluation, normal, no disability, no impairment">
+      <value xsi:type="CD" code="66557003" codeSystem="2.16.840.1.113883.6.96"
+             codeSystemName="SNOMED CT" displayName="Disability evaluation, normal, no disability, no impairment">
         <originalText>
           <reference value="#MS_Finding1"/>
         </originalText>

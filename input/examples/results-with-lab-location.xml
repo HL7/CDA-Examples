@@ -1,7 +1,7 @@
 <!-- Results with Lab Location this example shows content from the 2015 Certification Sender test file: 170.315_e1_vdt_amb_sample1_v8.pdf
-since the focus of the example is upon the test data statement shown below, multiple actual results values are removed:
-Laboratory Location Details for the above Laboratory Results: The laboratory location details are required to meet the 42 CFR 493.1291(c)(1) through (7) requirements identified in the Regulation
--->
+     since the focus of the example is upon the test data statement shown below, multiple actual results values are removed:
+     Laboratory Location Details for the above Laboratory Results: The laboratory location details are required to meet the 42 CFR 493.1291(c)(1) through (7) requirements identified in the Regulation
+     -->
 
 <section xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <!-- ... this component / section is templated as a C-CDA R2.1 Results Section, entries required -->
@@ -13,11 +13,10 @@ Laboratory Location Details for the above Laboratory Results: The laboratory loc
   <title>Results</title>
   <text>
     <table>
-      <!-- the results display in 3 columns: 
-      col 1: Result Organizer detail, containing the ordered test, date/time
-      col 2: the name and result of the items that are resulted
-      col 3: additional result details, such as ranges, interpretations, comments
-    -->
+      <!-- the results display in 3 columns:
+           col 1: Result Organizer detail, containing the ordered test, date/time
+           col 2: the name and result of the items that are resulted
+           col 3: additional result details, such as ranges, interpretations, comments -->
       <colgroup>
         <col width="20%"/>
         <col width="40%"/>
@@ -37,13 +36,11 @@ Laboratory Location Details for the above Laboratory Results: The laboratory loc
             <content> 2474, Rocky place Beaverton OR 97006</content>
             <content> tel:+1-(555)666-1002</content>
           </td>
-          <td>
-          </td>
+          <td></td>
         </tr>
         <!-- rows removed just to simplify example -->
         <tr ID="_13a52df8-79ed-4689-a9da-14c5905de830">
-          <td>
-          </td>
+          <td></td>
           <td>
             <content styleCode="xSecondary" ID="_ea838e08-d5eb-4ed4-a176-e5f9a831a780">Specific gravity of Urine by Test strip</content>
             <content styleCode="xSecondary"> 1.015</content>

@@ -38,8 +38,8 @@
           </text>
           <!-- This Health Concern has a statusCode of active because it is an active concern -->
           <statusCode code="active"/>
-          <!-- The effective time is the date that the Health Concern started being followed - 
-            this does not necessarily correlate to the onset date of the contained health issues-->
+          <!-- The effective time is the date that the Health Concern started being followed -
+               this does not necessarily correlate to the onset date of the contained health issues-->
           <effectiveTime value="20140302"/>
           <entryRelationship typeCode="REFR">
             <observation classCode="OBS" moodCode="EVN">
@@ -61,7 +61,7 @@
                 <originalText>
                   <reference value="#Concern1Issue1" />
                 </originalText>
-              </value>      
+              </value>
             </observation>
           </entryRelationship>
           <!-- Health Concern Problem: Community Acquired Pneumonia -->
@@ -80,7 +80,7 @@
       </entry>
     </section>
   </component>
-  <component> 
+  <component>
     <section>
       <!-- Located elsewhere in the document -->
       <!-- Taken directly (changed observation/id) from prior example https://github.com/brettmarquard/HL7-C-CDA-Task-Force-Examples/blob/master/Problem_List_Active_Problem.xml -->
@@ -143,7 +143,8 @@
                 <low value="20140227"/>
               </effectiveTime>
               <!-- This is a SNOMED code as the primary vocabulary for problem lists-->
-              <value xsi:type="CD" code="385093006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Community acquired pneumonia"/>        
+              <value xsi:type="CD" code="385093006" codeSystem="2.16.840.1.113883.6.96"
+                     codeSystemName="SNOMED CT" displayName="Community acquired pneumonia" />
             </observation>
           </entryRelationship>
         </act>

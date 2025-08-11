@@ -3,8 +3,8 @@
   <!-- C-CDA 2.1 Procedures Section -->
   <templateId root="2.16.840.1.113883.10.20.22.2.7.1"/>
   <templateId root="2.16.840.1.113883.10.20.22.2.7.1" extension="2014-06-09"/>
-  <code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-    displayName="HISTORY OF PROCEDURES"/>
+  <code code="47519-4" codeSystem="2.16.840.1.113883.6.1"
+        codeSystemName="LOINC" displayName="HISTORY OF PROCEDURES" />
   <title>Procedures</title>
   <text>
     <table>
@@ -21,9 +21,8 @@
           <td>(03 Feb 2014 09:22am - 03 Feb 2014 11:15am)</td>
           <td ID="ProcedureNote1">
             <paragraph>Dr. Physician - 03 Feb 2014</paragraph>
-            <paragraph>Patient repositioned with arms extended on arm
-              boards...</paragraph>
-
+            <paragraph>Patient repositioned with arms extended on arm boards...</paragraph>
+            
           </td>
         </tr>
       </tbody>
@@ -36,8 +35,8 @@
       <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2024-05-01"/>
       <id root="64af26d5-88ef-4169-ba16-c6ef16a1824f"/>
-      <code code="6025007" displayName="Laparoscopic appendectomy"
-        codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT">
+      <code code="6025007" codeSystem="2.16.840.1.113883.6.96"
+            displayName="Laparoscopic appendectomy" codeSystemName="SNOMED-CT">
         <originalText>
           <reference value="#ProcedureDesc1"/>
         </originalText>
@@ -54,10 +53,10 @@
       <entryRelationship typeCode="COMP">
         <act classCode="ACT" moodCode="EVN">
           <templateId root="2.16.840.1.113883.10.20.22.4.202" extension="2016-11-01"/>
-          <code code="34109-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-            displayName="Note">
+          <code code="34109-9" codeSystem="2.16.840.1.113883.6.1"
+                codeSystemName="LOINC" displayName="Note">
             <translation code="28570-0" codeSystem="2.16.840.1.113883.6.1"
-              codeSystemName="LOINC" displayName="Procedure note"/>
+                         codeSystemName="LOINC" displayName="Procedure note" />
           </code>
           <text>
             <reference value="#ProcedureNote1"/>

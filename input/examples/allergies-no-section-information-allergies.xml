@@ -10,8 +10,8 @@
   <!-- conforms to Allergies section with entries required -->
   <templateId root="2.16.840.1.113883.10.20.22.2.6.1"/>
   <templateId root="2.16.840.1.113883.10.20.22.2.6.1" extension="2015-08-01"/>
-  <code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-    displayName="Allergies, adverse reactions, alerts"/>
+  <code code="48765-2" codeSystem="2.16.840.1.113883.6.1"
+        codeSystemName="LOINC" displayName="Allergies, adverse reactions, alerts" />
   <title>ALLERGIES</title>
   <text>No Information</text>
-</section>  
+</section>

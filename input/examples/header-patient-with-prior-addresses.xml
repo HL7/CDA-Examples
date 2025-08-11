@@ -1,11 +1,10 @@
-<!-- recordTarget example from C-CDA-Examples/Header/Patient Demographic Information 
-  added multiple home addresses
--->
+<!-- recordTarget example from C-CDA-Examples/Header/Patient Demographic Information
+     added multiple home addresses -->
 <recordTarget xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <patientRole>
     <id root="2.16.840.1.113883.3.6132" extension="345678912-0154"/>
-    <!-- HP is "primary home" from valueSet 2.16.840.1.113883.1.11.10637 
-       and in this instance represents patient's current address -->
+    <!-- HP is "primary home" from valueSet 2.16.840.1.113883.1.11.10637
+         and in this instance represents patient's current address -->
     <addr use="HP">
       <streetAddressLine>152 Creek Lane</streetAddressLine>
       <city>Shelburne</city>
@@ -50,9 +49,11 @@
       <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" displayName="Male" codeSystemName="AdministrativeGender"/>
       <birthTime value="19621022"/>
       <maritalStatusCode code="M" displayName="Married" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatus"/>
-      <religiousAffiliationCode code="1013" displayName="Christian (non-Catholic, non-specific)" codeSystem="2.16.840.1.113883.5.1076" codeSystemName="HL7 Religious Affiliation"/>
+      <religiousAffiliationCode code="1013" codeSystem="2.16.840.1.113883.5.1076"
+                                displayName="Christian (non-Catholic, non-specific)" codeSystemName="HL7 Religious Affiliation" />
       <raceCode code="2106-3" displayName="White" codeSystem="2.16.840.1.113883.6.238" codeSystemName="OMB Standards for Race and Ethnicity"/>
-      <ethnicGroupCode code="2186-5" displayName="Not Hispanic or Latino" codeSystem="2.16.840.1.113883.6.238" codeSystemName="OMB Standards for Race and Ethnicity"/>
+      <ethnicGroupCode code="2186-5" codeSystem="2.16.840.1.113883.6.238"
+                       displayName="Not Hispanic or Latino" codeSystemName="OMB Standards for Race and Ethnicity" />
       <languageCommunication>
         <languageCode code="en"/>
         <modeCode code="ESP" displayName="Expressed spoken" codeSystem="2.16.840.1.113883.5.60" codeSystemName="LanguageAbilityMode"/>
