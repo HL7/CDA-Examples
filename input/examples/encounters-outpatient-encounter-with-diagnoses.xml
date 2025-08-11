@@ -100,7 +100,7 @@
           <entryRelationship typeCode="SUBJ">
             <observation classCode="OBS" moodCode="EVN">
               <!-- Problem Observation -->
-              <templateId root="2.16.840.1.113883.10.20.22.4.4" assigningAuthorityName="CCDA Problem Observation" extension="2024-05-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" assigningAuthorityName="CCDA Problem Observation" extension="2024-05-01" /> <!-- C-CDA 3.0-->
               <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
               <templateId root="2.16.840.1.113883.10.20.22.4.4"/>
               <id root="db734647-fc99-424c-a864-7e3cda82e704"/>

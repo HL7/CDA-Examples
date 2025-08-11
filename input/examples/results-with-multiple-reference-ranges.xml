@@ -55,7 +55,7 @@
           </text>
           <statusCode code="completed"/>
           <effectiveTime value="201703191230-0800"/>
-          <value xsi:type="ST"> Borderline, equal to 1:80</value>
+          <value xsi:type="ST">Borderline, equal to 1:80</value>
           <!-- Borderline is considered abnormal -->
           <interpretationCode code="A" displayName="Abnormal" codeSystem="2.16.840.1.113883.5.83"/>
           <author typeCode="AUT">

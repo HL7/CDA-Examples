@@ -15,11 +15,11 @@
             <br/>
             <!-- ... -->
           </td>
-          <td> mightBeSomeDate
-            <br/> mightbeSomeProviderName
-            <br/> mightbeSomeFacilityName
-            <br/> mightbeSomeAddress
-            <br/> mightbeSomePhoneNumber
+          <td>mightBeSomeDate
+            <br/>mightbeSomeProviderName
+            <br/>mightbeSomeFacilityName
+            <br/>mightbeSomeAddress
+            <br/>mightbeSomePhoneNumber
           </td>
           <td>labelText: mmm DD YYYY</td>
         </tr>

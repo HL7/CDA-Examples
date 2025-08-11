@@ -10,7 +10,7 @@
           <td>
             <content ID="ResultOrganizerCodeTextReference1">Lorem ipsum dolor sit amet</content>
           </td>
-          <td> labetText: DD-mmm-YYYY
+          <td>labetText: DD-mmm-YYYY
             <br/>
             <!-- ... -->
           </td>
@@ -32,10 +32,10 @@
             <content ID="ResultComponentReferenceRangeTextReference1">
               <content>labelText: </content>
               <content>111</content>
-              <content> {MG/DL}</content>
+              <content>{MG/DL}</content>
               <content> - </content>
               <content>222</content>
-              <content> {MG/DL}</content>
+              <content>{MG/DL}</content>
             </content>
             <br/>
             <content>labeltext: </content>

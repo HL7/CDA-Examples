@@ -9,10 +9,10 @@
         <tr ID="procedureFullTextReference1">
           <td ID="procedureCodeTextReference1">Vestibulum nunc nisl</td>
           <td>labelText: mmm DD YYYY</td>
-          <td> labelText:
+          <td>labelText:
             <content ID="procedureSiteCodeReference1">Vulputate eget  </content>
           </td>
-          <td> labeltext:
+          <td>labeltext:
             <content ID="procedureMethodCodeReference1">Ornare eget </content>
             <br/>
           </td>

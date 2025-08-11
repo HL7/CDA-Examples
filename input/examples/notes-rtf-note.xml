@@ -23,7 +23,8 @@
         <translation code="34746-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Nurse Note" />
       </code>
       <!-- This Base64 example includes line breaks which is optional -->
-      <text mediaType="text/rtf" representation="B64"> e1xydGYxXGFuc2lcYW5zaWNwZzEyNTJcZGVmZjBcbm91aWNvbXBhdFxkZWZsYW5nMTAzM3tcZm9u
+      <text mediaType="text/rtf" representation="B64">
+        e1xydGYxXGFuc2lcYW5zaWNwZzEyNTJcZGVmZjBcbm91aWNvbXBhdFxkZWZsYW5nMTAzM3tcZm9u
         dHRibHtcZjBcZm5pbFxmY2hhcnNldDAgQ2FsaWJyaTt9fQ0Ke1xjb2xvcnRibCA7XHJlZDUxXGdy
         ZWVuNTFcYmx1ZTUxO30NCntcKlxnZW5lcmF0b3IgUmljaGVkMjAgMTAuMC4xODM2Mn1cdmlld2tp
         bmQ0XHVjMSANClxwYXJkXHNhMjAwXHNsMjc2XHNsbXVsdDFcY2YxXGJcZjBcZnMyMlxsYW5nOSAw
@@ -41,7 +42,8 @@
         dmFzY3VsYXIgdGhlcmFweSBwbGFjZWQgYSBuZXcgMThnIHBlcmlwaGVyYWwgSVYgYXMgdGhlIHBy
         ZXZpb3VzIG9uZSB3YXMgZHVlIGZvciBhIGNoYW5nZS4gUHQgdG9vayBhbGwgbW9ybmluZyBtZWRz
         IHdpdGhvdXQgcHJvYmxlbS4gUmVvcmllbnRlZCBwYXRpZW50IGFuZCBwcm92aWRlZCBvcHBvcnR1
-        bml0aWVzIGZvciB0b2lsZXRpbmcgYW5kIGZvciBtYWtpbmcgbmVlZHMga25vd24gZXZlcnkgMS0y IGhvdXJzIHRvZGF5IHRvIGxlc3NlbiByaXNrIG9mIGZhbGwuXHBhcg0KfQ0KAA==
+        bml0aWVzIGZvciB0b2lsZXRpbmcgYW5kIGZvciBtYWtpbmcgbmVlZHMga25vd24gZXZlcnkgMS0y
+        IGhvdXJzIHRvZGF5IHRvIGxlc3NlbiByaXNrIG9mIGZhbGwuXHBhcg0KfQ0KAA==
         <reference value="#note1"/>
       </text>
       <statusCode code="completed"/>
