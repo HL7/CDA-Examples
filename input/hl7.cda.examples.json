@@ -219,15 +219,33 @@
           "generation": "markdown"
         },
         {
+          "sourceUrl": "effectivetime.html",
+          "name": "effectivetime.html",
+          "title": "effectiveTime Use",
+          "generation": "markdown"
+        },
+        {
           "sourceUrl": "medicationstatus.html",
           "name": "medicationstatus.html",
           "title": "Medication statusCodes",
           "generation": "markdown"
-        } ,
+        },
         {
           "sourceUrl": "medicationfrequency.html",
           "name": "medicationfrequency.html",
           "title": "Medication Frequency",
+          "generation": "markdown"
+        },
+        {
+          "sourceUrl": "narrativelinking.html",
+          "name": "narrativelinking.html",
+          "title": "Narrative Text Linking",
+          "generation": "markdown"
+        },
+        {
+          "sourceUrl": "participants.html",
+          "name": "participants.html",
+          "title": "Performers, Authors, Informants, and Participants",
           "generation": "markdown"
         }
       ]

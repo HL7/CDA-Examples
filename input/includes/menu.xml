@@ -4,8 +4,11 @@
     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Guidance<b class="caret"> </b></a>
     <ul class="dropdown-menu">
       <li><a href="migrationnotes.html">Migration Notes</a></li>
+      <li><a href="effectivetime.html">effectiveTime Use</a></li>
       <li><a href="medicationstatus.html">Medication statusCodes</a></li>
       <li><a href="medicationfrequency.html">Medication Frequency</a></li>
+      <li><a href="narrativelinking.html">Narrative Text Linking</a></li>
+      <li><a href="participants.html">Performers, Authors, Informants, and Participants</a></li>
     </ul>
   </li>
   <li class="dropdown">

@@ -13,7 +13,7 @@ All files (with the following exceptions) were copied directly into the IG with 
 
 The following examples were NOT brought over via automatic process:
 - Any example with `Approval Status: Withdrawn` in the `Readme.md` file
-- Any example missing an `.xml` file (e.g. Medication Timing notes). These will be brought over as narrative guidance pages
+- Any example missing an `.xml` file (e.g. Medication Timing notes). These were all brought over manually, cleaned up for Markdown / HTML formatting, and listed under the Guidance menu.
 - Full Document Examples
 - Guide Examples
 - Stylesheets
