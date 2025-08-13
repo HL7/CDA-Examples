@@ -19,9 +19,9 @@ const ORGANIZE_ATTRIBUTES = true;
  *    remaining under the maximum line length.
  * 
  * Known limitations:
- *  - Treats all text in comment as a comment, even if it contains XML-like syntax
  *  - Does not split long lines of text content (apart from opening elements)
  *  - Doesn't always detect closing elements of parent tags if included on a child line
+ *  - Elements whose attributes split multiple lines are assumed to not have the closing element on the same line
  *  - Tries to detect > within quotes, but also assumes lines area actually quoted well
  * 
  * TODOs:
@@ -48,11 +48,7 @@ const prettyCDA = (xmlString) => {
     newLines.push(' '.repeat(indent(addIndent)) + [preComment, restoreGtInQuotes(text), psComment].filter(Boolean).join(' '));
     psComment = '';
     if (inComment && text.endsWith('-->')) {
-      inComment = false;
-      if (commentStackLevel > 0) {
-        stack.length = commentStackLevel;
-        commentStackLevel = 0;
-      }
+      endComment();
     }
     if (startComment) {
       startComment = false;
@@ -60,6 +56,13 @@ const prettyCDA = (xmlString) => {
       commentStackLevel = stack.length;
     }
   };
+  const endComment = () => {
+    inComment = false;
+    if (commentStackLevel > 0) {
+      stack.length = commentStackLevel;
+      commentStackLevel = 0;
+    }
+  }
 
   // WAY-too complicated function for a brief idea I had...
   // Auto-splits long attributes; combines attribute lists; and
@@ -188,6 +191,13 @@ const prettyCDA = (xmlString) => {
       if (newLines.length > 0 && newLines[newLines.length-1].trim() !== '') {
         addLine(trimmed);
       }
+      continue;
+    }
+
+    // Put closing comment on previous line if it's not too long and the previous line isn't an XML tag
+    if (trimmed === '-->' && inComment && newLines.length > 0 && newLines[newLines.length - 1].length + trimmed.length < LINE_LENGTH - 40 && !newLines[newLines.length -1].endsWith('>')) {
+      newLines[newLines.length - 1] += ' -->';
+      endComment();
       continue;
     }
 
