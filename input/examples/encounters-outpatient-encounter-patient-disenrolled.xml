@@ -93,7 +93,7 @@
           <id root="db734647-fc99-424c-a864-7e3cda82e703" extension="45665"/>
           <!-- code is required; MAY be selected from ValueSet Problem Type (LOINC) urn:oid:2.16.840.1.113883.3.88.12.3221.7.2 STATIC 2014-09-02 (CONF:1098-31229) -->
           <code code="404684003" displayName="Clinical finding" codeSystemName="SNOMED-CT" codeSystem="2.16.840.1.113883.6.96">
-            <!--  of course this MAY be present
+            <!-- of course this MAY be present
                  <translation code="75321-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Clinical finding"/>-->
           </code>
           <statusCode code="completed"/>

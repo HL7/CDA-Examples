@@ -38,7 +38,7 @@
       <templateId root="2.16.840.1.113883.10.20.22.4.44" extension="2014-06-09"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.44"/>
       <id root="c03e5445-af1b-4911-a419-e2782f21448c"/>
-      <!--If a code is available for the general concept for which there is no information (e.g. Problem), use that
+      <!-- If a code is available for the general concept for which there is no information (e.g. Problem), use that
            code in the code attribute, otherwise use a nullFlavor of OTH -->
       <code nullFlavor="OTH">
         <originalText>

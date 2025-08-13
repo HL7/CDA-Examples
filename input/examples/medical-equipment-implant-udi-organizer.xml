@@ -179,11 +179,12 @@
           <!-- The distinct identification code may be equivalent to the serial number, lot or batch number, or the donation identification number.  -->
           <!-- The appropriate value should be provided as the distinct identification code. -->
           <!-- <component>
-               <observation classCode="OBS" moodCode="EVN">
-               <templateId root="2.16.840.1.113883.10.20.22.4.308" extension="2019-06-21"/>
-               <code code="C113843" displayName="Distinct Identification" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus"/>
-               <value xsi:type="ST">1111</value>
-               </observation>
+                 <observation classCode="OBS" moodCode="EVN">
+                   <templateId root="2.16.840.1.113883.10.20.22.4.308" extension="2019-06-21"/>
+                   <code code="C113843" codeSystem="2.16.840.1.113883.3.26.1.1"
+                         displayName="Distinct Identification" codeSystemName="NCI Thesaurus" />
+                   <value xsi:type="ST">1111</value>
+                 </observation>
                </component> -->
           <!-- Brand Name -->
           <component>

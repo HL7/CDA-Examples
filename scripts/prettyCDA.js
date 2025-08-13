@@ -37,13 +37,15 @@ const prettyCDA = (xmlString) => {
   const newLines = [];
 
   const stack = [];
+  let startComment = false;
   let inComment = false;
   let commentStackLevel = 0;
   let psComment = '';
 
   const indent = (addIndent = 0) => (stack.length + addIndent + (inComment ? 2.5 : 0)) * 2;
   const addLine = (text, addIndent = 0) => {
-    newLines.push(' '.repeat(indent(addIndent)) + restoreGtInQuotes(text) + psComment);
+    const preComment = startComment ? '<!--' : '';
+    newLines.push(' '.repeat(indent(addIndent)) + [preComment, restoreGtInQuotes(text), psComment].filter(Boolean).join(' '));
     psComment = '';
     if (inComment && text.endsWith('-->')) {
       inComment = false;
@@ -51,6 +53,11 @@ const prettyCDA = (xmlString) => {
         stack.length = commentStackLevel;
         commentStackLevel = 0;
       }
+    }
+    if (startComment) {
+      startComment = false;
+      inComment = true;
+      commentStackLevel = stack.length;
     }
   };
 
@@ -175,24 +182,24 @@ const prettyCDA = (xmlString) => {
 
     let trimmed = replaceGtInQuotes(originalLines[i].trim());
 
-    // Multiple empty lines? Skip
-    if (trimmed === '' && newLines.length > 0 && newLines[newLines.length-1].trim() === '') {
+    // Empty line - just add (but only one)
+    if (trimmed === '') {
+      // Only add one blank line in a row
+      if (newLines.length > 0 && newLines[newLines.length-1].trim() !== '') {
+        addLine(trimmed);
+      }
       continue;
     }
 
-    // Empty line? Just preserve (with current spacing)
-    if (trimmed === '' || trimmed.startsWith('<!--')) {
-      if (inComment && trimmed === '-->' && (newLines[newLines.length-1].length < LINE_LENGTH)) {
-        newLines[newLines.length-1] += ' ' + trimmed;
-      } else {
+    if (trimmed.startsWith('<!--')) {
+      // Single-line comment? Just add
+      if (trimmed.endsWith('-->')) {
         addLine(trimmed);
+        continue;
       }
-      if (trimmed.startsWith('<!--')) {
-        inComment = true;
-        commentStackLevel = stack.length;
-      }
-      if (trimmed.endsWith('-->')) inComment = false;
-      continue;
+      // Remove the <!-- and treat it like any other content
+      startComment = true; // Tells the next call to "addLine" to start a comment
+      trimmed = trimmed.slice(4).trim(); // Remove the <!--
     }
 
     // If we have a trailing comment on a line, split it off
@@ -201,7 +208,7 @@ const prettyCDA = (xmlString) => {
     const commentMatch = trimmed.match(/(.{0,200}?)(\s*<!--.*-->)$/);
     if (commentMatch) {
       trimmed = commentMatch[1].trim();
-      psComment = ' ' + commentMatch[2].trim();
+      psComment = commentMatch[2].trim();
     }
 
     //<anything /> - just output the line with the current spacing
@@ -239,7 +246,7 @@ const prettyCDA = (xmlString) => {
       if (stack.length > 0) {
         stack.pop();
       }
-      if (newLines[newLines.length - 1].trim().startsWith(`<${tagName}`) && !newLines[newLines.length - 1].endsWith(`/${tagName}>`) && !inComment) {
+      if (newLines[newLines.length - 1].trim().startsWith(`<${tagName}`) && !newLines[newLines.length - 1].endsWith(`/${tagName}>`) && !inComment && !startComment) {
         newLines[newLines.length - 1] += trimmed;
       } else {
         addLine(trimmed);
@@ -294,7 +301,7 @@ const prettyCDA = (xmlString) => {
 
     // Remove unnecessary line breaks
     // unless the preceding line ends in a comment
-    if (newLines[newLines.length-1].length + trimmed.length < LINE_LENGTH && !newLines[newLines.length-1].endsWith('-->') && !inComment) {
+    if (newLines.length > 0 && newLines[newLines.length-1].length + trimmed.length < LINE_LENGTH && !newLines[newLines.length-1].endsWith('-->') && !inComment && !startComment) {
       const addSpace = newLines[newLines.length-1].endsWith('>') ? '' : ' ';
       newLines[newLines.length-1] += addSpace + trimmed;
     } else {

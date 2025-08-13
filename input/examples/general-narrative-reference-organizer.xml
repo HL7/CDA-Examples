@@ -77,11 +77,11 @@
           </text>
           <!-- .... -->
           <value xsi:type="CD" code="3456" codeSystem="1.2.3.4.5.6.7.8.42" displayName="duis id consequat">
-            <!--If some of the human readable text is a representation of the value, we SHOULD include a reference to that text using the originalText/reference construct
+            <!-- If some of the human readable text is a representation of the value, we SHOULD include a reference to that text using the originalText/reference construct
                  if, however, the value is bound to some constant by an Implementation Guide and it is not represented in the human readable text, then the originalText/reference SHALL NOT be present
                  -->
             <originalText>
-              <!--  notice that the referenced text is similar to but different than the @displayName  of the code element
+              <!-- notice that the referenced text is similar to but different than the @displayName  of the code element
                    from an interoperability perspective, this pattern is a SHOULD as access to the human readable text reflecting the (code, codeSystem) in use is beneficial to consuming systems
                    Example referenced content, using Tobacco Use: Ex-heavy cigarette smoker 20 to 39 per day
                    (where the (code, codeSystem) on the value element would be (266924008, 2.16.840.1.113883.6.96)) -->

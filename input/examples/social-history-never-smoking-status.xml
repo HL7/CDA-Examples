@@ -26,7 +26,7 @@
         <reference value="#SmokingStatus" />
       </text>
       <statusCode code="completed"/>
-      <!--Note: This template represents a "snapshot in time" observation, simply reflecting what the patient's
+      <!-- Note: This template represents a "snapshot in time" observation, simply reflecting what the patient's
            current smoking status is at the time of the observation. As a result, the effectiveTime is constrained
            to just a time stamp, and will approximately correspond with the author/time. -->
       <!-- The use of a specfic SNOMED code for unknown smoker is an encouraged variation from C-CDA practices in other sections -->
