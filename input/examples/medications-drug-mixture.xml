@@ -107,24 +107,24 @@
             <!-- ALTERNATE EXAMPLE: This ingredient isn't part of this mixture, but demonstrates how an active ingredient with multiple different
                  components may be represented in one.
                  <pharm:ingredient classCode="ACTI">
-                 Once again, this pharm:quantity represents the amount of the compound PRODUCT in the mixture:
-                 0.4 mg of "allantoin 0.02 mg/mg / benzethonium chloride 0.002 mg/mg / lidocaine hydrochloride 0.04 mg/mg Oral Gel"
-                 per 1 mL of the mixture.
-                 
-                 Receivers may multiply these together to obtain the concentration of each INGREDIENT:
-                 (0.4 mg / 1 mL) * (allantoin 0.02 mg/mg) = 0.008 mg of allantoin / 1 mL of the mixture
-                 (0.4 mg / 1 mL) * (benzethonium chloride 0.002 mg/mg) = 0.0008 mg of benzethonium chloride / 1 mL of the mixture
-                 (0.4 mg / 1 mL) * (lidocaine hydrochloride 0.04 mg/mg) = 0.016 mg of lidocaine hydrochloride / 1 mL of the mixture
-                 
-                 <pharm:quantity>
-                 <pharm:numerator xsi:type="PQ" value="0.4" unit="mg" />
-                 <pharm:denominator xsi:type="PQ" value="1" unit="mL" />
-                 </pharm:quantity>
-                 <pharm:ingredientSubstance classCode="MMAT" determinerCode="KIND">
-                 <pharm:code code="2566834" displayName="allantoin 0.02 MG/MG / benzethonium chloride 0.002 MG/MG / lidocaine hydrochloride 0.04 MG/MG Oral Gel"
-                 codeSystem="2.16.840.1.113883.6.88"
-                 codeSystemName="RxNorm"/>
-                 </pharm:ingredientSubstance>
+                   Once again, this pharm:quantity represents the amount of the compound PRODUCT in the mixture:
+                   0.4 mg of "allantoin 0.02 mg/mg / benzethonium chloride 0.002 mg/mg / lidocaine hydrochloride 0.04 mg/mg Oral Gel"
+                   per 1 mL of the mixture.
+                   
+                   Receivers may multiply these together to obtain the concentration of each INGREDIENT:
+                   (0.4 mg / 1 mL) * (allantoin 0.02 mg/mg) = 0.008 mg of allantoin / 1 mL of the mixture
+                   (0.4 mg / 1 mL) * (benzethonium chloride 0.002 mg/mg) = 0.0008 mg of benzethonium chloride / 1 mL of the mixture
+                   (0.4 mg / 1 mL) * (lidocaine hydrochloride 0.04 mg/mg) = 0.016 mg of lidocaine hydrochloride / 1 mL of the mixture
+                   
+                   <pharm:quantity>
+                     <pharm:numerator xsi:type="PQ" value="0.4" unit="mg" />
+                     <pharm:denominator xsi:type="PQ" value="1" unit="mL" />
+                   </pharm:quantity>
+                   <pharm:ingredientSubstance classCode="MMAT" determinerCode="KIND">
+                     <pharm:code code="2566834" codeSystem="2.16.840.1.113883.6.88"
+                                 displayName="allantoin 0.02 MG/MG / benzethonium chloride 0.002 MG/MG / lidocaine hydrochloride 0.04 MG/MG Oral Gel"
+                                 codeSystemName="RxNorm" />
+                   </pharm:ingredientSubstance>
                  </pharm:ingredient> -->
             
             <!-- aluminum & magnesium hydroxide-simethicone -->

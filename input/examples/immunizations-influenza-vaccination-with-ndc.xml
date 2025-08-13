@@ -59,7 +59,7 @@
           </manufacturedMaterial>
           <!-- Optional manufacturerOrganization
                <manufacturerOrganization>
-               <name>Health LS - Immuno Inc.</name>
+                 <name>Health LS - Immuno Inc.</name>
                </manufacturerOrganization> -->
         </manufacturedProduct>
       </consumable>

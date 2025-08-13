@@ -69,7 +69,7 @@
           <statusCode code="completed"/>
           <!--
                <text>
-               <reference value="#Action1" />
+                 <reference value="#Action1" />
                </text> -->
           <!-- In this example, the instruction was given at the same time that the goal was set.
                effectiveTime is the same in this case. -->
@@ -109,7 +109,7 @@
           <statusCode code="completed"/>
           <!--
                <text>
-               <reference value="#Action2" />
+                 <reference value="#Action2" />
                </text> -->
           <!-- In this example, the instruction was given at the same time that the goal was set.
                effectiveTime is the same in this case. -->

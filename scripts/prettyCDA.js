@@ -38,12 +38,20 @@ const prettyCDA = (xmlString) => {
 
   const stack = [];
   let inComment = false;
+  let commentStackLevel = 0;
   let psComment = '';
 
   const indent = (addIndent = 0) => (stack.length + addIndent + (inComment ? 2.5 : 0)) * 2;
   const addLine = (text, addIndent = 0) => {
     newLines.push(' '.repeat(indent(addIndent)) + restoreGtInQuotes(text) + psComment);
     psComment = '';
+    if (inComment && text.endsWith('-->')) {
+      inComment = false;
+      if (commentStackLevel > 0) {
+        stack.length = commentStackLevel;
+        commentStackLevel = 0;
+      }
+    }
   };
 
   // WAY-too complicated function for a brief idea I had...
@@ -173,13 +181,16 @@ const prettyCDA = (xmlString) => {
     }
 
     // Empty line? Just preserve (with current spacing)
-    if (trimmed === '' || trimmed.startsWith('<!--') || inComment) {
+    if (trimmed === '' || trimmed.startsWith('<!--')) {
       if (inComment && trimmed === '-->' && (newLines[newLines.length-1].length < LINE_LENGTH)) {
         newLines[newLines.length-1] += ' ' + trimmed;
       } else {
         addLine(trimmed);
       }
-      if (trimmed.startsWith('<!--')) inComment = true;
+      if (trimmed.startsWith('<!--')) {
+        inComment = true;
+        commentStackLevel = stack.length;
+      }
       if (trimmed.endsWith('-->')) inComment = false;
       continue;
     }
@@ -228,7 +239,7 @@ const prettyCDA = (xmlString) => {
       if (stack.length > 0) {
         stack.pop();
       }
-      if (newLines[newLines.length - 1].trim().startsWith(`<${tagName}`) && !newLines[newLines.length - 1].endsWith(`/${tagName}>`)) {
+      if (newLines[newLines.length - 1].trim().startsWith(`<${tagName}`) && !newLines[newLines.length - 1].endsWith(`/${tagName}>`) && !inComment) {
         newLines[newLines.length - 1] += trimmed;
       } else {
         addLine(trimmed);
@@ -283,7 +294,7 @@ const prettyCDA = (xmlString) => {
 
     // Remove unnecessary line breaks
     // unless the preceding line ends in a comment
-    if (newLines[newLines.length-1].length + trimmed.length < LINE_LENGTH && !newLines[newLines.length-1].endsWith('-->')) {
+    if (newLines[newLines.length-1].length + trimmed.length < LINE_LENGTH && !newLines[newLines.length-1].endsWith('-->') && !inComment) {
       const addSpace = newLines[newLines.length-1].endsWith('>') ? '' : ' ';
       newLines[newLines.length-1] += addSpace + trimmed;
     } else {
