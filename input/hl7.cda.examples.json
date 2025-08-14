@@ -254,6 +254,13 @@
       {
         "code": {
           "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+          "code": "jira-code"
+        },
+        "value": "examples"
+      },
+      {
+        "code": {
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
           "code": "excludexml"
         },
         "value": "y"
