@@ -3,16 +3,16 @@
 <!-- This uses the "Measure Section" section where the measure logic (i.e. denominators, numerators) is imparted using negationInd of measure component observations -->
 <!-- This example complies with QRDA1 measure section but may not suitable for formal quality reporting. Refer to QRDA1 and QRDA3 implementation guidance for more details -->
 <!-- Per discussion with clinical quality improvement CQI workgroup, this aligns with how the Joint Commission encourage patient level reporting in QRDA1 documents.-->
-<!-- For the measures shown in this section, the clinical data that support quality calculation could be included in other sections (e.g. problems, procedures, results, vital signs, etc.) --> 
-<!-- Thank you to Yan Heras and Gay Dolin + other members in CQI workgroup for consultation and feedback regarding the sample --> 
+<!-- For the measures shown in this section, the clinical data that support quality calculation could be included in other sections (e.g. problems, procedures, results, vital signs, etc.) -->
+<!-- Thank you to Yan Heras and Gay Dolin + other members in CQI workgroup for consultation and feedback regarding the sample -->
 <section xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <!-- Templates use QRDA1 1.1 (current reporting standard as of 2018)-->
   <!-- This is the templateId for Measure Section -->
   <templateId root="2.16.840.1.113883.10.20.24.2.2"/>
   <!-- This is the templateId for Measure Section QDM -->
   <templateId root="2.16.840.1.113883.10.20.24.2.3"/>
-  <code code="55186-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-    displayName="Measure Document"/>
+  <code code="55186-1" codeSystem="2.16.840.1.113883.6.1"
+        codeSystemName="LOINC" displayName="Measure Document" />
   <title>Measure Section</title>
   <text>
     <table border="1" width="100%">
@@ -97,10 +97,9 @@
           <!-- This includes an uuid identifier of the measure logic, For this example, -->
           <!-- see https://ecqi.healthit.gov/system/files/ecqm/measures/CMS122v5_SimpleXML_2.xml -->
           <!-- If no GUID available, the measure would at least be described using the text field -->
-          <id root="2.16.840.1.113883.4.738"
-            extension="40280381-51f0-825b-0152-229afff616ee"/>
-          <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-            displayName="Health Quality Measure Document"/>
+          <id root="2.16.840.1.113883.4.738" extension="40280381-51f0-825b-0152-229afff616ee" />
+          <code code="57024-2" codeSystem="2.16.840.1.113883.6.1"
+                codeSystemName="LOINC" displayName="Health Quality Measure Document" />
           <text>Diabetes: Hemoglobin A1c Poor Control</text>
           <versionNumber value="5"/>
         </externalDocument>
@@ -111,7 +110,7 @@
           <templateId root="2.16.840.1.113883.10.20.17.3.8"/>
           <id root="55a43e20-6463-46eb-81c3-9a3a1ad41225"/>
           <code code="252116004" codeSystem="2.16.840.1.113883.6.96"
-            displayName="Observation Parameters"/>
+                displayName="Observation Parameters" />
           <effectiveTime>
             <!-- The beginning of the reporting period. -->
             <low value="20170101000000-0500"/>
@@ -121,14 +120,14 @@
         </act>
       </component>
       <component>
-        <!-- Set negationInd="false" to assert that the criteria are met by the included data. 
-    Set negationInd="true" to assert that the criteria are NOT met by the included data. 
-    Since this patient is in the denominator, negationInd is set to false -->
+        <!-- Set negationInd="false" to assert that the criteria are met by the included data.
+             Set negationInd="true" to assert that the criteria are NOT met by the included data.
+             Since this patient is in the denominator, negationInd is set to false -->
         <observation classCode="OBS" moodCode="EVN" negationInd="false">
           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ActCode" displayName="Assertion"/>
+                codeSystemName="ActCode" displayName="Assertion" />
           <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ObservationValue" displayName="denominator"/>
+                 codeSystemName="ObservationValue" displayName="denominator" />
           <reference typeCode="REFR">
             <externalObservation classCode="OBS" moodCode="EVN">
               <!-- This includes an version specific uuid identifier of the specific measure component, (denominator in this example) -->
@@ -143,9 +142,9 @@
         <!-- Note that this measure has inverted numerator logic (i.e. numerator events are non-compliant)-->
         <observation classCode="OBS" moodCode="EVN" negationInd="true">
           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ActCode" displayName="Assertion"/>
+                codeSystemName="ActCode" displayName="Assertion" />
           <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ObservationValue" displayName="numerator"/>
+                 codeSystemName="ObservationValue" displayName="numerator" />
           <reference typeCode="REFR">
             <externalObservation classCode="OBS" moodCode="EVN">
               <id root="6D01A564-58CC-4CF5-929F-B83583701BFE"/>
@@ -164,10 +163,9 @@
       <statusCode code="completed"/>
       <reference typeCode="REFR">
         <externalDocument classCode="DOC" moodCode="EVN">
-          <id root="2.16.840.1.113883.4.738"
-            extension="40280381-51f0-825b-0152-22a1e7e81737"/>
-          <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-            displayName="Health Quality Measure Document"/>
+          <id root="2.16.840.1.113883.4.738" extension="40280381-51f0-825b-0152-22a1e7e81737" />
+          <code code="57024-2" codeSystem="2.16.840.1.113883.6.1"
+                codeSystemName="LOINC" displayName="Health Quality Measure Document" />
           <text>Colorectal Cancer Screening</text>
           <versionNumber value="5"/>
         </externalDocument>
@@ -178,7 +176,7 @@
           <templateId root="2.16.840.1.113883.10.20.17.3.8"/>
           <id root="55a43e20-6463-46eb-81c3-9a3a1ad41225"/>
           <code code="252116004" codeSystem="2.16.840.1.113883.6.96"
-            displayName="Observation Parameters"/>
+                displayName="Observation Parameters" />
           <effectiveTime>
             <!-- The beginning of the reporting period. -->
             <low value="20170101000000-0500"/>
@@ -191,9 +189,9 @@
         <!-- Since this patient is in the denominator, negationInd is set to false -->
         <observation classCode="OBS" moodCode="EVN" negationInd="false">
           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ActCode" displayName="Assertion"/>
+                codeSystemName="ActCode" displayName="Assertion" />
           <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ObservationValue" displayName="denominator"/>
+                 codeSystemName="ObservationValue" displayName="denominator" />
           <reference typeCode="REFR">
             <externalObservation classCode="OBS" moodCode="EVN">
               <id root="589C2FD6-6AA9-4AF8-9E1C-973170361917"/>
@@ -206,9 +204,9 @@
         <!-- Note that this measure has typical numerator logic (i.e. numerator events are compliant)-->
         <observation classCode="OBS" moodCode="EVN" negationInd="true">
           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ActCode" displayName="Assertion"/>
+                codeSystemName="ActCode" displayName="Assertion" />
           <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ObservationValue" displayName="numerator"/>
+                 codeSystemName="ObservationValue" displayName="numerator" />
           <reference typeCode="REFR">
             <externalObservation classCode="OBS" moodCode="EVN">
               <id root="52ADE511-39D4-4CBC-84B6-A82059741359"/>
@@ -220,9 +218,9 @@
         <!-- Since this patient is NOT excluded, negationInd is set to true -->
         <observation classCode="OBS" moodCode="EVN" negationInd="true">
           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ActCode" displayName="Assertion"/>
+                codeSystemName="ActCode" displayName="Assertion" />
           <value xsi:type="CD" code="DENEX" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ObservationValue" displayName="denominator exclusions"/>
+                 codeSystemName="ObservationValue" displayName="denominator exclusions" />
           <reference typeCode="REFR">
             <externalObservation classCode="OBS" moodCode="EVN">
               <id root="93AA9C96-E1FE-435B-BA0B-FAF0C5592275"/>
@@ -240,10 +238,9 @@
       <statusCode code="completed"/>
       <reference typeCode="REFR">
         <externalDocument classCode="DOC" moodCode="EVN">
-          <id root="2.16.840.1.113883.4.738"
-            extension="40280381-52fc-3a32-0153-1a646a2a0bfa"/>
-          <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-            displayName="Health Quality Measure Document"/>
+          <id root="2.16.840.1.113883.4.738" extension="40280381-52fc-3a32-0153-1a646a2a0bfa" />
+          <code code="57024-2" codeSystem="2.16.840.1.113883.6.1"
+                codeSystemName="LOINC" displayName="Health Quality Measure Document" />
           <text>Pneumonia Vaccination Status for Older Adults</text>
           <versionNumber value="5"/>
         </externalDocument>
@@ -254,7 +251,7 @@
           <templateId root="2.16.840.1.113883.10.20.17.3.8"/>
           <id root="55a43e20-6463-46eb-81c3-9a3a1ad41225"/>
           <code code="252116004" codeSystem="2.16.840.1.113883.6.96"
-            displayName="Observation Parameters"/>
+                displayName="Observation Parameters" />
           <effectiveTime>
             <!-- The beginning of the reporting period. -->
             <low value="20170101000000-0500"/>
@@ -267,9 +264,9 @@
         <!-- Since this patient is NOT in the denominator, negationInd is set to true -->
         <observation classCode="OBS" moodCode="EVN" negationInd="true">
           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ActCode" displayName="Assertion"/>
+                codeSystemName="ActCode" displayName="Assertion" />
           <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ObservationValue" displayName="denominator"/>
+                 codeSystemName="ObservationValue" displayName="denominator" />
           <reference typeCode="REFR">
             <externalObservation classCode="OBS" moodCode="EVN">
               <id root="B57EA797-15A1-4C60-B34C-BAE292FE3B76"/>
@@ -281,9 +278,9 @@
         <!-- Since this patient is NOT in the numerator, negationInd is set to true -->
         <observation classCode="OBS" moodCode="EVN" negationInd="true">
           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ActCode" displayName="Assertion"/>
+                codeSystemName="ActCode" displayName="Assertion" />
           <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ObservationValue" displayName="numerator"/>
+                 codeSystemName="ObservationValue" displayName="numerator" />
           <reference typeCode="REFR">
             <externalObservation classCode="OBS" moodCode="EVN">
               <id root="CBD0926D-6088-44EE-883C-0A0F9E77E2A1"/>
@@ -302,10 +299,9 @@
       <statusCode code="completed"/>
       <reference typeCode="REFR">
         <externalDocument classCode="DOC" moodCode="EVN">
-          <id root="2.16.840.1.113883.4.738"
-            extension="40280381-51f0-825b-0152-22b98cff181a"/>
-          <code code="57024-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-            displayName="Health Quality Measure Document"/>
+          <id root="2.16.840.1.113883.4.738" extension="40280381-51f0-825b-0152-22b98cff181a" />
+          <code code="57024-2" codeSystem="2.16.840.1.113883.6.1"
+                codeSystemName="LOINC" displayName="Health Quality Measure Document" />
           <text>Controlling High Blood Pressure</text>
           <versionNumber value="5"/>
         </externalDocument>
@@ -316,7 +312,7 @@
           <templateId root="2.16.840.1.113883.10.20.17.3.8"/>
           <id root="55a43e20-6463-46eb-81c3-9a3a1ad41225"/>
           <code code="252116004" codeSystem="2.16.840.1.113883.6.96"
-            displayName="Observation Parameters"/>
+                displayName="Observation Parameters" />
           <effectiveTime>
             <!-- The beginning of the reporting period. -->
             <low value="20170101000000-0500"/>
@@ -329,9 +325,9 @@
         <!-- Since this patient is in the denominator, negationInd is set to false -->
         <observation classCode="OBS" moodCode="EVN" negationInd="false">
           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ActCode" displayName="Assertion"/>
+                codeSystemName="ActCode" displayName="Assertion" />
           <value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ObservationValue" displayName="denominator"/>
+                 codeSystemName="ObservationValue" displayName="denominator" />
           <reference typeCode="REFR">
             <externalObservation classCode="OBS" moodCode="EVN">
               <id root="E62FEBA3-0F98-460D-93CD-44314D7203A8"/>
@@ -343,9 +339,9 @@
         <!-- Since this patient is excluded, they are NOT in numerator, negationInd is set to true-->
         <observation classCode="OBS" moodCode="EVN" negationInd="true">
           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ActCode" displayName="Assertion"/>
+                codeSystemName="ActCode" displayName="Assertion" />
           <value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ObservationValue" displayName="numerator"/>
+                 codeSystemName="ObservationValue" displayName="numerator" />
           <reference typeCode="REFR">
             <externalObservation classCode="OBS" moodCode="EVN">
               <id root="F9FEBF42-4B21-47A9-B03E-D2DA5CF8492B"/>
@@ -357,9 +353,9 @@
         <!-- Since this patient is  excluded, negationInd is set to false -->
         <observation classCode="OBS" moodCode="EVN" negationInd="false">
           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ActCode" displayName="Assertion"/>
+                codeSystemName="ActCode" displayName="Assertion" />
           <value xsi:type="CD" code="DENEX" codeSystem="2.16.840.1.113883.5.4"
-            codeSystemName="ObservationValue" displayName="denominator exclusions"/>
+                 codeSystemName="ObservationValue" displayName="denominator exclusions" />
           <reference typeCode="REFR">
             <externalObservation classCode="OBS" moodCode="EVN">
               <id root="55A6D5F3-2029-4896-B850-4C7894161D7D"/>

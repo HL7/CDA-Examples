@@ -17,10 +17,9 @@
       </thead>
       <tbody>
         <tr ID="encounterDescriptionID0">
-          <td ID="encounterTypeDescriptionID0">Wellness Visit</td> 
+          <td ID="encounterTypeDescriptionID0">Wellness Visit</td>
           <td>David E Ford MD</td>
-          <td>
-          </td>
+          <td></td>
           <td>09/18/2017</td>
           <td><content ID="encounterDiagnosisID0">Jaw Asymmetry Maxillary</content>, <content ID="encounterDiagnosisID1">Anomaly of Dental Arch</content>, <content ID="encounterDiagnosisID2">Malocclusion Mesio-occlusion</content></td>
         </tr>
@@ -35,7 +34,7 @@
       <id root="2.16.840.1.113883.3.140.1.1918489287.6.10.16.1" extension="271818" assigningAuthorityName="Intergy Encounter Number" />
       <code code="AMB" displayName="ambulatory" codeSystem="2.16.840.1.113883.1.11.13955" codeSystemName="ActEncounterCode">
         <originalText>
-          <reference value="#encounterTypeDescriptionID0"/><!-- This is the text the user saw and was the basis for the AMB coding -->
+          <reference value="#encounterTypeDescriptionID0"/> <!-- This is the text the user saw and was the basis for the AMB coding -->
         </originalText>
       </code>
       <text>
@@ -43,7 +42,7 @@
       </text>
       <effectiveTime>
         <low value="20170918093900-0400" />
-        <high value="20170918095100-0400" /> 
+        <high value="20170918095100-0400" />
       </effectiveTime>
       <!-- Could include optional performer -->
       <entryRelationship typeCode="COMP"> <!-- Encounter Diagnosis Act -->
@@ -66,9 +65,10 @@
               <statusCode code="completed" />
               <effectiveTime>
                 <low value="20170918093900-0400" />
-                <high nullFlavor="NI"/> <!-- Better to omit high if problem is ongoing, but if you always include high use nullFlavor=NI --> 
+                <high nullFlavor="NI"/> <!-- Better to omit high if problem is ongoing, but if you always include high use nullFlavor=NI -->
               </effectiveTime>
-              <value code="235083001" displayName="Asymmetry of maxilla (disorder)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" xsi:type="CD">
+              <value xsi:type="CD" code="235083001" codeSystem="2.16.840.1.113883.6.96"
+                     displayName="Asymmetry of maxilla (disorder)" codeSystemName="SNOMED CT">
                 <originalText>
                   <reference value="#encounterDiagnosisID0" />
                 </originalText>
@@ -92,7 +92,8 @@
                 <low value="20170918093900-0400" />
                 <high nullFlavor="NI"/> <!-- Better to omit high if problem is ongoing, but if you always include high use nullFlavor=NI -->
               </effectiveTime>
-              <value code="23997001" displayName="Anomaly of dental arch (disorder)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" xsi:type="CD">
+              <value xsi:type="CD" code="23997001" codeSystem="2.16.840.1.113883.6.96"
+                     displayName="Anomaly of dental arch (disorder)" codeSystemName="SNOMED CT">
                 <originalText>
                   <reference value="#encounterDiagnosisID1" />
                 </originalText>
@@ -115,13 +116,16 @@
                 <low value="20170918093900-0400" />
                 <high nullFlavor="NI"/> <!-- Better to omit high if problem is ongoing, but if you always include high use nullFlavor=NI -->
               </effectiveTime>
-              <value code="12264001" displayName="Mesio-occlusion of teeth (disorder)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" xsi:type="CD">
+              <value xsi:type="CD" code="12264001" codeSystem="2.16.840.1.113883.6.96"
+                     displayName="Mesio-occlusion of teeth (disorder)" codeSystemName="SNOMED CT">
                 <originalText>
                   <reference value="#encounterDiagnosisID2" />
                 </originalText>
-                <translation code="524.23" displayName="Malocclusion Mesio-occlusion" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" />
+                <translation code="524.23" codeSystem="2.16.840.1.113883.6.103"
+                             displayName="Malocclusion Mesio-occlusion" codeSystemName="ICD9CM" />
                 <translation code="M26.213" displayName="Malocclusion Mesio-occlusion" codeSystem="2.16.840.1.113883.6.3" codeSystemName="ICD10" />
-                <translation code="219237" displayName="Malocclusion Mesio-occlusion" codeSystem="2.16.840.1.113883.6.26" codeSystemName="MEDCIN" />
+                <translation code="219237" codeSystem="2.16.840.1.113883.6.26"
+                             displayName="Malocclusion Mesio-occlusion" codeSystemName="MEDCIN" />
               </value>
             </observation>
           </entryRelationship>
@@ -129,17 +133,23 @@
       </entryRelationship>
       <entryRelationship typeCode="REFR" inversionInd="false">
         <act classCode="ACT" moodCode="EVN">
-          <code code="99408" codeSystemName="CPT-4" codeSystem="2.16.840.1.113883.6.12" displayName="Alcohol and/or substance (other than tobacco) abuse structured screening (eg, AUDIT, DAST), and brief intervention (SBI) services; 15 to 30 minutes" />
+          <code code="99408" codeSystem="2.16.840.1.113883.6.12"
+                codeSystemName="CPT-4"
+                displayName="Alcohol and/or substance (other than tobacco) abuse structured screening (eg, AUDIT, DAST), and brief intervention (SBI) services; 15 to 30 minutes" />
         </act>
       </entryRelationship>
       <entryRelationship typeCode="REFR" inversionInd="false">
         <act classCode="ACT" moodCode="EVN">
-          <code code="99394" codeSystemName="CPT-4" codeSystem="2.16.840.1.113883.6.12" displayName="Periodic comprehensive preventive medicine reevaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions, and the ordering of laboratory/diagnostic procedures, established patient; adolescent"/>
+          <code code="99394" codeSystem="2.16.840.1.113883.6.12"
+                codeSystemName="CPT-4"
+                displayName="Periodic comprehensive preventive medicine reevaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions, and the ordering of laboratory/diagnostic procedures, established patient; adolescent" />
         </act>
       </entryRelationship>
       <entryRelationship typeCode="REFR" inversionInd="false">
         <act classCode="ACT" moodCode="EVN">
-          <code code="99213" codeSystemName="CPT-4" codeSystem="2.16.840.1.113883.6.12" displayName="Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using time for code selection, 20-29 minutes of total time is spent on the date of the encounter."/>
+          <code code="99213" codeSystem="2.16.840.1.113883.6.12"
+                codeSystemName="CPT-4"
+                displayName="Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using time for code selection, 20-29 minutes of total time is spent on the date of the encounter." />
         </act>
       </entryRelationship>
     </encounter>

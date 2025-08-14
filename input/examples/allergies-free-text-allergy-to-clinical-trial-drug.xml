@@ -51,7 +51,7 @@
         <assignedAuthor>
           <id extension="12345" root="2.16.840.1.113883.4.6"/>
           <code code="207RX0202X" codeSystem="2.16.840.1.113883.6.101"
-            codeSystemName="Health Care Provider Taxonomy" displayName="Allopathic &amp; Osteopathic Physicians; Internal Medicine, Medical Oncology"/>
+                codeSystemName="Health Care Provider Taxonomy" displayName="Allopathic &amp; Osteopathic Physicians; Internal Medicine, Medical Oncology" />
           <addr nullFlavor="UNK"/>
           <telecom use="WP" value="tel:555-555-1234"/>
           <assignedPerson>
@@ -82,17 +82,17 @@
             <high value="20180401"/>
           </effectiveTime>
           <!-- This specifies that the allergy is to a medication in contrast to other allergies (substance) -->
-          <value xsi:type="CD" code="59037007" displayName="Intolerance to drug (finding)"
-            codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+          <value xsi:type="CD" code="59037007" codeSystem="2.16.840.1.113883.6.96"
+                 displayName="Intolerance to drug (finding)" codeSystemName="SNOMED CT" />
           <author>
             <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
             <time value="20180401"/>
             <assignedAuthor>
               <id extension="99999999" root="2.16.840.1.113883.4.6"/>
               <code code="207RX0202X" codeSystem="2.16.840.1.113883.6.101"
-                codeSystemName="Health Care Provider Taxonomy"
-                displayName="Allopathic &amp; Osteopathic Physicians; Internal Medicine, Medical Oncology"/>
-              <addr nullFlavor="UNK"/>                
+                    codeSystemName="Health Care Provider Taxonomy"
+                    displayName="Allopathic &amp; Osteopathic Physicians; Internal Medicine, Medical Oncology" />
+              <addr nullFlavor="UNK"/>
               <telecom use="WP" value="tel:555-555-1234"/>
               <assignedPerson>
                 <name>
@@ -108,13 +108,13 @@
                 <!-- This drug is a clinical trial drug not approved by FDA so there is no RxNorm code -->
                 <!-- For non-drug substances that don't have a concept you may omit codeSystem -->
                 <!-- Use OTH and originalText -->
-                <code nullFlavor="OTH" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm"> 
+                <code nullFlavor="OTH" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm">
                   <originalText>
                     <reference value="#allergy1allergen"/>
                   </originalText>
                   <!-- Include clinical trial code or local code and codeSystem in translation-->
-                   <translation code="C95733" displayName="talazoparib" 
-                        codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI"/>
+                  <translation code="C95733" codeSystem="2.16.840.1.113883.3.26.1.1"
+                               displayName="talazoparib" codeSystemName="NCI" />
                 </code>
               </playingEntity>
             </participantRole>
@@ -131,7 +131,7 @@
               <statusCode code="completed"/>
               <effectiveTime value = "20180401"/>
               <value xsi:type="CD" code="267036007" codeSystem="2.16.840.1.113883.6.96"
-                codeSystemName="SNOMED CT" displayName="Dyspnea">
+                     codeSystemName="SNOMED CT" displayName="Dyspnea">
                 <originalText>
                   <reference value="#allergy1reaction"/>
                 </originalText>
@@ -142,18 +142,18 @@
                   <templateId root="2.16.840.1.113883.10.20.22.4.8"/>
                   <templateId root="2.16.840.1.113883.10.20.22.4.8" extension="2014-06-09"/>
                   <code code="SEV" codeSystem="2.16.840.1.113883.5.4"
-                    codeSystemName="ActCode"/>
+                        codeSystemName="ActCode" />
                   <text>
                     <reference value="#allergy1reactionseverity"/>
                   </text>
                   <statusCode code="completed"/>
                   <value xsi:type="CD" code="6736007" codeSystem="2.16.840.1.113883.6.96"
-                    codeSystemName="SNOMED CT" displayName="Moderate"/>
+                         codeSystemName="SNOMED CT" displayName="Moderate" />
                 </observation>
               </entryRelationship>
             </observation>
           </entryRelationship>
-           </observation>
+        </observation>
       </entryRelationship>
     </act>
   </entry>

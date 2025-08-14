@@ -6,7 +6,7 @@
   <templateId root="2.16.840.1.113883.10.20.22.2.22.1"/>
   <code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of encounters"/>
   <title>ENCOUNTERS</title>
-<text>
+  <text>
     <table border="1" width="100%">
       <thead>
         <tr>
@@ -36,26 +36,29 @@
       <templateId root="2.16.840.1.113883.10.20.22.4.49" extension="2015-08-01"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.49"/>
       <id root="2a620155-9d11-439e-92b3-5d9815ff4de8"/>
-      <code code="99221" displayName="Initial hospital inpatient or observation care, per day, for the evaluation and management of a patient, which requires a medically appropriate history and/or examination and straightforward or low level medical decision making. When using total time on the date of the encounter for code selection, 40 minutes must be met or exceeded." codeSystemName="CPT-4" codeSystem="2.16.840.1.113883.6.12">
+      <code code="99221" codeSystem="2.16.840.1.113883.6.12"
+            displayName="Initial hospital inpatient or observation care, per day, for the evaluation and management of a patient, which requires a medically appropriate history and/or examination and straightforward or low level medical decision making. When using total time on the date of the encounter for code selection, 40 minutes must be met or exceeded."
+            codeSystemName="CPT-4">
         <originalText>
           <reference value="#Encounter1_Type"/>
         </originalText>
         <!-- MAY MAY contain zero or one [0..1] translation (CONF:1198-32323)
-        The translation may exist to map the code of EncounterTypeCode (2.16.840.1.113883.3.88.12.80.32) valueset to the code of Encounter Planned (2.16.840.1.113883.11.20.9.52) valueset.
-      <translation code="AMB" codeSystem="2.16.840.1.113883.5.4" displayName="Ambulatory" codeSystemName="HL7 ActEncounterCode"/>
-      -->
+             The translation may exist to map the code of EncounterTypeCode (2.16.840.1.113883.3.88.12.80.32) valueset to the code of Encounter Planned (2.16.840.1.113883.11.20.9.52) valueset.
+             <translation code="AMB" codeSystem="2.16.840.1.113883.5.4" displayName="Ambulatory" codeSystemName="HL7 ActEncounterCode"/> -->
       </code>
       <text>
         <reference value="#Encounter1"/>
       </text>
       <effectiveTime value="201209271300-0500"/>
       <!-- This shows use of the discharge disposition extension AND shows using both the suggested encoding from C-CDA R2.1 and local Good Health Hospital codes. -->
-      <sdtc:dischargeDispositionCode code="04" codeSystem="2.16.840.1.113883.12.112"  codeSystemName="HL7 Discharge Disposition" displayName="Discharged/transferred to an intermediate-care facility (ICF)">
+      <sdtc:dischargeDispositionCode code="04" codeSystem="2.16.840.1.113883.12.112"
+                                     codeSystemName="HL7 Discharge Disposition" displayName="Discharged/transferred to an intermediate-care facility (ICF)">
         <originalText>
           <reference value="#Encounter1_DischargeDispositionCode" />
         </originalText>
         <!-- Good Health Hospital (local OID) to represent their local code system. -->
-        <translation code="HOSSVR" codeSystem="2.16.840.1.113883.19.5" codeSystemName="Community Medical Center Local Discharge Codes" displayName="SUNNYVIEW REHAB HOSPITAL"/>
+        <translation code="HOSSVR" codeSystem="2.16.840.1.113883.19.5"
+                     codeSystemName="Community Medical Center Local Discharge Codes" displayName="SUNNYVIEW REHAB HOSPITAL" />
       </sdtc:dischargeDispositionCode>
       <performer>
         <assignedEntity>
@@ -82,12 +85,13 @@
           </playingEntity>
         </participantRole>
       </participant>
-<participant typeCode="DST">
+      <participant typeCode="DST">
         <participantRole classCode="SDLOC">
           <templateId root="2.16.840.1.113883.10.20.22.4.32"/>
           <!-- Discharged To Location template -->
           <!-- How do we represent this concept of "the 'discharged to' location? -->
-          <code code="1105-6" codeSystem="2.16.840.1.113883.6.259" codeSystemName="HL7 HealthcareServiceLocation" displayName="Chronic Rehabilitation Unit"/>
+          <code code="1105-6" codeSystem="2.16.840.1.113883.6.259"
+                codeSystemName="HL7 HealthcareServiceLocation" displayName="Chronic Rehabilitation Unit" />
           <addr>
             <streetAddressLine>200 Rehab Road</streetAddressLine>
             <city>Portland</city>
@@ -110,9 +114,8 @@
           <id root="db734647-fc99-424c-a864-7e3cda82e703" extension="45665"/>
           <!-- code is required; MAY be selected from ValueSet Problem Type (LOINC) urn:oid:2.16.840.1.113883.3.88.12.3221.7.2 STATIC 2014-09-02 (CONF:1098-31229) -->
           <code code="404684003" displayName="Clinical finding" codeSystemName="SNOMED-CT" codeSystem="2.16.840.1.113883.6.96">
-            <!--  of course this MAY be present 
-        <translation code="75321-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Clinical finding"/>
-        -->
+            <!-- of course this MAY be present
+                 <translation code="75321-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Clinical finding"/> -->
           </code>
           <statusCode code="completed"/>
           <effectiveTime>

@@ -8,116 +8,116 @@
   <code code="46264-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medical Equipment"/>
   <title>Implants</title>
   <text>
-  <table>
-    <thead>
-    <tr>
-      <th>Device Type</th>  <!-- This is the generic name of the device. -->
-      <th>Procedure</th>
-      <th>Procedure Site</th>  
-      <th>Laterality</th> 
-      <th>Implant Date</th>  <!-- separated out implant date -->
-      <th>Provider Name and Organization</th>  
-      <th>Informant</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td ID="implantDevice1">Cardiac pacemaker</td> 
-      <td ID="procedureCodeTextReference1">Insertion of intracardiac pacemaker</td>
-      <td ID="procedureSiteCodeReference1">Structure of upper chest wall</td>
-      <td>2012</td>
-      <td/>  <!-- Laterality not appropriate for this device. -->
-      <td>Winston, Harry</td>
-      <td>Patient</td>
-    </tr>
-    </tbody>
-  </table>
+    <table>
+      <thead>
+        <tr>
+          <th>Device Type</th> <!-- This is the generic name of the device. -->
+          <th>Procedure</th>
+          <th>Procedure Site</th>
+          <th>Laterality</th>
+          <th>Implant Date</th> <!-- separated out implant date -->
+          <th>Provider Name and Organization</th>
+          <th>Informant</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td ID="implantDevice1">Cardiac pacemaker</td>
+          <td ID="procedureCodeTextReference1">Insertion of intracardiac pacemaker</td>
+          <td ID="procedureSiteCodeReference1">Structure of upper chest wall</td>
+          <td>2012</td>
+          <td/> <!-- Laterality not appropriate for this device. -->
+          <td>Winston, Harry</td>
+          <td>Patient</td>
+        </tr>
+      </tbody>
+    </table>
   </text>
   <!-- An example where the UDI is unknown or unavailable.  In this scenario,
-    the patient asserts that a pacemaker was inserted 5 years ago.  -->
+       the patient asserts that a pacemaker was inserted 5 years ago.  -->
   <entry>
-  <procedure classCode="PROC" moodCode="EVN">
-    <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
-    <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
-    <!-- Note - not sending the 2024-05-01 C-CDA 3.0 templateId because
-         that changed the requirement of date to being precise to at least the day-->
-    <!-- This a different procedure at the same facility, so the extension is different while the root is the same -->
-    <id extension="1122334455" root="1.2.840.114350.1.13.5552.1.7.2.737780"/>
-    <code code="25267002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED" displayName="Insertion of intracardiac pacemaker">
-    <originalText>
-      <reference value="#procedureCodeTextReference1"/> 
-    </originalText>
-    </code>
-    <!-- Procedure is completed, even though the implant is still active -->
-    <statusCode code="completed"/>
-    <effectiveTime>
-    <!-- Placed Date -->
-    <low value="2012"/>
-    </effectiveTime>
-    <targetSiteCode code="699646004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Structure of upper chest wall">
-    <originalText>
-      <reference value="#procedureSiteCodeReference1"/> 
-    </originalText>
-    </targetSiteCode>
-    
-    <performer typeCode="PRF"> 
-    <assignedEntity>
-      <id extension="2222222222" root="2.16.840.1.113883.4.6" />
-      <addr>
-        <streetAddressLine>123 Any Street</streetAddressLine>
-        <streetAddressLine>Suite 101</streetAddressLine>
-        <city>Anytown</city>
-        <state>AR</state>
-        <postalCode>10010</postalCode>
-        <country>US</country>
-      </addr>
-      <telecom value="tel:+1-(555)555-1234" />
-      <assignedPerson>
-      <name>
-        <family>Harry</family>
-        <given>Winston</given>
-      </name>
-      </assignedPerson>
-    </assignedEntity>
-    </performer>
-    <!-- The informant is identified as the patient. -->
-    <informant>
-    <assignedEntity>
-      <id extension="12345" root="1.2.840.114350.1.13.5552.1.7.2.12345" />
-      <!-- the informant is the patient -->
-      <code code="ONESELF" displayName="self" codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7 Role code" /> 
-      <addr use="HP">
-      <streetAddressLine>222 Home Street</streetAddressLine>
-      <city>Anytown</city>
-      <state>NY</state>
-      <postalCode>10010</postalCode>
-      <country>US</country>
-      </addr>
-      <telecom value="tel:(555)555-2004" use="HP" />
-      <assignedPerson>
-      <name>
-        <given>PatientFirstName</given>
-        <family>PatientLastName</family>
-      </name>
-      </assignedPerson>
-    </assignedEntity>
-    </informant>
-    <participant typeCode="DEV">
-    <participantRole classCode="MANU">
-      <templateId root="2.16.840.1.113883.10.20.22.4.37"/> 
-      <id root="2.16.840.1.113883.3.3719" nullFlavor="NI" /> <!-- There is no UDI information available --> 
-      <playingDevice>
-      <code nullFlavor="OTH"> <!-- Vendor doesn't code specific device. --> 
+    <procedure classCode="PROC" moodCode="EVN">
+      <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
+      <!-- Note - not sending the 2024-05-01 C-CDA 3.0 templateId because
+           that changed the requirement of date to being precise to at least the day-->
+      <!-- This a different procedure at the same facility, so the extension is different while the root is the same -->
+      <id extension="1122334455" root="1.2.840.114350.1.13.5552.1.7.2.737780"/>
+      <code code="25267002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED" displayName="Insertion of intracardiac pacemaker">
         <originalText>
-        <reference value="#implantDevice1"/>
+          <reference value="#procedureCodeTextReference1"/>
         </originalText>
       </code>
-      </playingDevice>
-      <scopingEntity>
-      <id root="2.16.840.1.113883.3.3719"/>  <!-- The FDA is the issuing agency as a default. -->
-      </scopingEntity>
-    </participantRole>
-    </participant>
-  </procedure>
+      <!-- Procedure is completed, even though the implant is still active -->
+      <statusCode code="completed"/>
+      <effectiveTime>
+        <!-- Placed Date -->
+        <low value="2012"/>
+      </effectiveTime>
+      <targetSiteCode code="699646004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Structure of upper chest wall">
+        <originalText>
+          <reference value="#procedureSiteCodeReference1"/>
+        </originalText>
+      </targetSiteCode>
+      
+      <performer typeCode="PRF">
+        <assignedEntity>
+          <id extension="2222222222" root="2.16.840.1.113883.4.6" />
+          <addr>
+            <streetAddressLine>123 Any Street</streetAddressLine>
+            <streetAddressLine>Suite 101</streetAddressLine>
+            <city>Anytown</city>
+            <state>AR</state>
+            <postalCode>10010</postalCode>
+            <country>US</country>
+          </addr>
+          <telecom value="tel:+1-(555)555-1234" />
+          <assignedPerson>
+            <name>
+              <family>Harry</family>
+              <given>Winston</given>
+            </name>
+          </assignedPerson>
+        </assignedEntity>
+      </performer>
+      <!-- The informant is identified as the patient. -->
+      <informant>
+        <assignedEntity>
+          <id extension="12345" root="1.2.840.114350.1.13.5552.1.7.2.12345" />
+          <!-- the informant is the patient -->
+          <code code="ONESELF" displayName="self" codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7 Role code" />
+          <addr use="HP">
+            <streetAddressLine>222 Home Street</streetAddressLine>
+            <city>Anytown</city>
+            <state>NY</state>
+            <postalCode>10010</postalCode>
+            <country>US</country>
+          </addr>
+          <telecom value="tel:(555)555-2004" use="HP" />
+          <assignedPerson>
+            <name>
+              <given>PatientFirstName</given>
+              <family>PatientLastName</family>
+            </name>
+          </assignedPerson>
+        </assignedEntity>
+      </informant>
+      <participant typeCode="DEV">
+        <participantRole classCode="MANU">
+          <templateId root="2.16.840.1.113883.10.20.22.4.37"/>
+          <id root="2.16.840.1.113883.3.3719" nullFlavor="NI" /> <!-- There is no UDI information available -->
+          <playingDevice>
+            <code nullFlavor="OTH"> <!-- Vendor doesn't code specific device. -->
+              <originalText>
+                <reference value="#implantDevice1"/>
+              </originalText>
+            </code>
+          </playingDevice>
+          <scopingEntity>
+            <id root="2.16.840.1.113883.3.3719"/> <!-- The FDA is the issuing agency as a default. -->
+          </scopingEntity>
+        </participantRole>
+      </participant>
+    </procedure>
   </entry>
 </section>

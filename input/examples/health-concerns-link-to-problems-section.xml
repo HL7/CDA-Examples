@@ -125,7 +125,8 @@
               <effectiveTime>
                 <low value="20140227"/>
               </effectiveTime>
-              <value xsi:type="CD" code="385093006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Community acquired pneumonia"/>
+              <value xsi:type="CD" code="385093006" codeSystem="2.16.840.1.113883.6.96"
+                     codeSystemName="SNOMED CT" displayName="Community acquired pneumonia" />
             </observation>
           </entryRelationship>
         </act>

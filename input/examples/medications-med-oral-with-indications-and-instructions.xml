@@ -1,18 +1,17 @@
 <!-- These examples illustrate multiple ways that a medication can be prescribed for pain
-   These examples are meant to illustrate for comparison purposes only!  
-   DO NOT COPY as an example of a Medication Section. These would not appear together in one patient document.
-   
-   Summary of examples:
-   
-  1. PRN with a coded precondition  
+     These examples are meant to illustrate for comparison purposes only!
+     DO NOT COPY as an example of a Medication Section. These would not appear together in one patient document.
+     
+     Summary of examples:
+     
+     1. PRN with a coded precondition
      Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours as needed for joint pain
      
-  2. Instructions; similar to above but NOT a PRN 
-  Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours. Do not take on an empty stomach.
-  
-  3. Indication; again, NOT a PRN - 
-  Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours for joint pain
--->
+     2. Instructions; similar to above but NOT a PRN
+     Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours. Do not take on an empty stomach.
+     
+     3. Indication; again, NOT a PRN -
+     Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours for joint pain -->
 <section xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <!-- Medication Section (entries required) (V2) -->
   <templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09"/>
@@ -41,7 +40,7 @@
           <td>600 MG</td>
           <td>Mar-10-2013 - </td>
           <td>Active</td>
-        </tr>    
+        </tr>
         <tr ID="Medication_42424242">
           <td>
             <content ID="MedicationName_42424242">Ibuprofen 600mg Oral Tablet</content>
@@ -68,16 +67,15 @@
     </table>
   </text>
   
-  <!-- 1. PRN with a coded precondition - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours PRN for joint pain 
-  compare to "Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours PRN"
-  coded here as an precondition with a code
-  note the following wording would be coded the same way, with a coded precondition:
-   Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours as needed for joint pain
-  -->
+  <!-- 1. PRN with a coded precondition - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours PRN for joint pain
+       compare to "Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours PRN"
+       coded here as an precondition with a code
+       note the following wording would be coded the same way, with a coded precondition:
+       Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours as needed for joint pain -->
   <entry>
     <substanceAdministration classCode="SBADM" moodCode="EVN">
       <!-- Medication Activity (V2) -->
-      <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>    
+      <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
       <id extension="300035" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
       <id extension="300013" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
@@ -89,10 +87,10 @@
         <low value="20130310"/>
         <high nullFlavor="NI"/>
       </effectiveTime>
-      <!-- 
-    institutionSpecified="true" for a PRN medication
-    See http://hl7-c-cda-examples.herokuapp.com/examples/22 or https://docs.google.com/document/d/1Y0Z458o_MrR2aPnpx6EygO6hpI88Bl95esjRWZ0agtY/edit
-    -->
+      <!--
+           institutionSpecified="true" for a PRN medication
+           See http://hl7-c-cda-examples.herokuapp.com/examples/22 or https://docs.google.com/document/d/1Y0Z458o_MrR2aPnpx6EygO6hpI88Bl95esjRWZ0agtY/edit
+           -->
       <effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
         <period value="6" unit="h"/>
       </effectiveTime>
@@ -127,7 +125,7 @@
             </manufacturedProduct>
           </consumable>
         </substanceAdministration>
-      </entryRelationship>    
+      </entryRelationship>
       <precondition typeCode="PRCN">
         <criterion>
           <!-- ** Precondition for substance administration (V2) -->
@@ -144,7 +142,7 @@
   <!-- Instructions; similar to above but NOT a PRN - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours with food -->
   <entry>
     <substanceAdministration classCode="SBADM" moodCode="EVN">
-      <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>      
+      <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
       <id extension="200035" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
       <id extension="200013" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
@@ -156,9 +154,8 @@
         <low value="20130310"/>
         <high nullFlavor="NI"/>
       </effectiveTime>
-      <!-- for the frequency of every 6 hours, we omit the institutionSpecified="false" attribute as false is the default value 
-    the reader is referred to the Frequency examples for more information.
-    -->    
+      <!-- for the frequency of every 6 hours, we omit the institutionSpecified="false" attribute as false is the default value
+           the reader is referred to the Frequency examples for more information. -->
       <effectiveTime xsi:type="PIVL_TS" operator="A">
         <period value="6" unit="h"/>
       </effectiveTime>
@@ -192,16 +189,17 @@
             </manufacturedProduct>
           </consumable>
         </substanceAdministration>
-      </entryRelationship>      
-      <!-- Instructions 
-    Additional Note: careful consideration should be given as to whether or not an instruction is actually a precondition. Note also that including both a precondition and an instruction may be appropriate.
-    -->
+      </entryRelationship>
+      <!-- Instructions
+           Additional Note: careful consideration should be given as to whether or not an instruction is actually a precondition. Note also that including both a precondition and an instruction may be appropriate.
+           -->
       <entryRelationship typeCode="SUBJ" inversionInd="true">
         <act classCode="ACT" moodCode="INT">
           <!-- Instruction (V2) -->
           <templateId root="2.16.840.1.113883.10.20.22.4.20" extension="2014-06-09"/>
           <templateId root="2.16.840.1.113883.10.20.22.4.20"/>
-          <code code="422037009" displayName="Provider medication administration instructions" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+          <code code="422037009" codeSystem="2.16.840.1.113883.6.96"
+                displayName="Provider medication administration instructions" codeSystemName="SNOMED CT" />
           <text>
             <reference value="#MedicationInstruction_42424242"/>
           </text>
@@ -211,12 +209,11 @@
     </substanceAdministration>
   </entry>
   
-  
   <!-- Indication; again, NOT a PRN - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours for joint pain
-    as if "for" was written as "because of", so coded with an indication, not precondition -->
+       as if "for" was written as "because of", so coded with an indication, not precondition -->
   <entry>
     <substanceAdministration classCode="SBADM" moodCode="EVN">
-      <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>    
+      <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
       <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
       <id extension="500035" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
       <id extension="500013" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
@@ -228,9 +225,8 @@
         <low value="20130310"/>
         <high nullFlavor="NI"/>
       </effectiveTime>
-      <!-- for the frequency of every 6 hours, we omit the institutionSpecified="false" attribute as false is the default value 
-    the reader is referred to the Frequency examples for more information.
-    -->
+      <!-- for the frequency of every 6 hours, we omit the institutionSpecified="false" attribute as false is the default value
+           the reader is referred to the Frequency examples for more information. -->
       <effectiveTime xsi:type="PIVL_TS" operator="A">
         <period value="6" unit="h"/>
       </effectiveTime>
@@ -264,14 +260,14 @@
             </manufacturedProduct>
           </consumable>
         </substanceAdministration>
-      </entryRelationship>        
+      </entryRelationship>
       <!-- a problem indication of joint pain -->
       <entryRelationship typeCode="RSON">
         <observation classCode="OBS" moodCode="EVN">
           <!-- Indication (V2) -->
           <templateId root="2.16.840.1.113883.10.20.22.4.19" extension="2023-05-01"/> <!-- Companion Guide -->
           <templateId root="2.16.840.1.113883.10.20.22.4.19" extension="2014-06-09"/>
-          <templateId root="2.16.840.1.113883.10.20.22.4.19"/>      
+          <templateId root="2.16.840.1.113883.10.20.22.4.19"/>
           <id extension="44" root="1.3.6.1.4.1.22812.3.99930.3.4.1.3"/>
           <code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="404684003" displayName="Clinical finding"/>
           <text>
