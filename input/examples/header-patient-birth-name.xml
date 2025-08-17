@@ -9,7 +9,7 @@
         <given>Jones</given>
         <family>Newman</family>
       </name>
-      <name> 
+      <name>
         <given qualifier="BR">Alicia</given> <!-- BR = Birth name-->
         <given>Jones</given>
         <family qualifier="BR">Newman</family> <!-- BR = Birth name-->
@@ -18,7 +18,7 @@
           <low value="20010505"/>
           <high value="20210510"/>
         </validTime>
-      </name>  
+      </name>
     </patient>
   </patientRole>
 </recordTarget>

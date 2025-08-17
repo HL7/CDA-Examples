@@ -4,137 +4,138 @@
   <code code="85847-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Patient Care team information"/>
   <title>Care Team Information</title>
   <text>
-  <list>
-    <item ID="CareTeam1">
-    <table>
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Focus</th>
-        <th>Nature</th>
-        <th>Time</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr ID="CareTeamName1">
-        <td>My Care Team</td>
-      </tr>
-      <tr>
-        <td>Care Coordination</td>
-      </tr>
-      <tr>
-        <td>Integrated</td>
-      </tr>
-      <tr>
-        <td>Oct 2018 - present</td>
-      </tr>
-      </tbody>
-    </table>
-    <table>
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Role</th>
-        <th>Specialty</th>
-        <th>Address</th>
-        <th>Phone</th>
-        <th>Email</th>
-        <th>Organization</th>
-        <th>Dates</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr ID="CareTeamParticipants1">
-        <td>John D Smith, MD</td>
-        <td>PCP</td>
-        <td>Internal Medicine</td>
-        <td>100 Main St. Suite 100, Hope Valley, RI 02832</td>
-        <td>(401)539-2461</td>
-        <td>johndsmith@direct.aclinic.org</td>
-        <td>Hope Woods Health Services</td>
-        <td>Oct 8, 2018 - present</td>
-      </tr>
-      </tbody>
-    </table>
-    </item>
-  </list>
+    <list>
+      <item ID="CareTeam1">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Focus</th>
+              <th>Nature</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ID="CareTeamName1">
+              <td>My Care Team</td>
+            </tr>
+            <tr>
+              <td>Care Coordination</td>
+            </tr>
+            <tr>
+              <td>Integrated</td>
+            </tr>
+            <tr>
+              <td>Oct 2018 - present</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Specialty</th>
+              <th>Address</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Organization</th>
+              <th>Dates</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ID="CareTeamParticipants1">
+              <td>John D Smith, MD</td>
+              <td>PCP</td>
+              <td>Internal Medicine</td>
+              <td>100 Main St. Suite 100, Hope Valley, RI 02832</td>
+              <td>(401)539-2461</td>
+              <td>johndsmith@direct.aclinic.org</td>
+              <td>Hope Woods Health Services</td>
+              <td>Oct 8, 2018 - present</td>
+            </tr>
+          </tbody>
+        </table>
+      </item>
+    </list>
   </text>
   <entry>
-   <!--Care Team Organizer-->
-   <organizer classCode="CLUSTER" moodCode="EVN">
-    <templateId root="2.16.840.1.113883.10.20.22.4.500" extension="2022-06-01"/>
-    <templateId root="2.16.840.1.113883.10.20.22.4.500" extension="2019-07-01"/>
-    <id root="c37b6e41-8d99-496f-afba-b97383da63eb"/>
-    <code code="86744-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Care Team">
-    <originalText>
-      <reference value="#CareTeamName1"/>
-    </originalText>
-    </code>
-    <sdtc:text>
-      <reference value="#CareTeamParticipants1" />
-    </sdtc:text>
-    <!--Care Team Status-->
-    <statusCode code="active"/>
-    <effectiveTime>
-    <low value="201810081426-0500"/>
-    </effectiveTime>
-    <!-- This participant is the Care Team Lead (1..1)-->
-    <!-- Care Team Lead is one of the contained care team members in the list of care team members-->
-    <participant typeCode="PPRF">
-      <participantRole>
-        <!--<This id matches at least one of the member's id in the Care Team Member act template-->
-        <id root="1.5.5.5.5.5.5"/>
-      </participantRole>
-    </participant>
-    <!-- #1 Care Team Member Act - This component is a care team member who is a provider -->
-    <component>
-     <act classCode="PCPR" moodCode="EVN">
-      <templateId root="2.16.840.1.113883.10.20.22.4.500.1" extension="2022-06-01"/>
-      <templateId root="2.16.840.1.113883.10.20.22.4.500.1" extension="2024-05-01"/>
-      <id root="1.5.5.5.5.5.5"/>
-      <!-- Note in C-CDA 2.1, templateId version 2022-06-01, this code had to be 85847-2 -->
-      <code code="92707-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Care Team Information panel"/>
-      <text>
+    <!--Care Team Organizer-->
+    <organizer classCode="CLUSTER" moodCode="EVN">
+      <templateId root="2.16.840.1.113883.10.20.22.4.500" extension="2022-06-01"/>
+      <templateId root="2.16.840.1.113883.10.20.22.4.500" extension="2019-07-01"/>
+      <id root="c37b6e41-8d99-496f-afba-b97383da63eb"/>
+      <code code="86744-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Care Team">
+        <originalText>
+          <reference value="#CareTeamName1"/>
+        </originalText>
+      </code>
+      <sdtc:text>
         <reference value="#CareTeamParticipants1" />
-      </text>
-      <!--Care Team Member Status-->
+      </sdtc:text>
+      <!--Care Team Status-->
       <statusCode code="active"/>
       <effectiveTime>
         <low value="201810081426-0500"/>
       </effectiveTime>
-      <!--Attributes about the provider member - name-->
-      <performer typeCode="PRF">
-        <sdtc:functionCode code="PCP" displayName="primary care physician" codeSystem="2.16.840.1.113883.5.88" codeSystemName="ParticipationFunction" />
-        <assignedEntity>
-          <!-- This is a fictional NPI so it will not validate if checked -->
-          <id extension="5555555555" root="2.16.840.1.113883.4.6"/>
-          <addr use="WP">
-            <streetAddressLine>100 Main St. Suite 100</streetAddressLine>
-            <city>Hope Valley</city>
-            <state>RI</state>
-            <postalCode>02832</postalCode>
-            <country>US</country>
-          </addr>
-          <telecom use="WP" value="tel:+1(401)539-2461"/>
-          <telecom value="mailto:johndsmith@direct.aclinic.org"/>
-          <assignedPerson>
-            <name>
-              <given>John</given>
-              <given>D</given>
-              <family>Smith</family>
-              <suffix>MD</suffix>
-            </name>
-          </assignedPerson>
-          <representedOrganization>
-            <id extension="219BX" root="1.2.16.840.1.113883.4.6"/>
-            <name>Hope Woods Health Services</name>
-            <telecom use="WP" value="tel:+1(401)539-2461"/>
-            <addr nullFlavor="UNK" />
-          </representedOrganization>
-        </assignedEntity>
-      </performer>
-     </act>
-    </component>
-   </organizer>
+      <!-- This participant is the Care Team Lead (1..1)-->
+      <!-- Care Team Lead is one of the contained care team members in the list of care team members-->
+      <participant typeCode="PPRF">
+        <participantRole>
+          <!--<This id matches at least one of the member's id in the Care Team Member act template-->
+          <id root="1.5.5.5.5.5.5"/>
+        </participantRole>
+      </participant>
+      <!-- #1 Care Team Member Act - This component is a care team member who is a provider -->
+      <component>
+        <act classCode="PCPR" moodCode="EVN">
+          <templateId root="2.16.840.1.113883.10.20.22.4.500.1" extension="2022-06-01"/>
+          <templateId root="2.16.840.1.113883.10.20.22.4.500.1" extension="2024-05-01"/>
+          <id root="1.5.5.5.5.5.5"/>
+          <!-- Note in C-CDA 2.1, templateId version 2022-06-01, this code had to be 85847-2 -->
+          <code code="92707-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Care Team Information panel"/>
+          <text>
+            <reference value="#CareTeamParticipants1" />
+          </text>
+          <!--Care Team Member Status-->
+          <statusCode code="active"/>
+          <effectiveTime>
+            <low value="201810081426-0500"/>
+          </effectiveTime>
+          <!--Attributes about the provider member - name-->
+          <performer typeCode="PRF">
+            <sdtc:functionCode code="PCP" codeSystem="2.16.840.1.113883.5.88"
+                               displayName="primary care physician" codeSystemName="ParticipationFunction" />
+            <assignedEntity>
+              <!-- This is a fictional NPI so it will not validate if checked -->
+              <id extension="5555555555" root="2.16.840.1.113883.4.6"/>
+              <addr use="WP">
+                <streetAddressLine>100 Main St. Suite 100</streetAddressLine>
+                <city>Hope Valley</city>
+                <state>RI</state>
+                <postalCode>02832</postalCode>
+                <country>US</country>
+              </addr>
+              <telecom use="WP" value="tel:+1(401)539-2461"/>
+              <telecom value="mailto:johndsmith@direct.aclinic.org"/>
+              <assignedPerson>
+                <name>
+                  <given>John</given>
+                  <given>D</given>
+                  <family>Smith</family>
+                  <suffix>MD</suffix>
+                </name>
+              </assignedPerson>
+              <representedOrganization>
+                <id extension="219BX" root="1.2.16.840.1.113883.4.6"/>
+                <name>Hope Woods Health Services</name>
+                <telecom use="WP" value="tel:+1(401)539-2461"/>
+                <addr nullFlavor="UNK" />
+              </representedOrganization>
+            </assignedEntity>
+          </performer>
+        </act>
+      </component>
+    </organizer>
   </entry>
 </section>

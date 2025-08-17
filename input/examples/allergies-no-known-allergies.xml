@@ -28,7 +28,7 @@
         <assignedAuthor>
           <id extension="99999999" root="2.16.840.1.113883.4.6"/>
           <code code="207Q00000X" codeSystem="2.16.840.1.113883.6.101"
-            codeSystemName="Health Care Provider Taxonomy" displayName="Family Medicine Physician"/>
+                codeSystemName="Health Care Provider Taxonomy" displayName="Family Medicine Physician" />
           <addr nullFlavor="UNK"/>
           <telecom use="WP" value="tel:555-555-1002"/>
           <assignedPerson>
@@ -55,27 +55,25 @@
             <reference value="#allergiesNoKnown"/>
           </text>
           <statusCode code="completed"/>
-
+          
           <!-- The time when this was biologically relevant ie True for the patient. -->
           <!-- For "no known allergies," this will typically be null unless information
-             is available about how long the patient has been allergy-free for. -->
+               is available about how long the patient has been allergy-free for. -->
           <!-- As a maximum, you would never indicate an effectiveTime/high that was greater than the current point in time. -->
           <effectiveTime>
             <low nullFlavor="NI" />
           </effectiveTime>
-
+          
           <!-- Note 419199007 - Allergy to substance has been retired; 609328004 is the recommended replacement -->
-          <value xsi:type="CD" code="609328004"
-            displayName="Allergic disposition (finding)"
-            codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+          <value xsi:type="CD" code="609328004" codeSystem="2.16.840.1.113883.6.96"
+                 displayName="Allergic disposition (finding)" codeSystemName="SNOMED CT" />
           <author>
             <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
             <time value="201001030908-0500"/>
             <assignedAuthor>
               <id extension="99999999" root="2.16.840.1.113883.4.6"/>
               <code code="207Q00000X" codeSystem="2.16.840.1.113883.6.101"
-                codeSystemName="Health Care Provider Taxonomy"
-                displayName="Family Medicine Physician"/>
+                    codeSystemName="Health Care Provider Taxonomy" displayName="Family Medicine Physician" />
               <addr nullFlavor="UNK"/>
               <telecom use="WP" value="tel:555-555-1002"/>
               <assignedPerson>

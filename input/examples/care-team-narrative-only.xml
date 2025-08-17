@@ -3,13 +3,12 @@
   <templateId root="2.16.840.1.113883.10.20.22.2.500" extension="2022-06-01"/>
   <!-- C-CDA 2.1 -->
   <templateId root="2.16.840.1.113883.10.20.22.2.500" extension="2019-07-01"/>
-  <code code="85847-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-    displayName="Patient Care team information"/>
+  <code code="85847-2" codeSystem="2.16.840.1.113883.6.1"
+        codeSystemName="LOINC" displayName="Patient Care team information" />
   <!-- Other possible types of Care Teams include:
-  Note: FHIR permits multiple codes to be used to designate the type of care team.  CDA offers less precision, and so only the XXXX Dimension code is used.
-  -->
-  <title mediaType="text/plain" representation="TXT" language="en-US">Care Team
-    Information</title>
+       Note: FHIR permits multiple codes to be used to designate the type of care team.
+       CDA offers less precision, and so only the XXXX Dimension code is used. -->
+  <title mediaType="text/plain" representation="TXT" language="en-US">Care Team Information</title>
   <text>
     <list>
       <item>
@@ -46,8 +45,7 @@
                           <td>Speciality: Internal Medicine</td>
                         </tr>
                         <tr>
-                          <td>Address: 100 Main St. Suite 100, Hope Valley,
-                          RI 02832</td>
+                          <td>Address: 100 Main St. Suite 100, Hope Valley, RI 02832</td>
                           <!-- Address (AssignedEntity) -->
                         </tr>
                         <tr>
@@ -59,8 +57,7 @@
                           <!-- email (AssignedEntity) -->
                         </tr>
                         <tr>
-                          <td>Organization Name: Hope Woods Health
-                          Services</td>
+                          <td>Organization Name: Hope Woods Health Services</td>
                           <!-- Organization name -->
                         </tr>
                         <tr>
@@ -93,8 +90,7 @@
                           <td>Email: Not on File </td>
                         </tr>
                         <tr>
-                          <td>Organization Name: Center for Womens
-                          Health</td>
+                          <td>Organization Name: Center for Womens Health</td>
                         </tr>
                         <tr>
                           <td>From: 1999</td>
@@ -128,8 +124,7 @@
                           <td>Email: Will.Namaste123@gmail.com </td>
                         </tr>
                         <tr>
-                          <td>Organization Name: Four Corners Community
-                          Church Presbyterian</td>
+                          <td>Organization Name: Four Corners Community Church Presbyterian</td>
                         </tr>
                         <tr>
                           <td>From: 2016</td>
@@ -217,12 +212,10 @@
                           <td>Contact Phone: Not on File</td>
                         </tr>
                         <tr>
-                          <td>Email:
-                          BeStrongPTN@FirstChoicePhysical.Direct.MD </td>
+                          <td>Email: BeStrongPTN@FirstChoicePhysical.Direct.MD </td>
                         </tr>
                         <tr>
-                          <td>Organization Name: First Choice Physical
-                          Therapy</td>
+                          <td>Organization Name: First Choice Physical Therapy</td>
                         </tr>
                         <tr>
                           <td>From: 2009</td>
@@ -254,12 +247,10 @@
                           <td>Email: Not on File </td>
                         </tr>
                         <tr>
-                          <td>Organization Name: Bayview Orthopedic
-                          Associates</td>
+                          <td>Organization Name: Bayview Orthopedic Associates</td>
                         </tr>
                         <tr>
-                          <td>From: November 10, 2016 to November 10,
-                          2016</td>
+                          <td>From: November 10, 2016 to November 10, 2016</td>
                         </tr>
                       </tbody>
                     </table>
@@ -279,19 +270,16 @@
                           <td>Speciality: Physical Therapy Assistant</td>
                         </tr>
                         <tr>
-                          <td>Address: YMCA, 123 Healthy Way, Westerly, RI
-                          02891</td>
+                          <td>Address: YMCA, 123 Healthy Way, Westerly, RI 02891</td>
                         </tr>
                         <tr>
                           <td>Contact Phone: Not on File</td>
                         </tr>
                         <tr>
-                          <td>Email:
-                          DBStretch@FirstChoicePhysical.Direct.MD</td>
+                          <td>Email: DBStretch@FirstChoicePhysical.Direct.MD</td>
                         </tr>
                         <tr>
-                          <td>Organization Name: First Choice Physical
-                          Therapy</td>
+                          <td>Organization Name: First Choice Physical Therapy</td>
                         </tr>
                         <tr>
                           <td>From: January 5, 2017</td>

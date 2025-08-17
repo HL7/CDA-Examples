@@ -1,12 +1,12 @@
 <section xmlns="urn:hl7-org:v3">
   <!-- conforms to Immunizations section with entries optional -->
-  <templateId root="2.16.840.1.113883.10.20.22.2.2"/>    
+  <templateId root="2.16.840.1.113883.10.20.22.2.2"/>
   <templateId root="2.16.840.1.113883.10.20.22.2.2" extension="2015-08-01"/>
   <!-- Immunizations section with entries required -->
   <templateId root="2.16.840.1.113883.10.20.22.2.2.1"/>
   <templateId root="2.16.840.1.113883.10.20.22.2.2.1" extension="2015-08-01"/>
-  <code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-    displayName="History of immunizations"/>
+  <code code="11369-6" codeSystem="2.16.840.1.113883.6.1"
+        codeSystemName="LOINC" displayName="History of immunizations" />
   <title>IMMUNIZATIONS</title>
   <text>
     <table border="1" width="100%">
@@ -51,9 +51,8 @@
             <code nullFlavor="OTH">
               <!-- Optional original text -->
               <originalText>Vaccination</originalText>
-              <translation code="787859002" displayName="vaccine"
-                codeSystem="2.16.840.1.113883.6.96"
-                codeSystemName="SNOMED CT"/>
+              <translation code="787859002" codeSystem="2.16.840.1.113883.6.96"
+                           displayName="vaccine" codeSystemName="SNOMED CT" />
             </code>
           </manufacturedMaterial>
         </manufacturedProduct>

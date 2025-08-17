@@ -1,15 +1,13 @@
 <recordTarget xmlns="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc">
   <patientRole>
     <!-- Example Social Security Number using the root for the Social Security Administion assigningAuthority. -->
-    <id assigningAuthorityName="US Social Security Administration" 
-      root="2.16.840.1.113883.4.1" extension="414122222"/>
+    <id assigningAuthorityName="US Social Security Administration" root="2.16.840.1.113883.4.1" extension="414122222" />
     <!-- SSN provided, but masked to include only the last 4 characters. -->
     <!-- Note: both examples are shows for comparison. It would not make sense to use both of these options in a real C-CDA Document. -->
-    <!-- When recording SSN in the extension dashes (-) are permitted but not required" -->
+    <!-- When recording SSN in the extension dashes (-) are permitted but not required -->
     <!-- Receiving systems may decide whether to store the last 4 or discard -->
     <!-- an id with a nullFlavor of "MSK" SHALL NOT be used for matching or indexing -->
-    <id assigningAuthorityName="US Social Security Administration"     
-      root="2.16.840.1.113883.4.1" extension="***-**-2222" nullFlavor="MSK"/>
+    <id assigningAuthorityName="US Social Security Administration" root="2.16.840.1.113883.4.1" extension="***-**-2222" nullFlavor="MSK" />
     <addr use="HP">
       <!-- HP is "primary home" from codeSystem 2.16.840.1.113883.5.1119 -->
       <streetAddressLine>1357 Amber Dr</streetAddressLine>
@@ -32,14 +30,15 @@
       <!-- Date of birth need only be precise to the day -->
       <birthTime value="19800801"/>
       <maritalStatusCode nullFlavor="NI"/>
-      <religiousAffiliationCode code="1013" displayName="Christian (non-Catholic, non-specific)" codeSystem="2.16.840.1.113883.5.1076" codeSystemName="HL7 Religious Affiliation"/>
+      <religiousAffiliationCode code="1013" codeSystem="2.16.840.1.113883.5.1076"
+                                displayName="Christian (non-Catholic, non-specific)" codeSystemName="HL7 Religious Affiliation" />
       <raceCode nullFlavor="UNK"/>
       <sdtc:raceCode nullFlavor="UNK"/>
       <ethnicGroupCode nullFlavor="UNK"/>
       <languageCommunication>
         <languageCode code="en"/>
-        <modeCode code="ESP" displayName="Expressed spoken"
-          codeSystem="2.16.840.1.113883.5.60" codeSystemName="LanguageAbilityMode"/>
+        <modeCode code="ESP" codeSystem="2.16.840.1.113883.5.60"
+                  displayName="Expressed spoken" codeSystemName="LanguageAbilityMode" />
         <preferenceInd value="true"/>
       </languageCommunication>
     </patient>

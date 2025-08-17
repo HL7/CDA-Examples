@@ -1,6 +1,6 @@
-<!-- This is an example of a medication being refused by a patient --> 
+<!-- This is an example of a medication being refused by a patient -->
 <!-- This example illustrates hhow such documentation may represent an exclusion criterion for a quality measure -->
-<!-- This example uses a QRDA tempalte to document reason with a coded concept --> 
+<!-- This example uses a QRDA tempalte to document reason with a coded concept -->
 <section xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdtc="urn:hl7-org:sdtc">
   <templateId root="2.16.840.1.113883.10.20.22.2.1.1"/>
   <templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09"/>
@@ -19,8 +19,7 @@
       </thead>
       <tbody>
         <tr ID="Medication_0">
-          <td>
-            Patient refused: 
+          <td>Patient refused:
             <content ID="MedicationName_0">Lisinopril 10mg Oral Tablet</content>
           </td>
           <td>NA</td>
@@ -68,7 +67,7 @@
         <assignedAuthor>
           <id extension="66666" root="2.16.840.1.113883.4.6"/>
           <code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101"
-            codeSystemName="NUCC" displayName="Allopathic &amp; Osteopathic Physicians; Internal Medicine, Cardiovascular Disease"/>
+                codeSystemName="NUCC" displayName="Allopathic &amp; Osteopathic Physicians; Internal Medicine, Cardiovascular Disease" />
           <addr>
             <streetAddressLine>6666 StreetName St.</streetAddressLine>
             <city>Silver Spring</city>
@@ -86,7 +85,7 @@
           </assignedPerson>
         </assignedAuthor>
       </author>
-      <!-- Comment activity --> 
+      <!-- Comment activity -->
       <entryRelationship typeCode="COMP">
         <act classCode="ACT" moodCode="EVN">
           <templateId root="2.16.840.1.113883.10.20.22.4.64"/>
@@ -96,7 +95,7 @@
           </text>
         </act>
       </entryRelationship>
-      <!-- This is the QRDA template --> 
+      <!-- This is the QRDA template -->
       <entryRelationship typeCode="COMP">
         <observation classCode="OBS" moodCode="EVN">
           <!-- Reason (V2) -->
@@ -109,7 +108,8 @@
             <low value="20180315112305-0500"/>
           </effectiveTime>
           <!-- sdtc:valueset extension is required in many QRDA templates. It's allowed in C-CDA. -->
-          <value xsi:type="CD" code="105480006" codeSystem="2.16.840.1.113883.6.96"  codeSystemName="SNOMED CT" displayName="Procedure declined by patient" sdtc:valueSet="2.16.840.1.113883.3.526.3.1008" />
+          <value xsi:type="CD" code="105480006" codeSystem="2.16.840.1.113883.6.96"
+                 codeSystemName="SNOMED CT" displayName="Procedure declined by patient" sdtc:valueSet="2.16.840.1.113883.3.526.3.1008" />
         </observation>
       </entryRelationship>
     </substanceAdministration>

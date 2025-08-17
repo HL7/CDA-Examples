@@ -5,8 +5,8 @@
   <!-- Medications section with entries required -->
   <templateId root="2.16.840.1.113883.10.20.22.2.1.1"/>
   <templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09"/>
-  <code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-    displayName="HISTORY OF MEDICATION USE"/>
+  <code code="10160-0" codeSystem="2.16.840.1.113883.6.1"
+        codeSystemName="LOINC" displayName="HISTORY OF MEDICATION USE" />
   <title>MEDICATIONS</title>
   <text ID="Medication_None">No Medications</text>
   <entry>
@@ -30,8 +30,8 @@
           <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
           <manufacturedMaterial>
             <code nullFlavor="OTH" codeSystem="2.16.840.1.113883.6.88">
-              <translation code="410942007" displayName="Drug or medicament"
-                codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+              <translation code="410942007" codeSystem="2.16.840.1.113883.6.96"
+                           displayName="Drug or medicament" codeSystemName="SNOMED CT" />
             </code>
           </manufacturedMaterial>
         </manufacturedProduct>
@@ -43,7 +43,7 @@
         <assignedAuthor>
           <id extension="66666" root="2.16.840.1.113883.4.6"/>
           <code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101"
-            codeSystemName="NUCC" displayName="Allopathic &amp; Osteopathic Physicians; Internal Medicine, Cardiovascular Disease"/>
+                codeSystemName="NUCC" displayName="Allopathic &amp; Osteopathic Physicians; Internal Medicine, Cardiovascular Disease" />
           <addr>
             <streetAddressLine>6666 StreetName St.</streetAddressLine>
             <city>Silver Spring</city>
