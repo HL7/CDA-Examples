@@ -1,6 +1,6 @@
 <section xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <templateId root="2.16.840.1.113883.10.20.22.2.22" assigningAuthorityName="CCDA Encounters Section" extension="2015-08-01" />
-  <templateId root="2.16.840.1.113883.10.20.22.2.22" assigningAuthorityName="CCDA Encounters Section" />
+  <templateId root="2.16.840.1.113883.10.20.22.2.22" extension="2015-08-01" />
+  <templateId root="2.16.840.1.113883.10.20.22.2.22" />
   <id root="6c628dae-578b-4e3a-b0d9-e82453d29c14" />
   <code code="46240-8" displayName="History of encounters" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
   <title>Encounters</title>
@@ -28,8 +28,8 @@
   </text>
   <entry typeCode="DRIV">
     <encounter classCode="ENC" moodCode="EVN">
-      <templateId root="2.16.840.1.113883.10.20.22.4.49" assigningAuthorityName="CCDA Encounter Activity" extension="2015-08-01" />
-      <templateId root="2.16.840.1.113883.10.20.22.4.49" assigningAuthorityName="CCDA Encounter Activity" />
+      <templateId root="2.16.840.1.113883.10.20.22.4.49" extension="2015-08-01" />
+      <templateId root="2.16.840.1.113883.10.20.22.4.49" />
       <id root="2.16.840.1.113883.3.140.1.1918489287.6.10.16" extension="449" assigningAuthorityName="Intergy Encounter ID" />
       <id root="2.16.840.1.113883.3.140.1.1918489287.6.10.16.1" extension="271818" assigningAuthorityName="Intergy Encounter Number" />
       <code code="AMB" displayName="ambulatory" codeSystem="2.16.840.1.113883.1.11.13955" codeSystemName="ActEncounterCode">
@@ -48,16 +48,16 @@
       <entryRelationship typeCode="COMP"> <!-- Encounter Diagnosis Act -->
         <act classCode="ACT" moodCode="EVN">
           <templateId root="2.16.840.1.113883.10.20.22.4.80" extension="2024-05-01" /> <!-- C-CDA 3.0 -->
-          <templateId root="2.16.840.1.113883.10.20.22.4.80" assigningAuthorityName="CCDA Encounter Diagnosis" extension="2015-08-01" />
-          <templateId root="2.16.840.1.113883.10.20.22.4.80" assigningAuthorityName="CCDA Encounter Diagnosis" />
+          <templateId root="2.16.840.1.113883.10.20.22.4.80" extension="2015-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.4.80" />
           <id root="2.16.840.1.113883.3.140.1.1918489287.6.10.7" extension="449" />
           <code code="29308-4" displayName="Diagnosis" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
           <statusCode code="completed" />
           <entryRelationship typeCode="SUBJ" inversionInd="false">
             <observation classCode="OBS" moodCode="EVN" negationInd="false">
-              <templateId root="2.16.840.1.113883.10.20.22.4.4" assigningAuthorityName="CCDA Problem Observation" extension="2024-05-01" /> <!-- C-CDA 3.0-->
-              <templateId root="2.16.840.1.113883.10.20.22.4.4" assigningAuthorityName="CCDA Problem Observation" extension="2015-08-01" />
-              <templateId root="2.16.840.1.113883.10.20.22.4.4" assigningAuthorityName="CCDA Problem Observation" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2024-05-01" /> <!-- C-CDA 3.0-->
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" />
               <id root="755efd22-a0d1-4504-9e6f-de4e173f91bc" />
               <code code="55607006" displayName="Problem" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
                 <translation code="75326-9" displayName="Problem" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
@@ -80,9 +80,9 @@
           </entryRelationship>
           <entryRelationship typeCode="SUBJ" inversionInd="false">
             <observation classCode="OBS" moodCode="EVN" negationInd="false">
-              <templateId root="2.16.840.1.113883.10.20.22.4.4" assigningAuthorityName="CCDA Problem Observation" extension="2024-05-01" /> <!-- C-CDA 3.0-->
-              <templateId root="2.16.840.1.113883.10.20.22.4.4" assigningAuthorityName="CCDA Problem Observation" extension="2015-08-01" />
-              <templateId root="2.16.840.1.113883.10.20.22.4.4" assigningAuthorityName="CCDA Problem Observation" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2024-05-01" /> <!-- C-CDA 3.0-->
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" />
               <id root="c351f35e-ad79-4519-aae2-153526171926" />
               <code code="55607006" displayName="Problem" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
                 <translation code="75326-9" displayName="Problem" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
@@ -104,9 +104,9 @@
           </entryRelationship>
           <entryRelationship typeCode="SUBJ" inversionInd="false">
             <observation classCode="OBS" moodCode="EVN" negationInd="false">
-              <templateId root="2.16.840.1.113883.10.20.22.4.4" assigningAuthorityName="CCDA Problem Observation" extension="2024-05-01" /> <!-- C-CDA 3.0-->
-              <templateId root="2.16.840.1.113883.10.20.22.4.4" assigningAuthorityName="CCDA Problem Observation" extension="2015-08-01" />
-              <templateId root="2.16.840.1.113883.10.20.22.4.4" assigningAuthorityName="CCDA Problem Observation" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2024-05-01" /> <!-- C-CDA 3.0-->
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" />
               <id root="1dd3d744-6108-4284-823a-138c2568e446" />
               <code code="55607006" displayName="Problem" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
                 <translation code="75326-9" displayName="Problem" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
