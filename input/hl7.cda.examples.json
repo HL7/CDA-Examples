@@ -213,9 +213,9 @@
           ]
         },
         {
-          "sourceUrl": "migrationnotes.html",
-          "name": "migrationnotes.html",
-          "title": "Migration Notes",
+          "sourceUrl": "changelog.html",
+          "name": "changelog.html",
+          "title": "Change Log",
           "generation": "markdown"
         },
         {

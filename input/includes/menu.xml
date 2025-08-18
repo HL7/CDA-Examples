@@ -3,7 +3,6 @@
   <li class="dropdown">
     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Guidance<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-      <li><a href="migrationnotes.html">Migration Notes</a></li>
       <li><a href="effectivetime.html">effectiveTime Use</a></li>
       <li><a href="medicationstatus.html">Medication statusCodes</a></li>
       <li><a href="medicationfrequency.html">Medication Frequency</a></li>
@@ -47,4 +46,5 @@
       <li><a href="examples-vital-signs.html">Vital Signs</a></li>
     </ul>
   </li>
+  <li><a href="changelog.html">Change Log</a></li>
 </ul>
