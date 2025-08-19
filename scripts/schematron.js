@@ -2,43 +2,59 @@ const fs = require('fs');
 const path = require('path');
 const { loadSchematron, validateXml } = require('./schematronValidation');
 
-const versionHeaders = {
-  '2.1': `
- ██████╗    ██╗
- ╚════██╗  ███║
-  █████╔╝  ╚██║
- ██╔═══╝    ██║
- ███████╗██╗██║
- ╚══════╝╚═╝╚═╝`
-  ,
-  '3.0': `
-██████╗     ██████╗ 
-╚════██╗   ██╔═████╗
- █████╔╝   ██║██╔██║
- ╚═══██╗   ████╔╝██║
-██████╔╝██╗╚██████╔╝
-╚═════╝ ╚═╝ ╚═════╝`
-  ,
-  '4.0': `
-██╗  ██╗    ██████╗ 
-██║  ██║   ██╔═████╗
-███████║   ██║██╔██║
-╚════██║   ████╔╝██║
-     ██║██╗╚██████╔╝
-     ╚═╝╚═╝ ╚═════╝`
+const schematrons = {
+  '2.1': {
+    fileName: 'ccda-2.1.sch',
+    icon: '2️⃣'
+  },
+  '3.0': {
+    fileName: 'ccda-3.0.sch',
+    icon: '3️⃣'
+  },
+  '4.0': {
+    fileName: 'ccda-4.0.sch',
+    icon: '4️⃣'
+  },
 };
 
-const filenameFilter = Object.keys(versionHeaders).includes(process.argv[2]) ? process.argv[3] : process.argv[2] || null;
+const modeHeaders = {
+  '2.1': `
+ ██████╗        ██████╗██████╗  █████╗     ██████╗    ██╗
+██╔════╝       ██╔════╝██╔══██╗██╔══██╗    ╚════██╗  ███║
+██║     █████╗ ██║     ██║  ██║███████║     █████╔╝  ╚██║
+██║     ╚════╝ ██║     ██║  ██║██╔══██║    ██╔═══╝    ██║
+╚██████╗       ╚██████╗██████╔╝██║  ██║    ███████╗██╗██║
+ ╚═════╝        ╚═════╝╚═════╝ ╚═╝  ╚═╝    ╚══════╝╚═╝╚═╝`
+  ,
+  '3.0': `
+ ██████╗        ██████╗██████╗  █████╗    ██████╗     ██████╗
+██╔════╝       ██╔════╝██╔══██╗██╔══██╗   ╚════██╗   ██╔═████╗
+██║     █████╗ ██║     ██║  ██║███████║    █████╔╝   ██║██╔██║
+██║     ╚════╝ ██║     ██║  ██║██╔══██║    ╚═══██╗   ████╔╝██║
+╚██████╗       ╚██████╗██████╔╝██║  ██║   ██████╔╝██╗╚██████╔╝
+ ╚═════╝        ╚═════╝╚═════╝ ╚═╝  ╚═╝   ╚═════╝ ╚═╝ ╚═════╝`
+  ,
+  '4.0': `
+ ██████╗        ██████╗██████╗  █████╗    ██╗  ██╗    ██████╗
+██╔════╝       ██╔════╝██╔══██╗██╔══██╗   ██║  ██║   ██╔═████╗
+██║     █████╗ ██║     ██║  ██║███████║   ███████║   ██║██╔██║
+██║     ╚════╝ ██║     ██║  ██║██╔══██║   ╚════██║   ████╔╝██║
+╚██████╗       ╚██████╗██████╔╝██║  ██║        ██║██╗╚██████╔╝
+ ╚═════╝        ╚═════╝╚═════╝ ╚═╝  ╚═╝        ╚═╝╚═╝ ╚═════╝`
+  ,
+  'all': `
+ ██████╗        ██████╗██████╗  █████╗     ██████╗    ██╗        ██╗  ██╗    ██████╗
+██╔════╝       ██╔════╝██╔══██╗██╔══██╗    ╚════██╗  ███║        ██║  ██║   ██╔═████╗
+██║     █████╗ ██║     ██║  ██║███████║     █████╔╝  ╚██║ █████╗ ███████║   ██║██╔██║
+██║     ╚════╝ ██║     ██║  ██║██╔══██║    ██╔═══╝    ██║ ╚════╝ ╚════██║   ████╔╝██║
+╚██████╗       ╚██████╗██████╔╝██║  ██║    ███████╗██╗██║             ██║██╗╚██████╔╝
+ ╚═════╝        ╚═════╝╚═════╝ ╚═╝  ╚═╝    ╚══════╝╚═╝╚═╝             ╚═╝╚═╝ ╚═════╝`
+};
+
+const filenameFilter = Object.keys(modeHeaders).includes(process.argv[2]) ? process.argv[3] : process.argv[2] || null;
 
 // TextToASCII Font ANSI Shadow
 const headerBase = `
- ██████╗        ██████╗██████╗  █████╗    
-██╔════╝       ██╔════╝██╔══██╗██╔══██╗   
-██║     █████╗ ██║     ██║  ██║███████║   
-██║     ╚════╝ ██║     ██║  ██║██╔══██║   
-╚██████╗       ╚██████╗██████╔╝██║  ██║   
- ╚═════╝        ╚═════╝╚═════╝ ╚═╝  ╚═╝   
-      
 ███████╗ ██████╗██╗  ██╗███████╗███╗   ███╗ █████╗ ████████╗██████╗  ██████╗ ███╗   ██╗
 ██╔════╝██╔════╝██║  ██║██╔════╝████╗ ████║██╔══██╗╚══██╔══╝██╔══██╗██╔═══██╗████╗  ██║
 ███████╗██║     ███████║█████╗  ██╔████╔██║███████║   ██║   ██████╔╝██║   ██║██╔██╗ ██║
@@ -46,35 +62,18 @@ const headerBase = `
 ███████║╚██████╗██║  ██║███████╗██║ ╚═╝ ██║██║  ██║   ██║   ██║  ██║╚██████╔╝██║ ╚████║
 ╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝`;
 
-const headerDash = `
-        
-        
- █████╗ 
- ╚════╝ 
-        
-        `;
-
-const version = Object.keys(versionHeaders).includes(process.argv[2]) ? process.argv[2] : 'all';
-const versions = version === 'all' ? Object.keys(versionHeaders) : [version];
+const version = Object.keys(schematrons).includes(process.argv[2]) ? process.argv[2] : 'all';
+const versions = version === 'all' ? Object.keys(schematrons) : [version];
 
 for (const versionToLoad of versions) {
-  if (!loadSchematron(versionToLoad)) {
+  if (!loadSchematron(schematrons[versionToLoad].fileName, versionToLoad)) {
     console.error(`Error loading schematron for version ${versionToLoad}.`);
     process.exit(1);
   }
 }
 
-const header = headerBase.split('\n').map((base, index) => {
-  const firstVersion = version === 'all' ? Object.keys(versionHeaders)[0] : version;
-  let versionedRow = base + (versionHeaders[firstVersion].split('\n')[index] || '');
-
-  if (version === 'all') {
-    versionedRow += (headerDash.split('\n')[index] + versionHeaders['4.0'].split('\n')[index]) || '';
-  }
-  return versionedRow;
-}).join('\n');
-
-console.log(header);
+console.log(modeHeaders[version]);
+console.log(headerBase);
 console.log(filenameFilter ? `Validating example files matching: ${filenameFilter}` : 'Validating all sample files (pass in a string to filter files)');
 
 const inputDir = path.join(__dirname, '..', 'input', 'examples');
@@ -114,8 +113,8 @@ process.stdin.on('data', (key) => {
 });
 
 function printVersionNumbers() {
-  if (version !== 'all') return;
-  console.log('2️⃣  3️⃣  4️⃣');
+  if (versions.length === 1) return;
+  console.log(versions.map(version => schematrons[version].icon).join('  '));
 }
 
 function validateFile(file) {

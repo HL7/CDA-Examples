@@ -1,14 +1,11 @@
 const fs = require('fs');
 const validator = require('cda-schematron-validator')
 
-const supportedVersions = ['2.1', '3.0', '4.0'];
-
 // Tests that cda-schematron-validation can't handle yet
 const knownIgnoredTests = [
   'current()',
   'voc.xml',
   'not(@extension)', // https://jira.hl7.org/browse/CDA-21367
-  'count(sdtc:category)=1', // https://jira.hl7.org/browse/CDA-21383
 ];
 
 const skippedAssertions = [
@@ -19,16 +16,25 @@ const skippedAssertions = [
 // Map of version to schematron file and parsedMap
 const loadedMaps = new Map();
 
-function loadSchematron(version) {
-  if (!supportedVersions.includes(version)) {
-    throw new Error(`Unsupported schematron version: ${version}. Supported versions are: ${supportedVersions.join(', ')}`);
+/**
+ * Load a schematron from a file or the cache
+ * @param {*} fileName Filename to load - must be a local .sch file
+ * @param {*} versionTag Tag used to identify the file for future validateXml calls. If empty, defaults to fileName.
+ * @returns 
+ */
+function loadSchematron(fileName, versionTag) {
+  if (!versionTag) versionTag = fileName;
+
+  if (loadedMaps.has(versionTag)) {
+    return loadedMaps.get(versionTag);
   }
-  if (loadedMaps.has(version)) {
-    return loadedMaps.get(version);
+
+  if (!/^[\w.-]+\.sch$/.test(`${fileName}`)) {
+    throw new Error(`Invalid schematron filename for version: ${fileName}`);
   }
 
   try {
-    let contents = fs.readFileSync(`ccda-${version}.sch`, 'utf8');
+    let contents = fs.readFileSync(`${fileName}`, 'utf8');
 
     // Quick fix since cda-schematron-validator doesn't handle variables, and I can't work on that right now
     const matches = Array.from(contents.matchAll(/<let name="([\w_]+)" value="('[^'"]+')"\/>/g));
@@ -36,21 +42,21 @@ function loadSchematron(version) {
       contents = contents.replaceAll(`($${variable[1]},`, `(${variable[2]},`);
     }
   
-    loadedMaps.set(version, {
+    loadedMaps.set(versionTag, {
       contents,
       parsedMap: null // Not calling validator.parseSchematron(contents) because that requires a parsed DOM object *sigh*
     });
-    return loadedMaps.get(version);
+    return loadedMaps.get(versionTag);
   } catch (error) {
-    console.error(`Error loading schematron for version ${version}. Please ensure 'ccda-${version}.sch' exists in the current directory.`, error);
+    console.error(`Error loading schematron ${fileName}. Please ensure it exists in the current directory.`, error);
     return false;
   }
 }
 
-function validateXml(version, xml) {
-  const schematron = loadSchematron(version);
+function validateXml(versionTagOrFilename, xml) {
+  const schematron = loadSchematron(versionTagOrFilename);
   if (!schematron) {
-    console.error(`Schematron for version ${version} not loaded.`);
+    console.error(`Schematron for version ${versionTagOrFilename} not loaded.`);
     return false;
   }
 
