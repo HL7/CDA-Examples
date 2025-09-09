@@ -1,13 +1,19 @@
-{% assign resources = site.data.ImplementationGuide-hl7cdaexamples.definition.resource | where: "isExample", true %}
+{% assign all_resources = site.data.ImplementationGuide-hl7cdaexamples.definition.resource | where: "isExample", true %}
 
+{% assign resources = "" | split: "" %}
 {% assign all_profiles = "" | split: "" %}
-{% for resource in resources %}
+{% for resource in all_resources %}
+  {% assign approvalExtension = resource.extension | where: "url", "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus" | first %}
+  {% assign statusExtension = approvalExtension.extension | where: "url", "status" | first %}
   {% if resource.profile %}
-    {% for profile in resource.profile %}
-      {% unless profile contains "hl7.org/cda/stds/core" %}
-        {% assign all_profiles = all_profiles | push: profile %}
-      {% endunless %}
-    {% endfor %}
+   {% unless statusExtension.valueCode == "draft" %}
+      {% assign resources = resources | push: resource %}
+      {% for profile in resource.profile %}
+        {% unless profile contains "hl7.org/cda/stds/core" %}
+          {% assign all_profiles = all_profiles | push: profile %}
+        {% endunless %}
+      {% endfor %}
+    {% endunless %}
   {% endif %}
 {% endfor %}
 {% assign unique_profiles = all_profiles | uniq | sort %}

@@ -15,18 +15,24 @@
   border-radius: 3px;
 }
 
-.approvalPending {
-  border: 1px solid black;
+.approvalBox span {
   padding: 0 2px;
-  background-color: #fff9c4;
   border-radius: 3px;
   cursor: default;
+  white-space: nowrap;
+}
+
+.approvalDraft {
+  border: 1px dashed darkgray;
+  background-color: lightyellow;
+}
+
+.approvalPending {
+  border: 1px solid black;
+  background-color: #fff9c4;
 }
 
 .approvalWithdrawn {
   border: 1px solid black;
-  padding: 0 2px;
   background-color: #ffb3b3;
-  border-radius: 3px;
-  cursor: default;
 }

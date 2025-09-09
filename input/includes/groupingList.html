@@ -12,6 +12,11 @@
       <th>Approval</th>
     </tr>
   {% for resource in resources %}
+{% assign approvalExtension = resource.extension | where: "url", "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus" | first %}
+{% assign statusExtension = approvalExtension.extension | where: "url", "status" | first %}
+{% assign sdwgDates = approvalExtension.extension | where: "url", "sdwgApprovalDate" %}
+
+    {% unless statusExtension.valueCode == "draft" %}
       <tr>
         <td>
           <a href="{{ resource.reference.reference | replace: '/', '-' }}.html">{{ resource.name }}</a>
@@ -21,9 +26,6 @@
         </td>
         <td>
 
-{% assign approvalExtension = resource.extension | where: "url", "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus" | first %}
-{% assign statusExtension = approvalExtension.extension | where: "url", "status" | first %}
-{% assign sdwgDates = approvalExtension.extension | where: "url", "sdwgApprovalDate" %}
 
     {% if statusExtension.valueCode == "pending" %}
       {% include labelPending.html %}
@@ -35,6 +37,7 @@
 
         </td>
       </tr>
+    {% endunless %}
   {% endfor %}
   </table>
 {% else %}

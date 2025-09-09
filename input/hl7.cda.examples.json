@@ -1314,6 +1314,39 @@
             "extension": [
               {
                 "url": "status",
+                "valueCode": "draft"
+              }
+            ]
+          }
+        ],
+        "reference": {
+          "reference": "Binary/functional-status-disability-status-acs"
+        },
+        "name": "Functional Assessment - American Community Survey Disability Status",
+        "description": "Represents an American Community Survey (ACS) Disability Status using Assessment Scale Supporting Observations.",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/cda/us/ccda/StructureDefinition/FunctionalStatusSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AssessmentScaleObservation",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/AssessmentScaleSupportingObservation"
+        ],
+        "groupingId": "functional-status"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format",
+            "valueCode": "application/xml"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical",
+            "valueCanonical": "http://hl7.org/cda/us/ccda/StructureDefinition/FunctionalStatusSection"
+          },
+          {
+            "url": "http://hl7.org/cda/hl7.cda.examples/StructureDefinition/ExampleApprovalStatus",
+            "extension": [
+              {
+                "url": "status",
                 "valueCode": "approved"
               },
               {

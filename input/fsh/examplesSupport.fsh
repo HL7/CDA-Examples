@@ -3,9 +3,10 @@ Title: "Example Approval Status"
 Description: "Identifies the approval status of an example"
 * ^experimental = false
 * ^caseSensitive = true
-* #approved "Approved"
-* #pending "Pending"
-* #withdrawn "Withdrawn"
+* #draft "Draft" "Example is not yet ready for approval by Structured Documents Workgroup."
+* #approved "Approved" "Example has been approved by Structured Documents Workgroup."
+* #pending "Pending" "Example is considered complete but has not yet been officially approved by Structured Documents Workgroup."
+* #withdrawn "Withdrawn" "Example has been withdrawn from consideration by Structured Documents Workgroup."
 
 ValueSet: ApprovalStatusValueSet
 Title: "Example Approval Status"
