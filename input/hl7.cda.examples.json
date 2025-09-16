@@ -1327,6 +1327,7 @@
         "isExample": true,
         "profile": [
           "http://hl7.org/cda/us/ccda/StructureDefinition/FunctionalStatusSection",
+          "http://hl7.org/cda/us/ccda/StructureDefinition/DisabilityStatusObservation",
           "http://hl7.org/cda/us/ccda/StructureDefinition/AssessmentScaleObservation",
           "http://hl7.org/cda/us/ccda/StructureDefinition/AssessmentScaleSupportingObservation"
         ],
