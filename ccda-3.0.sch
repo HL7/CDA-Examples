@@ -8,6 +8,7 @@ More information may be found at https://github.com/HL7/fhir-cda-validation
 
 - Jul 7 2025: Changed filename to include version
 - Aug 18 2025: Updated to version 1.2.0 which adds a few new terminology files
+- Sep 16 2025: https://jira.hl7.org/browse/CDA-21379 - updated Disability Status Observation to allow for 101720-1 Disability Status
 -->
 <schema xmlns="http://purl.oclc.org/dsdl/schematron">
   <ns prefix="sch" uri="http://purl.oclc.org/dsdl/schematron"/>
@@ -2381,7 +2382,7 @@ More information may be found at https://github.com/HL7/fhir-cda-validation
       <assert test="count(cda:value)=1">Cardinality of value is 1..1</assert>
     </rule>
     <rule id="DisabilityStatusObservation-errors-code" context="cda:observation[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.505' and @extension='2023-05-01']]/cda:code">
-      <assert test="@code = '89571-4'">@code SHALL = '89571-4'</assert>
+      <assert test="@code = '89571-4' or @code = '101720-1'">@code SHALL = '89571-4' or '101720-1'</assert>
       <assert test="@codeSystem = '2.16.840.1.113883.6.1'">@codeSystem SHALL = '2.16.840.1.113883.6.1'</assert>
     </rule>
     <rule id="DisabilityStatusObservation-errors-text" context="cda:observation[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.505' and @extension='2023-05-01']]/cda:text">

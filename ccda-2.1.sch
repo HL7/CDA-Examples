@@ -27,6 +27,8 @@ Manually-applied changes:
 >> Companion Guide updates (not published anywhere yet)
 https://jira.hl7.org/browse/CDA-21368 - fixed a-4437-3488
 https://jira.hl7.org/browse/CDA-21368 - removed a-4524-3421
+https://jira.hl7.org/browse/CDA-21379 - updated a-4537-33023 to allow for 101720-1 Disability Status
+
 
 -->
 <sch:schema xmlns:voc="http://www.lantanagroup.com/voc" xmlns:svs="urn:ihe:iti:svs:2008" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdtc="urn:hl7-org:sdtc" xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
@@ -8055,7 +8057,7 @@ https://jira.hl7.org/browse/CDA-21368 - removed a-4524-3421
       <sch:assert id="a-4537-32626" test="cda:statusCode[@code='completed']">This statusCode SHALL contain exactly one [1..1] @code="completed" (CodeSystem: HL7ActStatus urn:oid:2.16.840.1.113883.5.14) (CONF:4537-32626).</sch:assert>
       <sch:assert id="a-4537-32627" test="count(cda:effectiveTime)=1">SHALL contain exactly one [1..1] effectiveTime (CONF:4537-32627).</sch:assert>
       <sch:assert id="a-4537-32628" test="count(cda:value)=1">SHALL contain exactly one [1..1] value, which MAY be selected from ValueSet CUBS_Disability urn:oid:1.3.6.1.4.1.12009.10.1.3932 DYNAMIC (CONF:4537-32628).</sch:assert>
-      <sch:assert id="a-4537-33023" test="cda:code[@code='89571-4']">This code SHALL contain exactly one [1..1] @code="89571-4" Disability Status [CUBS] (CONF:4537-33023).</sch:assert>
+      <sch:assert id="a-4537-33023" test="cda:code[@code='89571-4' or @code='101720-1']">This code SHALL contain exactly one [1..1] @code="89571-4" Disability Status [CUBS] or @code="101720-1" Disability Status (CONF:4537-33023).</sch:assert>
       <sch:assert id="a-4537-33024" test="cda:code[@codeSystem='2.16.840.1.113883.6.1']">This code SHALL contain exactly one [1..1] @codeSystem="2.16.840.1.113883.6.1" (CONF:4537-33024).</sch:assert>
     </sch:rule>
     <sch:rule id="r-urn-hl7ii-2.16.840.1.113883.10.20.22.4.505-2023-05-01-errors" context="cda:observation[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.505' and @extension='2023-05-01']]">
