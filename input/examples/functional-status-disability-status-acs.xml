@@ -55,7 +55,7 @@
       <statusCode code="completed"/>
       <effectiveTime value="20221111"/>
       <value xsi:type="CD" nullFlavor="UNK"/>
-      <entryRelationship>
+      <entryRelationship typeCode="COMP">
         <!-- Assessment Scale Observation -->
         <observation xmlns="urn:hl7-org:v3" moodCode="EVN" classCode="OBS">
           <templateId root="2.16.840.1.113883.10.20.22.4.69" extension="2022-06-01"/>
