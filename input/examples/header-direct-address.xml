@@ -25,27 +25,27 @@
            If a coded concept is not available in the identifierType Code System, use originalText to describe the identifier type -->
       <sdtc:identifiedBy typeCode="REL">
         <sdtc:alternateIdentification classCode="IDENT">
-          <id root="1.3.6.1.4.1.41179.2.4" extension="lisarnelson@direct.myphd.us" />
-          <code><originalText>DirectTrust Consumer Identity</originalText></code>
+          <sdtc:id root="1.3.6.1.4.1.41179.2.4" extension="lisarnelson@direct.myphd.us" />
+          <sdtc:code><originalText>DirectTrust Consumer Identity</originalText></sdtc:code>
         </sdtc:alternateIdentification>
       </sdtc:identifiedBy>
       <!-- Available Direct Trust identitifier types include the following:
            <sdtc:identifiedBy typeCode="REL">
              <sdtc:alternateIdentification classCode="IDENT">
-               <id root="1.3.6.1.4.1.41179.2.3" extension="lisarnelson@direct.myphd.us" />
-               <code><originalText>DirectTrust Practitioner Identity</originalText></code>
+               <sdtc:id root="1.3.6.1.4.1.41179.2.3" extension="lisarnelson@direct.myphd.us" />
+               <sdtc:code><originalText>DirectTrust Practitioner Identity</originalText></sdtc:code>
              </sdtc:alternateIdentification>
            </sdtc:identifiedBy>
            <sdtc:identifiedBy typeCode="REL">
              <sdtc:alternateIdentification classCode="IDENT">
-               <id root="1.3.6.1.4.1.41179.2.2" extension="lisarnelson@direct.myphd.us" />
-               <code><originalText>DirectTrust Business Associate Identity</originalText></code>
+               <sdtc:id root="1.3.6.1.4.1.41179.2.2" extension="lisarnelson@direct.myphd.us" />
+               <sdtc:code><originalText>DirectTrust Business Associate Identity</originalText></sdtc:code>
              </sdtc:alternateIdentification>
            </sdtc:identifiedBy>
            <sdtc:identifiedBy typeCode="REL">
              <sdtc:alternateIdentification classCode="IDENT">
-               <id root="1.3.6.1.4.1.41179.2.1" extension="lisarnelson@direct.myphd.us" />
-               <code><originalText>DirectTrust Covered Entity Identity</originalText></code>
+               <sdtc:id root="1.3.6.1.4.1.41179.2.1" extension="lisarnelson@direct.myphd.us" />
+               <sdtc:code><originalText>DirectTrust Covered Entity Identity</originalText></sdtc:code>
              </sdtc:alternateIdentification>
            </sdtc:identifiedBy> -->
       <sdtc:identifiedBy typeCode="REL">
@@ -134,7 +134,9 @@
   <component>
     <structuredBody>
       <component>
-        <!-- ... -->
+        <section>
+          <!-- ... -->
+        </section>
       </component>
     </structuredBody>
   </component>
