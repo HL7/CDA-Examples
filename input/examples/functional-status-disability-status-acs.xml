@@ -45,6 +45,7 @@
     </table>
   </text>
   <entry>
+    <!-- Disability Status Observation -->
     <observation classCode="OBS" moodCode="EVN">
       <templateId root="2.16.840.1.113883.10.20.22.4.505" extension="2023-05-01"/>
       <!-- Note in https://jira.hl7.org/browse/CDA-21379 this was expanded
