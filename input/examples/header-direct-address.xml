@@ -1,5 +1,20 @@
-<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xmlns:mif="urn:hl7-org:v3/mif" xmlns:voc="urn:hl7-org:v3/voc"
-                  xmlns:sdtc="urn:hl7-org:sdtc">
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mif="urn:hl7-org:v3/mif"
+                  xmlns:voc="urn:hl7-org:v3/voc" xmlns:sdtc="urn:hl7-org:sdtc">
+  <!-- This example was updated on 12/11/2025 to include a recommended pattern for representing a Direct Address as a telecom element
+       distinguishing it from other mailto telecom addresses which do not require the use of Direct for the telecommunication protocol.
+       The recommended pattern is a workaround which is required because there is no way to extend the supported use attributes for CDA R2.
+       This practice recommendation offers an option for distinguishing Direct addresses from other types of mailto addresses which
+       semantically extends the definition of use="DIR" to include a telecommunication Direct address that reaches the individual or organization
+       directly without intermediaries.
+       This implies it is a Direct address where the certificate that backs the Direct address is associated with the individual or organization
+       associated with the telecom element.
+       This recommended telecom pattern is consistent with the earlier part of the example which shows how to assert a Direct address
+       as an identifier of an entity.
+       The same implication exists for that aspect of the example.  If a Direct address is asserted as an entity's identifier, it should be true
+       that the certificate that backs the Direct address is associated with the individual or organization associated with the telecom element.
+       
+       The portion of the example showing how to include a Direct address as an additional identifier of an entity was approved on 11/30/2017.
+       The portion of the example showing how to include a Direct address as a telecom for an entity was approved on 1/22/2026 -->
   <realmCode code="US"/>
   <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
   <templateId root="2.16.840.1.113883.10.20.22.1.1"/>
@@ -64,7 +79,11 @@
       <telecom use="WP" value="tel:+1-4013482345"/>
       <telecom use="HP" value="tel:+1-4016412345"/>
       <telecom value="mailto:lisanelson@gmail.com"/>
-      <telecom value="mailto:lisarnelson@direct.myphd.us"/>
+      <!-- Recommended pattern for expressing a Direct address for this Patient. -->
+      <!-- DIR is used for Direct addresses that support an "individual use" use case -->
+      <!-- Usage Note:  the use attribute supports multiple attributes by separating them with a space,
+           thus "HP DIR" or "DIR HP" also would be acceptable. -->
+      <telecom use="DIR" value="mailto:lisarnelson@direct.myphd.us"/>
       <patient>
         <name use="L">
           <family>Nelson</family>
@@ -97,7 +116,10 @@
         <id root="2.16.840.1.113883.1.111.12345" assigningAuthorityName="River Valley Health Services local patient Medical Record Number" />
         <name>River Valley Health Services</name>
         <telecom use="WP" value="tel:+1-4015394321"/>
-        <telecom use="WP" value="mailto:rvhs@rvhs.direct.md"/>
+        <!-- Recommended pattern for expressing a Direct address for this Provider Organization-->
+        <!-- PUB is used for Direct addresses that support a workflow address that is not intended for a specific individual user. -->
+        <!-- Usage Note:  the use attribute supports multiple attributes by separating them with a space, thus "WP PUB" or "PUB WP" also would be acceptable. -->
+        <telecom use="PUB" value="mailto:rvhs@rvhs.direct.md"/>
         <addr>
           <streetAddressLine>823 Main Street</streetAddressLine>
           <city>River Valley</city>
@@ -108,6 +130,11 @@
       </providerOrganization>
     </patientRole>
   </recordTarget>
+  <!-- Recommended pattern for expressing a Direct address for any entity in other roles in the CDA also can use this telecom use pattern of use="DIR" or use="PUB". -->
+  <!-- DIR is used for Direct addresses that support an "individual use" use case -->
+  <!-- PUB is used for Direct addresses that support a message workflow that is not intended for a specific individual user. -->
+  <!-- Usage Note:  the use attribute supports multiple attributes by separating them with a space. For example, "WP DIR" or "DIR WP" or "DIR HP" also would be acceptable
+       where telecom elements are included in header or body entries in the CDA document. -->
   <author>
     <time nullFlavor="NI"/>
     <assignedAuthor>
