@@ -81,7 +81,7 @@
       <telecom value="mailto:lisanelson@gmail.com"/>
       <!-- Recommended pattern for expressing a Direct address for this Patient. -->
       <!-- DIR is used for Direct addresses that support an "individual use" use case -->
-      <!-- Usage Note:  the use attribute supports multiple attributes by separating them with a space,
+      <!-- Usage Note:  the use attribute supports multiple attributes by separating them with a space.
            thus "HP DIR" or "DIR HP" also would be acceptable. -->
       <telecom use="DIR" value="mailto:lisarnelson@direct.myphd.us"/>
       <patient>
@@ -118,7 +118,33 @@
         <telecom use="WP" value="tel:+1-4015394321"/>
         <!-- Recommended pattern for expressing a Direct address for this Provider Organization-->
         <!-- PUB is used for Direct addresses that support a workflow address that is not intended for a specific individual user. -->
-        <!-- Usage Note:  the use attribute supports multiple attributes by separating them with a space, thus "WP PUB" or "PUB WP" also would be acceptable. -->
+        <!-- Usage Note:  the use attribute supports multiple attributes by separating them with a space, thus "WP PUB" or "PUB WP" also would be acceptable.
+             In FHIR US Core, three concepts are represented separately:
+             ContentPoint
+             FHIR system = phone | fax | email | pager | url | sms | other (in FHIR email is the system when representing Direct Secure Messaging)
+             CDA system =  not21 | note2 | note3| pager | note4|
+             
+             FHIR use = home | work | temp | old | mobile
+             CDA  use = HP   | WP   |TMP   |     | MC
+             
+             FHIR extension.us-core-direct value [x] TRUE with a required boolean, then other value[x] elements are permitted.
+             value [codeableConcept] can be used to express the two aligned concepts for
+             codeSystemName=AddressUse codeSystem=http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.9.20
+             FHIR CodeSystemName=TelecomUseUSRealmHeader
+             DIR display="direct"
+             PUB display="public"
+             CDA us-core-direct use DIR or PUB
+             
+             note1 use tel:
+             note2 use mailto:
+             note3 use fax:
+             note4 use http: or https:
+             rare but ftp: also is supported.
+             
+             <telecom use="WP PUB" value="mailto:rvhs@rvhs.direct.md"/> and <telecom use="WP DIR" value="mailto:rvhs@rvhs.direct.md"/>
+             also would be valid and offers full alignment with FHIR contact-point.
+             When uncertian if the Direct address supports individual access or workflow "group access" use cases, best practice guidance is to use DIR.
+             -->
         <telecom use="PUB" value="mailto:rvhs@rvhs.direct.md"/>
         <addr>
           <streetAddressLine>823 Main Street</streetAddressLine>
